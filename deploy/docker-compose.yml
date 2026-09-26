@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   backend:
     build: 
@@ -8,10 +7,9 @@ services:
     ports:
       - "8000:8000"
     restart: unless-stopped
-    env_file:
-      - .env
     volumes:
-      - ../session_audit.json:/app/session_audit.json
+      - ../aitrader/outputs:/app/aitrader/outputs
+      - ~/.config/gmgn/.env:/root/.config/gmgn/.env
   
   bot:
     build:
@@ -21,4 +19,5 @@ services:
     env_file:
       - .env
     volumes:
-      - ../session_audit.json:/app/session_audit.json
+      - ../aitrader/outputs:/app/aitrader/outputs
+      - ~/.config/gmgn/.env:/root/.config/gmgn/.env

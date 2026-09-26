@@ -1,13 +1,13 @@
 FROM python:3.11-slim
-
 WORKDIR /app
 
-# Install ping, curl for network testing if needed
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y curl build-essential nodejs npm && rm -rf /var/lib/apt/lists/*
 
-COPY kida_bot/requirements.txt ./
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN npm install -g gmgn-cli@1.0.1
 
 COPY . .
+RUN chmod +x start.sh
 
-CMD ["bash", "-c", "cd kida_bot && ./start.sh"]
+CMD ["./start.sh"]

@@ -1,0 +1,226 @@
+{
+  "session_start": 1790012275.3131802,
+  "elapsed_seconds": 3602.637953519821,
+  "cycle_count": 1061,
+  "total_trades_opened": 10,
+  "total_trades_closed": 11,
+  "winning_trades_count": 4,
+  "losing_trades_count": 6,
+  "win_rate_pct": 36.4,
+  "total_sol_gained": 0.078387,
+  "total_sol_lost": 0.034019,
+  "profit_factor": 2.3,
+  "total_realized_pnl_sol": 0.044366,
+  "unrealized_pnl_sol": 0.0,
+  "net_portfolio_pnl_sol": 0.044366,
+  "tokens_scanned": 8200,
+  "token_history": {
+    "31nQQSUfBJ7cGG7xTBZEiSUQje6QfzebyLcmgN4xpump": {
+      "symbol": "Uranus",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.0151632,
+      "last_pnl_pct": -0.0702,
+      "last_exit_time": 1790012822.3479855
+    },
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump": {
+      "symbol": "baton",
+      "trades_count": 3,
+      "cumulative_pnl_sol": 0.0018576,
+      "last_pnl_pct": 0.0,
+      "last_exit_time": 1790015759.3829274
+    },
+    "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump": {
+      "symbol": "USDF",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00038879999999999996,
+      "last_pnl_pct": -0.0018,
+      "last_exit_time": 1790013211.9459152
+    },
+    "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump": {
+      "symbol": "pill",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.0004104,
+      "last_pnl_pct": -0.0019,
+      "last_exit_time": 1790013950.9194455
+    },
+    "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA": {
+      "symbol": "CALI",
+      "trades_count": 2,
+      "cumulative_pnl_sol": 0.00034560000000000146,
+      "last_pnl_pct": -0.0464,
+      "last_exit_time": 1790014119.2003329
+    },
+    "EpEfnZxQyiBXppSKi8sncc8w4corn1UJbF9G91fQpump": {
+      "symbol": "PEPENOM",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.0013608,
+      "last_pnl_pct": 0.0063,
+      "last_exit_time": 1790014111.9470298
+    },
+    "fvHLJUwsynVHJrssbZ8MLNyku9jt2izUspbBD4Spump": {
+      "symbol": "FLEX",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.0596808,
+      "last_pnl_pct": 0.2763,
+      "last_exit_time": 1790014795.8804426
+    },
+    "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump": {
+      "symbol": "GEOM",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.0029159999999999998,
+      "last_pnl_pct": -0.0135,
+      "last_exit_time": 1790014874.3421779
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "Uranus",
+      "address": "31nQQSUfBJ7cGG7xTBZEiSUQje6QfzebyLcmgN4xpump",
+      "reason": "HARD_STOP_LOSS (-4.0%) (PnL: -7.02%)",
+      "entry_price": 0.0013325,
+      "exit_price": 0.00123893,
+      "pnl_pct": -0.0702,
+      "pnl_sol": -0.015163,
+      "hold_minutes": 9.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T20:47:02.347976"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -2.37%)",
+      "entry_price": 0.00208898,
+      "exit_price": 0.00203953,
+      "pnl_pct": -0.0237,
+      "pnl_sol": -0.005119,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T20:52:57.607015"
+    },
+    {
+      "symbol": "USDF",
+      "address": "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -0.18%)",
+      "entry_price": 0.00437882,
+      "exit_price": 0.00437077,
+      "pnl_pct": -0.0018,
+      "pnl_sol": -0.000389,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T20:53:31.945906"
+    },
+    {
+      "symbol": "pill",
+      "address": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -0.19%)",
+      "entry_price": 0.000796871,
+      "exit_price": 0.000795369,
+      "pnl_pct": -0.0019,
+      "pnl_sol": -0.00041,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:05:50.919438"
+    },
+    {
+      "symbol": "CALI",
+      "address": "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA",
+      "reason": "MICRO_SCALP_TAKE_PROFIT (+4.80% net profit banked)",
+      "entry_price": 0.00182412,
+      "exit_price": 0.00191172,
+      "pnl_pct": 0.048,
+      "pnl_sol": 0.010368,
+      "hold_minutes": 0.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:06:21.384048"
+    },
+    {
+      "symbol": "PEPENOM",
+      "address": "EpEfnZxQyiBXppSKi8sncc8w4corn1UJbF9G91fQpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: 0.63%)",
+      "entry_price": 0.000366997,
+      "exit_price": 0.000369312,
+      "pnl_pct": 0.0063,
+      "pnl_sol": 0.001361,
+      "hold_minutes": 15.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:08:31.947005"
+    },
+    {
+      "symbol": "CALI",
+      "address": "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA",
+      "reason": "HARD_STOP_LOSS (-4.0%) (PnL: -4.64%)",
+      "entry_price": 0.00196164,
+      "exit_price": 0.0018707,
+      "pnl_pct": -0.0464,
+      "pnl_sol": -0.010022,
+      "hold_minutes": 0.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:08:39.200323"
+    },
+    {
+      "symbol": "FLEX",
+      "address": "fvHLJUwsynVHJrssbZ8MLNyku9jt2izUspbBD4Spump",
+      "reason": "MICRO_SCALP_TAKE_PROFIT (+27.63% net profit banked)",
+      "entry_price": 0.000635207,
+      "exit_price": 0.000810685,
+      "pnl_pct": 0.2763,
+      "pnl_sol": 0.059681,
+      "hold_minutes": 13.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:19:55.880433"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "MICRO_SCALP_TAKE_PROFIT (+3.23% net profit banked)",
+      "entry_price": 0.00198939,
+      "exit_price": 0.00205367,
+      "pnl_pct": 0.0323,
+      "pnl_sol": 0.006977,
+      "hold_minutes": 6.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:19:55.882908"
+    },
+    {
+      "symbol": "GEOM",
+      "address": "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -1.35%)",
+      "entry_price": 0.00285601,
+      "exit_price": 0.00281743,
+      "pnl_pct": -0.0135,
+      "pnl_sol": -0.002916,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-21T21:21:14.342155"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: 0.00%)",
+      "entry_price": 0.00205367,
+      "exit_price": 0.00205367,
+      "pnl_pct": 0.0,
+      "pnl_sol": 0.0,
+      "hold_minutes": 15.0,
+      "is_reentry": true,
+      "timestamp": "2026-09-21T21:35:59.382919"
+    }
+  ],
+  "active_positions": [
+    {
+      "symbol": "PEPENOM",
+      "address": "EpEfnZxQyiBXppSKi8sncc8w4corn1UJbF9G91fQpump",
+      "size_sol": 0.216,
+      "pnl": 0.0,
+      "entry_price": 0.000369781,
+      "cur_price": 0.000369781,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    }
+  ]
+}

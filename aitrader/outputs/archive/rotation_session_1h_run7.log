@@ -1,0 +1,1176 @@
+[03:21:25] INFO: ================================================================
+[03:21:25] INFO:   GMGN $100 MICRO-SCALP WAVE RIDER ENGINE (SHADOW MODE)
+[03:21:25] INFO:   Target Chain: SOL | Concurrent Slots: 3
+[03:21:25] INFO:   Fixed Position Size: 0.216 SOL (~$30 USD) per slot
+[03:21:25] INFO:   Micro-Monitor Cadence: 3.0s (Fast In-Memory Tick)
+[03:21:25] INFO:   Take-Profit Target: +3.0% | Base Stop-Loss: -1.5%
+[03:21:25] INFO:   House Money Re-Entry Stop: -1.0% (Tightened Protection)
+[03:21:25] INFO:   Ratchet Vault: Tier 1 (+1.2% -> +0.5%), Tier 2 (+3.0% -> +1.5%), Tier 3 (+6.0% -> +4.5%)
+[03:21:25] INFO:   Anti-Slippage Defense: Micro Hard Stop -1.5% | Max Spread Cap 0.5%
+[03:21:25] INFO:   Liquidity Moat: >= $80,000 Pool Depth | >= $150,000 Mcap
+[03:21:25] INFO: ================================================================
+[03:21:26] INFO: Cycle #  1 | Elapsed:  0.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:29] INFO: Cycle #  2 | Elapsed:  0.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:32] INFO: Cycle #  3 | Elapsed:  0.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:35] INFO: Cycle #  4 | Elapsed:  0.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:38] INFO: Cycle #  5 | Elapsed:  0.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:41] INFO: Cycle #  6 | Elapsed:  0.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:44] INFO: Cycle #  7 | Elapsed:  0.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:48] INFO: Cycle #  8 | Elapsed:  0.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:51] INFO: Cycle #  9 | Elapsed:  0.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:54] INFO: Cycle # 10 | Elapsed:  0.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:21:57] INFO: Cycle # 11 | Elapsed:  0.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:00] INFO: Cycle # 12 | Elapsed:  0.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:03] INFO: Cycle # 13 | Elapsed:  0.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:06] INFO: Cycle # 14 | Elapsed:  0.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:10] INFO: Cycle # 15 | Elapsed:  0.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:13] INFO: Cycle # 16 | Elapsed:  0.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:16] INFO: Cycle # 17 | Elapsed:  0.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:19] INFO: Cycle # 18 | Elapsed:  0.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:22] INFO: Cycle # 19 | Elapsed:  0.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:25] INFO: Cycle # 20 | Elapsed:  1.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:28] INFO: Cycle # 21 | Elapsed:  1.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:32] INFO: Cycle # 22 | Elapsed:  1.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:35] INFO: Cycle # 23 | Elapsed:  1.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:38] INFO: Cycle # 24 | Elapsed:  1.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:41] INFO: Cycle # 25 | Elapsed:  1.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:44] INFO: Cycle # 26 | Elapsed:  1.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:47] INFO: Cycle # 27 | Elapsed:  1.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:50] INFO: Cycle # 28 | Elapsed:  1.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:54] INFO: Cycle # 29 | Elapsed:  1.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:22:57] INFO: Cycle # 30 | Elapsed:  1.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:00] INFO: Cycle # 31 | Elapsed:  1.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:03] INFO: Cycle # 32 | Elapsed:  1.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:06] INFO: Cycle # 33 | Elapsed:  1.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:09] INFO: Cycle # 34 | Elapsed:  1.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:12] INFO: Cycle # 35 | Elapsed:  1.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:16] INFO: Cycle # 36 | Elapsed:  1.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:19] INFO: Cycle # 37 | Elapsed:  1.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:22] INFO: Cycle # 38 | Elapsed:  2.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:25] INFO: Cycle # 39 | Elapsed:  2.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:28] INFO: Cycle # 40 | Elapsed:  2.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:31] INFO: Cycle # 41 | Elapsed:  2.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:34] INFO: Cycle # 42 | Elapsed:  2.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:38] INFO: Cycle # 43 | Elapsed:  2.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:41] INFO: Cycle # 44 | Elapsed:  2.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:44] INFO: Cycle # 45 | Elapsed:  2.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:47] INFO: Cycle # 46 | Elapsed:  2.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:50] INFO: Cycle # 47 | Elapsed:  2.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:53] INFO: Cycle # 48 | Elapsed:  2.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:23:56] INFO: Cycle # 49 | Elapsed:  2.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:00] INFO: Cycle # 50 | Elapsed:  2.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:03] INFO: Cycle # 51 | Elapsed:  2.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:06] INFO: Cycle # 52 | Elapsed:  2.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:09] INFO: Cycle # 53 | Elapsed:  2.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:12] INFO: Cycle # 54 | Elapsed:  2.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:15] INFO: Cycle # 55 | Elapsed:  2.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:18] INFO: Cycle # 56 | Elapsed:  2.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:22] INFO: Cycle # 57 | Elapsed:  2.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:25] INFO: Cycle # 58 | Elapsed:  3.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:28] INFO: Cycle # 59 | Elapsed:  3.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:31] INFO: Cycle # 60 | Elapsed:  3.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:34] INFO: Cycle # 61 | Elapsed:  3.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:37] INFO: Cycle # 62 | Elapsed:  3.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:40] INFO: Cycle # 63 | Elapsed:  3.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:44] INFO: Cycle # 64 | Elapsed:  3.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:47] INFO: Cycle # 65 | Elapsed:  3.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:50] INFO: Cycle # 66 | Elapsed:  3.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:53] INFO: Cycle # 67 | Elapsed:  3.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:56] INFO: Cycle # 68 | Elapsed:  3.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:24:59] INFO: Cycle # 69 | Elapsed:  3.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:02] INFO: Cycle # 70 | Elapsed:  3.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:06] INFO: Cycle # 71 | Elapsed:  3.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:09] INFO: Cycle # 72 | Elapsed:  3.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:12] INFO: Cycle # 73 | Elapsed:  3.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:15] INFO: Cycle # 74 | Elapsed:  3.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:18] INFO: Cycle # 75 | Elapsed:  3.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:21] INFO: Cycle # 76 | Elapsed:  3.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:24] INFO: Cycle # 77 | Elapsed:  4.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:27] INFO: Cycle # 78 | Elapsed:  4.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:30] INFO: Cycle # 79 | Elapsed:  4.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:34] INFO: Cycle # 80 | Elapsed:  4.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:37] INFO: Cycle # 81 | Elapsed:  4.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:40] INFO: Cycle # 82 | Elapsed:  4.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:43] INFO: Cycle # 83 | Elapsed:  4.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:46] INFO: Cycle # 84 | Elapsed:  4.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:49] INFO: Cycle # 85 | Elapsed:  4.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:52] INFO: Cycle # 86 | Elapsed:  4.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:55] INFO: Cycle # 87 | Elapsed:  4.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:25:58] INFO: Cycle # 88 | Elapsed:  4.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:01] INFO: Cycle # 89 | Elapsed:  4.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:04] INFO: Cycle # 90 | Elapsed:  4.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:07] INFO: Cycle # 91 | Elapsed:  4.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:11] INFO: Cycle # 92 | Elapsed:  4.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:14] INFO: Cycle # 93 | Elapsed:  4.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:17] INFO: Cycle # 94 | Elapsed:  4.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:20] INFO: Cycle # 95 | Elapsed:  4.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:23] INFO: Cycle # 96 | Elapsed:  5.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:26] INFO: Cycle # 97 | Elapsed:  5.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:29] INFO: Cycle # 98 | Elapsed:  5.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:33] INFO: Cycle # 99 | Elapsed:  5.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:36] INFO: Cycle #100 | Elapsed:  5.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:39] INFO: Cycle #101 | Elapsed:  5.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:42] INFO: Cycle #102 | Elapsed:  5.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:45] INFO: Cycle #103 | Elapsed:  5.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:48] INFO: Cycle #104 | Elapsed:  5.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:51] INFO: Cycle #105 | Elapsed:  5.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:55] INFO: Cycle #106 | Elapsed:  5.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:26:58] INFO: Cycle #107 | Elapsed:  5.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:01] INFO: Cycle #108 | Elapsed:  5.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:04] INFO: Cycle #109 | Elapsed:  5.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:07] INFO: Cycle #110 | Elapsed:  5.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:10] INFO: Cycle #111 | Elapsed:  5.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:13] INFO: Cycle #112 | Elapsed:  5.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:17] INFO: Cycle #113 | Elapsed:  5.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:20] INFO: Cycle #114 | Elapsed:  5.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:23] INFO: Cycle #115 | Elapsed:  6.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:26] INFO: Cycle #116 | Elapsed:  6.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:29] INFO: Cycle #117 | Elapsed:  6.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:32] INFO: Cycle #118 | Elapsed:  6.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:35] INFO: Cycle #119 | Elapsed:  6.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:39] INFO: Cycle #120 | Elapsed:  6.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:42] INFO: Cycle #121 | Elapsed:  6.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:45] INFO: Cycle #122 | Elapsed:  6.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:48] INFO: Cycle #123 | Elapsed:  6.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:51] INFO: Cycle #124 | Elapsed:  6.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:54] INFO: Cycle #125 | Elapsed:  6.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:27:57] INFO: Cycle #126 | Elapsed:  6.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:01] INFO: Cycle #127 | Elapsed:  6.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:04] INFO: Cycle #128 | Elapsed:  6.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:07] INFO: Cycle #129 | Elapsed:  6.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:10] INFO: Cycle #130 | Elapsed:  6.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:13] INFO: Cycle #131 | Elapsed:  6.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:16] INFO: Cycle #132 | Elapsed:  6.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:19] INFO: Cycle #133 | Elapsed:  6.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:23] INFO: Cycle #134 | Elapsed:  7.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:26] INFO: Cycle #135 | Elapsed:  7.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:29] INFO: Cycle #136 | Elapsed:  7.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:32] INFO: Cycle #137 | Elapsed:  7.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:35] INFO: Cycle #138 | Elapsed:  7.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:38] INFO: Cycle #139 | Elapsed:  7.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:41] INFO: Cycle #140 | Elapsed:  7.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:45] INFO: Cycle #141 | Elapsed:  7.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:48] INFO: Cycle #142 | Elapsed:  7.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:51] INFO: Cycle #143 | Elapsed:  7.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:54] INFO: Cycle #144 | Elapsed:  7.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:28:57] INFO: Cycle #145 | Elapsed:  7.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:00] INFO: Cycle #146 | Elapsed:  7.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:03] INFO: Cycle #147 | Elapsed:  7.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:07] INFO: Cycle #148 | Elapsed:  7.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:10] INFO: Cycle #149 | Elapsed:  7.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:13] INFO: Cycle #150 | Elapsed:  7.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:16] INFO: Cycle #151 | Elapsed:  7.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:19] INFO: Cycle #152 | Elapsed:  7.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:22] INFO: Cycle #153 | Elapsed:  8.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:25] INFO: Cycle #154 | Elapsed:  8.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:29] INFO: Cycle #155 | Elapsed:  8.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:32] INFO: Cycle #156 | Elapsed:  8.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:35] INFO: Cycle #157 | Elapsed:  8.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:38] INFO: Cycle #158 | Elapsed:  8.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:41] INFO: Cycle #159 | Elapsed:  8.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:44] INFO: Cycle #160 | Elapsed:  8.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:47] INFO: Cycle #161 | Elapsed:  8.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:51] INFO: Cycle #162 | Elapsed:  8.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:54] INFO: Cycle #163 | Elapsed:  8.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:29:57] INFO: Cycle #164 | Elapsed:  8.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:00] INFO: Cycle #165 | Elapsed:  8.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:03] INFO: Cycle #166 | Elapsed:  8.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:06] INFO: Cycle #167 | Elapsed:  8.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:09] INFO: Cycle #168 | Elapsed:  8.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:13] INFO: Cycle #169 | Elapsed:  8.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:16] INFO: Cycle #170 | Elapsed:  8.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:19] INFO: Cycle #171 | Elapsed:  8.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:22] INFO: Cycle #172 | Elapsed:  8.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:25] INFO: Cycle #173 | Elapsed:  9.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:28] INFO: Cycle #174 | Elapsed:  9.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:31] INFO: Cycle #175 | Elapsed:  9.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:34] INFO: Cycle #176 | Elapsed:  9.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:37] INFO: Cycle #177 | Elapsed:  9.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:40] INFO: Cycle #178 | Elapsed:  9.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:43] INFO: Cycle #179 | Elapsed:  9.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:46] INFO: Cycle #180 | Elapsed:  9.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:50] INFO: Cycle #181 | Elapsed:  9.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:53] INFO: Cycle #182 | Elapsed:  9.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:56] INFO: Cycle #183 | Elapsed:  9.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:30:59] INFO: Cycle #184 | Elapsed:  9.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:02] INFO: Cycle #185 | Elapsed:  9.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:05] INFO: Cycle #186 | Elapsed:  9.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:08] INFO: Cycle #187 | Elapsed:  9.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:11] INFO: Cycle #188 | Elapsed:  9.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:15] INFO: Cycle #189 | Elapsed:  9.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:18] INFO: Cycle #190 | Elapsed:  9.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:21] INFO: Cycle #191 | Elapsed:  9.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:24] INFO: Cycle #192 | Elapsed: 10.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:27] INFO: Cycle #193 | Elapsed: 10.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:30] INFO: Cycle #194 | Elapsed: 10.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:33] INFO: Cycle #195 | Elapsed: 10.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:36] INFO: Cycle #196 | Elapsed: 10.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:40] INFO: Cycle #197 | Elapsed: 10.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:43] INFO: Cycle #198 | Elapsed: 10.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:46] INFO: Cycle #199 | Elapsed: 10.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:49] INFO: Cycle #200 | Elapsed: 10.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:52] INFO: Cycle #201 | Elapsed: 10.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:55] INFO: Cycle #202 | Elapsed: 10.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:31:58] INFO: Cycle #203 | Elapsed: 10.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:02] INFO: Cycle #204 | Elapsed: 10.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:05] INFO: Cycle #205 | Elapsed: 10.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:08] INFO: Cycle #206 | Elapsed: 10.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:11] INFO: Cycle #207 | Elapsed: 10.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:14] INFO: Cycle #208 | Elapsed: 10.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:17] INFO: Cycle #209 | Elapsed: 10.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:20] INFO: Cycle #210 | Elapsed: 10.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:24] INFO: Cycle #211 | Elapsed: 11.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:27] INFO: Cycle #212 | Elapsed: 11.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:30] INFO: Cycle #213 | Elapsed: 11.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:33] INFO: Cycle #214 | Elapsed: 11.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:36] INFO: Cycle #215 | Elapsed: 11.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:39] INFO: Cycle #216 | Elapsed: 11.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:42] INFO: Cycle #217 | Elapsed: 11.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:47] INFO: Cycle #218 | Elapsed: 11.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:51] INFO: Cycle #219 | Elapsed: 11.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:54] INFO: Cycle #220 | Elapsed: 11.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:32:57] INFO: Cycle #221 | Elapsed: 11.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:00] INFO: Cycle #222 | Elapsed: 11.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:03] INFO: Cycle #223 | Elapsed: 11.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:06] INFO: Cycle #224 | Elapsed: 11.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:09] INFO: Cycle #225 | Elapsed: 11.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:12] INFO: Cycle #226 | Elapsed: 11.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:15] INFO: Cycle #227 | Elapsed: 11.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:18] INFO: Cycle #228 | Elapsed: 11.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:22] INFO: Cycle #229 | Elapsed: 11.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:25] INFO: Cycle #230 | Elapsed: 12.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:28] INFO: Cycle #231 | Elapsed: 12.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:31] INFO: Cycle #232 | Elapsed: 12.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:34] INFO: Cycle #233 | Elapsed: 12.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:37] INFO: Cycle #234 | Elapsed: 12.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:40] INFO: Cycle #235 | Elapsed: 12.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:43] INFO: Cycle #236 | Elapsed: 12.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:46] INFO: Cycle #237 | Elapsed: 12.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:50] INFO: Cycle #238 | Elapsed: 12.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:53] INFO: Cycle #239 | Elapsed: 12.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:56] INFO: Cycle #240 | Elapsed: 12.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:33:59] INFO: Cycle #241 | Elapsed: 12.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:02] INFO: Cycle #242 | Elapsed: 12.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:05] INFO: Cycle #243 | Elapsed: 12.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:08] INFO: Cycle #244 | Elapsed: 12.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:12] INFO: Cycle #245 | Elapsed: 12.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:15] INFO: Cycle #246 | Elapsed: 12.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:18] INFO: Cycle #247 | Elapsed: 12.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:21] INFO: Cycle #248 | Elapsed: 12.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:24] INFO: Cycle #249 | Elapsed: 13.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:27] INFO: Cycle #250 | Elapsed: 13.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:30] INFO: Cycle #251 | Elapsed: 13.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:34] INFO: Cycle #252 | Elapsed: 13.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:37] INFO: Cycle #253 | Elapsed: 13.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:40] INFO: Cycle #254 | Elapsed: 13.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:43] INFO: Cycle #255 | Elapsed: 13.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:46] INFO: Cycle #256 | Elapsed: 13.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:49] INFO: Cycle #257 | Elapsed: 13.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:52] INFO: Cycle #258 | Elapsed: 13.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:56] INFO: Cycle #259 | Elapsed: 13.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:34:59] INFO: Cycle #260 | Elapsed: 13.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:02] INFO: Cycle #261 | Elapsed: 13.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:05] INFO: Cycle #262 | Elapsed: 13.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:08] INFO: Cycle #263 | Elapsed: 13.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:11] INFO: Cycle #264 | Elapsed: 13.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:14] INFO: Cycle #265 | Elapsed: 13.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:18] INFO: Cycle #266 | Elapsed: 13.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:21] INFO: Cycle #267 | Elapsed: 13.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:24] INFO: Cycle #268 | Elapsed: 14.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:27] INFO: Cycle #269 | Elapsed: 14.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:30] INFO: Cycle #270 | Elapsed: 14.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:33] INFO: Cycle #271 | Elapsed: 14.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:36] INFO: Cycle #272 | Elapsed: 14.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:39] INFO: Cycle #273 | Elapsed: 14.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:43] INFO: Cycle #274 | Elapsed: 14.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:46] INFO: Cycle #275 | Elapsed: 14.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:49] INFO: Cycle #276 | Elapsed: 14.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:52] INFO: Cycle #277 | Elapsed: 14.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:55] INFO: Cycle #278 | Elapsed: 14.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:35:58] INFO: Cycle #279 | Elapsed: 14.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:01] INFO: Cycle #280 | Elapsed: 14.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:04] INFO: Cycle #281 | Elapsed: 14.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:07] INFO: Cycle #282 | Elapsed: 14.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:10] INFO: Cycle #283 | Elapsed: 14.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:13] INFO: Cycle #284 | Elapsed: 14.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:16] INFO: Cycle #285 | Elapsed: 14.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:20] INFO: Cycle #286 | Elapsed: 14.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:23] INFO: Cycle #287 | Elapsed: 15.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:26] INFO: Cycle #288 | Elapsed: 15.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:29] INFO: Cycle #289 | Elapsed: 15.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:32] INFO: Cycle #290 | Elapsed: 15.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:35] INFO: Cycle #291 | Elapsed: 15.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:38] INFO: Cycle #292 | Elapsed: 15.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:41] INFO: Cycle #293 | Elapsed: 15.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:45] INFO: Cycle #294 | Elapsed: 15.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:48] INFO: Cycle #295 | Elapsed: 15.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:51] INFO: Cycle #296 | Elapsed: 15.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:54] INFO: Cycle #297 | Elapsed: 15.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:36:57] INFO: Cycle #298 | Elapsed: 15.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:00] INFO: Cycle #299 | Elapsed: 15.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:04] INFO: Cycle #300 | Elapsed: 15.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:07] INFO: Cycle #301 | Elapsed: 15.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:10] INFO: Cycle #302 | Elapsed: 15.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:13] INFO: Cycle #303 | Elapsed: 15.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:16] INFO: Cycle #304 | Elapsed: 15.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:19] INFO: Cycle #305 | Elapsed: 15.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:22] INFO: Cycle #306 | Elapsed: 16.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:25] INFO: Cycle #307 | Elapsed: 16.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:29] INFO: Cycle #308 | Elapsed: 16.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:32] INFO: Cycle #309 | Elapsed: 16.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:35] INFO: Cycle #310 | Elapsed: 16.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:38] INFO: Cycle #311 | Elapsed: 16.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:41] INFO: Cycle #312 | Elapsed: 16.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:44] INFO: Cycle #313 | Elapsed: 16.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:47] INFO: Cycle #314 | Elapsed: 16.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:51] INFO: Cycle #315 | Elapsed: 16.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:54] INFO: Cycle #316 | Elapsed: 16.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:37:57] INFO: Cycle #317 | Elapsed: 16.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:00] INFO: Cycle #318 | Elapsed: 16.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:03] INFO: Cycle #319 | Elapsed: 16.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:06] INFO: Cycle #320 | Elapsed: 16.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:09] INFO: Cycle #321 | Elapsed: 16.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:13] INFO: Cycle #322 | Elapsed: 16.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:16] INFO: Cycle #323 | Elapsed: 16.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:19] INFO: Cycle #324 | Elapsed: 16.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:22] INFO: Cycle #325 | Elapsed: 17.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:25] INFO: Cycle #326 | Elapsed: 17.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:28] INFO: Cycle #327 | Elapsed: 17.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:31] INFO: Cycle #328 | Elapsed: 17.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:35] INFO: Cycle #329 | Elapsed: 17.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:38] INFO: Cycle #330 | Elapsed: 17.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:41] INFO: Cycle #331 | Elapsed: 17.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:44] INFO: Cycle #332 | Elapsed: 17.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:47] INFO: Cycle #333 | Elapsed: 17.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:50] INFO: Cycle #334 | Elapsed: 17.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:53] INFO: Cycle #335 | Elapsed: 17.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:38:57] INFO: Cycle #336 | Elapsed: 17.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:00] INFO: Cycle #337 | Elapsed: 17.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:03] INFO: Cycle #338 | Elapsed: 17.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:06] INFO: Cycle #339 | Elapsed: 17.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:09] INFO: Cycle #340 | Elapsed: 17.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:12] INFO: Cycle #341 | Elapsed: 17.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:15] INFO: Cycle #342 | Elapsed: 17.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:19] INFO: Cycle #343 | Elapsed: 17.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:22] INFO: Cycle #344 | Elapsed: 17.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:25] INFO: Cycle #345 | Elapsed: 18.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:28] INFO: Cycle #346 | Elapsed: 18.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:31] INFO: Cycle #347 | Elapsed: 18.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:34] INFO: Cycle #348 | Elapsed: 18.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:37] INFO: Cycle #349 | Elapsed: 18.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:41] INFO: Cycle #350 | Elapsed: 18.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:44] INFO: Cycle #351 | Elapsed: 18.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:47] INFO: Cycle #352 | Elapsed: 18.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:50] INFO: Cycle #353 | Elapsed: 18.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:53] INFO: Cycle #354 | Elapsed: 18.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:56] INFO: Cycle #355 | Elapsed: 18.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:39:59] INFO: Cycle #356 | Elapsed: 18.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:02] INFO: Cycle #357 | Elapsed: 18.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:05] INFO: Cycle #358 | Elapsed: 18.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:08] INFO: Cycle #359 | Elapsed: 18.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:11] INFO: Cycle #360 | Elapsed: 18.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:14] INFO: Cycle #361 | Elapsed: 18.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:17] INFO: Cycle #362 | Elapsed: 18.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:21] INFO: Cycle #363 | Elapsed: 18.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:24] INFO: Cycle #364 | Elapsed: 19.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:27] INFO: Cycle #365 | Elapsed: 19.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:30] INFO: Cycle #366 | Elapsed: 19.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:33] INFO: Cycle #367 | Elapsed: 19.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:36] INFO: Cycle #368 | Elapsed: 19.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:39] INFO: Cycle #369 | Elapsed: 19.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:42] INFO: Cycle #370 | Elapsed: 19.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:46] INFO: Cycle #371 | Elapsed: 19.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:49] INFO: Cycle #372 | Elapsed: 19.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:52] INFO: Cycle #373 | Elapsed: 19.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:55] INFO: Cycle #374 | Elapsed: 19.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:40:58] INFO: Cycle #375 | Elapsed: 19.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:01] INFO: Cycle #376 | Elapsed: 19.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:04] INFO: Cycle #377 | Elapsed: 19.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:08] INFO: Cycle #378 | Elapsed: 19.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:11] INFO: Cycle #379 | Elapsed: 19.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:14] INFO: Cycle #380 | Elapsed: 19.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:17] INFO: Cycle #381 | Elapsed: 19.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:20] INFO: Cycle #382 | Elapsed: 19.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:23] INFO: Cycle #383 | Elapsed: 20.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:26] INFO: Cycle #384 | Elapsed: 20.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:30] INFO: Cycle #385 | Elapsed: 20.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:33] INFO: Cycle #386 | Elapsed: 20.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:36] INFO: Cycle #387 | Elapsed: 20.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:39] INFO: Cycle #388 | Elapsed: 20.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:42] INFO: Cycle #389 | Elapsed: 20.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:45] INFO: Cycle #390 | Elapsed: 20.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:48] INFO: Cycle #391 | Elapsed: 20.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:52] INFO: Cycle #392 | Elapsed: 20.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:55] INFO: Cycle #393 | Elapsed: 20.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:41:58] INFO: Cycle #394 | Elapsed: 20.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:01] INFO: Cycle #395 | Elapsed: 20.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:04] INFO: Cycle #396 | Elapsed: 20.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:07] INFO: Cycle #397 | Elapsed: 20.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:10] INFO: Cycle #398 | Elapsed: 20.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:14] INFO: Cycle #399 | Elapsed: 20.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:17] INFO: Cycle #400 | Elapsed: 20.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:20] INFO: Cycle #401 | Elapsed: 20.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:23] INFO: Cycle #402 | Elapsed: 21.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:26] INFO: Cycle #403 | Elapsed: 21.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:29] INFO: Cycle #404 | Elapsed: 21.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:32] INFO: Cycle #405 | Elapsed: 21.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:36] INFO: Cycle #406 | Elapsed: 21.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:39] INFO: Cycle #407 | Elapsed: 21.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:42] INFO: Cycle #408 | Elapsed: 21.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:45] INFO: Cycle #409 | Elapsed: 21.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:48] INFO: Cycle #410 | Elapsed: 21.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:51] INFO: Cycle #411 | Elapsed: 21.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:54] INFO: Cycle #412 | Elapsed: 21.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:42:58] INFO: Cycle #413 | Elapsed: 21.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:01] INFO: Cycle #414 | Elapsed: 21.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:04] INFO: Cycle #415 | Elapsed: 21.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:07] INFO: Cycle #416 | Elapsed: 21.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:10] INFO: Cycle #417 | Elapsed: 21.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:13] INFO: Cycle #418 | Elapsed: 21.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:16] INFO: Cycle #419 | Elapsed: 21.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:20] INFO: Cycle #420 | Elapsed: 21.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:23] INFO: Cycle #421 | Elapsed: 22.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:26] INFO: Cycle #422 | Elapsed: 22.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:29] INFO: Cycle #423 | Elapsed: 22.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:32] INFO: Cycle #424 | Elapsed: 22.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:35] INFO: Cycle #425 | Elapsed: 22.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:38] INFO: Cycle #426 | Elapsed: 22.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:42] INFO: Cycle #427 | Elapsed: 22.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:45] INFO: Cycle #428 | Elapsed: 22.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:48] INFO: Cycle #429 | Elapsed: 22.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:51] INFO: Cycle #430 | Elapsed: 22.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:54] INFO: Cycle #431 | Elapsed: 22.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:43:57] INFO: Cycle #432 | Elapsed: 22.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:00] INFO: Cycle #433 | Elapsed: 22.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:04] INFO: Cycle #434 | Elapsed: 22.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:07] INFO: Cycle #435 | Elapsed: 22.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:10] INFO: Cycle #436 | Elapsed: 22.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:13] INFO: Cycle #437 | Elapsed: 22.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:16] INFO: Cycle #438 | Elapsed: 22.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:19] INFO: Cycle #439 | Elapsed: 22.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:22] INFO: Cycle #440 | Elapsed: 23.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:26] INFO: Cycle #441 | Elapsed: 23.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:29] INFO: Cycle #442 | Elapsed: 23.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:32] INFO: Cycle #443 | Elapsed: 23.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:35] INFO: Cycle #444 | Elapsed: 23.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:38] INFO: Cycle #445 | Elapsed: 23.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:41] INFO: Cycle #446 | Elapsed: 23.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:44] INFO: Cycle #447 | Elapsed: 23.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:48] INFO: Cycle #448 | Elapsed: 23.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:51] INFO: Cycle #449 | Elapsed: 23.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:54] INFO: Cycle #450 | Elapsed: 23.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:44:57] INFO: Cycle #451 | Elapsed: 23.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:00] INFO: Cycle #452 | Elapsed: 23.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:03] INFO: Cycle #453 | Elapsed: 23.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:06] INFO: Cycle #454 | Elapsed: 23.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:10] INFO: Cycle #455 | Elapsed: 23.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:13] INFO: Cycle #456 | Elapsed: 23.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:16] INFO: Cycle #457 | Elapsed: 23.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:19] INFO: Cycle #458 | Elapsed: 23.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:22] INFO: Cycle #459 | Elapsed: 23.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:25] INFO: Cycle #460 | Elapsed: 24.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:28] INFO: Cycle #461 | Elapsed: 24.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:32] INFO: Cycle #462 | Elapsed: 24.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:35] INFO: Cycle #463 | Elapsed: 24.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:38] INFO: Cycle #464 | Elapsed: 24.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:41] INFO: Cycle #465 | Elapsed: 24.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:44] INFO: Cycle #466 | Elapsed: 24.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:47] INFO: Cycle #467 | Elapsed: 24.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:50] INFO: Cycle #468 | Elapsed: 24.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:53] INFO: Cycle #469 | Elapsed: 24.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:56] INFO: Cycle #470 | Elapsed: 24.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:45:59] INFO: Cycle #471 | Elapsed: 24.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:03] INFO: Cycle #472 | Elapsed: 24.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:06] INFO: Cycle #473 | Elapsed: 24.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:09] INFO: Cycle #474 | Elapsed: 24.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:12] INFO: Cycle #475 | Elapsed: 24.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:15] INFO: Cycle #476 | Elapsed: 24.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:18] INFO: Cycle #477 | Elapsed: 24.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:21] INFO: Cycle #478 | Elapsed: 24.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:24] INFO: Cycle #479 | Elapsed: 25.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:27] INFO: Cycle #480 | Elapsed: 25.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:30] INFO: Cycle #481 | Elapsed: 25.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:33] INFO: Cycle #482 | Elapsed: 25.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:37] INFO: Cycle #483 | Elapsed: 25.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:40] INFO: Cycle #484 | Elapsed: 25.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:43] INFO: Cycle #485 | Elapsed: 25.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:46] INFO: Cycle #486 | Elapsed: 25.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:49] INFO: Cycle #487 | Elapsed: 25.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:52] INFO: Cycle #488 | Elapsed: 25.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:55] INFO: Cycle #489 | Elapsed: 25.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:46:59] INFO: Cycle #490 | Elapsed: 25.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:02] INFO: Cycle #491 | Elapsed: 25.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:05] INFO: Cycle #492 | Elapsed: 25.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:08] INFO: Cycle #493 | Elapsed: 25.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:11] INFO: Cycle #494 | Elapsed: 25.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:14] INFO: Cycle #495 | Elapsed: 25.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:17] INFO: Cycle #496 | Elapsed: 25.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:21] INFO: Cycle #497 | Elapsed: 25.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:24] INFO: Cycle #498 | Elapsed: 26.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:27] INFO: Cycle #499 | Elapsed: 26.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:30] INFO: Cycle #500 | Elapsed: 26.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:33] INFO: Cycle #501 | Elapsed: 26.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:36] INFO: Cycle #502 | Elapsed: 26.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:39] INFO: Cycle #503 | Elapsed: 26.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:43] INFO: Cycle #504 | Elapsed: 26.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:46] INFO: Cycle #505 | Elapsed: 26.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:49] INFO: Cycle #506 | Elapsed: 26.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:52] INFO: Cycle #507 | Elapsed: 26.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:55] INFO: Cycle #508 | Elapsed: 26.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:47:58] INFO: Cycle #509 | Elapsed: 26.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:01] INFO: Cycle #510 | Elapsed: 26.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:05] INFO: Cycle #511 | Elapsed: 26.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:08] INFO: Cycle #512 | Elapsed: 26.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:11] INFO: Cycle #513 | Elapsed: 26.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:14] INFO: Cycle #514 | Elapsed: 26.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:17] INFO: Cycle #515 | Elapsed: 26.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:20] INFO: Cycle #516 | Elapsed: 26.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:23] INFO: Cycle #517 | Elapsed: 27.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:27] INFO: Cycle #518 | Elapsed: 27.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:30] INFO: Cycle #519 | Elapsed: 27.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:33] INFO: Cycle #520 | Elapsed: 27.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:36] INFO: Cycle #521 | Elapsed: 27.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:39] INFO: Cycle #522 | Elapsed: 27.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:42] INFO: Cycle #523 | Elapsed: 27.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:45] INFO: Cycle #524 | Elapsed: 27.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:49] INFO: Cycle #525 | Elapsed: 27.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:52] INFO: Cycle #526 | Elapsed: 27.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:55] INFO: Cycle #527 | Elapsed: 27.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:48:58] INFO: Cycle #528 | Elapsed: 27.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:01] INFO: Cycle #529 | Elapsed: 27.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:04] INFO: Cycle #530 | Elapsed: 27.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:07] INFO: Cycle #531 | Elapsed: 27.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:11] INFO: Cycle #532 | Elapsed: 27.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:14] INFO: Cycle #533 | Elapsed: 27.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:17] INFO: Cycle #534 | Elapsed: 27.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:20] INFO: Cycle #535 | Elapsed: 27.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:23] INFO: Cycle #536 | Elapsed: 28.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:26] INFO: Cycle #537 | Elapsed: 28.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:29] INFO: Cycle #538 | Elapsed: 28.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:33] INFO: Cycle #539 | Elapsed: 28.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:36] INFO: Cycle #540 | Elapsed: 28.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:39] INFO: Cycle #541 | Elapsed: 28.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:42] INFO: Cycle #542 | Elapsed: 28.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:45] INFO: Cycle #543 | Elapsed: 28.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:48] INFO: Cycle #544 | Elapsed: 28.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:51] INFO: Cycle #545 | Elapsed: 28.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:55] INFO: Cycle #546 | Elapsed: 28.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:49:58] INFO: Cycle #547 | Elapsed: 28.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:01] INFO: Cycle #548 | Elapsed: 28.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:04] INFO: Cycle #549 | Elapsed: 28.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:07] INFO: Cycle #550 | Elapsed: 28.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:10] INFO: Cycle #551 | Elapsed: 28.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:13] INFO: Cycle #552 | Elapsed: 28.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:17] INFO: Cycle #553 | Elapsed: 28.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:20] INFO: Cycle #554 | Elapsed: 28.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:23] INFO: Cycle #555 | Elapsed: 29.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:26] INFO: Cycle #556 | Elapsed: 29.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:29] INFO: Cycle #557 | Elapsed: 29.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:32] INFO: Cycle #558 | Elapsed: 29.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:35] INFO: Cycle #559 | Elapsed: 29.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:39] INFO: Cycle #560 | Elapsed: 29.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:42] INFO: Cycle #561 | Elapsed: 29.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:45] INFO: Cycle #562 | Elapsed: 29.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:48] INFO: Cycle #563 | Elapsed: 29.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:51] INFO: Cycle #564 | Elapsed: 29.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:54] INFO: Cycle #565 | Elapsed: 29.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:50:57] INFO: Cycle #566 | Elapsed: 29.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:01] INFO: Cycle #567 | Elapsed: 29.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:04] INFO: Cycle #568 | Elapsed: 29.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:07] INFO: Cycle #569 | Elapsed: 29.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:10] INFO: Cycle #570 | Elapsed: 29.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:13] INFO: Cycle #571 | Elapsed: 29.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:16] INFO: Cycle #572 | Elapsed: 29.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:19] INFO: Cycle #573 | Elapsed: 29.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:23] INFO: Cycle #574 | Elapsed: 30.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:26] INFO: Cycle #575 | Elapsed: 30.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:29] INFO: Cycle #576 | Elapsed: 30.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:32] INFO: Cycle #577 | Elapsed: 30.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:35] INFO: Cycle #578 | Elapsed: 30.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:38] INFO: Cycle #579 | Elapsed: 30.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:41] INFO: Cycle #580 | Elapsed: 30.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:45] INFO: Cycle #581 | Elapsed: 30.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:48] INFO: Cycle #582 | Elapsed: 30.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:51] INFO: Cycle #583 | Elapsed: 30.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:54] INFO: Cycle #584 | Elapsed: 30.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:51:57] INFO: Cycle #585 | Elapsed: 30.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:00] INFO: Cycle #586 | Elapsed: 30.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:03] INFO: Cycle #587 | Elapsed: 30.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:07] INFO: Cycle #588 | Elapsed: 30.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:10] INFO: Cycle #589 | Elapsed: 30.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:13] INFO: Cycle #590 | Elapsed: 30.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:16] INFO: Cycle #591 | Elapsed: 30.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:19] INFO: Cycle #592 | Elapsed: 30.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:22] INFO: Cycle #593 | Elapsed: 31.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:25] INFO: Cycle #594 | Elapsed: 31.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:29] INFO: Cycle #595 | Elapsed: 31.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:32] INFO: Cycle #596 | Elapsed: 31.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:35] INFO: Cycle #597 | Elapsed: 31.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:38] INFO: Cycle #598 | Elapsed: 31.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:41] INFO: Cycle #599 | Elapsed: 31.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:44] INFO: Cycle #600 | Elapsed: 31.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:48] INFO: Cycle #601 | Elapsed: 31.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:53] INFO: Cycle #602 | Elapsed: 31.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:56] INFO: Cycle #603 | Elapsed: 31.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:52:59] INFO: Cycle #604 | Elapsed: 31.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:02] INFO: Cycle #605 | Elapsed: 31.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:05] INFO: Cycle #606 | Elapsed: 31.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:08] INFO: Cycle #607 | Elapsed: 31.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:12] INFO: Cycle #608 | Elapsed: 31.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:15] INFO: Cycle #609 | Elapsed: 31.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:18] INFO: Cycle #610 | Elapsed: 31.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:21] INFO: Cycle #611 | Elapsed: 31.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:24] INFO: Cycle #612 | Elapsed: 32.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:28] INFO: Cycle #613 | Elapsed: 32.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:31] INFO: Cycle #614 | Elapsed: 32.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:34] INFO: Cycle #615 | Elapsed: 32.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:37] INFO: Cycle #616 | Elapsed: 32.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:41] INFO: Cycle #617 | Elapsed: 32.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:44] INFO: Cycle #618 | Elapsed: 32.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:47] INFO: Cycle #619 | Elapsed: 32.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:50] INFO: Cycle #620 | Elapsed: 32.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:53] INFO: Cycle #621 | Elapsed: 32.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:53:56] INFO: Cycle #622 | Elapsed: 32.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:00] INFO: Cycle #623 | Elapsed: 32.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:03] INFO: Cycle #624 | Elapsed: 32.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:06] INFO: Cycle #625 | Elapsed: 32.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:09] INFO: Cycle #626 | Elapsed: 32.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:12] INFO: Cycle #627 | Elapsed: 32.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:15] INFO: Cycle #628 | Elapsed: 32.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:18] INFO: Cycle #629 | Elapsed: 32.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:21] INFO: Cycle #630 | Elapsed: 32.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:24] INFO: Cycle #631 | Elapsed: 33.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:28] INFO: Cycle #632 | Elapsed: 33.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:31] INFO: Cycle #633 | Elapsed: 33.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:34] INFO: Cycle #634 | Elapsed: 33.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:37] INFO: Cycle #635 | Elapsed: 33.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:40] INFO: Cycle #636 | Elapsed: 33.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:44] INFO: Cycle #637 | Elapsed: 33.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:47] INFO: Cycle #638 | Elapsed: 33.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:50] INFO: Cycle #639 | Elapsed: 33.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:53] INFO: Cycle #640 | Elapsed: 33.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:56] INFO: Cycle #641 | Elapsed: 33.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:54:59] INFO: Cycle #642 | Elapsed: 33.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:02] INFO: Cycle #643 | Elapsed: 33.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:05] INFO: Cycle #644 | Elapsed: 33.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:08] INFO: Cycle #645 | Elapsed: 33.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:11] INFO: Cycle #646 | Elapsed: 33.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:14] INFO: Cycle #647 | Elapsed: 33.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:17] INFO: Cycle #648 | Elapsed: 33.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:20] INFO: Cycle #649 | Elapsed: 33.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:24] INFO: Cycle #650 | Elapsed: 34.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:27] INFO: Cycle #651 | Elapsed: 34.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:30] INFO: Cycle #652 | Elapsed: 34.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:33] INFO: Cycle #653 | Elapsed: 34.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:36] INFO: Cycle #654 | Elapsed: 34.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:39] INFO: Cycle #655 | Elapsed: 34.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:42] INFO: Cycle #656 | Elapsed: 34.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:46] INFO: Cycle #657 | Elapsed: 34.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:49] INFO: Cycle #658 | Elapsed: 34.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:52] INFO: Cycle #659 | Elapsed: 34.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:55] INFO: Cycle #660 | Elapsed: 34.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:55:58] INFO: Cycle #661 | Elapsed: 34.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:01] INFO: Cycle #662 | Elapsed: 34.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:04] INFO: Cycle #663 | Elapsed: 34.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:08] INFO: Cycle #664 | Elapsed: 34.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:11] INFO: Cycle #665 | Elapsed: 34.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:14] INFO: Cycle #666 | Elapsed: 34.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:17] INFO: Cycle #667 | Elapsed: 34.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:20] INFO: Cycle #668 | Elapsed: 34.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:23] INFO: Cycle #669 | Elapsed: 35.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:26] INFO: Cycle #670 | Elapsed: 35.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:30] INFO: Cycle #671 | Elapsed: 35.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:33] INFO: Cycle #672 | Elapsed: 35.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:36] INFO: Cycle #673 | Elapsed: 35.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:39] INFO: Cycle #674 | Elapsed: 35.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:42] INFO: Cycle #675 | Elapsed: 35.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:45] INFO: Cycle #676 | Elapsed: 35.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:49] INFO: Cycle #677 | Elapsed: 35.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:52] INFO: Cycle #678 | Elapsed: 35.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:55] INFO: Cycle #679 | Elapsed: 35.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:56:58] INFO: Cycle #680 | Elapsed: 35.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:01] INFO: Cycle #681 | Elapsed: 35.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:04] INFO: Cycle #682 | Elapsed: 35.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:07] INFO: Cycle #683 | Elapsed: 35.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:10] INFO: Cycle #684 | Elapsed: 35.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:14] INFO: Cycle #685 | Elapsed: 35.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:17] INFO: Cycle #686 | Elapsed: 35.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:20] INFO: Cycle #687 | Elapsed: 35.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:23] INFO: Cycle #688 | Elapsed: 36.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:27] INFO: Cycle #689 | Elapsed: 36.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:30] INFO: Cycle #690 | Elapsed: 36.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:33] INFO: Cycle #691 | Elapsed: 36.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:36] INFO: Cycle #692 | Elapsed: 36.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:39] INFO: Cycle #693 | Elapsed: 36.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:42] INFO: Cycle #694 | Elapsed: 36.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:45] INFO: Cycle #695 | Elapsed: 36.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:48] INFO: Cycle #696 | Elapsed: 36.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:51] INFO: Cycle #697 | Elapsed: 36.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:54] INFO: Cycle #698 | Elapsed: 36.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:57:58] INFO: Cycle #699 | Elapsed: 36.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:01] INFO: Cycle #700 | Elapsed: 36.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:04] INFO: Cycle #701 | Elapsed: 36.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:07] INFO: Cycle #702 | Elapsed: 36.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:10] INFO: Cycle #703 | Elapsed: 36.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:13] INFO: Cycle #704 | Elapsed: 36.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:16] INFO: Cycle #705 | Elapsed: 36.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:20] INFO: Cycle #706 | Elapsed: 36.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:23] INFO: Cycle #707 | Elapsed: 37.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:26] INFO: Cycle #708 | Elapsed: 37.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:29] INFO: Cycle #709 | Elapsed: 37.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:32] INFO: Cycle #710 | Elapsed: 37.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:35] INFO: Cycle #711 | Elapsed: 37.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:38] INFO: Cycle #712 | Elapsed: 37.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:42] INFO: Cycle #713 | Elapsed: 37.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:45] INFO: Cycle #714 | Elapsed: 37.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:48] INFO: Cycle #715 | Elapsed: 37.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:51] INFO: Cycle #716 | Elapsed: 37.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:54] INFO: Cycle #717 | Elapsed: 37.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:58:57] INFO: Cycle #718 | Elapsed: 37.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:00] INFO: Cycle #719 | Elapsed: 37.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:04] INFO: Cycle #720 | Elapsed: 37.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:07] INFO: Cycle #721 | Elapsed: 37.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:10] INFO: Cycle #722 | Elapsed: 37.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:13] INFO: Cycle #723 | Elapsed: 37.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:16] INFO: Cycle #724 | Elapsed: 37.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:19] INFO: Cycle #725 | Elapsed: 37.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:22] INFO: Cycle #726 | Elapsed: 38.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:26] INFO: Cycle #727 | Elapsed: 38.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:29] INFO: Cycle #728 | Elapsed: 38.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:32] INFO: Cycle #729 | Elapsed: 38.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:35] INFO: Cycle #730 | Elapsed: 38.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:38] INFO: Cycle #731 | Elapsed: 38.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:41] INFO: Cycle #732 | Elapsed: 38.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:44] INFO: Cycle #733 | Elapsed: 38.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:48] INFO: Cycle #734 | Elapsed: 38.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:51] INFO: Cycle #735 | Elapsed: 38.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:54] INFO: Cycle #736 | Elapsed: 38.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[03:59:57] INFO: Cycle #737 | Elapsed: 38.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:00] INFO: Cycle #738 | Elapsed: 38.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:03] INFO: Cycle #739 | Elapsed: 38.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:06] INFO: Cycle #740 | Elapsed: 38.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:09] INFO: Cycle #741 | Elapsed: 38.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:12] INFO: Cycle #742 | Elapsed: 38.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:16] INFO: Cycle #743 | Elapsed: 38.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:19] INFO: Cycle #744 | Elapsed: 38.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:22] INFO: Cycle #745 | Elapsed: 38.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:25] INFO: Cycle #746 | Elapsed: 39.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:28] INFO: Cycle #747 | Elapsed: 39.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:31] INFO: Cycle #748 | Elapsed: 39.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:34] INFO: Cycle #749 | Elapsed: 39.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:37] INFO: Cycle #750 | Elapsed: 39.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:40] INFO: Cycle #751 | Elapsed: 39.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:43] INFO: Cycle #752 | Elapsed: 39.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:46] INFO: Cycle #753 | Elapsed: 39.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:49] INFO: Cycle #754 | Elapsed: 39.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:53] INFO: Cycle #755 | Elapsed: 39.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:56] INFO: Cycle #756 | Elapsed: 39.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:00:59] INFO: Cycle #757 | Elapsed: 39.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:02] INFO: Cycle #758 | Elapsed: 39.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:05] INFO: Cycle #759 | Elapsed: 39.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:08] INFO: Cycle #760 | Elapsed: 39.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:11] INFO: Cycle #761 | Elapsed: 39.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:15] INFO: Cycle #762 | Elapsed: 39.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:18] INFO: Cycle #763 | Elapsed: 39.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:21] INFO: Cycle #764 | Elapsed: 39.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:24] INFO: Cycle #765 | Elapsed: 40.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:27] INFO: Cycle #766 | Elapsed: 40.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:30] INFO: Cycle #767 | Elapsed: 40.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:33] INFO: Cycle #768 | Elapsed: 40.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:37] INFO: Cycle #769 | Elapsed: 40.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:40] INFO: Cycle #770 | Elapsed: 40.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:43] INFO: Cycle #771 | Elapsed: 40.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:46] INFO: Cycle #772 | Elapsed: 40.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:49] INFO: Cycle #773 | Elapsed: 40.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:52] INFO: Cycle #774 | Elapsed: 40.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:55] INFO: Cycle #775 | Elapsed: 40.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:01:59] INFO: Cycle #776 | Elapsed: 40.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:02] INFO: Cycle #777 | Elapsed: 40.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:05] INFO: Cycle #778 | Elapsed: 40.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:08] INFO: Cycle #779 | Elapsed: 40.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:11] INFO: Cycle #780 | Elapsed: 40.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:14] INFO: Cycle #781 | Elapsed: 40.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:17] INFO: Cycle #782 | Elapsed: 40.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:21] INFO: Cycle #783 | Elapsed: 40.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:24] INFO: Cycle #784 | Elapsed: 41.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:27] INFO: Cycle #785 | Elapsed: 41.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:30] INFO: Cycle #786 | Elapsed: 41.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:33] INFO: Cycle #787 | Elapsed: 41.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:36] INFO: Cycle #788 | Elapsed: 41.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:39] INFO: Cycle #789 | Elapsed: 41.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:43] INFO: Cycle #790 | Elapsed: 41.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:46] INFO: Cycle #791 | Elapsed: 41.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:49] INFO: Cycle #792 | Elapsed: 41.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:52] INFO: Cycle #793 | Elapsed: 41.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:55] INFO: Cycle #794 | Elapsed: 41.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:02:58] INFO: Cycle #795 | Elapsed: 41.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:01] INFO: Cycle #796 | Elapsed: 41.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:05] INFO: Cycle #797 | Elapsed: 41.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:08] INFO: Cycle #798 | Elapsed: 41.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:11] INFO: Cycle #799 | Elapsed: 41.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:14] INFO: Cycle #800 | Elapsed: 41.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:17] INFO: Cycle #801 | Elapsed: 41.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:20] INFO: Cycle #802 | Elapsed: 41.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:23] INFO: Cycle #803 | Elapsed: 42.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:28] INFO: Cycle #804 | Elapsed: 42.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:31] INFO: Cycle #805 | Elapsed: 42.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:34] INFO: Cycle #806 | Elapsed: 42.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:37] INFO: Cycle #807 | Elapsed: 42.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:40] INFO: Cycle #808 | Elapsed: 42.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:43] INFO: Cycle #809 | Elapsed: 42.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:47] INFO: Cycle #810 | Elapsed: 42.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:50] INFO: Cycle #811 | Elapsed: 42.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:53] INFO: Cycle #812 | Elapsed: 42.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:56] INFO: Cycle #813 | Elapsed: 42.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:03:59] INFO: Cycle #814 | Elapsed: 42.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:02] INFO: Cycle #815 | Elapsed: 42.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:05] INFO: Cycle #816 | Elapsed: 42.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:09] INFO: Cycle #817 | Elapsed: 42.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:12] INFO: Cycle #818 | Elapsed: 42.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:15] INFO: Cycle #819 | Elapsed: 42.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:18] INFO: Cycle #820 | Elapsed: 42.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:21] INFO: Cycle #821 | Elapsed: 42.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:24] INFO: Cycle #822 | Elapsed: 43.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:27] INFO: Cycle #823 | Elapsed: 43.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:31] INFO: Cycle #824 | Elapsed: 43.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:34] INFO: Cycle #825 | Elapsed: 43.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:37] INFO: Cycle #826 | Elapsed: 43.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:40] INFO: Cycle #827 | Elapsed: 43.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:43] INFO: Cycle #828 | Elapsed: 43.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:46] INFO: Cycle #829 | Elapsed: 43.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:49] INFO: Cycle #830 | Elapsed: 43.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:53] INFO: Cycle #831 | Elapsed: 43.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:56] INFO: Cycle #832 | Elapsed: 43.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:04:59] INFO: Cycle #833 | Elapsed: 43.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:02] INFO: Cycle #834 | Elapsed: 43.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:05] INFO: Cycle #835 | Elapsed: 43.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:08] INFO: Cycle #836 | Elapsed: 43.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:11] INFO: Cycle #837 | Elapsed: 43.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:14] INFO: Cycle #838 | Elapsed: 43.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:17] INFO: Cycle #839 | Elapsed: 43.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:20] INFO: Cycle #840 | Elapsed: 43.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:23] INFO: Cycle #841 | Elapsed: 44.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:26] INFO: Cycle #842 | Elapsed: 44.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:29] INFO: Cycle #843 | Elapsed: 44.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:33] INFO: Cycle #844 | Elapsed: 44.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:36] INFO: Cycle #845 | Elapsed: 44.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:39] INFO: Cycle #846 | Elapsed: 44.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:42] INFO: Cycle #847 | Elapsed: 44.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:45] INFO: Cycle #848 | Elapsed: 44.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:48] INFO: Cycle #849 | Elapsed: 44.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:51] INFO: Cycle #850 | Elapsed: 44.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:54] INFO: Cycle #851 | Elapsed: 44.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:05:58] INFO: Cycle #852 | Elapsed: 44.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:01] INFO: Cycle #853 | Elapsed: 44.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:04] INFO: Cycle #854 | Elapsed: 44.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:07] INFO: Cycle #855 | Elapsed: 44.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:10] INFO: Cycle #856 | Elapsed: 44.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:13] INFO: Cycle #857 | Elapsed: 44.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:16] INFO: Cycle #858 | Elapsed: 44.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:20] INFO: Cycle #859 | Elapsed: 44.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:23] INFO: Cycle #860 | Elapsed: 45.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:26] INFO: Cycle #861 | Elapsed: 45.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:29] INFO: Cycle #862 | Elapsed: 45.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:32] INFO: Cycle #863 | Elapsed: 45.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:35] INFO: Cycle #864 | Elapsed: 45.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:38] INFO: Cycle #865 | Elapsed: 45.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:42] INFO: Cycle #866 | Elapsed: 45.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:45] INFO: Cycle #867 | Elapsed: 45.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:48] INFO: Cycle #868 | Elapsed: 45.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:51] INFO: Cycle #869 | Elapsed: 45.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:54] INFO: Cycle #870 | Elapsed: 45.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:06:57] INFO: Cycle #871 | Elapsed: 45.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:00] INFO: Cycle #872 | Elapsed: 45.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:04] INFO: Cycle #873 | Elapsed: 45.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:07] INFO: Cycle #874 | Elapsed: 45.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:10] INFO: Cycle #875 | Elapsed: 45.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:13] INFO: Cycle #876 | Elapsed: 45.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:16] INFO: Cycle #877 | Elapsed: 45.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:19] INFO: Cycle #878 | Elapsed: 45.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:22] INFO: Cycle #879 | Elapsed: 46.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:26] INFO: Cycle #880 | Elapsed: 46.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:29] INFO: Cycle #881 | Elapsed: 46.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:32] INFO: Cycle #882 | Elapsed: 46.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:35] INFO: Cycle #883 | Elapsed: 46.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:38] INFO: Cycle #884 | Elapsed: 46.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:41] INFO: Cycle #885 | Elapsed: 46.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:44] INFO: Cycle #886 | Elapsed: 46.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:48] INFO: Cycle #887 | Elapsed: 46.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:51] INFO: Cycle #888 | Elapsed: 46.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:54] INFO: Cycle #889 | Elapsed: 46.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:07:57] INFO: Cycle #890 | Elapsed: 46.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:00] INFO: Cycle #891 | Elapsed: 46.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:03] INFO: Cycle #892 | Elapsed: 46.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:06] INFO: Cycle #893 | Elapsed: 46.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:10] INFO: Cycle #894 | Elapsed: 46.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:13] INFO: Cycle #895 | Elapsed: 46.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:16] INFO: Cycle #896 | Elapsed: 46.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:19] INFO: Cycle #897 | Elapsed: 46.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:22] INFO: Cycle #898 | Elapsed: 46.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:25] INFO: Cycle #899 | Elapsed: 47.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:28] INFO: Cycle #900 | Elapsed: 47.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:32] INFO: Cycle #901 | Elapsed: 47.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:35] INFO: Cycle #902 | Elapsed: 47.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:38] INFO: Cycle #903 | Elapsed: 47.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:41] INFO: Cycle #904 | Elapsed: 47.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:44] INFO: Cycle #905 | Elapsed: 47.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:47] INFO: Cycle #906 | Elapsed: 47.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:50] INFO: Cycle #907 | Elapsed: 47.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:54] INFO: Cycle #908 | Elapsed: 47.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:08:57] INFO: Cycle #909 | Elapsed: 47.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:00] INFO: Cycle #910 | Elapsed: 47.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:03] INFO: Cycle #911 | Elapsed: 47.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:06] INFO: Cycle #912 | Elapsed: 47.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:09] INFO: Cycle #913 | Elapsed: 47.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:12] INFO: Cycle #914 | Elapsed: 47.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:15] INFO: Cycle #915 | Elapsed: 47.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:18] INFO: Cycle #916 | Elapsed: 47.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:21] INFO: Cycle #917 | Elapsed: 47.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:25] INFO: Cycle #918 | Elapsed: 48.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:28] INFO: Cycle #919 | Elapsed: 48.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:31] INFO: Cycle #920 | Elapsed: 48.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:34] INFO: Cycle #921 | Elapsed: 48.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:37] INFO: Cycle #922 | Elapsed: 48.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:40] INFO: Cycle #923 | Elapsed: 48.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:43] INFO: Cycle #924 | Elapsed: 48.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:46] INFO: Cycle #925 | Elapsed: 48.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:49] INFO: Cycle #926 | Elapsed: 48.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:52] INFO: Cycle #927 | Elapsed: 48.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:55] INFO: Cycle #928 | Elapsed: 48.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:09:59] INFO: Cycle #929 | Elapsed: 48.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:02] INFO: Cycle #930 | Elapsed: 48.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:05] INFO: Cycle #931 | Elapsed: 48.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:08] INFO: Cycle #932 | Elapsed: 48.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:11] INFO: Cycle #933 | Elapsed: 48.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:14] INFO: Cycle #934 | Elapsed: 48.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:17] INFO: Cycle #935 | Elapsed: 48.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:21] INFO: Cycle #936 | Elapsed: 48.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:24] INFO: Cycle #937 | Elapsed: 49.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:27] INFO: Cycle #938 | Elapsed: 49.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:30] INFO: Cycle #939 | Elapsed: 49.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:33] INFO: Cycle #940 | Elapsed: 49.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:36] INFO: Cycle #941 | Elapsed: 49.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:39] INFO: Cycle #942 | Elapsed: 49.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:43] INFO: Cycle #943 | Elapsed: 49.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:44] INFO: FRESH CANDIDATE BLOCKED: GEOM — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $0 < 40% of 5m avg)
+[04:10:47] INFO: Cycle #944 | Elapsed: 49.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:50] INFO: Cycle #945 | Elapsed: 49.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:53] INFO: Cycle #946 | Elapsed: 49.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:56] INFO: Cycle #947 | Elapsed: 49.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:10:59] INFO: Cycle #948 | Elapsed: 49.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:02] INFO: Cycle #949 | Elapsed: 49.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:07] INFO: Cycle #950 | Elapsed: 49.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:10] INFO: Cycle #951 | Elapsed: 49.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:13] INFO: Cycle #952 | Elapsed: 49.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:16] INFO: Cycle #953 | Elapsed: 49.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:19] INFO: Cycle #954 | Elapsed: 49.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:22] INFO: Cycle #955 | Elapsed: 50.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:26] INFO: Cycle #956 | Elapsed: 50.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:29] INFO: Cycle #957 | Elapsed: 50.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:32] INFO: Cycle #958 | Elapsed: 50.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:35] INFO: Cycle #959 | Elapsed: 50.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:38] INFO: Cycle #960 | Elapsed: 50.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:41] INFO: Cycle #961 | Elapsed: 50.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:44] INFO: Cycle #962 | Elapsed: 50.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:48] INFO: Cycle #963 | Elapsed: 50.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:51] INFO: Cycle #964 | Elapsed: 50.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:54] INFO: Cycle #965 | Elapsed: 50.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:11:57] INFO: Cycle #966 | Elapsed: 50.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:00] INFO: Cycle #967 | Elapsed: 50.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:03] INFO: Cycle #968 | Elapsed: 50.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:07] INFO: Cycle #969 | Elapsed: 50.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:10] INFO: Cycle #970 | Elapsed: 50.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:13] INFO: Cycle #971 | Elapsed: 50.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:16] INFO: Cycle #972 | Elapsed: 50.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:19] INFO: Cycle #973 | Elapsed: 50.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:22] INFO: Cycle #974 | Elapsed: 51.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:25] INFO: Cycle #975 | Elapsed: 51.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:28] INFO: Cycle #976 | Elapsed: 51.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:33] INFO: Cycle #977 | Elapsed: 51.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:36] INFO: Cycle #978 | Elapsed: 51.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:39] INFO: Cycle #979 | Elapsed: 51.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:42] INFO: Cycle #980 | Elapsed: 51.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:45] INFO: Cycle #981 | Elapsed: 51.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:48] INFO: Cycle #982 | Elapsed: 51.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:51] INFO: Cycle #983 | Elapsed: 51.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:55] INFO: Cycle #984 | Elapsed: 51.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:12:58] INFO: Cycle #985 | Elapsed: 51.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:01] INFO: Cycle #986 | Elapsed: 51.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:04] INFO: Cycle #987 | Elapsed: 51.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:07] INFO: Cycle #988 | Elapsed: 51.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:10] INFO: Cycle #989 | Elapsed: 51.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:13] INFO: Cycle #990 | Elapsed: 51.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:17] INFO: Cycle #991 | Elapsed: 51.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:20] INFO: Cycle #992 | Elapsed: 51.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:23] INFO: Cycle #993 | Elapsed: 52.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:26] INFO: Cycle #994 | Elapsed: 52.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:29] INFO: Cycle #995 | Elapsed: 52.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:32] INFO: Cycle #996 | Elapsed: 52.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:35] INFO: Cycle #997 | Elapsed: 52.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:39] INFO: Cycle #998 | Elapsed: 52.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:42] INFO: Cycle #999 | Elapsed: 52.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:45] INFO: Cycle #1000 | Elapsed: 52.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:48] INFO: Cycle #1001 | Elapsed: 52.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:51] INFO: Cycle #1002 | Elapsed: 52.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:54] INFO: Cycle #1003 | Elapsed: 52.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:13:57] INFO: Cycle #1004 | Elapsed: 52.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:01] INFO: Cycle #1005 | Elapsed: 52.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:04] INFO: Cycle #1006 | Elapsed: 52.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:07] INFO: Cycle #1007 | Elapsed: 52.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:10] INFO: Cycle #1008 | Elapsed: 52.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:13] INFO: Cycle #1009 | Elapsed: 52.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:16] INFO: Cycle #1010 | Elapsed: 52.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:19] INFO: Cycle #1011 | Elapsed: 52.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:23] INFO: Cycle #1012 | Elapsed: 53.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:26] INFO: Cycle #1013 | Elapsed: 53.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:29] INFO: Cycle #1014 | Elapsed: 53.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:33] INFO: Cycle #1015 | Elapsed: 53.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:36] INFO: Cycle #1016 | Elapsed: 53.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:39] INFO: Cycle #1017 | Elapsed: 53.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:42] INFO: Cycle #1018 | Elapsed: 53.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:46] INFO: Cycle #1019 | Elapsed: 53.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:49] INFO: Cycle #1020 | Elapsed: 53.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:52] INFO: Cycle #1021 | Elapsed: 53.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:55] INFO: Cycle #1022 | Elapsed: 53.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:14:58] INFO: Cycle #1023 | Elapsed: 53.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:01] INFO: Cycle #1024 | Elapsed: 53.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:04] INFO: Cycle #1025 | Elapsed: 53.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:08] INFO: Cycle #1026 | Elapsed: 53.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:11] INFO: Cycle #1027 | Elapsed: 53.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:14] INFO: Cycle #1028 | Elapsed: 53.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:17] INFO: Cycle #1029 | Elapsed: 53.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:20] INFO: Cycle #1030 | Elapsed: 53.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:23] INFO: Cycle #1031 | Elapsed: 54.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:26] INFO: Cycle #1032 | Elapsed: 54.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:30] INFO: Cycle #1033 | Elapsed: 54.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:33] INFO: Cycle #1034 | Elapsed: 54.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:36] INFO: Cycle #1035 | Elapsed: 54.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:39] INFO: Cycle #1036 | Elapsed: 54.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:42] INFO: Cycle #1037 | Elapsed: 54.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:45] INFO: Cycle #1038 | Elapsed: 54.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:48] INFO: Cycle #1039 | Elapsed: 54.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:52] INFO: Cycle #1040 | Elapsed: 54.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:55] INFO: Cycle #1041 | Elapsed: 54.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:15:58] INFO: Cycle #1042 | Elapsed: 54.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:01] INFO: Cycle #1043 | Elapsed: 54.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:04] INFO: Cycle #1044 | Elapsed: 54.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:07] INFO: Cycle #1045 | Elapsed: 54.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:10] INFO: Cycle #1046 | Elapsed: 54.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:14] INFO: Cycle #1047 | Elapsed: 54.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:17] INFO: Cycle #1048 | Elapsed: 54.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:20] INFO: Cycle #1049 | Elapsed: 54.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:23] INFO: Cycle #1050 | Elapsed: 55.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:26] INFO: Cycle #1051 | Elapsed: 55.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:29] INFO: Cycle #1052 | Elapsed: 55.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:32] INFO: Cycle #1053 | Elapsed: 55.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:36] INFO: Cycle #1054 | Elapsed: 55.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:39] INFO: Cycle #1055 | Elapsed: 55.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:42] INFO: Cycle #1056 | Elapsed: 55.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:45] INFO: Cycle #1057 | Elapsed: 55.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:48] INFO: Cycle #1058 | Elapsed: 55.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:51] INFO: Cycle #1059 | Elapsed: 55.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:54] INFO: Cycle #1060 | Elapsed: 55.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:16:58] INFO: Cycle #1061 | Elapsed: 55.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:01] INFO: Cycle #1062 | Elapsed: 55.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:04] INFO: Cycle #1063 | Elapsed: 55.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:07] INFO: Cycle #1064 | Elapsed: 55.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:10] INFO: Cycle #1065 | Elapsed: 55.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:13] INFO: Cycle #1066 | Elapsed: 55.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:16] INFO: Cycle #1067 | Elapsed: 55.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:20] INFO: Cycle #1068 | Elapsed: 55.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:23] INFO: Cycle #1069 | Elapsed: 56.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:26] INFO: Cycle #1070 | Elapsed: 56.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:29] INFO: Cycle #1071 | Elapsed: 56.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:32] INFO: Cycle #1072 | Elapsed: 56.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:35] INFO: Cycle #1073 | Elapsed: 56.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:38] INFO: Cycle #1074 | Elapsed: 56.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:42] INFO: Cycle #1075 | Elapsed: 56.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:45] INFO: Cycle #1076 | Elapsed: 56.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:48] INFO: Cycle #1077 | Elapsed: 56.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:51] INFO: Cycle #1078 | Elapsed: 56.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:54] INFO: Cycle #1079 | Elapsed: 56.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:17:57] INFO: Cycle #1080 | Elapsed: 56.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:00] INFO: Cycle #1081 | Elapsed: 56.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:04] INFO: Cycle #1082 | Elapsed: 56.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:07] INFO: Cycle #1083 | Elapsed: 56.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:10] INFO: Cycle #1084 | Elapsed: 56.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:13] INFO: Cycle #1085 | Elapsed: 56.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:16] INFO: Cycle #1086 | Elapsed: 56.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:19] INFO: Cycle #1087 | Elapsed: 56.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:22] INFO: Cycle #1088 | Elapsed: 57.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:27] INFO: Cycle #1089 | Elapsed: 57.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:30] INFO: Cycle #1090 | Elapsed: 57.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:33] INFO: Cycle #1091 | Elapsed: 57.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:36] INFO: Cycle #1092 | Elapsed: 57.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:39] INFO: Cycle #1093 | Elapsed: 57.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:42] INFO: Cycle #1094 | Elapsed: 57.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:45] INFO: Cycle #1095 | Elapsed: 57.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:48] INFO: Cycle #1096 | Elapsed: 57.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:51] INFO: Cycle #1097 | Elapsed: 57.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:55] INFO: Cycle #1098 | Elapsed: 57.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:18:58] INFO: Cycle #1099 | Elapsed: 57.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:01] INFO: Cycle #1100 | Elapsed: 57.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:04] INFO: Cycle #1101 | Elapsed: 57.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:07] INFO: Cycle #1102 | Elapsed: 57.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:11] INFO: Cycle #1103 | Elapsed: 57.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:14] INFO: Cycle #1104 | Elapsed: 57.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:17] INFO: Cycle #1105 | Elapsed: 57.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:20] INFO: Cycle #1106 | Elapsed: 57.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:23] INFO: Cycle #1107 | Elapsed: 58.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:26] INFO: Cycle #1108 | Elapsed: 58.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:29] INFO: Cycle #1109 | Elapsed: 58.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:33] INFO: Cycle #1110 | Elapsed: 58.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:36] INFO: Cycle #1111 | Elapsed: 58.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:39] INFO: Cycle #1112 | Elapsed: 58.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:42] INFO: Cycle #1113 | Elapsed: 58.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:45] INFO: Cycle #1114 | Elapsed: 58.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:48] INFO: Cycle #1115 | Elapsed: 58.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:51] INFO: Cycle #1116 | Elapsed: 58.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:55] INFO: Cycle #1117 | Elapsed: 58.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:19:58] INFO: Cycle #1118 | Elapsed: 58.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:01] INFO: Cycle #1119 | Elapsed: 58.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:04] INFO: Cycle #1120 | Elapsed: 58.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:07] INFO: Cycle #1121 | Elapsed: 58.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:10] INFO: Cycle #1122 | Elapsed: 58.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:13] INFO: Cycle #1123 | Elapsed: 58.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:18] INFO: Cycle #1124 | Elapsed: 58.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:21] INFO: Cycle #1125 | Elapsed: 58.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:24] INFO: Cycle #1126 | Elapsed: 59.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:27] INFO: Cycle #1127 | Elapsed: 59.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:30] INFO: Cycle #1128 | Elapsed: 59.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:33] INFO: Cycle #1129 | Elapsed: 59.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:36] INFO: Cycle #1130 | Elapsed: 59.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:40] INFO: Cycle #1131 | Elapsed: 59.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:43] INFO: Cycle #1132 | Elapsed: 59.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:46] INFO: Cycle #1133 | Elapsed: 59.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:49] INFO: Cycle #1134 | Elapsed: 59.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:52] INFO: Cycle #1135 | Elapsed: 59.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:55] INFO: Cycle #1136 | Elapsed: 59.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:20:58] INFO: Cycle #1137 | Elapsed: 59.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:02] INFO: Cycle #1138 | Elapsed: 59.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:05] INFO: Cycle #1139 | Elapsed: 59.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:08] INFO: Cycle #1140 | Elapsed: 59.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:11] INFO: Cycle #1141 | Elapsed: 59.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:14] INFO: Cycle #1142 | Elapsed: 59.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:17] INFO: Cycle #1143 | Elapsed: 59.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:20] INFO: Cycle #1144 | Elapsed: 59.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:24] INFO: Cycle #1145 | Elapsed: 60.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: +0.0000 SOL
+[04:21:27] INFO: 1-Hour target duration (3600s) reached.
+[04:21:27] INFO: ================================================================
+[04:21:27] INFO:     GMGN $100 MICRO-SCALP WAVE RIDER SESSION AUDIT COMPLETE
+[04:21:27] INFO: ================================================================
+[04:21:27] INFO:   Total Session Duration: 60.0 minutes
+[04:21:27] INFO:   Total Screening Cycles: 1145
+[04:21:27] INFO:   Tokens Scanned on-Chain: 112334
+[04:21:27] INFO:   Total Positions Opened: 0
+[04:21:27] INFO:   Total Trades Closed: 0
+[04:21:27] INFO:   Winning Trades: 0 | Losing Trades: 0 | Win Rate: 0.0%
+[04:21:27] INFO:   Total SOL Gained: +0.000000 SOL
+[04:21:27] INFO:   Total SOL Lost: -0.000000 SOL
+[04:21:27] INFO:   Realized PnL: +0.000000 SOL
+[04:21:27] INFO:   Unrealized PnL: +0.000000 SOL
+[04:21:27] INFO:   Net Portfolio PnL: +0.000000 SOL
+[04:21:27] INFO:   Active Slots at Close: 0/3
+[04:21:27] INFO:   Session Log File: /home/liora/Documents/prjs/tr--kida--bot--config/aitrader/outputs/rotation_session_1h.log
+[04:21:27] INFO:   Audit State File: /home/liora/Documents/prjs/tr--kida--bot--config/aitrader/outputs/session_audit.json
+[04:21:27] INFO: ================================================================

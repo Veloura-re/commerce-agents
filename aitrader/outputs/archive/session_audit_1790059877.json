@@ -1,0 +1,631 @@
+{
+  "session_start": 1790059877.911752,
+  "elapsed_seconds": 3602.6412427425385,
+  "cycle_count": 1111,
+  "total_trades_opened": 24,
+  "total_trades_closed": 32,
+  "winning_trades_count": 19,
+  "losing_trades_count": 13,
+  "win_rate_pct": 59.4,
+  "total_sol_gained": 0.236304,
+  "total_sol_lost": 0.051451,
+  "profit_factor": 4.59,
+  "total_realized_pnl_sol": 0.184853,
+  "unrealized_pnl_sol": 0.053611,
+  "net_portfolio_pnl_sol": 0.238464,
+  "tokens_scanned": 3391,
+  "token_history": {
+    "CcEeacMuqBJsgCdVxpgyNs6kqpDpNMLpL66AiKGijRhs": {
+      "symbol": "STONKS",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.0288,
+      "last_exit_time": 1790059881.690725
+    },
+    "7gKKy2p1SaMkRFPX7caF96YpfuMMpDj82ZpjaffuvaU5": {
+      "symbol": "PARK",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.0411,
+      "last_exit_time": 1790059883.0239522
+    },
+    "DrK9ci66pPJxi9ig327XcVRs8cDzs7frXXoHWwwKvsN5": {
+      "symbol": "Chiiba",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.0633,
+      "last_exit_time": 1790059920.9913938
+    },
+    "AsW7CuFBJwKWZKBCBqRJVVAg1QWchhNeSu1nMEmZpump": {
+      "symbol": "OCULA",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.003305,
+      "last_pnl_pct": -0.0153,
+      "last_exit_time": 1790059942.9272902
+    },
+    "64EP8PBWY822YSPbRxhgGrVS1azyShddfTBsHFgMRUNE": {
+      "symbol": "RUNE",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.0784,
+      "last_exit_time": 1790060356.9959774
+    },
+    "ELcv3u2dPVXRB72u76kX84SVp9zUfA7nGQCmd8B9x7bH": {
+      "symbol": "Milo",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.1131,
+      "last_exit_time": 1790060402.2822027
+    },
+    "E4uaQB52QHyPcWjPBMLftAoRurpswCinY9WVNqeb96Lz": {
+      "symbol": "AoOni",
+      "trades_count": 2,
+      "cumulative_pnl_sol": 0.106348,
+      "last_pnl_pct": -0.0252,
+      "last_exit_time": 1790062001.9118712
+    },
+    "CkK9mUWnQwSiGc1ZZF5wDxT4r8TNPvGJ7DTcAffy56hm": {
+      "symbol": "CCAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.000432,
+      "last_pnl_pct": -0.0172,
+      "last_exit_time": 1790060611.2144156
+    },
+    "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1": {
+      "symbol": "MADE",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -0.00864,
+      "last_pnl_pct": -0.0242,
+      "last_exit_time": 1790062366.4645925
+    },
+    "41UrTGwAokUi5y9qXvHtG82fYsHgCnQE7oFtLhYRwYMP": {
+      "symbol": "baton",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.000626,
+      "last_pnl_pct": -0.0029,
+      "last_exit_time": 1790061513.8487096
+    },
+    "AxpiTsZTUYKiayfZoWeTruUHZaEoNVBgZaw9BN3tpump": {
+      "symbol": "Bengal",
+      "trades_count": 2,
+      "cumulative_pnl_sol": 0.010303,
+      "last_pnl_pct": 0.1354,
+      "last_exit_time": 1790062616.1001065
+    },
+    "3vBJ2amPHN8Gj9LDyJPaxpfPYJ6LfwfxcxZWCvPARsux": {
+      "symbol": "BENI",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.00054,
+      "last_pnl_pct": -0.0198,
+      "last_exit_time": 1790061637.3822875
+    },
+    "DY8D8doBhZjJRgarAPMeUDzThnhBs2pwUhk1kQi86KaL": {
+      "symbol": "ECOIN",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.00486,
+      "last_pnl_pct": 0.045,
+      "last_exit_time": 1790061957.2679975
+    },
+    "C3b3fpyRWsJf3bo6vay2vo1bQ7CezwumZwTrP82Lpump": {
+      "symbol": "Tokens",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.00054,
+      "last_pnl_pct": -0.0213,
+      "last_exit_time": 1790062433.952147
+    },
+    "G54ysAZbiNZ7McqRKj5bdrsuMGNNf2eK77BTH8JT6xnp": {
+      "symbol": "NEAR",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.00054,
+      "last_pnl_pct": -0.0474,
+      "last_exit_time": 1790062478.3941073
+    },
+    "BQ9FiG8UvD66dnzsLyvqi9cZefPCeCF2Dw7BAvosUBct": {
+      "symbol": "MIDORI",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.000281,
+      "last_pnl_pct": 0.0013,
+      "last_exit_time": 1790062537.6650658
+    },
+    "89VdwqRkPoNJRuoAT5q6wCLtyGxAHSaZdk3r1wHhpump": {
+      "symbol": "Ponk",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.0231,
+      "last_exit_time": 1790062566.5805302
+    },
+    "BPiZnkXiUw9WsP6Nb1L5X6LEsyM5abLofretsX2i8a53": {
+      "symbol": "KKK",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.000432,
+      "last_pnl_pct": -0.0232,
+      "last_exit_time": 1790062849.4029336
+    },
+    "AxwSUUHx6hj8bgdtSxVUiKtKkZwmcDbNbEEtTvzfpump": {
+      "symbol": "jevbrain",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.003434,
+      "last_pnl_pct": 0.0318,
+      "last_exit_time": 1790063171.2284634
+    },
+    "RnhAUX9A4xr1FPdHbfqu3LxitvFRhpfnr54qsvwpump": {
+      "symbol": "FOUR",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.02794,
+      "last_pnl_pct": 0.2587,
+      "last_exit_time": 1790063264.4632177
+    },
+    "4Do6jjC9uit7vyzMWksSPYownWwzLBJYV7uVsJ45pump": {
+      "symbol": "AnonPay",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.1978,
+      "last_exit_time": 1790063286.5827255
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "STONKS",
+      "address": "CcEeacMuqBJsgCdVxpgyNs6kqpDpNMLpL66AiKGijRhs",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.88%)",
+      "percent": 100,
+      "entry_price": 1.7969e-05,
+      "exit_price": 1.761e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T09:51:21.690580"
+    },
+    {
+      "symbol": "PARK",
+      "address": "7gKKy2p1SaMkRFPX7caF96YpfuMMpDj82ZpjaffuvaU5",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -4.11%)",
+      "percent": 100,
+      "entry_price": 6.54478e-05,
+      "exit_price": 6.414e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T09:51:23.023883"
+    },
+    {
+      "symbol": "Chiiba",
+      "address": "DrK9ci66pPJxi9ig327XcVRs8cDzs7frXXoHWwwKvsN5",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -6.33%)",
+      "percent": 100,
+      "entry_price": 9.73134e-05,
+      "exit_price": 9.537e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T09:52:00.991280"
+    },
+    {
+      "symbol": "OCULA",
+      "address": "AsW7CuFBJwKWZKBCBqRJVVAg1QWchhNeSu1nMEmZpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -1.53%)",
+      "percent": 100,
+      "entry_price": 0.00013956,
+      "exit_price": 0.00013742,
+      "pnl_pct": -0.0153,
+      "pnl_sol": -0.003305,
+      "hold_minutes": 1.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T09:52:22.927217"
+    },
+    {
+      "symbol": "RUNE",
+      "address": "64EP8PBWY822YSPbRxhgGrVS1azyShddfTBsHFgMRUNE",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -7.84%)",
+      "percent": 100,
+      "entry_price": 1.67884e-05,
+      "exit_price": 1.645e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 1.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T09:59:16.995456"
+    },
+    {
+      "symbol": "AoOni",
+      "address": "E4uaQB52QHyPcWjPBMLftAoRurpswCinY9WVNqeb96Lz",
+      "reason": "PARTIAL_TP_50_PCT (+6.72% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 4.16422e-06,
+      "exit_price": 4.44e-06,
+      "pnl_pct": 0.0672,
+      "pnl_sol": 0.007258,
+      "hold_minutes": 1.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T09:59:30.099557"
+    },
+    {
+      "symbol": "Milo",
+      "address": "ELcv3u2dPVXRB72u76kX84SVp9zUfA7nGQCmd8B9x7bH",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -11.31%)",
+      "percent": 100,
+      "entry_price": 6.56863e-06,
+      "exit_price": 6.44e-06,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.8,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:00:02.282122"
+    },
+    {
+      "symbol": "AoOni",
+      "address": "E4uaQB52QHyPcWjPBMLftAoRurpswCinY9WVNqeb96Lz",
+      "reason": "RUNNER_TRAILING_EXIT (Peak: 0.000009, Pullback: -5.5%, PnL: +102.47%)",
+      "percent": 100,
+      "entry_price": 4.16422e-06,
+      "exit_price": 8.43e-06,
+      "pnl_pct": 1.0247,
+      "pnl_sol": 0.110668,
+      "hold_minutes": 3.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:01:37.296353"
+    },
+    {
+      "symbol": "CCAT",
+      "address": "CkK9mUWnQwSiGc1ZZF5wDxT4r8TNPvGJ7DTcAffy56hm",
+      "reason": "RATCHET_VAULT_EXIT (+0.50% floor hit, PnL: -1.72%)",
+      "percent": 100,
+      "entry_price": 1.9179e-05,
+      "exit_price": 1.922e-05,
+      "pnl_pct": 0.002,
+      "pnl_sol": 0.000432,
+      "hold_minutes": 1.9,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:03:31.214345"
+    },
+    {
+      "symbol": "MADE",
+      "address": "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.21%)",
+      "percent": 100,
+      "entry_price": 0.00111985,
+      "exit_price": 0.00109745,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 8.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:08:14.641611"
+    },
+    {
+      "symbol": "STONKS",
+      "address": "CcEeacMuqBJsgCdVxpgyNs6kqpDpNMLpL66AiKGijRhs",
+      "reason": "PARTIAL_TP_50_PCT (+12.54% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 1.75723e-05,
+      "exit_price": 1.978e-05,
+      "pnl_pct": 0.1254,
+      "pnl_sol": 0.013543,
+      "hold_minutes": 7.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:15:52.703746"
+    },
+    {
+      "symbol": "baton",
+      "address": "41UrTGwAokUi5y9qXvHtG82fYsHgCnQE7oFtLhYRwYMP",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -0.29%)",
+      "percent": 100,
+      "entry_price": 7.06206e-06,
+      "exit_price": 7.04e-06,
+      "pnl_pct": -0.0029,
+      "pnl_sol": -0.000626,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:18:33.848609"
+    },
+    {
+      "symbol": "Bengal",
+      "address": "AxpiTsZTUYKiayfZoWeTruUHZaEoNVBgZaw9BN3tpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -5.59%)",
+      "percent": 100,
+      "entry_price": 7.41772e-05,
+      "exit_price": 7.269e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:19:08.901771"
+    },
+    {
+      "symbol": "BENI",
+      "address": "3vBJ2amPHN8Gj9LDyJPaxpfPYJ6LfwfxcxZWCvPARsux",
+      "reason": "PARTIAL_TP_50_PCT (+3.71% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 2.32103e-05,
+      "exit_price": 2.407e-05,
+      "pnl_pct": 0.0371,
+      "pnl_sol": 0.004007,
+      "hold_minutes": 0.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:19:30.806654"
+    },
+    {
+      "symbol": "BENI",
+      "address": "3vBJ2amPHN8Gj9LDyJPaxpfPYJ6LfwfxcxZWCvPARsux",
+      "reason": "RATCHET_FLOOR_PROTECTION (+1.50% guaranteed floor, PnL: -1.98%)",
+      "percent": 100,
+      "entry_price": 2.32103e-05,
+      "exit_price": 2.333e-05,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.00054,
+      "hold_minutes": 1.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:20:37.382221"
+    },
+    {
+      "symbol": "ECOIN",
+      "address": "DY8D8doBhZjJRgarAPMeUDzThnhBs2pwUhk1kQi86KaL",
+      "reason": "RATCHET_FLOOR_PROTECTION (+4.50% guaranteed floor, PnL: 4.50%)",
+      "percent": 100,
+      "entry_price": 3.73485e-06,
+      "exit_price": 3.9e-06,
+      "pnl_pct": 0.045,
+      "pnl_sol": 0.00486,
+      "hold_minutes": 34.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:25:57.267850"
+    },
+    {
+      "symbol": "AoOni",
+      "address": "E4uaQB52QHyPcWjPBMLftAoRurpswCinY9WVNqeb96Lz",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.52%)",
+      "percent": 100,
+      "entry_price": 6.8276e-06,
+      "exit_price": 6.69e-06,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:26:41.911765"
+    },
+    {
+      "symbol": "MADE",
+      "address": "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.42%)",
+      "percent": 100,
+      "entry_price": 0.001114,
+      "exit_price": 0.00109172,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 6.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:32:46.464495"
+    },
+    {
+      "symbol": "Tokens",
+      "address": "C3b3fpyRWsJf3bo6vay2vo1bQ7CezwumZwTrP82Lpump",
+      "reason": "PARTIAL_TP_50_PCT (+4.25% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 0.000166294,
+      "exit_price": 0.00017336,
+      "pnl_pct": 0.0425,
+      "pnl_sol": 0.00459,
+      "hold_minutes": 0.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:33:31.240998"
+    },
+    {
+      "symbol": "Tokens",
+      "address": "C3b3fpyRWsJf3bo6vay2vo1bQ7CezwumZwTrP82Lpump",
+      "reason": "RATCHET_FLOOR_PROTECTION (+1.50% guaranteed floor, PnL: -2.13%)",
+      "percent": 100,
+      "entry_price": 0.000166294,
+      "exit_price": 0.00016713,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.00054,
+      "hold_minutes": 1.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:33:53.952053"
+    },
+    {
+      "symbol": "NEAR",
+      "address": "G54ysAZbiNZ7McqRKj5bdrsuMGNNf2eK77BTH8JT6xnp",
+      "reason": "PARTIAL_TP_50_PCT (+3.50% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 3.05017e-05,
+      "exit_price": 3.157e-05,
+      "pnl_pct": 0.035,
+      "pnl_sol": 0.00378,
+      "hold_minutes": 0.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:34:16.301060"
+    },
+    {
+      "symbol": "NEAR",
+      "address": "G54ysAZbiNZ7McqRKj5bdrsuMGNNf2eK77BTH8JT6xnp",
+      "reason": "RATCHET_FLOOR_PROTECTION (+1.50% guaranteed floor, PnL: -4.74%)",
+      "percent": 100,
+      "entry_price": 3.05017e-05,
+      "exit_price": 3.065e-05,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.00054,
+      "hold_minutes": 0.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:34:38.394004"
+    },
+    {
+      "symbol": "Bengal",
+      "address": "AxpiTsZTUYKiayfZoWeTruUHZaEoNVBgZaw9BN3tpump",
+      "reason": "PARTIAL_TP_50_PCT (+7.98% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 9.19018e-05,
+      "exit_price": 9.924e-05,
+      "pnl_pct": 0.0798,
+      "pnl_sol": 0.008618,
+      "hold_minutes": 0.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:35:00.425258"
+    },
+    {
+      "symbol": "MIDORI",
+      "address": "BQ9FiG8UvD66dnzsLyvqi9cZefPCeCF2Dw7BAvosUBct",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: 0.13%)",
+      "percent": 100,
+      "entry_price": 4.95068e-06,
+      "exit_price": 4.96e-06,
+      "pnl_pct": 0.0013,
+      "pnl_sol": 0.000281,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:35:37.664935"
+    },
+    {
+      "symbol": "Ponk",
+      "address": "89VdwqRkPoNJRuoAT5q6wCLtyGxAHSaZdk3r1wHhpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.31%)",
+      "percent": 100,
+      "entry_price": 3.22084e-05,
+      "exit_price": 3.156e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:36:06.580390"
+    },
+    {
+      "symbol": "Bengal",
+      "address": "AxpiTsZTUYKiayfZoWeTruUHZaEoNVBgZaw9BN3tpump",
+      "reason": "RUNNER_TRAILING_EXIT (Peak: 0.000115, Pullback: -9.5%, PnL: +13.54%)",
+      "percent": 100,
+      "entry_price": 9.19018e-05,
+      "exit_price": 0.00010435,
+      "pnl_pct": 0.1354,
+      "pnl_sol": 0.014623,
+      "hold_minutes": 2.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:36:56.099999"
+    },
+    {
+      "symbol": "jevbrain",
+      "address": "AxwSUUHx6hj8bgdtSxVUiKtKkZwmcDbNbEEtTvzfpump",
+      "reason": "PARTIAL_TP_50_PCT (+3.49% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 7.7038e-05,
+      "exit_price": 7.973e-05,
+      "pnl_pct": 0.0349,
+      "pnl_sol": 0.003769,
+      "hold_minutes": 4.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:40:27.354996"
+    },
+    {
+      "symbol": "KKK",
+      "address": "BPiZnkXiUw9WsP6Nb1L5X6LEsyM5abLofretsX2i8a53",
+      "reason": "RATCHET_VAULT_EXIT (+0.50% floor hit, PnL: -2.32%)",
+      "percent": 100,
+      "entry_price": 5.85534e-06,
+      "exit_price": 5.87e-06,
+      "pnl_pct": 0.002,
+      "pnl_sol": 0.000432,
+      "hold_minutes": 3.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:40:49.402820"
+    },
+    {
+      "symbol": "jevbrain",
+      "address": "AxwSUUHx6hj8bgdtSxVUiKtKkZwmcDbNbEEtTvzfpump",
+      "reason": "RUNNER_STAGNATION_HARVEST (Held 10.0m, PnL: 3.18%)",
+      "percent": 100,
+      "entry_price": 7.7038e-05,
+      "exit_price": 7.949e-05,
+      "pnl_pct": 0.0318,
+      "pnl_sol": 0.003434,
+      "hold_minutes": 10.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:46:11.228285"
+    },
+    {
+      "symbol": "FOUR",
+      "address": "RnhAUX9A4xr1FPdHbfqu3LxitvFRhpfnr54qsvwpump",
+      "reason": "PARTIAL_TP_50_PCT (+24.49% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 4.40332e-05,
+      "exit_price": 5.482e-05,
+      "pnl_pct": 0.2449,
+      "pnl_sol": 0.026449,
+      "hold_minutes": 0.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:46:39.858655"
+    },
+    {
+      "symbol": "FOUR",
+      "address": "RnhAUX9A4xr1FPdHbfqu3LxitvFRhpfnr54qsvwpump",
+      "reason": "RUNNER_TRAILING_EXIT (Peak: 0.000067, Pullback: -17.5%, PnL: +25.87%)",
+      "percent": 100,
+      "entry_price": 4.40332e-05,
+      "exit_price": 5.542e-05,
+      "pnl_pct": 0.2587,
+      "pnl_sol": 0.02794,
+      "hold_minutes": 1.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:47:44.463156"
+    },
+    {
+      "symbol": "AnonPay",
+      "address": "4Do6jjC9uit7vyzMWksSPYownWwzLBJYV7uVsJ45pump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -19.78%)",
+      "percent": 100,
+      "entry_price": 1.71312e-05,
+      "exit_price": 1.679e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 0.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T10:48:06.582565"
+    }
+  ],
+  "active_positions": [
+    {
+      "symbol": "STONKS",
+      "address": "CcEeacMuqBJsgCdVxpgyNs6kqpDpNMLpL66AiKGijRhs",
+      "size_sol": 0.108,
+      "pnl": 0.2308,
+      "entry_price": 1.75723e-05,
+      "cur_price": 2.16282e-05,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "baton",
+      "address": "41UrTGwAokUi5y9qXvHtG82fYsHgCnQE7oFtLhYRwYMP",
+      "size_sol": 0.216,
+      "pnl": 0.002,
+      "entry_price": 7.02919e-06,
+      "cur_price": 7.04325e-06,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "CTO",
+      "address": "BFb1VvEyciCgUrDL1oxDCBQUELNirbrjEyF5hNXgpump",
+      "size_sol": 0.216,
+      "pnl": 0.0154,
+      "entry_price": 1.62687e-05,
+      "cur_price": 1.65188e-05,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    }
+  ]
+}

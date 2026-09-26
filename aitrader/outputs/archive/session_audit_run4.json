@@ -1,0 +1,323 @@
+{
+  "session_start": 1790027034.078419,
+  "elapsed_seconds": 3609.616993188858,
+  "cycle_count": 1064,
+  "total_trades_opened": 11,
+  "total_trades_closed": 16,
+  "winning_trades_count": 8,
+  "losing_trades_count": 8,
+  "win_rate_pct": 50.0,
+  "total_sol_gained": 0.042173,
+  "total_sol_lost": 0.07156,
+  "profit_factor": 0.59,
+  "total_realized_pnl_sol": -0.029387,
+  "unrealized_pnl_sol": 0.009612,
+  "net_portfolio_pnl_sol": -0.019775,
+  "tokens_scanned": 2836,
+  "token_history": {
+    "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto": {
+      "symbol": "Tilcayo",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.006847,
+      "last_pnl_pct": -0.0317,
+      "last_exit_time": 1790027050.1722696
+    },
+    "EKtmPPLaCbEEKiwoHHtV7TsRsmPXs5CMGtQtZFSiinsc": {
+      "symbol": "Stamp",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.00095,
+      "last_pnl_pct": 0.0044,
+      "last_exit_time": 1790027070.4951022
+    },
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump": {
+      "symbol": "baton",
+      "trades_count": 2,
+      "cumulative_pnl_sol": 0.00203,
+      "last_pnl_pct": 0.0014,
+      "last_exit_time": 1790030457.4203289
+    },
+    "A9AHYeqb7nQk7LZUraw7rBCzYRjy2DRvE6NqWfFHKRdH": {
+      "symbol": "HUHCAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.013392,
+      "last_pnl_pct": -0.062,
+      "last_exit_time": 1790028014.090044
+    },
+    "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump": {
+      "symbol": "USDF",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -8.699999999999984e-05,
+      "last_pnl_pct": -0.0088,
+      "last_exit_time": 1790029804.6054857
+    },
+    "DDVUsN8sDFxbaX6gNBoD44kjZhFETWJnwAn4EX1dpump": {
+      "symbol": "BABYCATE",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.020455,
+      "last_pnl_pct": -0.0947,
+      "last_exit_time": 1790028735.1554983
+    },
+    "CbyTNf7UPzvewHh4Zp6umogM2RWahhmGRJWLJnPwpump": {
+      "symbol": "biketyson",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.004946,
+      "last_pnl_pct": -0.0229,
+      "last_exit_time": 1790028917.436447
+    },
+    "D4sBdmPaDKxKThQW3Eh721R9M335VcCThn31w7CRtdkN": {
+      "symbol": "TRUMPTV",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.016351,
+      "last_pnl_pct": -0.0757,
+      "last_exit_time": 1790029108.1844754
+    },
+    "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump": {
+      "symbol": "Jimothy",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00013,
+      "last_pnl_pct": -0.0006,
+      "last_exit_time": 1790029639.1132824
+    },
+    "BP4Wic5LNKsqpmiREW6uNVEC16juvFCSd4WzVBatpump": {
+      "symbol": "fomopay",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.007538,
+      "last_pnl_pct": -0.0349,
+      "last_exit_time": 1790030522.923388
+    },
+    "GY9mZfyPpxXxBXBxS2hB2XjhP3kfUsywTvgveozxpump": {
+      "symbol": "ELON",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.020218,
+      "last_pnl_pct": 0.0936,
+      "last_exit_time": 1790030545.5035813
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "Tilcayo",
+      "address": "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.17%)",
+      "percent": 100,
+      "entry_price": 0.00142206,
+      "exit_price": 0.00137703,
+      "pnl_pct": -0.0317,
+      "pnl_sol": -0.006847,
+      "hold_minutes": 0.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T00:44:10.172256"
+    },
+    {
+      "symbol": "Stamp",
+      "address": "EKtmPPLaCbEEKiwoHHtV7TsRsmPXs5CMGtQtZFSiinsc",
+      "reason": "BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: 0.44%)",
+      "percent": 100,
+      "entry_price": 0.000882051,
+      "exit_price": 0.000885942,
+      "pnl_pct": 0.0044,
+      "pnl_sol": 0.00095,
+      "hold_minutes": 0.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T00:44:30.495093"
+    },
+    {
+      "symbol": "BABYCATE",
+      "address": "DDVUsN8sDFxbaX6gNBoD44kjZhFETWJnwAn4EX1dpump",
+      "reason": "PARTIAL_TP_50_PCT (+3.56% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 0.00140126,
+      "exit_price": 0.00145119,
+      "pnl_pct": 0.0356,
+      "pnl_sol": 0.003845,
+      "hold_minutes": 1.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T00:48:55.467234"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: 0.80%)",
+      "percent": 100,
+      "entry_price": 0.00182899,
+      "exit_price": 0.00184363,
+      "pnl_pct": 0.008,
+      "pnl_sol": 0.001728,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T00:58:54.795094"
+    },
+    {
+      "symbol": "HUHCAT",
+      "address": "A9AHYeqb7nQk7LZUraw7rBCzYRjy2DRvE6NqWfFHKRdH",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -6.20%)",
+      "percent": 100,
+      "entry_price": 0.000267263,
+      "exit_price": 0.000250692,
+      "pnl_pct": -0.062,
+      "pnl_sol": -0.013392,
+      "hold_minutes": 1.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:00:14.090033"
+    },
+    {
+      "symbol": "USDF",
+      "address": "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump",
+      "reason": "STAGNATION_TIMEOUT (16m flat, PnL: 0.84%)",
+      "percent": 100,
+      "entry_price": 0.00434499,
+      "exit_price": 0.0043814,
+      "pnl_pct": 0.0084,
+      "pnl_sol": 0.001814,
+      "hold_minutes": 16.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:00:34.941727"
+    },
+    {
+      "symbol": "BABYCATE",
+      "address": "DDVUsN8sDFxbaX6gNBoD44kjZhFETWJnwAn4EX1dpump",
+      "reason": "RUNNER_FLOOR_PROTECTION (+1.0% guaranteed floor, PnL: -9.47%)",
+      "percent": 100,
+      "entry_price": 0.00140126,
+      "exit_price": 0.00126858,
+      "pnl_pct": -0.0947,
+      "pnl_sol": -0.020455,
+      "hold_minutes": 24.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:12:15.155470"
+    },
+    {
+      "symbol": "biketyson",
+      "address": "CbyTNf7UPzvewHh4Zp6umogM2RWahhmGRJWLJnPwpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -2.29%)",
+      "percent": 100,
+      "entry_price": 0.00133771,
+      "exit_price": 0.00130713,
+      "pnl_pct": -0.0229,
+      "pnl_sol": -0.004946,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:15:17.436429"
+    },
+    {
+      "symbol": "GEOM",
+      "address": "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump",
+      "reason": "PARTIAL_TP_50_PCT (+3.19% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 0.00373457,
+      "exit_price": 0.00385388,
+      "pnl_pct": 0.0319,
+      "pnl_sol": 0.003445,
+      "hold_minutes": 15.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:16:16.267646"
+    },
+    {
+      "symbol": "TRUMPTV",
+      "address": "D4sBdmPaDKxKThQW3Eh721R9M335VcCThn31w7CRtdkN",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -7.57%)",
+      "percent": 100,
+      "entry_price": 0.000597097,
+      "exit_price": 0.000551875,
+      "pnl_pct": -0.0757,
+      "pnl_sol": -0.016351,
+      "hold_minutes": 0.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:18:28.184468"
+    },
+    {
+      "symbol": "ELON",
+      "address": "GY9mZfyPpxXxBXBxS2hB2XjhP3kfUsywTvgveozxpump",
+      "reason": "PARTIAL_TP_50_PCT (+9.14% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 0.00096684,
+      "exit_price": 0.00105524,
+      "pnl_pct": 0.0914,
+      "pnl_sol": 0.009871,
+      "hold_minutes": 6.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:27:13.074964"
+    },
+    {
+      "symbol": "Jimothy",
+      "address": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: -0.06%)",
+      "percent": 100,
+      "entry_price": 0.00439393,
+      "exit_price": 0.00439138,
+      "pnl_pct": -0.0006,
+      "pnl_sol": -0.00013,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:27:19.113276"
+    },
+    {
+      "symbol": "USDF",
+      "address": "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump",
+      "reason": "BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: -0.88%)",
+      "percent": 100,
+      "entry_price": 0.00451401,
+      "exit_price": 0.0044745,
+      "pnl_pct": -0.0088,
+      "pnl_sol": -0.001901,
+      "hold_minutes": 2.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:30:04.605476"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: 0.14%)",
+      "percent": 100,
+      "entry_price": 0.00177495,
+      "exit_price": 0.00177752,
+      "pnl_pct": 0.0014,
+      "pnl_sol": 0.000302,
+      "hold_minutes": 10.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:40:57.420320"
+    },
+    {
+      "symbol": "fomopay",
+      "address": "BP4Wic5LNKsqpmiREW6uNVEC16juvFCSd4WzVBatpump",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.49%)",
+      "percent": 100,
+      "entry_price": 0.000471189,
+      "exit_price": 0.000454761,
+      "pnl_pct": -0.0349,
+      "pnl_sol": -0.007538,
+      "hold_minutes": 1.1,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:42:02.923379"
+    },
+    {
+      "symbol": "ELON",
+      "address": "GY9mZfyPpxXxBXBxS2hB2XjhP3kfUsywTvgveozxpump",
+      "reason": "RUNNER_TRAILING_EXIT (Peak: 0.001208, Pullback: -12.5%, PnL: +9.36%)",
+      "percent": 100,
+      "entry_price": 0.00096684,
+      "exit_price": 0.0010573,
+      "pnl_pct": 0.0936,
+      "pnl_sol": 0.020218,
+      "hold_minutes": 21.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:42:25.503573"
+    }
+  ],
+  "active_positions": [
+    {
+      "symbol": "GEOM",
+      "address": "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump",
+      "size_sol": 0.108,
+      "pnl": 0.0445,
+      "entry_price": 0.00373457,
+      "cur_price": 0.003900588,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    }
+  ]
+}

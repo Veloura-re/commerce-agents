@@ -1,0 +1,218 @@
+{
+  "session_start": 1790108498.055838,
+  "elapsed_seconds": 735.0302474498749,
+  "cycle_count": 133,
+  "total_trades_opened": 9,
+  "total_trades_closed": 6,
+  "winning_trades_count": 2,
+  "losing_trades_count": 4,
+  "win_rate_pct": 33.3,
+  "total_sol_gained": 0.02418,
+  "total_sol_lost": 0.008136,
+  "profit_factor": 2.97,
+  "total_realized_pnl_sol": 0.016044,
+  "unrealized_pnl_sol": 0.0,
+  "net_portfolio_pnl_sol": 0.016044,
+  "tokens_scanned": 5800,
+  "token_history": {
+    "8uiGv8wn3oqhgZHeZDaHtSvV2nrwByXHyk9Uqf1Vpump": {
+      "symbol": "$CRPAW",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.0024,
+      "last_pnl_pct": -0.0285,
+      "last_exit_time": 1790108522.369878
+    },
+    "DgusxuYhbs5TqvLYNhEwEow8GwXyFNgc5hspP7SjfaNc": {
+      "symbol": "OTC",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.02394,
+      "last_pnl_pct": 0.1995,
+      "last_exit_time": 1790108522.3749182
+    },
+    "CjV6L6iK6ntv2qXr5VvCzjaPiM8eNBG4wwgkPdKepump": {
+      "symbol": "growth",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00144,
+      "last_pnl_pct": -0.029,
+      "last_exit_time": 1790108547.797028
+    },
+    "AtcYMQbuqYuwxC3nfCm6yFMiYH9SJLJYYpBcE3jjpump": {
+      "symbol": "avatar",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.0024,
+      "last_pnl_pct": -0.0526,
+      "last_exit_time": 1790108580.0515192
+    },
+    "BeUAXnAoF1ip3kMLCpgdJ8WRQFTzntDkgfyVYyMwpump": {
+      "symbol": "Archi",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.001896,
+      "last_pnl_pct": -0.0158,
+      "last_exit_time": 1790108582.187274
+    },
+    "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump": {
+      "symbol": "USDF",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.00024,
+      "last_pnl_pct": -0.0007,
+      "last_exit_time": 1790109104.895836
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "$CRPAW",
+      "address": "8uiGv8wn3oqhgZHeZDaHtSvV2nrwByXHyk9Uqf1Vpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.85%)",
+      "percent": 100,
+      "entry_price": 9.88877e-05,
+      "exit_price": 9.691e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.0024,
+      "hold_minutes": 0.4,
+      "mcap": 93602.0,
+      "market_cap": 93602.0,
+      "liquidity": 24197.2,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T23:22:02.369795"
+    },
+    {
+      "symbol": "OTC",
+      "address": "DgusxuYhbs5TqvLYNhEwEow8GwXyFNgc5hspP7SjfaNc",
+      "reason": "EMERGENCY_FLASH_DRAIN (Pool Liquidity dropped 8.3%)",
+      "percent": 100,
+      "entry_price": 0.000117584,
+      "exit_price": 0.00014104,
+      "pnl_pct": 0.1995,
+      "pnl_sol": 0.02394,
+      "hold_minutes": 0.4,
+      "mcap": 113513.0,
+      "market_cap": 113513.0,
+      "liquidity": 38948.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T23:22:02.374867"
+    },
+    {
+      "symbol": "growth",
+      "address": "CjV6L6iK6ntv2qXr5VvCzjaPiM8eNBG4wwgkPdKepump",
+      "reason": "PROACTIVE_MOMENTUM_CUT (Early liq drain 5.0%, PnL: -2.90%)",
+      "percent": 100,
+      "entry_price": 3.55907e-05,
+      "exit_price": 3.516e-05,
+      "pnl_pct": -0.012,
+      "pnl_sol": -0.00144,
+      "hold_minutes": 0.8,
+      "mcap": 34636.1,
+      "market_cap": 34636.1,
+      "liquidity": 12618.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T23:22:27.796957"
+    },
+    {
+      "symbol": "avatar",
+      "address": "AtcYMQbuqYuwxC3nfCm6yFMiYH9SJLJYYpBcE3jjpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -5.26%)",
+      "percent": 100,
+      "entry_price": 8.57914e-05,
+      "exit_price": 8.408e-05,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.0024,
+      "hold_minutes": 0.8,
+      "mcap": 82777.4,
+      "market_cap": 82777.4,
+      "liquidity": 27765.8,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T23:23:00.051454"
+    },
+    {
+      "symbol": "Archi",
+      "address": "BeUAXnAoF1ip3kMLCpgdJ8WRQFTzntDkgfyVYyMwpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -1.58%)",
+      "percent": 100,
+      "entry_price": 0.000211806,
+      "exit_price": 0.00020846,
+      "pnl_pct": -0.0158,
+      "pnl_sol": -0.001896,
+      "hold_minutes": 0.2,
+      "mcap": 204964.0,
+      "market_cap": 204964.0,
+      "liquidity": 38356.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T23:23:02.187194"
+    },
+    {
+      "symbol": "USDF",
+      "address": "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump",
+      "reason": "RATCHET_VAULT_EXIT (+0.50% floor hit, PnL: -0.07%)",
+      "percent": 100,
+      "entry_price": 0.00229242,
+      "exit_price": 0.002297,
+      "pnl_pct": 0.002,
+      "pnl_sol": 0.00024,
+      "hold_minutes": 9.6,
+      "mcap": 2204830.0,
+      "market_cap": 2204830.0,
+      "liquidity": 138401.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T23:31:44.895771"
+    }
+  ],
+  "active_positions": [
+    {
+      "symbol": "BAKARI",
+      "address": "3y4KW6Yere8NAjVSPVVWEXkUoDfXV8b6t3EDGS2W5wP2",
+      "size_sol": 0.12,
+      "pnl": 0.0,
+      "entry_price": 0.000224196,
+      "cur_price": 0.000224196,
+      "mcap": 218922.0,
+      "liquidity": 41405.1,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "PUMPINU",
+      "address": "8jZD2UNc73YUY2nbXKgTMxtex56mdaxjn6SydirWpump",
+      "size_sol": 0.12,
+      "pnl": 0.0,
+      "entry_price": 5.80224e-05,
+      "cur_price": 5.80224e-05,
+      "mcap": 57922.1,
+      "liquidity": 17899.3,
+      "council_score": 40,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "fomopay",
+      "address": "BP4Wic5LNKsqpmiREW6uNVEC16juvFCSd4WzVBatpump",
+      "size_sol": 0.12,
+      "pnl": 0.0,
+      "entry_price": 0.00162994,
+      "cur_price": 0.00162994,
+      "mcap": 1563040.0,
+      "liquidity": 149825.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    }
+  ]
+}

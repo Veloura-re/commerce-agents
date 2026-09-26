@@ -1,0 +1,670 @@
+[02:33:01] INFO: ================================================================
+[02:33:01] INFO:   GMGN $100 MICRO-SCALP WAVE RIDER ENGINE (SHADOW MODE)
+[02:33:01] INFO:   Target Chain: SOL | Concurrent Slots: 3
+[02:33:01] INFO:   Fixed Position Size: 0.216 SOL (~$30 USD) per slot
+[02:33:01] INFO:   Micro-Monitor Cadence: 3.0s (Fast In-Memory Tick)
+[02:33:01] INFO:   Take-Profit Target: +3.0% | Base Stop-Loss: -1.5%
+[02:33:01] INFO:   House Money Re-Entry Stop: -1.0% (Tightened Protection)
+[02:33:01] INFO:   Ratchet Vault: Tier 1 (+1.2% -> +0.5%), Tier 2 (+3.0% -> +1.5%), Tier 3 (+6.0% -> +4.5%)
+[02:33:01] INFO:   Anti-Slippage Defense: Micro Hard Stop -1.5% | Max Spread Cap 0.5%
+[02:33:01] INFO:   Liquidity Moat: >= $80,000 Pool Depth | >= $150,000 Mcap
+[02:33:01] INFO: ================================================================
+[02:33:02] INFO: Cycle #  1 | Elapsed:  0.0m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:02] INFO: FRESH CANDIDATE BLOCKED: GEOM — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $104 < 40% of 5m avg)
+[02:33:05] INFO: Cycle #  2 | Elapsed:  0.1m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:08] INFO: Cycle #  3 | Elapsed:  0.1m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:11] INFO: Cycle #  4 | Elapsed:  0.2m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:14] INFO: Cycle #  5 | Elapsed:  0.2m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:18] INFO: Cycle #  6 | Elapsed:  0.3m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:21] INFO: Cycle #  7 | Elapsed:  0.3m/60.0m | Slots: 2/3 [USDF (-0.41%), baton (-0.02%)] | Realized PnL: +0.0000 SOL
+[02:33:32] INFO: Cycle #  8 | Elapsed:  0.5m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.73%)] | Realized PnL: +0.0000 SOL
+[02:33:44] INFO: Cycle #  9 | Elapsed:  0.7m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:33:47] INFO: Cycle # 10 | Elapsed:  0.8m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:33:51] INFO: Cycle # 11 | Elapsed:  0.8m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:33:54] INFO: Cycle # 12 | Elapsed:  0.9m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:33:57] INFO: Cycle # 13 | Elapsed:  0.9m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:34:00] INFO: Cycle # 14 | Elapsed:  1.0m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:34:03] INFO: Cycle # 15 | Elapsed:  1.0m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.34%)] | Realized PnL: +0.0000 SOL
+[02:34:06] INFO: Cycle # 16 | Elapsed:  1.1m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:09] INFO: Cycle # 17 | Elapsed:  1.1m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:12] INFO: Cycle # 18 | Elapsed:  1.2m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:15] INFO: Cycle # 19 | Elapsed:  1.2m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:18] INFO: Cycle # 20 | Elapsed:  1.3m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:21] INFO: Cycle # 21 | Elapsed:  1.3m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:24] INFO: Cycle # 22 | Elapsed:  1.4m/60.0m | Slots: 2/3 [USDF (-0.69%), baton (+0.33%)] | Realized PnL: +0.0000 SOL
+[02:34:29] INFO: ROTATING OUT (100%): USDF — Reason: MICRO_HARD_STOP (-1.5%) (PnL: -2.00%) | PnL: -2.00% (-0.0043 SOL)
+[02:34:29] INFO: SLOT UPDATED: USDF — MICRO_HARD_STOP (-1.5%) (PnL: -2.00%) (Sold 100%)
+[02:34:29] INFO: CONSOLIDATION COOLDOWN: USDF exited. Enforcing 15m cooldown before re-evaluation.
+[02:34:29] INFO: Cycle # 23 | Elapsed:  1.5m/60.0m | Slots: 1/3 [baton (-1.28%)] | Realized PnL: -0.0043 SOL
+[02:34:32] INFO: Cycle # 24 | Elapsed:  1.5m/60.0m | Slots: 1/3 [baton (-1.28%)] | Realized PnL: -0.0043 SOL
+[02:34:35] INFO: Cycle # 25 | Elapsed:  1.6m/60.0m | Slots: 1/3 [baton (-1.28%)] | Realized PnL: -0.0043 SOL
+[02:34:38] INFO: Cycle # 26 | Elapsed:  1.6m/60.0m | Slots: 1/3 [baton (-1.28%)] | Realized PnL: -0.0043 SOL
+[02:34:41] INFO: Cycle # 27 | Elapsed:  1.7m/60.0m | Slots: 1/3 [baton (-1.28%)] | Realized PnL: -0.0043 SOL
+[02:34:44] INFO: Cycle # 28 | Elapsed:  1.7m/60.0m | Slots: 1/3 [baton (-1.28%)] | Realized PnL: -0.0043 SOL
+[02:34:48] INFO: Cycle # 29 | Elapsed:  1.8m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:34:51] INFO: Cycle # 30 | Elapsed:  1.8m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:34:54] INFO: Cycle # 31 | Elapsed:  1.9m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:34:57] INFO: Cycle # 32 | Elapsed:  1.9m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:35:00] INFO: Cycle # 33 | Elapsed:  2.0m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:35:03] INFO: Cycle # 34 | Elapsed:  2.0m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:35:06] INFO: Cycle # 35 | Elapsed:  2.1m/60.0m | Slots: 1/3 [baton (-0.45%)] | Realized PnL: -0.0043 SOL
+[02:35:10] INFO: Cycle # 36 | Elapsed:  2.2m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:13] INFO: Cycle # 37 | Elapsed:  2.2m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:16] INFO: Cycle # 38 | Elapsed:  2.3m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:19] INFO: Cycle # 39 | Elapsed:  2.3m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:22] INFO: Cycle # 40 | Elapsed:  2.4m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:25] INFO: Cycle # 41 | Elapsed:  2.4m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:28] INFO: Cycle # 42 | Elapsed:  2.5m/60.0m | Slots: 1/3 [baton (-0.77%)] | Realized PnL: -0.0043 SOL
+[02:35:32] INFO: Cycle # 43 | Elapsed:  2.5m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:35] INFO: Cycle # 44 | Elapsed:  2.6m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:38] INFO: Cycle # 45 | Elapsed:  2.6m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:41] INFO: Cycle # 46 | Elapsed:  2.7m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:44] INFO: Cycle # 47 | Elapsed:  2.7m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:47] INFO: Cycle # 48 | Elapsed:  2.8m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:50] INFO: Cycle # 49 | Elapsed:  2.8m/60.0m | Slots: 1/3 [baton (-0.82%)] | Realized PnL: -0.0043 SOL
+[02:35:54] INFO: Cycle # 50 | Elapsed:  2.9m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:35:57] INFO: Cycle # 51 | Elapsed:  2.9m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:36:00] INFO: Cycle # 52 | Elapsed:  3.0m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:36:03] INFO: Cycle # 53 | Elapsed:  3.0m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:36:06] INFO: Cycle # 54 | Elapsed:  3.1m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:36:09] INFO: Cycle # 55 | Elapsed:  3.1m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:36:12] INFO: Cycle # 56 | Elapsed:  3.2m/60.0m | Slots: 1/3 [baton (-1.36%)] | Realized PnL: -0.0043 SOL
+[02:36:16] INFO: Cycle # 57 | Elapsed:  3.3m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:19] INFO: Cycle # 58 | Elapsed:  3.3m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:22] INFO: Cycle # 59 | Elapsed:  3.4m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:25] INFO: Cycle # 60 | Elapsed:  3.4m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:28] INFO: Cycle # 61 | Elapsed:  3.5m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:31] INFO: Cycle # 62 | Elapsed:  3.5m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:34] INFO: Cycle # 63 | Elapsed:  3.6m/60.0m | Slots: 1/3 [baton (-1.33%)] | Realized PnL: -0.0043 SOL
+[02:36:37] INFO: Cycle # 64 | Elapsed:  3.6m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:40] INFO: Cycle # 65 | Elapsed:  3.7m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:43] INFO: Cycle # 66 | Elapsed:  3.7m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:46] INFO: Cycle # 67 | Elapsed:  3.8m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:49] INFO: Cycle # 68 | Elapsed:  3.8m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:52] INFO: Cycle # 69 | Elapsed:  3.9m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:55] INFO: Cycle # 70 | Elapsed:  3.9m/60.0m | Slots: 1/3 [baton (-0.73%)] | Realized PnL: -0.0043 SOL
+[02:36:59] INFO: Cycle # 71 | Elapsed:  4.0m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:02] INFO: Cycle # 72 | Elapsed:  4.0m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:05] INFO: Cycle # 73 | Elapsed:  4.1m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:08] INFO: Cycle # 74 | Elapsed:  4.1m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:11] INFO: Cycle # 75 | Elapsed:  4.2m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:14] INFO: Cycle # 76 | Elapsed:  4.2m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:17] INFO: Cycle # 77 | Elapsed:  4.3m/60.0m | Slots: 1/3 [baton (-1.23%)] | Realized PnL: -0.0043 SOL
+[02:37:21] INFO: Cycle # 78 | Elapsed:  4.3m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:24] INFO: Cycle # 79 | Elapsed:  4.4m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:27] INFO: Cycle # 80 | Elapsed:  4.4m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:30] INFO: Cycle # 81 | Elapsed:  4.5m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:33] INFO: Cycle # 82 | Elapsed:  4.5m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:36] INFO: Cycle # 83 | Elapsed:  4.6m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:39] INFO: Cycle # 84 | Elapsed:  4.6m/60.0m | Slots: 1/3 [baton (-0.90%)] | Realized PnL: -0.0043 SOL
+[02:37:43] INFO: Cycle # 85 | Elapsed:  4.7m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:37:46] INFO: Cycle # 86 | Elapsed:  4.8m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:37:49] INFO: Cycle # 87 | Elapsed:  4.8m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:37:52] INFO: Cycle # 88 | Elapsed:  4.9m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:37:55] INFO: Cycle # 89 | Elapsed:  4.9m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:37:58] INFO: Cycle # 90 | Elapsed:  5.0m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:38:01] INFO: Cycle # 91 | Elapsed:  5.0m/60.0m | Slots: 1/3 [baton (-0.87%)] | Realized PnL: -0.0043 SOL
+[02:38:05] INFO: Cycle # 92 | Elapsed:  5.1m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:09] INFO: Cycle # 93 | Elapsed:  5.1m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:12] INFO: Cycle # 94 | Elapsed:  5.2m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:15] INFO: Cycle # 95 | Elapsed:  5.2m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:18] INFO: Cycle # 96 | Elapsed:  5.3m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:21] INFO: Cycle # 97 | Elapsed:  5.3m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:24] INFO: Cycle # 98 | Elapsed:  5.4m/60.0m | Slots: 1/3 [baton (-1.16%)] | Realized PnL: -0.0043 SOL
+[02:38:27] INFO: Cycle # 99 | Elapsed:  5.4m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:31] INFO: Cycle #100 | Elapsed:  5.5m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:34] INFO: Cycle #101 | Elapsed:  5.5m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:37] INFO: Cycle #102 | Elapsed:  5.6m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:40] INFO: Cycle #103 | Elapsed:  5.6m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:43] INFO: Cycle #104 | Elapsed:  5.7m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:46] INFO: Cycle #105 | Elapsed:  5.7m/60.0m | Slots: 1/3 [baton (-1.17%)] | Realized PnL: -0.0043 SOL
+[02:38:49] INFO: Cycle #106 | Elapsed:  5.8m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:38:53] INFO: Cycle #107 | Elapsed:  5.9m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:38:56] INFO: Cycle #108 | Elapsed:  5.9m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:38:59] INFO: Cycle #109 | Elapsed:  6.0m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:02] INFO: Cycle #110 | Elapsed:  6.0m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:05] INFO: Cycle #111 | Elapsed:  6.1m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:08] INFO: Cycle #112 | Elapsed:  6.1m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:11] INFO: Cycle #113 | Elapsed:  6.2m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:14] INFO: Cycle #114 | Elapsed:  6.2m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:17] INFO: Cycle #115 | Elapsed:  6.3m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:20] INFO: Cycle #116 | Elapsed:  6.3m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:24] INFO: Cycle #117 | Elapsed:  6.4m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:27] INFO: Cycle #118 | Elapsed:  6.4m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:30] INFO: Cycle #119 | Elapsed:  6.5m/60.0m | Slots: 1/3 [baton (-1.14%)] | Realized PnL: -0.0043 SOL
+[02:39:33] INFO: Cycle #120 | Elapsed:  6.5m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:36] INFO: Cycle #121 | Elapsed:  6.6m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:39] INFO: Cycle #122 | Elapsed:  6.6m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:42] INFO: Cycle #123 | Elapsed:  6.7m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:46] INFO: Cycle #124 | Elapsed:  6.7m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:49] INFO: Cycle #125 | Elapsed:  6.8m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:52] INFO: Cycle #126 | Elapsed:  6.8m/60.0m | Slots: 1/3 [baton (-0.93%)] | Realized PnL: -0.0043 SOL
+[02:39:55] INFO: Cycle #127 | Elapsed:  6.9m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:39:58] INFO: Cycle #128 | Elapsed:  7.0m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:02] INFO: Cycle #129 | Elapsed:  7.0m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:05] INFO: Cycle #130 | Elapsed:  7.1m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:08] INFO: Cycle #131 | Elapsed:  7.1m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:11] INFO: Cycle #132 | Elapsed:  7.2m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:14] INFO: Cycle #133 | Elapsed:  7.2m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:17] INFO: Cycle #134 | Elapsed:  7.3m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:20] INFO: Cycle #135 | Elapsed:  7.3m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:23] INFO: Cycle #136 | Elapsed:  7.4m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:26] INFO: Cycle #137 | Elapsed:  7.4m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:30] INFO: Cycle #138 | Elapsed:  7.5m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:33] INFO: Cycle #139 | Elapsed:  7.5m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:36] INFO: Cycle #140 | Elapsed:  7.6m/60.0m | Slots: 1/3 [baton (-1.27%)] | Realized PnL: -0.0043 SOL
+[02:40:40] INFO: Cycle #141 | Elapsed:  7.6m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:40:43] INFO: Cycle #142 | Elapsed:  7.7m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:40:46] INFO: Cycle #143 | Elapsed:  7.7m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:40:49] INFO: Cycle #144 | Elapsed:  7.8m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:40:52] INFO: Cycle #145 | Elapsed:  7.8m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:40:55] INFO: Cycle #146 | Elapsed:  7.9m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:40:58] INFO: Cycle #147 | Elapsed:  7.9m/60.0m | Slots: 1/3 [baton (-1.13%)] | Realized PnL: -0.0043 SOL
+[02:41:01] INFO: Cycle #148 | Elapsed:  8.0m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:04] INFO: Cycle #149 | Elapsed:  8.1m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:07] INFO: Cycle #150 | Elapsed:  8.1m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:10] INFO: Cycle #151 | Elapsed:  8.2m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:13] INFO: Cycle #152 | Elapsed:  8.2m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:16] INFO: Cycle #153 | Elapsed:  8.3m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:20] INFO: Cycle #154 | Elapsed:  8.3m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:23] INFO: Cycle #155 | Elapsed:  8.4m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:26] INFO: Cycle #156 | Elapsed:  8.4m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:29] INFO: Cycle #157 | Elapsed:  8.5m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:32] INFO: Cycle #158 | Elapsed:  8.5m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:35] INFO: Cycle #159 | Elapsed:  8.6m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:38] INFO: Cycle #160 | Elapsed:  8.6m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:42] INFO: Cycle #161 | Elapsed:  8.7m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:45] INFO: Cycle #162 | Elapsed:  8.7m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:48] INFO: Cycle #163 | Elapsed:  8.8m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:51] INFO: Cycle #164 | Elapsed:  8.8m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:54] INFO: Cycle #165 | Elapsed:  8.9m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:41:57] INFO: Cycle #166 | Elapsed:  8.9m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:42:00] INFO: Cycle #167 | Elapsed:  9.0m/60.0m | Slots: 1/3 [baton (-0.86%)] | Realized PnL: -0.0043 SOL
+[02:42:04] INFO: Cycle #168 | Elapsed:  9.1m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:07] INFO: Cycle #169 | Elapsed:  9.1m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:10] INFO: Cycle #170 | Elapsed:  9.2m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:13] INFO: Cycle #171 | Elapsed:  9.2m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:16] INFO: Cycle #172 | Elapsed:  9.3m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:19] INFO: Cycle #173 | Elapsed:  9.3m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:22] INFO: Cycle #174 | Elapsed:  9.4m/60.0m | Slots: 1/3 [baton (-0.88%)] | Realized PnL: -0.0043 SOL
+[02:42:26] INFO: ROTATING OUT (100%): baton — Reason: MICRO_HARD_STOP (-1.5%) (PnL: -1.67%) | PnL: -1.67% (-0.0036 SOL)
+[02:42:26] INFO: SLOT UPDATED: baton — MICRO_HARD_STOP (-1.5%) (PnL: -1.67%) (Sold 100%)
+[02:42:26] INFO: CONSOLIDATION COOLDOWN: baton exited. Enforcing 15m cooldown before re-evaluation.
+[02:42:26] INFO: Cycle #175 | Elapsed:  9.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:29] INFO: Cycle #176 | Elapsed:  9.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:32] INFO: Cycle #177 | Elapsed:  9.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:35] INFO: Cycle #178 | Elapsed:  9.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:38] INFO: Cycle #179 | Elapsed:  9.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:41] INFO: Cycle #180 | Elapsed:  9.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:44] INFO: Cycle #181 | Elapsed:  9.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:47] INFO: Cycle #182 | Elapsed:  9.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:50] INFO: Cycle #183 | Elapsed:  9.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:53] INFO: Cycle #184 | Elapsed:  9.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:56] INFO: Cycle #185 | Elapsed:  9.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:42:59] INFO: Cycle #186 | Elapsed: 10.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:43:03] INFO: Cycle #187 | Elapsed: 10.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:43:07] INFO: Cycle #188 | Elapsed: 10.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0079 SOL
+[02:43:08] INFO: ENTERING FRESH ROTATION SLOT: GEOM (6dX5M8DY...6cpump) | Mcap: $3,689,820 | Liq: $228,413 | SM: 46 | Size: 0.216 SOL (~$30)
+[02:43:08] INFO: SLOT FILLED: GEOM | Tx: SHADOW_SIM
+[02:43:11] INFO: Cycle #189 | Elapsed: 10.2m/60.0m | Slots: 1/3 [GEOM (+0.00%)] | Realized PnL: -0.0079 SOL
+[02:43:14] INFO: Cycle #190 | Elapsed: 10.2m/60.0m | Slots: 1/3 [GEOM (+0.00%)] | Realized PnL: -0.0079 SOL
+[02:43:17] INFO: Cycle #191 | Elapsed: 10.3m/60.0m | Slots: 1/3 [GEOM (+0.00%)] | Realized PnL: -0.0079 SOL
+[02:43:20] INFO: Cycle #192 | Elapsed: 10.3m/60.0m | Slots: 1/3 [GEOM (+0.00%)] | Realized PnL: -0.0079 SOL
+[02:43:23] INFO: Cycle #193 | Elapsed: 10.4m/60.0m | Slots: 1/3 [GEOM (+0.00%)] | Realized PnL: -0.0079 SOL
+[02:43:27] INFO: Cycle #194 | Elapsed: 10.4m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:30] INFO: Cycle #195 | Elapsed: 10.5m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:33] INFO: Cycle #196 | Elapsed: 10.5m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:36] INFO: Cycle #197 | Elapsed: 10.6m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:39] INFO: Cycle #198 | Elapsed: 10.6m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:42] INFO: Cycle #199 | Elapsed: 10.7m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:45] INFO: Cycle #200 | Elapsed: 10.7m/60.0m | Slots: 1/3 [GEOM (-1.00%)] | Realized PnL: -0.0079 SOL
+[02:43:48] INFO: Cycle #201 | Elapsed: 10.8m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:43:51] INFO: Cycle #202 | Elapsed: 10.8m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:43:54] INFO: Cycle #203 | Elapsed: 10.9m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:43:57] INFO: Cycle #204 | Elapsed: 10.9m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:00] INFO: Cycle #205 | Elapsed: 11.0m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:03] INFO: Cycle #206 | Elapsed: 11.0m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:06] INFO: Cycle #207 | Elapsed: 11.1m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:10] INFO: Cycle #208 | Elapsed: 11.2m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:13] INFO: Cycle #209 | Elapsed: 11.2m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:16] INFO: Cycle #210 | Elapsed: 11.3m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:19] INFO: Cycle #211 | Elapsed: 11.3m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:22] INFO: Cycle #212 | Elapsed: 11.4m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:25] INFO: Cycle #213 | Elapsed: 11.4m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:28] INFO: Cycle #214 | Elapsed: 11.5m/60.0m | Slots: 1/3 [GEOM (-1.01%)] | Realized PnL: -0.0079 SOL
+[02:44:32] INFO: Cycle #215 | Elapsed: 11.5m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:35] INFO: Cycle #216 | Elapsed: 11.6m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:38] INFO: Cycle #217 | Elapsed: 11.6m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:41] INFO: Cycle #218 | Elapsed: 11.7m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:44] INFO: Cycle #219 | Elapsed: 11.7m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:47] INFO: Cycle #220 | Elapsed: 11.8m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:50] INFO: Cycle #221 | Elapsed: 11.8m/60.0m | Slots: 1/3 [GEOM (-1.11%)] | Realized PnL: -0.0079 SOL
+[02:44:54] INFO: Cycle #222 | Elapsed: 11.9m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:44:57] INFO: Cycle #223 | Elapsed: 11.9m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:00] INFO: Cycle #224 | Elapsed: 12.0m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:03] INFO: Cycle #225 | Elapsed: 12.0m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:06] INFO: Cycle #226 | Elapsed: 12.1m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:09] INFO: Cycle #227 | Elapsed: 12.1m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:12] INFO: Cycle #228 | Elapsed: 12.2m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:16] INFO: Cycle #229 | Elapsed: 12.3m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:19] INFO: Cycle #230 | Elapsed: 12.3m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:22] INFO: Cycle #231 | Elapsed: 12.4m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:25] INFO: Cycle #232 | Elapsed: 12.4m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:28] INFO: Cycle #233 | Elapsed: 12.5m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:31] INFO: Cycle #234 | Elapsed: 12.5m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:34] INFO: Cycle #235 | Elapsed: 12.6m/60.0m | Slots: 1/3 [GEOM (-1.22%)] | Realized PnL: -0.0079 SOL
+[02:45:38] INFO: Cycle #236 | Elapsed: 12.6m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:45:41] INFO: Cycle #237 | Elapsed: 12.7m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:45:44] INFO: Cycle #238 | Elapsed: 12.7m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:45:47] INFO: Cycle #239 | Elapsed: 12.8m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:45:50] INFO: Cycle #240 | Elapsed: 12.8m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:45:53] INFO: Cycle #241 | Elapsed: 12.9m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:45:56] INFO: Cycle #242 | Elapsed: 12.9m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:00] INFO: Cycle #243 | Elapsed: 13.0m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:03] INFO: Cycle #244 | Elapsed: 13.0m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:06] INFO: Cycle #245 | Elapsed: 13.1m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:09] INFO: Cycle #246 | Elapsed: 13.1m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:12] INFO: Cycle #247 | Elapsed: 13.2m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:15] INFO: Cycle #248 | Elapsed: 13.2m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:18] INFO: Cycle #249 | Elapsed: 13.3m/60.0m | Slots: 1/3 [GEOM (-1.38%)] | Realized PnL: -0.0079 SOL
+[02:46:22] INFO: ROTATING OUT (100%): GEOM — Reason: MICRO_HARD_STOP (-1.5%) (PnL: -2.89%) | PnL: -2.00% (-0.0043 SOL)
+[02:46:22] INFO: SLOT UPDATED: GEOM — MICRO_HARD_STOP (-1.5%) (PnL: -2.89%) (Sold 100%)
+[02:46:22] INFO: CONSOLIDATION COOLDOWN: GEOM exited. Enforcing 15m cooldown before re-evaluation.
+[02:46:22] INFO: Cycle #250 | Elapsed: 13.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:25] INFO: Cycle #251 | Elapsed: 13.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:28] INFO: Cycle #252 | Elapsed: 13.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:31] INFO: Cycle #253 | Elapsed: 13.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:34] INFO: Cycle #254 | Elapsed: 13.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:37] INFO: Cycle #255 | Elapsed: 13.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:40] INFO: Cycle #256 | Elapsed: 13.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:44] INFO: Cycle #257 | Elapsed: 13.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:47] INFO: Cycle #258 | Elapsed: 13.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:50] INFO: Cycle #259 | Elapsed: 13.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:53] INFO: Cycle #260 | Elapsed: 13.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:56] INFO: Cycle #261 | Elapsed: 13.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:46:59] INFO: Cycle #262 | Elapsed: 14.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:02] INFO: Cycle #263 | Elapsed: 14.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:07] INFO: Cycle #264 | Elapsed: 14.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:10] INFO: Cycle #265 | Elapsed: 14.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:13] INFO: Cycle #266 | Elapsed: 14.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:16] INFO: Cycle #267 | Elapsed: 14.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:19] INFO: Cycle #268 | Elapsed: 14.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:22] INFO: Cycle #269 | Elapsed: 14.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:25] INFO: Cycle #270 | Elapsed: 14.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:29] INFO: Cycle #271 | Elapsed: 14.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:32] INFO: Cycle #272 | Elapsed: 14.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:35] INFO: Cycle #273 | Elapsed: 14.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:38] INFO: Cycle #274 | Elapsed: 14.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:41] INFO: Cycle #275 | Elapsed: 14.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:44] INFO: Cycle #276 | Elapsed: 14.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:47] INFO: Cycle #277 | Elapsed: 14.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:51] INFO: Cycle #278 | Elapsed: 14.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:54] INFO: Cycle #279 | Elapsed: 14.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:47:57] INFO: Cycle #280 | Elapsed: 14.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:00] INFO: Cycle #281 | Elapsed: 15.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:03] INFO: Cycle #282 | Elapsed: 15.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:06] INFO: Cycle #283 | Elapsed: 15.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:09] INFO: Cycle #284 | Elapsed: 15.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:12] INFO: Cycle #285 | Elapsed: 15.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:15] INFO: Cycle #286 | Elapsed: 15.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:18] INFO: Cycle #287 | Elapsed: 15.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:21] INFO: Cycle #288 | Elapsed: 15.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:24] INFO: Cycle #289 | Elapsed: 15.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:27] INFO: Cycle #290 | Elapsed: 15.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:30] INFO: Cycle #291 | Elapsed: 15.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:33] INFO: Cycle #292 | Elapsed: 15.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:36] INFO: Cycle #293 | Elapsed: 15.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:39] INFO: Cycle #294 | Elapsed: 15.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:42] INFO: Cycle #295 | Elapsed: 15.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:45] INFO: Cycle #296 | Elapsed: 15.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:49] INFO: Cycle #297 | Elapsed: 15.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:52] INFO: Cycle #298 | Elapsed: 15.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:48:57] INFO: Cycle #299 | Elapsed: 15.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:00] INFO: Cycle #300 | Elapsed: 16.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:03] INFO: Cycle #301 | Elapsed: 16.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:06] INFO: Cycle #302 | Elapsed: 16.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:09] INFO: Cycle #303 | Elapsed: 16.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:12] INFO: Cycle #304 | Elapsed: 16.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:16] INFO: Cycle #305 | Elapsed: 16.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:19] INFO: Cycle #306 | Elapsed: 16.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:22] INFO: Cycle #307 | Elapsed: 16.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:25] INFO: Cycle #308 | Elapsed: 16.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:28] INFO: Cycle #309 | Elapsed: 16.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:31] INFO: Cycle #310 | Elapsed: 16.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:34] INFO: Cycle #311 | Elapsed: 16.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:38] INFO: Cycle #312 | Elapsed: 16.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:41] INFO: Cycle #313 | Elapsed: 16.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:44] INFO: Cycle #314 | Elapsed: 16.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:47] INFO: Cycle #315 | Elapsed: 16.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:50] INFO: Cycle #316 | Elapsed: 16.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:53] INFO: Cycle #317 | Elapsed: 16.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:49:56] INFO: Cycle #318 | Elapsed: 16.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:00] INFO: Cycle #319 | Elapsed: 17.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:03] INFO: Cycle #320 | Elapsed: 17.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:06] INFO: Cycle #321 | Elapsed: 17.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:09] INFO: Cycle #322 | Elapsed: 17.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:12] INFO: Cycle #323 | Elapsed: 17.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:15] INFO: Cycle #324 | Elapsed: 17.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:18] INFO: Cycle #325 | Elapsed: 17.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:22] INFO: Cycle #326 | Elapsed: 17.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:26] INFO: Cycle #327 | Elapsed: 17.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:29] INFO: Cycle #328 | Elapsed: 17.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:32] INFO: Cycle #329 | Elapsed: 17.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:35] INFO: Cycle #330 | Elapsed: 17.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:38] INFO: Cycle #331 | Elapsed: 17.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:41] INFO: Cycle #332 | Elapsed: 17.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:44] INFO: Cycle #333 | Elapsed: 17.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:47] INFO: Cycle #334 | Elapsed: 17.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:50] INFO: Cycle #335 | Elapsed: 17.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:53] INFO: Cycle #336 | Elapsed: 17.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:50:56] INFO: Cycle #337 | Elapsed: 17.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:00] INFO: Cycle #338 | Elapsed: 18.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:03] INFO: Cycle #339 | Elapsed: 18.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:06] INFO: Cycle #340 | Elapsed: 18.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:07] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,960,780 | Liq: $185,706 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:07] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 7.3m)"}
+[02:51:10] INFO: Cycle #341 | Elapsed: 18.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:11] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,960,780 | Liq: $185,706 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:11] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 7.2m)"}
+[02:51:14] INFO: Cycle #342 | Elapsed: 18.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:14] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,960,780 | Liq: $185,706 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:14] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 7.1m)"}
+[02:51:17] INFO: Cycle #343 | Elapsed: 18.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:18] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,960,780 | Liq: $185,706 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:18] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 7.1m)"}
+[02:51:21] INFO: Cycle #344 | Elapsed: 18.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:22] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,960,780 | Liq: $185,706 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:22] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 7.0m)"}
+[02:51:25] INFO: Cycle #345 | Elapsed: 18.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:25] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,960,780 | Liq: $185,706 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:25] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.9m)"}
+[02:51:28] INFO: Cycle #346 | Elapsed: 18.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:32] INFO: Cycle #347 | Elapsed: 18.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:35] INFO: Cycle #348 | Elapsed: 18.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:38] INFO: Cycle #349 | Elapsed: 18.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:41] INFO: Cycle #350 | Elapsed: 18.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:44] INFO: Cycle #351 | Elapsed: 18.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:47] INFO: Cycle #352 | Elapsed: 18.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:48] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:48] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.6m)"}
+[02:51:51] INFO: Cycle #353 | Elapsed: 18.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:52] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:52] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.5m)"}
+[02:51:55] INFO: Cycle #354 | Elapsed: 18.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:56] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:56] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.4m)"}
+[02:51:59] INFO: Cycle #355 | Elapsed: 19.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:51:59] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:51:59] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.4m)"}
+[02:52:02] INFO: Cycle #356 | Elapsed: 19.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:03] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:03] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.3m)"}
+[02:52:06] INFO: Cycle #357 | Elapsed: 19.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:08] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:08] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.2m)"}
+[02:52:11] INFO: Cycle #358 | Elapsed: 19.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:12] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:12] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.2m)"}
+[02:52:15] INFO: Cycle #359 | Elapsed: 19.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:16] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:16] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.1m)"}
+[02:52:19] INFO: Cycle #360 | Elapsed: 19.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:20] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:20] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.0m)"}
+[02:52:23] INFO: Cycle #361 | Elapsed: 19.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:23] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:23] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 6.0m)"}
+[02:52:26] INFO: Cycle #362 | Elapsed: 19.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:27] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:27] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.9m)"}
+[02:52:30] INFO: Cycle #363 | Elapsed: 19.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:31] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,968,160 | Liq: $186,072 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:31] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.9m)"}
+[02:52:34] INFO: Cycle #364 | Elapsed: 19.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:35] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,923,080 | Liq: $185,603 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:35] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.8m)"}
+[02:52:38] INFO: Cycle #365 | Elapsed: 19.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:38] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,923,080 | Liq: $185,603 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:38] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.7m)"}
+[02:52:41] INFO: Cycle #366 | Elapsed: 19.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:42] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,923,080 | Liq: $185,603 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:42] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.7m)"}
+[02:52:45] INFO: Cycle #367 | Elapsed: 19.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:46] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,923,080 | Liq: $185,603 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:46] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.6m)"}
+[02:52:49] INFO: Cycle #368 | Elapsed: 19.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:50] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,923,080 | Liq: $185,603 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:50] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.5m)"}
+[02:52:53] INFO: Cycle #369 | Elapsed: 19.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:52:53] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,923,080 | Liq: $185,603 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:52:53] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 5.5m)"}
+[02:52:56] INFO: Cycle #370 | Elapsed: 19.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:00] INFO: Cycle #371 | Elapsed: 20.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:03] INFO: Cycle #372 | Elapsed: 20.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:06] INFO: Cycle #373 | Elapsed: 20.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:09] INFO: Cycle #374 | Elapsed: 20.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:12] INFO: Cycle #375 | Elapsed: 20.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:15] INFO: Cycle #376 | Elapsed: 20.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:18] INFO: Cycle #377 | Elapsed: 20.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:21] INFO: Cycle #378 | Elapsed: 20.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:24] INFO: Cycle #379 | Elapsed: 20.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:27] INFO: Cycle #380 | Elapsed: 20.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:30] INFO: Cycle #381 | Elapsed: 20.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:33] INFO: Cycle #382 | Elapsed: 20.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:37] INFO: Cycle #383 | Elapsed: 20.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:42] INFO: Cycle #384 | Elapsed: 20.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:45] INFO: Cycle #385 | Elapsed: 20.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:48] INFO: Cycle #386 | Elapsed: 20.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:51] INFO: Cycle #387 | Elapsed: 20.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:54] INFO: Cycle #388 | Elapsed: 20.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:53:57] INFO: Cycle #389 | Elapsed: 20.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:00] INFO: Cycle #390 | Elapsed: 21.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:03] INFO: Cycle #391 | Elapsed: 21.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:06] INFO: Cycle #392 | Elapsed: 21.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:09] INFO: Cycle #393 | Elapsed: 21.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:12] INFO: Cycle #394 | Elapsed: 21.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:16] INFO: Cycle #395 | Elapsed: 21.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:19] INFO: Cycle #396 | Elapsed: 21.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:22] INFO: Cycle #397 | Elapsed: 21.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:25] INFO: Cycle #398 | Elapsed: 21.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:28] INFO: Cycle #399 | Elapsed: 21.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:31] INFO: Cycle #400 | Elapsed: 21.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:34] INFO: Cycle #401 | Elapsed: 21.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:37] INFO: Cycle #402 | Elapsed: 21.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:40] INFO: Cycle #403 | Elapsed: 21.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:43] INFO: Cycle #404 | Elapsed: 21.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:44] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,954,220 | Liq: $185,538 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:54:44] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 3.6m)"}
+[02:54:47] INFO: Cycle #405 | Elapsed: 21.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:48] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,954,220 | Liq: $185,538 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:54:48] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 3.6m)"}
+[02:54:51] INFO: Cycle #406 | Elapsed: 21.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:52] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,954,220 | Liq: $185,538 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:54:52] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 3.5m)"}
+[02:54:55] INFO: Cycle #407 | Elapsed: 21.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:55] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,954,220 | Liq: $185,538 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:54:55] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 3.4m)"}
+[02:54:58] INFO: Cycle #408 | Elapsed: 22.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:54:59] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $3,954,220 | Liq: $185,538 | SM: 6 | Size: 0.216 SOL (~$30)
+[02:54:59] WARNING: BUY REJECTED (409): {"detail":"BLOCK kill-switch 已触发 (冷静期剩余 3.4m)"}
+[02:55:03] INFO: Cycle #409 | Elapsed: 22.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:06] INFO: Cycle #410 | Elapsed: 22.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:09] INFO: Cycle #411 | Elapsed: 22.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:12] INFO: Cycle #412 | Elapsed: 22.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:15] INFO: Cycle #413 | Elapsed: 22.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:18] INFO: Cycle #414 | Elapsed: 22.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:21] INFO: Cycle #415 | Elapsed: 22.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:26] INFO: Cycle #416 | Elapsed: 22.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:29] INFO: Cycle #417 | Elapsed: 22.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:32] INFO: Cycle #418 | Elapsed: 22.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:35] INFO: Cycle #419 | Elapsed: 22.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:38] INFO: Cycle #420 | Elapsed: 22.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:41] INFO: Cycle #421 | Elapsed: 22.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:44] INFO: Cycle #422 | Elapsed: 22.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:47] INFO: Cycle #423 | Elapsed: 22.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:50] INFO: Cycle #424 | Elapsed: 22.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:53] INFO: Cycle #425 | Elapsed: 22.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:55:57] INFO: Cycle #426 | Elapsed: 22.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:00] INFO: Cycle #427 | Elapsed: 23.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:03] INFO: Cycle #428 | Elapsed: 23.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:06] INFO: Cycle #429 | Elapsed: 23.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:09] INFO: Cycle #430 | Elapsed: 23.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:12] INFO: Cycle #431 | Elapsed: 23.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:15] INFO: Cycle #432 | Elapsed: 23.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:18] INFO: Cycle #433 | Elapsed: 23.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:21] INFO: Cycle #434 | Elapsed: 23.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:24] INFO: Cycle #435 | Elapsed: 23.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:28] INFO: Cycle #436 | Elapsed: 23.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:31] INFO: Cycle #437 | Elapsed: 23.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:34] INFO: Cycle #438 | Elapsed: 23.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:37] INFO: Cycle #439 | Elapsed: 23.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:40] INFO: Cycle #440 | Elapsed: 23.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:43] INFO: Cycle #441 | Elapsed: 23.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:46] INFO: Cycle #442 | Elapsed: 23.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:49] INFO: Cycle #443 | Elapsed: 23.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:52] INFO: Cycle #444 | Elapsed: 23.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:55] INFO: Cycle #445 | Elapsed: 23.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:56:58] INFO: Cycle #446 | Elapsed: 24.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:02] INFO: Cycle #447 | Elapsed: 24.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:05] INFO: Cycle #448 | Elapsed: 24.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:08] INFO: Cycle #449 | Elapsed: 24.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:11] INFO: Cycle #450 | Elapsed: 24.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:14] INFO: Cycle #451 | Elapsed: 24.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:17] INFO: Cycle #452 | Elapsed: 24.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:20] INFO: Cycle #453 | Elapsed: 24.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:23] INFO: Cycle #454 | Elapsed: 24.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:26] INFO: Cycle #455 | Elapsed: 24.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:29] INFO: Cycle #456 | Elapsed: 24.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:32] INFO: Cycle #457 | Elapsed: 24.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:36] INFO: Cycle #458 | Elapsed: 24.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:39] INFO: Cycle #459 | Elapsed: 24.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:42] INFO: Cycle #460 | Elapsed: 24.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:45] INFO: Cycle #461 | Elapsed: 24.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:48] INFO: Cycle #462 | Elapsed: 24.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:51] INFO: Cycle #463 | Elapsed: 24.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:54] INFO: Cycle #464 | Elapsed: 24.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:57:58] INFO: Cycle #465 | Elapsed: 25.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:01] INFO: Cycle #466 | Elapsed: 25.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:04] INFO: Cycle #467 | Elapsed: 25.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:07] INFO: Cycle #468 | Elapsed: 25.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:10] INFO: Cycle #469 | Elapsed: 25.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:13] INFO: Cycle #470 | Elapsed: 25.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:16] INFO: Cycle #471 | Elapsed: 25.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:20] INFO: Cycle #472 | Elapsed: 25.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:23] INFO: Cycle #473 | Elapsed: 25.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:26] INFO: Cycle #474 | Elapsed: 25.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:29] INFO: Cycle #475 | Elapsed: 25.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:32] INFO: Cycle #476 | Elapsed: 25.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:35] INFO: Cycle #477 | Elapsed: 25.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:38] INFO: Cycle #478 | Elapsed: 25.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:42] INFO: Cycle #479 | Elapsed: 25.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0122 SOL
+[02:58:43] INFO: ENTERING FRESH ROTATION SLOT: baton (Hg5Ja55T...hgpump) | Mcap: $1,728,670 | Liq: $218,942 | SM: 455 | Size: 0.216 SOL (~$30)
+[02:58:43] INFO: SLOT FILLED: baton | Tx: SHADOW_SIM
+[02:58:46] INFO: Cycle #480 | Elapsed: 25.7m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:58:49] INFO: Cycle #481 | Elapsed: 25.8m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:58:52] INFO: Cycle #482 | Elapsed: 25.8m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:58:55] INFO: Cycle #483 | Elapsed: 25.9m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:58:58] INFO: Cycle #484 | Elapsed: 25.9m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:01] INFO: Cycle #485 | Elapsed: 26.0m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:05] INFO: Cycle #486 | Elapsed: 26.1m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:08] INFO: Cycle #487 | Elapsed: 26.1m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:11] INFO: Cycle #488 | Elapsed: 26.2m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:14] INFO: Cycle #489 | Elapsed: 26.2m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:17] INFO: Cycle #490 | Elapsed: 26.3m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:20] INFO: Cycle #491 | Elapsed: 26.3m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:23] INFO: Cycle #492 | Elapsed: 26.4m/60.0m | Slots: 1/3 [baton (+0.00%)] | Realized PnL: -0.0122 SOL
+[02:59:27] INFO: Cycle #493 | Elapsed: 26.4m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:30] INFO: Cycle #494 | Elapsed: 26.5m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:33] INFO: Cycle #495 | Elapsed: 26.5m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:36] INFO: Cycle #496 | Elapsed: 26.6m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:39] INFO: Cycle #497 | Elapsed: 26.6m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:42] INFO: Cycle #498 | Elapsed: 26.7m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:45] INFO: Cycle #499 | Elapsed: 26.7m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:49] INFO: Cycle #500 | Elapsed: 26.8m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:52] INFO: Cycle #501 | Elapsed: 26.8m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:55] INFO: Cycle #502 | Elapsed: 26.9m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[02:59:58] INFO: Cycle #503 | Elapsed: 26.9m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[03:00:01] INFO: Cycle #504 | Elapsed: 27.0m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[03:00:04] INFO: Cycle #505 | Elapsed: 27.0m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[03:00:07] INFO: Cycle #506 | Elapsed: 27.1m/60.0m | Slots: 1/3 [baton (-0.44%)] | Realized PnL: -0.0122 SOL
+[03:00:11] INFO: RATCHET VAULT LOCKED: baton reached +1.44%. Stop floor raised to +0.50% [TIER_1_SCOUT_FLOOR (+0.50%)].
+[03:00:11] INFO: Cycle #507 | Elapsed: 27.2m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:14] INFO: Cycle #508 | Elapsed: 27.2m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:17] INFO: Cycle #509 | Elapsed: 27.3m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:20] INFO: Cycle #510 | Elapsed: 27.3m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:23] INFO: Cycle #511 | Elapsed: 27.4m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:26] INFO: Cycle #512 | Elapsed: 27.4m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:29] INFO: Cycle #513 | Elapsed: 27.5m/60.0m | Slots: 1/3 [baton (+1.44%)] | Realized PnL: -0.0122 SOL
+[03:00:34] INFO: Cycle #514 | Elapsed: 27.6m/60.0m | Slots: 1/3 [baton (+1.45%)] | Realized PnL: -0.0122 SOL
+[03:00:37] INFO: Cycle #515 | Elapsed: 27.6m/60.0m | Slots: 1/3 [baton (+1.45%)] | Realized PnL: -0.0122 SOL
+[03:00:40] INFO: Cycle #516 | Elapsed: 27.7m/60.0m | Slots: 1/3 [baton (+1.45%)] | Realized PnL: -0.0122 SOL
+[03:00:43] INFO: Cycle #517 | Elapsed: 27.7m/60.0m | Slots: 1/3 [baton (+1.45%)] | Realized PnL: -0.0122 SOL
+[03:00:46] INFO: Cycle #518 | Elapsed: 27.8m/60.0m | Slots: 1/3 [baton (+1.45%)] | Realized PnL: -0.0122 SOL
+[03:00:49] INFO: Cycle #519 | Elapsed: 27.8m/60.0m | Slots: 1/3 [baton (+1.45%)] | Realized PnL: -0.0122 SOL
+[03:00:53] INFO: ROTATING OUT (100%): baton — Reason: RATCHET_VAULT_EXIT (+0.50% floor hit, PnL: 0.50%) | PnL: +0.50% (+0.0011 SOL)
+[03:00:53] INFO: SLOT UPDATED: baton — RATCHET_VAULT_EXIT (+0.50% floor hit, PnL: 0.50%) (Sold 100%)
+[03:00:53] INFO: CONSOLIDATION COOLDOWN: baton exited. Enforcing 15m cooldown before re-evaluation.
+[03:00:53] INFO: Cycle #520 | Elapsed: 27.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:00:56] INFO: Cycle #521 | Elapsed: 27.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:00:59] INFO: Cycle #522 | Elapsed: 28.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:02] INFO: Cycle #523 | Elapsed: 28.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:05] INFO: Cycle #524 | Elapsed: 28.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:08] INFO: Cycle #525 | Elapsed: 28.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:11] INFO: Cycle #526 | Elapsed: 28.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:15] INFO: Cycle #527 | Elapsed: 28.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:18] INFO: Cycle #528 | Elapsed: 28.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:21] INFO: Cycle #529 | Elapsed: 28.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:24] INFO: Cycle #530 | Elapsed: 28.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:27] INFO: Cycle #531 | Elapsed: 28.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:30] INFO: Cycle #532 | Elapsed: 28.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:34] INFO: Cycle #533 | Elapsed: 28.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:37] INFO: Cycle #534 | Elapsed: 28.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:40] INFO: Cycle #535 | Elapsed: 28.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:43] INFO: Cycle #536 | Elapsed: 28.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:46] INFO: Cycle #537 | Elapsed: 28.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:49] INFO: Cycle #538 | Elapsed: 28.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:52] INFO: Cycle #539 | Elapsed: 28.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:55] INFO: Cycle #540 | Elapsed: 28.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:01:59] INFO: Cycle #541 | Elapsed: 29.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:02] INFO: Cycle #542 | Elapsed: 29.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:05] INFO: Cycle #543 | Elapsed: 29.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:08] INFO: Cycle #544 | Elapsed: 29.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:11] INFO: Cycle #545 | Elapsed: 29.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:14] INFO: Cycle #546 | Elapsed: 29.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:17] INFO: Cycle #547 | Elapsed: 29.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:21] INFO: Cycle #548 | Elapsed: 29.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:24] INFO: Cycle #549 | Elapsed: 29.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:27] INFO: Cycle #550 | Elapsed: 29.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:30] INFO: Cycle #551 | Elapsed: 29.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:33] INFO: Cycle #552 | Elapsed: 29.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:36] INFO: Cycle #553 | Elapsed: 29.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:39] INFO: Cycle #554 | Elapsed: 29.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:43] INFO: Cycle #555 | Elapsed: 29.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:46] INFO: Cycle #556 | Elapsed: 29.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:49] INFO: Cycle #557 | Elapsed: 29.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:52] INFO: Cycle #558 | Elapsed: 29.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:55] INFO: Cycle #559 | Elapsed: 29.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:02:58] INFO: Cycle #560 | Elapsed: 30.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:02] INFO: Cycle #561 | Elapsed: 30.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:06] INFO: Cycle #562 | Elapsed: 30.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:09] INFO: Cycle #563 | Elapsed: 30.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:12] INFO: Cycle #564 | Elapsed: 30.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:15] INFO: Cycle #565 | Elapsed: 30.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:18] INFO: Cycle #566 | Elapsed: 30.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:21] INFO: Cycle #567 | Elapsed: 30.3m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:24] INFO: Cycle #568 | Elapsed: 30.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:28] INFO: Cycle #569 | Elapsed: 30.4m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:31] INFO: Cycle #570 | Elapsed: 30.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:34] INFO: Cycle #571 | Elapsed: 30.5m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:37] INFO: Cycle #572 | Elapsed: 30.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:40] INFO: Cycle #573 | Elapsed: 30.6m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:43] INFO: Cycle #574 | Elapsed: 30.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:46] INFO: Cycle #575 | Elapsed: 30.7m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:50] INFO: Cycle #576 | Elapsed: 30.8m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:53] INFO: Cycle #577 | Elapsed: 30.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:56] INFO: Cycle #578 | Elapsed: 30.9m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:03:59] INFO: Cycle #579 | Elapsed: 31.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:04:02] INFO: Cycle #580 | Elapsed: 31.0m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:04:05] INFO: Cycle #581 | Elapsed: 31.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:04:08] INFO: Cycle #582 | Elapsed: 31.1m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL
+[03:04:12] INFO: Cycle #583 | Elapsed: 31.2m/60.0m | Slots: 0/3 [Empty] | Realized PnL: -0.0112 SOL

@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIDA CITADEL // INSTITUTIONAL ON-CHAIN ROTATION &amp; RISK ENGINE</title>
+  
+  <!-- Space Grotesk & JetBrains Mono Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --bg-subtle: #f1f5f9;
+      --panel: #ffffff;
+      --panel-hover: #f8fafc;
+      --border: #e2e8f0;
+      --border-bright: #cbd5e1;
+      --border-dark: #94a3b8;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --text-dim: #94a3b8;
+      
+      /* Executive Swiss Accents - Strictly Zero Cyan/Blue */
+      --green: #16a34a;
+      --green-dim: #f0fdf4;
+      --green-border: #bbf7d0;
+      --amber: #d97706;
+      --amber-dim: #fffbeb;
+      --amber-border: #fde68a;
+      --red: #dc2626;
+      --red-dim: #fef2f2;
+      --red-border: #fecaca;
+      
+      --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Top Command Header */
+    .header-bar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      background: var(--text);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .brand-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Executive Navigation Tab System */
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      background: #ffffff;
+      overflow-x: auto;
+    }
+
+    .nav-tabs-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-tab-btn {
+      padding: 12px 18px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+    }
+
+    .nav-tab-btn:hover {
+      color: var(--text);
+      background: var(--bg-subtle);
+    }
+
+    .nav-tab-btn.active {
+      color: var(--text);
+      font-weight: 700;
+      border-bottom-color: var(--text);
+      background: transparent;
+    }
+
+    .nav-tab-btn .badge {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 10px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .nav-tab-btn.active .badge {
+      background: var(--green-dim);
+      border-color: var(--green-border);
+      color: var(--green);
+    }
+
+    /* Telemetry HUD in Top Bar */
+    .telemetry-strip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+    }
+
+    .tel-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .tel-pill .k { color: var(--text-muted); font-size: 10px; }
+    .tel-pill .v { font-weight: 700; color: var(--text); }
+    .tel-pill.green { background: var(--green-dim); border-color: var(--green-border); }
+    .tel-pill.green .v { color: var(--green); }
+    .tel-pill.amber { background: var(--amber-dim); border-color: var(--amber-border); }
+    .tel-pill.amber .v { color: var(--amber); }
+
+    /* Button Controls */
+    .btn-executive {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: var(--text);
+      color: #ffffff;
+      border: 1px solid var(--text);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-executive:hover {
+      background: #1e293b;
+      border-color: #1e293b;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-executive.outline {
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-executive.outline:hover {
+      background: var(--bg-subtle);
+      border-color: var(--border-bright);
+    }
+    .btn-executive.danger {
+      background: var(--red-dim);
+      color: var(--red);
+      border: 1px solid var(--red-border);
+    }
+    .btn-executive.danger:hover {
+      background: #fee2e2;
+    }
+    .btn-executive.success {
+      background: var(--green-dim);
+      color: var(--green);
+      border: 1px solid var(--green-border);
+    }
+    .btn-executive.success:hover {
+      background: #dcfce7;
+    }
+
+    /* Main Container */
+    .app-viewport {
+      max-width: 1720px;
+      margin: 0 auto;
+      padding: 20px 24px 60px 24px;
+    }
+
+    /* Views System (Display Toggling) */
+    .view-page {
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+    .view-page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* KPI Command Bar (Top of Views) */
+    .kpi-command-bar {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .kpi-tile {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .kpi-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .kpi-val {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .kpi-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Card Panels */
+    .section-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .card-hdr {
+      padding: 14px 20px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .card-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .card-title .tag {
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    /* 2-Column Trading Cockpit Grid */
+    .cockpit-grid {
+      display: grid;
+      grid-template-columns: 1fr 390px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .cockpit-main {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cockpit-sidebar {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Live KOL Ticker Tape */
+    .kol-ticker-tape {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 11.5px;
+    }
+
+    .kol-ticker-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      padding: 10px 18px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    .f-chip {
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .f-chip:hover {
+      border-color: var(--border-bright);
+      color: var(--text);
+    }
+    .f-chip.active {
+      background: var(--text);
+      border-color: var(--text);
+      color: #ffffff;
+    }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+      max-height: 560px;
+    }
+
+    table.executive-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    table.executive-table th {
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    table.executive-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+    }
+
+    table.executive-table tr:hover td {
+      background: var(--bg-subtle);
+    }
+
+    .badge-gate {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      font-family: var(--font-sans);
+    }
+    .badge-gate.pass { background: var(--green-dim); color: var(--green); border: 1px solid var(--green-border); }
+    .badge-gate.fail { background: var(--red-dim); color: var(--red); border: 1px solid var(--red-border); }
+    .badge-gate.warn { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-border); }
+
+    .tok-cell { display: flex; flex-direction: column; gap: 2px; }
+    .tok-sym { font-weight: 700; color: var(--text); font-family: var(--font-sans); font-size: 12.5px; }
+    .tok-addr { font-size: 10.5px; color: var(--text-muted); cursor: pointer; text-decoration: underline; }
+    .tok-addr:hover { color: var(--green); }
+
+    /* Active Positions Cards */
+    .positions-vertical-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px;
+      max-height: 640px;
+      overflow-y: auto;
+    }
+
+    .pos-card-compact {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.15s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .pos-card-compact:hover {
+      border-color: var(--border-bright);
+      box-shadow: var(--shadow-md);
+    }
+    .pos-card-compact.winner { border-left: 4px solid var(--green); }
+    .pos-card-compact.loser { border-left: 4px solid var(--red); }
+
+    .pos-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pos-card-sym {
+      font-size: 13.5px;
+      font-weight: 700;
+      font-family: var(--font-sans);
+      color: var(--text);
+    }
+    .pos-card-pnl {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+    .pos-card-pnl.up { color: var(--green); }
+    .pos-card-pnl.dn { color: var(--red); }
+
+    .pos-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      font-size: 11px;
+      background: var(--bg-subtle);
+      padding: 8px 10px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+    }
+    .pos-stats-grid div { display: flex; flex-direction: column; }
+    .pos-stats-grid span { color: var(--text-muted); font-size: 9.5px; }
+    .pos-stats-grid b { color: var(--text); }
+
+    .pos-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 10.5px;
+    }
+    .pos-prot-badge {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Four Gates Funnel Scorecard */
+    .funnel-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 14px;
+    }
+    .funnel-row {
+      display: grid;
+      grid-template-columns: 85px 1fr 50px;
+      align-items: center;
+      gap: 10px;
+      font-size: 11.5px;
+      font-family: var(--font-mono);
+    }
+    .funnel-bar-bg {
+      height: 8px;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .funnel-bar-fill {
+      height: 100%;
+      background: var(--green);
+      border-radius: 4px;
+    }
+
+    /* Live Decision Feed */
+    .decision-log-box {
+      max-height: 240px;
+      overflow-y: auto;
+      padding: 12px 16px;
+      background: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .decision-log-item {
+      display: grid;
+      grid-template-columns: 75px 60px 100px 1fr;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 8px;
+      border-radius: 4px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+    }
+
+    /* Wallet View Elements */
+    .wallet-hero {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .wallet-hero-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .wallet-hero-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .wallet-search-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .wallet-input {
+      flex: 1;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+    }
+    .wallet-input:focus {
+      border-color: var(--text);
+    }
+
+    .wallet-profiles-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .wallet-profile-chip {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      transition: all 0.15s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .wallet-profile-chip:hover {
+      border-color: var(--border-bright);
+    }
+    .wallet-profile-chip.active {
+      border-color: var(--text);
+      background: var(--bg-subtle);
+    }
+    .wp-lbl { font-size: 11px; font-weight: 700; color: var(--text); }
+    .wp-addr { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-muted); }
+
+    .wallet-quad-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .quad-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: var(--shadow-sm);
+    }
+    .quad-lbl { font-size: 10.5px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+    .quad-val { font-family: var(--font-mono); font-size: 22px; font-weight: 700; color: var(--text); }
+    .quad-sub { font-size: 11px; color: var(--text-muted); }
+
+    .giga-gates-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .giga-gate-item {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .giga-gate-item.pass { border-top: 3px solid var(--green); }
+    .giga-gate-item-hdr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: 11.5px;
+    }
+
+    /* Brain & Council Elements */
+    .brain-hero {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brain-monologue-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+    .bm-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .bm-text {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .bm-time {
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      margin-top: 8px;
+    }
+
+    .council-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 20px;
+    }
+
+    .agent-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+    .agent-name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .agent-arg {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Intel Grid */
+    .intel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .intel-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+    .intel-channel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    /* Terminal Window */
+    .terminal-window {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      height: 480px;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+    .terminal-line {
+      display: flex;
+      gap: 10px;
+      padding: 2px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .terminal-ts { color: var(--text-dim); }
+    .terminal-tag { font-weight: 700; }
+    .terminal-content { color: var(--text); flex: 1; word-break: break-all; }
+
+    /* Footer */
+    footer.app-footer {
+      border-top: 1px solid var(--border);
+      padding: 16px 24px;
+      background: #ffffff;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .cockpit-grid { grid-template-columns: 1fr; }
+      .kpi-command-bar { grid-template-columns: repeat(3, 1fr); }
+      .wallet-quad-grid { grid-template-columns: repeat(2, 1fr); }
+      .giga-gates-grid { grid-template-columns: repeat(2, 1fr); }
+      .council-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .kpi-command-bar { grid-template-columns: repeat(2, 1fr); }
+      .wallet-quad-grid { grid-template-columns: 1fr; }
+      .giga-gates-grid { grid-template-columns: 1fr; }
+      .header-top { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .header-nav { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation & Telemetry Bar -->
+  <header class="header-bar">
+    <div class="header-top">
+      <div class="brand-block">
+        <span class="brand-badge">KIDA//CITADEL</span>
+        <div>
+          <div class="brand-title">AUTONOMOUS QUANTITATIVE ROTATION ENGINE</div>
+          <div class="brand-sub">Deterministic Rules &gt; ML Cuts &gt; LLM Synthesis // Space Grotesk Swiss Edition</div>
+        </div>
+      </div>
+
+      <!-- Real-Time Telemetry HUD -->
+      <div class="telemetry-strip">
+        <div class="tel-pill green">
+          <span class="k">STATUS:</span>
+          <span class="v" id="telStatus">ONLINE</span>
+        </div>
+        <div class="tel-pill amber">
+          <span class="k">MODE:</span>
+          <span class="v" id="telMode">SHADOW</span>
+        </div>
+        <div class="tel-pill">
+          <span class="k">SESSION:</span>
+          <span class="v" id="telTimer">60.0m / 60m</span>
+        </div>
+        <div class="tel-pill green">
+          <span class="k">BANKED:</span>
+          <span class="v" id="telRealized">-0.0622 SOL</span>
+        </div>
+        <div class="tel-pill green">
+          <span class="k">FLOATING:</span>
+          <span class="v" id="telFloating">+0.3285 SOL</span>
+        </div>
+        <div class="tel-pill green">
+          <span class="k">NET PROFIT:</span>
+          <span class="v" id="telNet">+0.2663 SOL ($+39.94)</span>
+        </div>
+        <button class="btn-executive" onclick="triggerManualRefresh()">REFRESH</button>
+      </div>
+    </div>
+
+    <!-- The 5 Primary Cohesive Views Tabs -->
+    <div class="header-nav">
+      <div class="nav-tabs-group">
+        <button class="nav-tab-btn active" data-view="token" onclick="switchView('token')">
+          <span>01 TOKEN RADAR &amp; COCKPIT</span>
+          <span class="badge" id="tabBadgeCockpit">100 CANDS</span>
+        </button>
+        <button class="nav-tab-btn" data-view="wallet" onclick="switchView('wallet')">
+          <span>02 MY WALLET &amp; GIGA AUDIT</span>
+          <span class="badge" id="tabBadgeWallet">36 SLOTS</span>
+        </button>
+        <button class="nav-tab-btn" data-view="brain" onclick="switchView('brain')">
+          <span>03 KIDA BRAIN &amp; COUNCIL</span>
+          <span class="badge">23 AGENTS</span>
+        </button>
+        <button class="nav-tab-btn" data-view="intel" onclick="switchView('intel')">
+          <span>04 KOL &amp; TELEGRAM INTEL</span>
+          <span class="badge">6 CHANNELS</span>
+        </button>
+        <button class="nav-tab-btn" data-view="ledger" onclick="switchView('ledger')">
+          <span>05 AUDIT LEDGER &amp; TERMINAL</span>
+          <span class="badge" id="tabBadgeLedger">46 TRADES</span>
+        </button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px;padding:6px 0;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">DEFENSE RATCHET:</span>
+        <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--green);">HARD -7.5% / FLOOR +1.5%</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-viewport">
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 1: TOKEN RADAR & COCKPIT GRID (Radar + Active Positions Together) -->
+    <!-- ===================================================================== -->
+    <main id="view-token" class="view-page active">
+      
+      <!-- Top KPI Command Strip -->
+      <section class="kpi-command-bar">
+        <div class="kpi-tile">
+          <span class="kpi-title">TOTAL TOKENS SCANNED</span>
+          <span class="kpi-val" id="kpiScanned">12,287</span>
+          <span class="kpi-sub">Continuous prefilter feed</span>
+        </div>
+        <div class="kpi-tile">
+          <span class="kpi-title">SAFETY HARD GATES</span>
+          <span class="kpi-val" id="kpiSafety" style="color:var(--green)">1,489</span>
+          <span class="kpi-sub" id="kpiSafetySub">Rugs / honeypots purged</span>
+        </div>
+        <div class="kpi-tile">
+          <span class="kpi-title">SMART MONEY CONFLUENCE</span>
+          <span class="kpi-val" id="kpiConsensus">482</span>
+          <span class="kpi-sub" id="kpiConsensusSub">Smart degens &amp; KOLs</span>
+        </div>
+        <div class="kpi-tile">
+          <span class="kpi-title">ACTIVE ROTATION SLOTS</span>
+          <span class="kpi-val" id="kpiSlots">36 / 36</span>
+          <span class="kpi-sub" id="kpiExposure">Exposure: 3.6000 SOL</span>
+        </div>
+        <div class="kpi-tile">
+          <span class="kpi-title">ACTIVE WIN RATE</span>
+          <span class="kpi-val" id="kpiWinRate" style="color:var(--green)">83.3%</span>
+          <span class="kpi-sub" id="kpiWinRateSub">30 Winners / 6 Drawdowns</span>
+        </div>
+        <div class="kpi-tile">
+          <span class="kpi-title">DEFENSE RATCHET</span>
+          <span class="kpi-val" id="kpiRatchet" style="color:var(--green)">ACTIVE</span>
+          <span class="kpi-sub">Trailing stops locked</span>
+        </div>
+      </section>
+
+      <!-- 2-Column Cockpit Layout: Left is Radar; Right is Positions & Funnel -->
+      <div class="cockpit-grid">
+        
+        <!-- Left Main Deck: Protocol Filter, Radar Table, and Decision Stream -->
+        <div class="cockpit-main">
+          
+          <div class="section-card">
+            <!-- Live KOL Intel Ticker Tape -->
+            <div class="kol-ticker-tape">
+              <div class="kol-ticker-left">
+                <span class="pulse-dot"></span>
+                <span>LIVE TELEGRAM ALPHA CALLERS // 0-LATENCY STREAM</span>
+              </div>
+              <span id="kolStreamMini" style="font-family:var(--font-mono);color:var(--text-muted);">MONITORING 6 VIP CHANNELS</span>
+            </div>
+
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>01 SCREENING RADAR // 100 REAL-TIME CANDIDATES</span>
+                <span class="tag" id="radarLatency">Latency: 142ms</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:11.5px;color:var(--text-muted)">Default Size:</span>
+                <span style="font-family:var(--font-mono);font-weight:700;">0.10 SOL</span>
+              </div>
+            </div>
+
+            <!-- Protocol Filter Strip -->
+            <div class="filter-bar">
+              <div class="f-chip active" onclick="setDexFilter('ALL', this)">ALL CANDIDATES (100)</div>
+              <div class="f-chip" onclick="setDexFilter('RAYDIUM', this)">RAYDIUM</div>
+              <div class="f-chip" onclick="setDexFilter('PUMP.FUN', this)">PUMP.FUN</div>
+              <div class="f-chip" onclick="setDexFilter('METEORA', this)">METEORA</div>
+              <div class="f-chip" onclick="setDexFilter('BUY', this)">QUALIFIED FOR ENTRY</div>
+            </div>
+
+            <!-- 100 Candidates Radar Table -->
+            <div class="table-responsive">
+              <table class="executive-table">
+                <thead>
+                  <tr>
+                    <th>TOKEN / CONTRACT</th>
+                    <th>DEX</th>
+                    <th>GATE SAFETY</th>
+                    <th>BUNDLER</th>
+                    <th>DEV HOLD</th>
+                    <th>TOP 10</th>
+                    <th>SMART CONFLUENCE</th>
+                    <th>5M / 1H CHG</th>
+                    <th>DECISION &amp; RATIONALE</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody id="radarTbody">
+                  <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-muted)">CONNECTING TO 100-TOKEN RADAR STREAM...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Real-Time Decision Stream (trade_decisions.jsonl) -->
+          <div class="section-card">
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>REAL-TIME DECISION STREAM // trade_decisions.jsonl</span>
+                <span class="tag">AUDITED LOG</span>
+              </div>
+              <div style="font-size:11px;color:var(--text-muted);">Deterministic Filters &gt; Council Consensus</div>
+            </div>
+            <div class="decision-log-box" id="decisionFeedBox">
+              <div class="decision-log-item">
+                <span style="color:var(--text-muted)">JUST NOW</span>
+                <span class="badge-gate pass">BUY</span>
+                <span style="font-weight:700;">$LYNKS</span>
+                <span style="color:var(--text-muted);">Smart money 6/4 confluence, dev 0.0%, liquidity $189k passed all 4 gates.</span>
+              </div>
+              <div class="decision-log-item">
+                <span style="color:var(--text-muted)">JUST NOW</span>
+                <span class="badge-gate pass">BUY</span>
+                <span style="font-weight:700;">$PIGGYBANK</span>
+                <span style="color:var(--text-muted);">Volume surge +184%, 0 honeypot, top 10 hold 28.4% safe.</span>
+              </div>
+              <div class="decision-log-item">
+                <span style="color:var(--text-muted)">JUST NOW</span>
+                <span class="badge-gate fail">DROP</span>
+                <span style="font-weight:700;">$RUGGER</span>
+                <span style="color:var(--red);">Dev hold 42.1% exceeds threshold. Purged by Gate 2.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Command Wing: Active Monitored Positions Citadel & Four Gates Funnel -->
+        <div class="cockpit-sidebar">
+          
+          <!-- Monitored Positions Citadel -->
+          <div class="section-card">
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>ACTIVE POSITIONS CITADEL</span>
+                <span class="tag" id="posCountHeader">36 / 36 Slots Filled</span>
+              </div>
+              <div style="font-size:13px;color:var(--green);font-weight:700;font-family:var(--font-mono);" id="posTotalFloating">+0.3285 SOL</div>
+            </div>
+            
+            <div class="positions-vertical-stack" id="positionsVerticalBoard">
+              <div style="text-align:center;padding:32px;color:var(--text-muted);">
+                CONNECTING TO PORTFOLIO POSITION ENGINE...
+              </div>
+            </div>
+          </div>
+
+          <!-- Four Gates Funnel & Risk Gauges -->
+          <div class="section-card">
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>FOUR GATES FUNNEL</span>
+                <span class="tag">REAL-TIME CONVERSION</span>
+              </div>
+            </div>
+            <div class="funnel-list">
+              <div class="funnel-row">
+                <span>1. SCAN</span>
+                <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:100%"></div></div>
+                <span style="text-align:right;">12,287</span>
+              </div>
+              <div class="funnel-row">
+                <span>2. SAFETY</span>
+                <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:12%"></div></div>
+                <span style="text-align:right;">1,489</span>
+              </div>
+              <div class="funnel-row">
+                <span>3. SMART</span>
+                <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:4%"></div></div>
+                <span style="text-align:right;">482</span>
+              </div>
+              <div class="funnel-row">
+                <span>4. ROTATE</span>
+                <div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:1%"></div></div>
+                <span style="text-align:right;color:var(--green);font-weight:700;">36</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 2: MY SOVEREIGN WALLET & GIGA AUDIT SCORECARD (All Wallet Parts) -->
+    <!-- ===================================================================== -->
+    <main id="view-wallet" class="view-page">
+      
+      <!-- Executive Wallet Header -->
+      <div class="wallet-hero">
+        <div>
+          <div class="wallet-hero-title">MY SOVEREIGN WALLET EVALUATION &amp; GIGA AUDIT</div>
+          <div class="wallet-hero-sub">MULTI-CHAIN ON-CHAIN RECORD // 4-GATE GIGA BETA AUDIT // QUANTITATIVE BOT PERFORMANCE</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div class="tel-pill green">
+            <span class="k">EVALUATING:</span>
+            <span class="v" id="mywCurrentAddrShort">Solana Bound Node</span>
+          </div>
+          <button class="btn-executive outline" onclick="copyAddress(document.getElementById('mywCurrentAddrShort').textContent)">COPY ADDRESS</button>
+          <button class="btn-executive" onclick="fetchWalletEngine()">REFRESH AUDIT</button>
+        </div>
+      </div>
+
+      <!-- Quick Address Override Bar -->
+      <div class="wallet-search-bar">
+        <input class="wallet-input" id="mywCustomAddr" placeholder="Audit any custom wallet address or cold vault (press Enter)..." onkeydown="if(event.key==='Enter')applyCustomMyWalletAddr()">
+        <button class="btn-executive" onclick="applyCustomMyWalletAddr()">AUDIT ADDRESS</button>
+        <button class="btn-executive outline" onclick="resetMyWalletToDefault()">RESET TO BOT WALLET</button>
+      </div>
+
+      <!-- Multi-Chain Bound Profiles -->
+      <div class="wallet-profiles-strip" id="mywProfilesGrid">
+        <div class="wallet-profile-chip active">
+          <span class="wp-lbl">SOLANA MASTER</span>
+          <span class="wp-addr">Solana Bound Node (36 Positions)</span>
+        </div>
+        <div class="wallet-profile-chip">
+          <span class="wp-lbl">BASE ARSENAL</span>
+          <span class="wp-addr">0x71c8...a49d (Shadow Mode)</span>
+        </div>
+        <div class="wallet-profile-chip">
+          <span class="wp-lbl">ETHEREUM WHALE</span>
+          <span class="wp-addr">0x4b9a...110e (Cold Vault)</span>
+        </div>
+        <div class="wallet-profile-chip">
+          <span class="wp-lbl">ARBITRUM FAST L2</span>
+          <span class="wp-addr">0x992d...fe10 (Monitoring)</span>
+        </div>
+      </div>
+
+      <!-- Core Performance Quad -->
+      <div class="wallet-quad-grid">
+        <div class="quad-box">
+          <span class="quad-lbl">REALIZED PNL &amp; ROI</span>
+          <span class="quad-val" id="mywRealizedVal" style="color:var(--green)">-0.0622 SOL</span>
+          <span class="quad-sub" id="mywRealizedSub">Disciplined Early Cuts (ROI -1.86%)</span>
+        </div>
+        <div class="quad-box">
+          <span class="quad-lbl">TOTAL CLOSED TRADES</span>
+          <span class="quad-val" id="mywWinRateVal">46 TRADES</span>
+          <span class="quad-sub" id="mywWinRateSub">18 Winners / 28 Stops (39.1% Win Rate)</span>
+        </div>
+        <div class="quad-box">
+          <span class="quad-lbl">PROFIT FACTOR &amp; REWARD</span>
+          <span class="quad-val" id="mywProfitFactorVal">1.07x</span>
+          <span class="quad-sub" id="mywProfitFactorSub">+0.1119 SOL Gained / -0.1740 SOL Lost</span>
+        </div>
+        <div class="quad-box">
+          <span class="quad-lbl">CAPITAL &amp; EXPOSURE</span>
+          <span class="quad-val" id="mywCapitalVal">36 / 36 Slots</span>
+          <span class="quad-sub" id="mywCapitalSub">3.60 SOL Exposure (50% Reserve Safe)</span>
+        </div>
+      </div>
+
+      <!-- The Four Gates Evaluation Scorecard -->
+      <div class="section-card">
+        <div class="card-hdr">
+          <div class="card-title">
+            <span>THE FOUR GATES EVALUATION SCORECARD</span>
+            <span class="tag">GIGA AUDIT PASSED</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--green);font-weight:600;">ZERO LOSS-CUTTING SLIPPAGE</div>
+        </div>
+        <div style="padding:16px;">
+          <div class="giga-gates-grid" id="mywGigaGatesGrid" style="margin-bottom:0;">
+            <div class="giga-gate-item pass">
+              <div class="giga-gate-item-hdr"><span>1. LIQUIDITY DEPTH</span><span style="color:var(--green)">PASSED</span></div>
+              <div style="font-size:11px;color:var(--text-muted)">Pool depth verified above $38k. Slip-free execution confirmed.</div>
+            </div>
+            <div class="giga-gate-item pass">
+              <div class="giga-gate-item-hdr"><span>2. DEV &amp; BUNDLER PURGE</span><span style="color:var(--green)">PASSED</span></div>
+              <div style="font-size:11px;color:var(--text-muted)">0 Honeypots in active slots. Dev hold capped strictly below 4.0%.</div>
+            </div>
+            <div class="giga-gate-item pass">
+              <div class="giga-gate-item-hdr"><span>3. VOLUME ACCELERATION</span><span style="color:var(--green)">PASSED</span></div>
+              <div style="font-size:11px;color:var(--text-muted)">Breakout multiplier verified with dominant 1m buyer inflow.</div>
+            </div>
+            <div class="giga-gate-item pass">
+              <div class="giga-gate-item-hdr"><span>4. SURVIVABILITY RATCHET</span><span style="color:var(--green)">PASSED</span></div>
+              <div style="font-size:11px;color:var(--text-muted)">Hard stop at -7.5%, break-even floor locked at +1.5%.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open Book Active Holdings Table -->
+      <div class="section-card">
+        <div class="card-hdr">
+          <div class="card-title">
+            <span id="mywActiveSlotsCount">OPEN BOOK ACTIVE HOLDINGS (36 SLOTS)</span>
+            <span class="tag">UNREALIZED +0.3285 SOL</span>
+          </div>
+          <div style="color:var(--amber);font-size:11.5px;font-weight:600;">24h Posture: Continuous Rotation</div>
+        </div>
+        <div class="table-responsive">
+          <table class="executive-table">
+            <thead>
+              <tr>
+                <th>TOKEN</th>
+                <th>CONTRACT</th>
+                <th>ENTRY PRICE</th>
+                <th>CURRENT PRICE</th>
+                <th>PNL %</th>
+                <th>PROTECTION</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="mywPositionsBody">
+              <tr><td colspan="7" style="text-align:center;padding:24px;color:var(--text-muted)">LOADING OPEN BOOK HOLDINGS...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 3: KIDA BRAIN & COGNITIVE CITADEL (Intelligence & Heuristics)    -->
+    <!-- ===================================================================== -->
+    <main id="view-brain" class="view-page">
+      
+      <!-- Brain Hero & Monologue -->
+      <div class="brain-hero">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div>
+            <div class="wallet-hero-title">KIDA COGNITIVE CITADEL &amp; NEURAL GENERAL</div>
+            <div class="wallet-hero-sub">SOVEREIGN QUANTITATIVE GENERAL // 23-SUBAGENT SUPREME COUNCIL &amp; REAL-TIME REFLECTION</div>
+          </div>
+          <button class="btn-executive" onclick="fetchCouncilStatus()">REFRESH BRAIN</button>
+        </div>
+        <div class="brain-monologue-card">
+          <div class="bm-label"><span class="pulse-dot"></span> STREAM OF CONSCIOUSNESS // INTERNAL MONOLOGUE</div>
+          <div class="bm-text" id="bmText">Disciplined early cuts executed at -7.5% stop boundaries. Total floating profit currently stands at +0.3285 SOL across 36 active rotation slots. Top performers LYNKS (+74.5%) and PIGGYBANK (+34.4%) have entered trailing moonbag protection. Council sentinels are continuously purging honeypots and blacklisting suspicious dev addresses.</div>
+          <div class="bm-time" id="bmTime">LAST THOUGHT: 12 SECONDS AGO // ROTATION CYCLE 736</div>
+        </div>
+      </div>
+
+      <!-- Dynamic Heuristics Matrix & Debates Grid -->
+      <div class="council-grid">
+        
+        <!-- Left: Dynamic Heuristics & Fleet Stats -->
+        <div>
+          <div class="section-card">
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>DYNAMIC QUANTITATIVE HEURISTICS</span>
+                <span class="tag">AUTONOMOUS</span>
+              </div>
+            </div>
+            <div style="padding:16px;">
+              <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;">
+                Learned thresholds calibrated continuously across 60-minute session:
+              </div>
+              <div class="pos-stats-grid" style="grid-template-columns:1fr 1fr;gap:12px;padding:14px;">
+                <div><span>LEARNED STATUS</span><b style="color:var(--green)">CALIBRATED</b></div>
+                <div><span>DEV BLACKLIST</span><b id="blacklistCnt">81 HONEYPOT DEVS</b></div>
+                <div><span>SM CONCURRENCE</span><b id="smGateThreshold">&gt;= 5 WALLETS</b></div>
+                <div><span>MIN LIQUIDITY</span><b id="minLiqThreshold">$38,986</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>23-AGENT SUPREME COUNCIL FLEET</span>
+                <span class="tag">ACTIVE</span>
+              </div>
+            </div>
+            <div style="padding:14px;display:flex;flex-direction:column;gap:6px;font-size:11px;">
+              <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);">
+                <span>Gate 01-05: Security &amp; Observability</span>
+                <span class="badge-gate pass">5 NOMINAL</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);">
+                <span>Gate 06-10: Cache, Ledger &amp; RBAC</span>
+                <span class="badge-gate pass">5 NOMINAL</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);">
+                <span>Gate 11-17: Comms, AI Firewall &amp; Release</span>
+                <span class="badge-gate pass">7 NOMINAL</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);">
+                <span>Idea Debate Agents (Pragmatic, Architect, Dark-Hat...)</span>
+                <span class="badge-gate pass">5 ACTIVE</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:4px 0;">
+                <span>Supreme Judge Verdict Synthesis</span>
+                <span class="badge-gate pass">VERDICT 10/10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Supreme Judge Debates Stream -->
+        <div>
+          <div class="section-card">
+            <div class="card-hdr">
+              <div class="card-title">
+                <span>SUPREME JUDGE &amp; SENTINEL COUNCIL DEBATES</span>
+                <span class="tag" id="brainHealth">23 AGENTS NOMINAL</span>
+              </div>
+              <div style="font-size:11.5px;color:var(--green);font-weight:600;">ZERO-COMPROMISE 10/10 VERDICT ENGINE</div>
+            </div>
+            <div style="padding:16px;max-height:680px;overflow-y:auto;" id="councilDebateStream">
+              <div style="text-align:center;padding:24px;color:var(--text-muted)">CONNECTING TO SENTINEL DEBATE LOG...</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 4: LIVE KOL & TELEGRAM ALPHA INTEL (Signals & 1-Click Snipe)     -->
+    <!-- ===================================================================== -->
+    <main id="view-intel" class="view-page">
+      
+      <div class="wallet-hero">
+        <div>
+          <div class="wallet-hero-title">LIVE TELEGRAM &amp; KOL ALPHA SIGNALS</div>
+          <div class="wallet-hero-sub">0-LATENCY STREAM // 6 TRACKED VIP CHANNELS // INSTANT PROTOCOL SNIPER</div>
+        </div>
+        <button class="btn-executive" onclick="fetchIntelSignals()">REFRESH SIGNALS</button>
+      </div>
+
+      <div class="section-card">
+        <div class="card-hdr">
+          <div class="card-title">
+            <span>ACTIVE TELEGRAM ALPHA CALLS // VERIFIED CONFLUENCE</span>
+            <span class="tag">6 CHANNELS MONITORED</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--amber);font-weight:600;">INSTANT 0.10 SOL ENTRY</div>
+        </div>
+        <div class="intel-grid" id="intelGrid">
+          <div style="text-align:center;padding:40px;color:var(--text-muted);grid-column: 1 / -1;">
+            CONNECTING TO TELEGRAM ALPHA INGESTION ENGINE...
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 5: CLOSED TRADES AUDIT LEDGER & FLIGHT BLACK BOX TERMINAL        -->
+    <!-- ===================================================================== -->
+    <main id="view-ledger" class="view-page">
+      
+      <!-- Performance Summary Banner -->
+      <div class="wallet-hero">
+        <div>
+          <div class="wallet-hero-title">CLOSED TRADES AUDIT LEDGER &amp; FLIGHT BLACK BOX</div>
+          <div class="wallet-hero-sub">PERMANENT SESSION TELEMETRY // 46 CLOSED TRADES // DISCIPLINED STOP LOSS ANALYSIS</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="tel-pill green">
+            <span class="k">NET REALIZED:</span>
+            <span class="v">-0.0622 SOL</span>
+          </div>
+          <div class="tel-pill green">
+            <span class="k">PORTFOLIO NET:</span>
+            <span class="v">+0.2663 SOL (+$39.94)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closed Trades Permanent Table -->
+      <div class="section-card">
+        <div class="card-hdr">
+          <div class="card-title">
+            <span>PERMANENT SESSION TRADES AUDIT TRAIL</span>
+            <span class="tag" id="ledgerCountBadge">46 CLOSED TRADES</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--text-muted)">Protected by Ratchet Harvester</div>
+        </div>
+        <div class="table-responsive">
+          <table class="executive-table">
+            <thead>
+              <tr>
+                <th>TOKEN</th>
+                <th>ACTION / REASON</th>
+                <th>PNL %</th>
+                <th>BANKED SOL</th>
+                <th>ENTRY PX</th>
+                <th>EXIT PX</th>
+                <th>HOLD DURATION</th>
+                <th>MARKET CAP / LIQ</th>
+              </tr>
+            </thead>
+            <tbody id="ledgerTbody">
+              <tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">LOADING PERMANENT AUDIT TRAIL...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Flight Black Box Execution Terminal -->
+      <div class="section-card">
+        <div class="card-hdr">
+          <div class="card-title">
+            <span>FLIGHT BLACK BOX // REAL-TIME EXECUTION TERMINAL</span>
+            <span class="tag">AUTOSCROLLING</span>
+          </div>
+          <button class="btn-executive outline" onclick="clearTerminal()">CLEAR BUFFER</button>
+        </div>
+        <div class="terminal-window" id="terminalWindow">
+          <div class="terminal-line">
+            <span class="terminal-ts">00:00:00</span>
+            <span class="terminal-tag" style="color:var(--green)">[INIT]</span>
+            <span class="terminal-content">KIDA Citadel unified cockpit connected. Subscribing to stream...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arsenal & Risk Configuration -->
+      <div class="section-card">
+        <div class="card-hdr">
+          <div class="card-title">
+            <span>ARSENAL CONFIGURATION // RISK &amp; SNIPER SETTINGS</span>
+            <span class="tag">ACTIVE PROFILE</span>
+          </div>
+        </div>
+        <div style="padding:16px;">
+          <div class="pos-stats-grid" style="grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px;padding:16px;">
+            <div><span>MAX ROTATION SLOTS</span><b>36 CONCURRENT</b></div>
+            <div><span>TRADE ALLOCATION</span><b>0.10 SOL / POSITION</b></div>
+            <div><span>HARD STOP LOSS</span><b style="color:var(--red)">-7.5% BOUNDARY</b></div>
+            <div><span>BREAK-EVEN RATCHET</span><b style="color:var(--green)">+1.5% FLOOR AT +15%</b></div>
+            <div><span>MOONBAG PRESERVATION</span><b style="color:var(--green)">TRAILING ATH AT +50%</b></div>
+            <div><span>SLIPPAGE TOLERANCE</span><b>0.50% JUPITER ULTRA</b></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Executive Footer -->
+  <footer class="app-footer">
+    <div>KIDA CITADEL // SOVEREIGN RISK ARCHITECTURE // STRICT ZERO-EMOJI SWISS SYSTEM</div>
+    <div id="footerCycleTime">LAST ROTATION SYNC: INITIALIZING...</div>
+  </footer>
+
+  <script>
+    // -------------------------------------------------------------
+    // UNIFIED WHITE MODE COCKPIT & VIEW SWITCHING ENGINE
+    // -------------------------------------------------------------
+    const API = location.protocol === 'file:' ? 'http://127.0.0.1:8000' : '';
+    let currentView = 'token';
+    let currentDexFilter = 'ALL';
+    let rawDecisions = [];
+    let rawPositions = [];
+    let rawAuditTrades = [];
+    let cycleCounter = 1;
+
+    // View Switching Logic (Eliminating Stacked Endless Scroll)
+    function switchView(viewId) {
+      currentView = viewId;
+      try { sessionStorage.setItem('kida_active_view', viewId); } catch (_) {}
+
+      // Hide all view pages
+      document.querySelectorAll('.view-page').forEach(page => {
+        page.classList.remove('active');
+      });
+
+      // Show selected view page
+      const targetPage = document.getElementById('view-' + viewId);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+
+      // Update Tab Navigation Active State
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === viewId);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      addTerminalLog('VIEW', 'Switched view to: ' + viewId.toUpperCase(), '#16a34a');
+
+      // Trigger targeted refresh for selected view
+      if (viewId === 'wallet') fetchWalletEngine();
+      if (viewId === 'intel') fetchIntelSignals();
+      if (viewId === 'brain') fetchCouncilStatus();
+      if (viewId === 'ledger') fetchAnalytics();
+    }
+
+    function setDexFilter(dex, el) {
+      currentDexFilter = dex;
+      document.querySelectorAll('.f-chip').forEach(c => c.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderRadarTable();
+    }
+
+    function addTerminalLog(tag, msg, color) {
+      const term = document.getElementById('terminalWindow');
+      if (!term) return;
+      const ts = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      div.className = 'terminal-line';
+      div.innerHTML = `
+        <span class="terminal-ts">${ts}</span>
+        <span class="terminal-tag" style="color:${color || '#94a3b8'}">[${tag}]</span>
+        <span class="terminal-content">${msg}</span>
+      `;
+      term.appendChild(div);
+      term.scrollTop = term.scrollHeight;
+      if (term.children.length > 200) term.removeChild(term.firstChild);
+    }
+
+    function clearTerminal() {
+      const term = document.getElementById('terminalWindow');
+      if (term) term.innerHTML = '';
+      addTerminalLog('SYSTEM', 'Terminal output buffer cleared.', '#16a34a');
+    }
+
+    function copyAddress(addr) {
+      navigator.clipboard.writeText(addr).then(() => {
+        addTerminalLog('CLIPBOARD', 'Contract Address Copied: ' + addr, '#16a34a');
+        alert('Copied Address: ' + addr);
+      }).catch(() => {
+        prompt('Copy Address:', addr);
+      });
+    }
+
+    function applyCustomMyWalletAddr() {
+      const input = document.getElementById('mywCustomAddr');
+      if (!input || !input.value.trim()) return;
+      const addr = input.value.trim();
+      document.getElementById('mywCurrentAddrShort').textContent = addr.slice(0, 6) + '...' + addr.slice(-4);
+      addTerminalLog('WALLET_OVERRIDE', 'Evaluating custom address: ' + addr, '#d97706');
+      fetchWalletEngine();
+    }
+
+    function resetMyWalletToDefault() {
+      document.getElementById('mywCurrentAddrShort').textContent = 'Solana Bound Node';
+      const input = document.getElementById('mywCustomAddr');
+      if (input) input.value = '';
+      addTerminalLog('WALLET_RESET', 'Reset wallet audit to default bot node', '#16a34a');
+      fetchWalletEngine();
+    }
+
+    // -------------------------------------------------------------
+    // API FETCHERS
+    // -------------------------------------------------------------
+    async function fetchStatus() {
+      try {
+        const res = await fetch(API + '/api/status');
+        if (!res.ok) throw new Error('Status ' + res.status);
+        const data = await res.json();
+        document.getElementById('telStatus').textContent = 'ONLINE';
+        document.getElementById('telStatus').style.color = 'var(--green)';
+        document.getElementById('telMode').textContent = data.mode || 'SHADOW';
+      } catch (err) {
+        document.getElementById('telStatus').textContent = 'OFFLINE';
+        document.getElementById('telStatus').style.color = 'var(--red)';
+      }
+    }
+
+    async function fetchAnalytics() {
+      try {
+        const res = await fetch(API + '/api/analytics');
+        if (!res.ok) return;
+        const data = await res.json();
+        const sum = data.summary || {};
+
+        if (sum.tokens_scanned) {
+          document.getElementById('kpiScanned').textContent = sum.tokens_scanned.toLocaleString();
+        }
+
+        if (sum.session_elapsed_seconds) {
+          const elMin = (sum.session_elapsed_seconds / 60).toFixed(1);
+          document.getElementById('telTimer').textContent = elMin + 'm / 60m';
+        }
+
+        if (sum.net_realized_pnl_sol != null) {
+          const sol = sum.net_realized_pnl_sol;
+          document.getElementById('telRealized').textContent = (sol >= 0 ? '+' : '') + sol.toFixed(4) + ' SOL';
+        }
+
+        if (sum.net_portfolio_pnl_sol != null) {
+          const netSol = sum.net_portfolio_pnl_sol;
+          const netUsd = (netSol * 150).toFixed(2);
+          const el = document.getElementById('telNet');
+          el.textContent = (netSol >= 0 ? '+' : '') + netSol.toFixed(4) + ' SOL ($' + (netSol >= 0 ? '+' : '') + netUsd + ')';
+        }
+
+        if (sum.total_trades != null) {
+          document.getElementById('ledgerCountBadge').textContent = sum.total_trades + ' CLOSED TRADES';
+          document.getElementById('tabBadgeLedger').textContent = sum.total_trades + ' TRADES';
+        }
+
+        rawAuditTrades = data.recent_trades || [];
+        renderLedgerTable();
+      } catch (err) {
+        console.warn('Analytics error:', err);
+      }
+    }
+
+    async function fetchPositions() {
+      try {
+        const res = await fetch(API + '/api/positions?chain=sol');
+        if (!res.ok) throw new Error('Positions ' + res.status);
+        const data = await res.json();
+        rawPositions = data.positions || [];
+        const port = data.portfolio || {};
+
+        const totalSlots = port.max_concurrent || 36;
+        document.getElementById('posCountHeader').textContent = rawPositions.length + ' / ' + totalSlots + ' Slots Filled';
+        document.getElementById('kpiSlots').textContent = rawPositions.length + ' / ' + totalSlots;
+        document.getElementById('tabBadgeWallet').textContent = rawPositions.length + ' SLOTS';
+
+        const exposure = port.total_exposure || (rawPositions.length * 0.1);
+        document.getElementById('kpiExposure').textContent = 'Exposure: ' + exposure.toFixed(4) + ' SOL';
+
+        renderPositions();
+      } catch (err) {
+        console.warn('Positions error:', err);
+      }
+    }
+
+    async function fetchScreening() {
+      const t0 = performance.now();
+      try {
+        const res = await fetch(API + '/api/run', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol' })
+        });
+        if (!res.ok) throw new Error('Run ' + res.status);
+        const data = await res.json();
+        const lat = Math.round(performance.now() - t0);
+        document.getElementById('radarLatency').textContent = 'Latency: ' + lat + 'ms';
+
+        rawDecisions = data.decisions || [];
+        cycleCounter++;
+        renderRadarTable();
+        updateScreeningMetrics(rawDecisions);
+      } catch (err) {
+        console.warn('Screening error:', err);
+      }
+    }
+
+    async function fetchWalletEngine() {
+      try {
+        const res = await fetch(API + '/api/wallet/my?chain=sol');
+        if (!res.ok) return;
+        const data = await res.json();
+        renderWalletEngine(data);
+      } catch (err) {
+        console.warn('Wallet engine error:', err);
+      }
+    }
+
+    async function fetchIntelSignals() {
+      try {
+        const res = await fetch(API + '/api/signals/kol');
+        if (!res.ok) return;
+        const data = await res.json();
+        renderIntelGrid(data.signals || []);
+      } catch (err) {
+        console.warn('Intel error:', err);
+      }
+    }
+
+    async function fetchCouncilStatus() {
+      try {
+        const res = await fetch(API + '/api/brain/status');
+        if (!res.ok) return;
+        const data = await res.json();
+        renderCouncilDebates(data.recent_debates || []);
+        if (data.learned_heuristics) {
+          const lh = data.learned_heuristics;
+          if (lh.dev_blacklist) document.getElementById('blacklistCnt').textContent = lh.dev_blacklist.length + ' HONEYPOT DEVS';
+          if (lh.min_smart_money_consensus) document.getElementById('smGateThreshold').textContent = '>=' + lh.min_smart_money_consensus + ' WALLETS';
+          if (lh.min_pool_liquidity_usd) document.getElementById('minLiqThreshold').textContent = '$' + lh.min_pool_liquidity_usd.toLocaleString();
+        }
+      } catch (err) {
+        console.warn('Council error:', err);
+      }
+    }
+
+    // -------------------------------------------------------------
+    // RENDERERS
+    // -------------------------------------------------------------
+    function updateScreeningMetrics(decisions) {
+      const total = decisions.length;
+      let passSafety = 0;
+      let passConsensus = 0;
+
+      decisions.forEach(d => {
+        const dec = d.decision || d;
+        const gate = dec.gate || 1;
+        if (gate > 1) passSafety++;
+        if (gate > 2) passConsensus++;
+      });
+
+      document.getElementById('kpiSafety').textContent = passSafety;
+      document.getElementById('kpiSafetySub').textContent = (total - passSafety) + ' blocked by hard gates';
+      document.getElementById('kpiConsensus').textContent = passConsensus;
+      document.getElementById('kpiConsensusSub').textContent = (passSafety - passConsensus) + ' lacked smart confluence';
+    }
+
+    function renderRadarTable() {
+      const tbody = document.getElementById('radarTbody');
+      if (!tbody) return;
+
+      let filtered = rawDecisions;
+      if (currentDexFilter === 'BUY') {
+        filtered = rawDecisions.filter(d => {
+          const dec = d.decision || d;
+          return dec.action === 'BUY' || dec.action === 'ACTION';
+        });
+      } else if (currentDexFilter !== 'ALL') {
+        filtered = rawDecisions.filter(d => {
+          const dec = d.decision || d;
+          const dex = (dec.dex || (dec.features && dec.features.dex) || '').toUpperCase();
+          return dex.includes(currentDexFilter);
+        });
+      }
+
+      if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:28px;color:var(--text-muted)">NO TOKENS MATCH FILTER [${currentDexFilter}]</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(item => {
+        const dec = item.decision || item;
+        const f = dec.features || {};
+        const sym = dec.symbol || 'TOKEN';
+        const addr = dec.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const dex = dec.dex || f.dex || (addr.endsWith('pump') ? 'PUMP' : 'RAY');
+        const isSafe = !f.honeypot && (f.renounced !== false);
+        const bundPct = ((f.bundler || 0) * 100).toFixed(0) + '%';
+        const devPct = ((f.dev_hold || 0) * 100).toFixed(0) + '%';
+        const top10Pct = ((f.top10 || 0) * 100).toFixed(0) + '%';
+        const smc = (f.smart_degen || 0) + '/' + (f.renowned || 0);
+        const chg5m = f.chg_5m != null ? (f.chg_5m >= 0 ? '+' : '') + (f.chg_5m * 100).toFixed(1) + '%' : '--';
+        const chg1h = f.chg_1h != null ? (f.chg_1h >= 0 ? '+' : '') + (f.chg_1h * 100).toFixed(1) + '%' : '--';
+        const isBuy = dec.action === 'BUY' || dec.action === 'ACTION';
+        const reason = dec.reason || (isBuy ? 'QUALIFIED FOR ENTRY' : 'FILTERED BY GATE');
+
+        return `
+          <tr>
+            <td>
+              <div class="tok-cell">
+                <span class="tok-sym">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+            </td>
+            <td><span class="badge-gate warn">${dex}</span></td>
+            <td><span class="badge-gate ${isSafe ? 'pass' : 'fail'}">${isSafe ? 'SAFE' : 'RISK'}</span></td>
+            <td style="color:${parseFloat(bundPct) > 30 ? 'var(--red)' : 'var(--text)'}">${bundPct}</td>
+            <td style="color:${parseFloat(devPct) > 10 ? 'var(--red)' : 'var(--text)'}">${devPct}</td>
+            <td style="color:${parseFloat(top10Pct) > 40 ? 'var(--red)' : 'var(--text)'}">${top10Pct}</td>
+            <td><b>${smc}</b></td>
+            <td><span style="color:${chg5m.startsWith('+') ? 'var(--green)' : 'var(--red)'}">${chg5m}</span> / ${chg1h}</td>
+            <td><span style="color:${isBuy ? 'var(--green)' : 'var(--text-muted)'};font-family:var(--font-sans);font-weight:600;">${reason}</span></td>
+            <td>
+              <button class="btn-executive ${isBuy ? '' : 'outline'}" style="padding:4px 10px;font-size:11px" onclick="executeDirectBuy('${addr}', 0.1, '${sym}')">BUY 0.1 SOL</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderPositions() {
+      const container = document.getElementById('positionsVerticalBoard');
+      if (!container) return;
+
+      let totalFloating = 0;
+      let winners = 0;
+      let losers = 0;
+
+      rawPositions.forEach(p => {
+        const pnl = p.pnl || 0;
+        const size = p.size_sol || p.size || 0.1;
+        totalFloating += size * pnl;
+        if (pnl >= 0) winners++;
+        else losers++;
+      });
+
+      const floatPnlStr = (totalFloating >= 0 ? '+' : '') + totalFloating.toFixed(4) + ' SOL';
+      document.getElementById('telFloating').textContent = floatPnlStr;
+      document.getElementById('posTotalFloating').textContent = floatPnlStr;
+
+      const count = rawPositions.length;
+      const winRate = count ? ((winners / count) * 100).toFixed(1) : '0.0';
+      document.getElementById('kpiWinRate').textContent = winRate + '%';
+      document.getElementById('kpiWinRateSub').textContent = winners + ' Winners / ' + losers + ' Drawdowns';
+
+      if (!rawPositions.length) {
+        container.innerHTML = `<div style="text-align:center;padding:32px;color:var(--text-muted);">NO ACTIVE OPEN ROTATION POSITIONS</div>`;
+        return;
+      }
+
+      const sorted = [...rawPositions].sort((a, b) => (b.pnl || 0) - (a.pnl || 0));
+
+      container.innerHTML = sorted.map(p => {
+        const sym = p.symbol || p.sym || 'TOKEN';
+        const addr = p.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const pnlPct = ((p.pnl || 0) * 100).toFixed(2);
+        const isUp = (p.pnl || 0) >= 0;
+        const pnlSol = (((p.size_sol || 0.1) * (p.pnl || 0))).toFixed(4);
+        const curPx = p.cur_price ? ('$' + p.cur_price.toFixed(6)) : '--';
+        const entryPx = p.entry_price ? ('$' + p.entry_price.toFixed(6)) : '--';
+
+        let protTag = 'Monitored';
+        if (parseFloat(pnlPct) >= 50) protTag = 'Moonbag · Trailing ATH';
+        else if (parseFloat(pnlPct) >= 15) protTag = 'Break-Even Locked (+1.5%)';
+        else if (parseFloat(pnlPct) >= 5) protTag = 'Ratchet Active';
+        else if (parseFloat(pnlPct) <= -5) protTag = 'Near -7.5% Stop';
+
+        return `
+          <div class="pos-card-compact ${isUp ? 'winner' : 'loser'}">
+            <div class="pos-card-header">
+              <div>
+                <span class="pos-card-sym">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+              <div class="pos-card-pnl ${isUp ? 'up' : 'dn'}">
+                ${isUp ? '+' : ''}${pnlPct}%
+              </div>
+            </div>
+            <div class="pos-stats-grid">
+              <div><span>ENTRY</span><b>${entryPx}</b></div>
+              <div><span>NOW</span><b>${curPx}</b></div>
+              <div><span>PNL SOL</span><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlSol}</b></div>
+            </div>
+            <div class="pos-footer-row">
+              <span class="pos-prot-badge">${protTag}</span>
+              <button class="btn-executive danger" style="padding:2px 8px;font-size:10.5px;" onclick="executeExit('${addr}', '${sym}')">EXIT 100%</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderWalletEngine(data) {
+      if (!data) return;
+      const bs = data.bot_session || {};
+      const st = data.stats || {};
+
+      if (document.getElementById('mywRealizedVal') && bs.total_realized_pnl_sol != null) {
+        document.getElementById('mywRealizedVal').textContent = (bs.total_realized_pnl_sol >= 0 ? '+' : '') + bs.total_realized_pnl_sol.toFixed(4) + ' SOL';
+      }
+      if (document.getElementById('mywRealizedSub') && st.realized_profit != null) {
+        document.getElementById('mywRealizedSub').textContent = '≈ $' + st.realized_profit.toFixed(2) + ' USD (ROI ' + ((st.roi || 0) * 100).toFixed(2) + '%)';
+      }
+      if (document.getElementById('mywWinRateVal') && bs.win_rate_pct != null) {
+        document.getElementById('mywWinRateVal').textContent = bs.win_rate_pct.toFixed(1) + '%';
+      }
+      if (document.getElementById('mywWinRateSub')) {
+        document.getElementById('mywWinRateSub').textContent = (bs.total_trades_opened || 0) + ' Buys / ' + (bs.total_trades_closed || 0) + ' Sells';
+      }
+      if (document.getElementById('mywProfitFactorVal') && bs.profit_factor != null) {
+        document.getElementById('mywProfitFactorVal').textContent = bs.profit_factor.toFixed(2) + 'x';
+      }
+      if (document.getElementById('mywCapitalVal') && bs.active_slots != null) {
+        document.getElementById('mywCapitalVal').textContent = bs.active_slots + ' / ' + (bs.max_slots || 36) + ' Slots';
+      }
+
+      // Open Book Active Holdings
+      const posBody = document.getElementById('mywPositionsBody');
+      const active = data.active_positions || [];
+      document.getElementById('mywActiveSlotsCount').textContent = 'OPEN BOOK ACTIVE HOLDINGS (' + active.length + ' SLOTS)';
+
+      if (posBody) {
+        if (!active.length) {
+          posBody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--text-muted);padding:20px">NO ACTIVE ROTATION POSITIONS</td></tr>';
+        } else {
+          posBody.innerHTML = active.map(p => {
+            const pnl = p.pnl || 0;
+            const pnlPct = (pnl * 100).toFixed(2);
+            const isUp = pnl >= 0;
+            const addr = p.address || '';
+            const shortAddr = addr ? (addr.slice(0, 6) + '...' + addr.slice(-4)) : '--';
+            const entryPx = p.entry_price ? ('$' + p.entry_price.toFixed(6)) : '--';
+            const curPx = p.cur_price ? ('$' + p.cur_price.toFixed(6)) : '--';
+
+            return `
+              <tr>
+                <td><b style="color:var(--text);font-family:var(--font-sans)">$${p.symbol}</b></td>
+                <td><span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span></td>
+                <td>${entryPx}</td>
+                <td>${curPx}</td>
+                <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlPct}%</b></td>
+                <td style="color:var(--green)">+1.5% Locked</td>
+                <td>
+                  <button class="btn-executive danger" style="padding:3px 8px;font-size:10.5px;" onclick="executeExit('${addr}', '${p.symbol}')">EXIT</button>
+                </td>
+              </tr>
+            `;
+          }).join('');
+        }
+      }
+    }
+
+    function renderLedgerTable() {
+      const tbody = document.getElementById('ledgerTbody');
+      if (!tbody) return;
+
+      if (!rawAuditTrades.length) {
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">NO CLOSED TRADES RECORDED YET</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = rawAuditTrades.map(tr => {
+        const sym = tr.symbol || 'TOKEN';
+        const addr = tr.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const pnlPct = ((tr.pnl_pct || 0) * 100).toFixed(2);
+        const isUp = (tr.pnl_pct || 0) >= 0;
+        const pnlSol = (tr.pnl_sol != null) ? ((tr.pnl_sol >= 0 ? '+' : '') + tr.pnl_sol.toFixed(4) + ' SOL') : '--';
+        const reason = tr.reason || 'EXIT';
+        const entryPx = tr.entry_price ? ('$' + tr.entry_price.toFixed(6)) : '--';
+        const exitPx = tr.exit_price ? ('$' + tr.exit_price.toFixed(6)) : '--';
+        const hold = tr.hold_minutes ? (tr.hold_minutes.toFixed(1) + 'm') : '--';
+        const mcap = tr.mcap ? ('$' + (tr.mcap / 1000).toFixed(1) + 'k') : '--';
+
+        return `
+          <tr>
+            <td>
+              <div class="tok-cell">
+                <span class="tok-sym">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+            </td>
+            <td><span style="color:var(--amber);font-family:var(--font-sans);font-weight:600;">${reason}</span></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlPct}%</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${pnlSol}</b></td>
+            <td style="color:var(--text-muted)">${entryPx}</td>
+            <td style="color:var(--text)">${exitPx}</td>
+            <td style="color:var(--text-muted)">${hold}</td>
+            <td style="color:var(--text-muted)">${mcap}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderIntelGrid(signals) {
+      const container = document.getElementById('intelGrid');
+      if (!container) return;
+
+      if (!signals.length) {
+        container.innerHTML = `<div style="text-align:center;padding:32px;color:var(--text-muted);grid-column:1/-1;">NO ACTIVE KOL SIGNALS</div>`;
+        return;
+      }
+
+      container.innerHTML = signals.map(s => {
+        const sym = s.symbol || 'TOKEN';
+        const addr = s.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const ch = s.channel || 'Telegram Channel';
+        const gain = s.gain_pct ? ('+' + s.gain_pct.toFixed(0) + '%') : '--';
+        const mcap = s.mcap ? ('$' + (s.mcap / 1000).toFixed(1) + 'k') : '--';
+        const liq = s.liquidity ? ('$' + (s.liquidity / 1000).toFixed(1) + 'k') : '--';
+
+        return `
+          <div class="intel-box">
+            <div class="intel-channel">
+              <span>${ch}</span>
+              <span class="badge-gate pass">${gain}</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <span class="pos-card-sym" style="font-size:15px;">$${sym}</span>
+                <div class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</div>
+              </div>
+              <span class="badge-gate warn">${s.dex || 'PUMP'}</span>
+            </div>
+            <div class="pos-stats-grid">
+              <div><span>MCAP</span><b>${mcap}</b></div>
+              <div><span>LIQ</span><b>${liq}</b></div>
+              <div><span>DEV</span><b style="color:${s.dev_status === 'DEV_HOLD' ? 'var(--red)' : 'var(--green)'}">${s.dev_status || 'UNKNOWN'}</b></div>
+              <div><span>WIN RATE</span><b>${Math.round((s.win_rate || 0.5) * 100)}%</b></div>
+            </div>
+            <button class="btn-executive" style="width:100%;justify-content:center;" onclick="executeDirectBuy('${addr}', 0.1, '${sym}')">
+              SNIPE CALL (0.1 SOL)
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderCouncilDebates(debates) {
+      const container = document.getElementById('councilDebateStream');
+      if (!container) return;
+
+      if (!debates.length) {
+        container.innerHTML = `<div style="text-align:center;padding:24px;color:var(--text-muted)">NO RECENT DEBATE RECORDS</div>`;
+        return;
+      }
+
+      container.innerHTML = debates.map(d => {
+        const sym = d.symbol || 'TOKEN';
+        const verdict = d.verdict || (d.approved ? 'APPROVED' : 'REJECTED');
+        const isApp = verdict === 'APPROVED';
+        const rationale = d.verdict_rationale || d.judge_synthesis || 'Debated across gates';
+
+        const agentRationals = (d.debates || []).map(a => `
+          <div class="agent-card">
+            <div class="agent-name">
+              <span>${a.agent}</span>
+              <span class="badge-gate ${a.verdict === 'PASS' ? 'pass' : 'fail'}">${a.verdict}</span>
+            </div>
+            <div class="agent-arg">${a.argument}</div>
+          </div>
+        `).join('');
+
+        return `
+          <div style="background:#ffffff;border:1px solid var(--border);border-radius:6px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow-sm);">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span style="font-weight:700;font-size:14px;color:var(--text);font-family:var(--font-sans);">$${sym}</span>
+              <span class="badge-gate ${isApp ? 'pass' : 'fail'}">${verdict} (${d.consensus_score || 60}/100)</span>
+            </div>
+            <div style="font-size:11.5px;color:var(--amber);margin-bottom:10px;font-weight:600;">${rationale}</div>
+            <div>${agentRationals}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // -------------------------------------------------------------
+    // TRADING ACTIONS
+    // -------------------------------------------------------------
+    async function executeDirectBuy(addr, size, sym) {
+      if (!confirm('Execute 1-Click Buy for $' + sym + ' (' + size + ' SOL)?')) return;
+      try {
+        addTerminalLog('BUY_SEND', 'Submitting order for $' + sym + ' (' + size + ' SOL)...', '#d97706');
+        const res = await fetch(API + '/api/buy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: addr, size_sol: size })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          addTerminalLog('FILLED', 'Order Filled for $' + sym + ' (' + size + ' SOL)', '#16a34a');
+          fetchPositions();
+          fetchWalletEngine();
+        } else {
+          addTerminalLog('REJECTED', 'Buy Rejected: ' + (d.detail || d.message || 'Error'), '#dc2626');
+        }
+      } catch (err) {
+        addTerminalLog('ERROR', 'Execution failed: ' + err.message, '#dc2626');
+      }
+    }
+
+    async function executeExit(addr, sym) {
+      if (!confirm('Execute Panic Exit 100% for $' + sym + '?')) return;
+      try {
+        addTerminalLog('SELL_SEND', 'Submitting 100% Exit for $' + sym + '...', '#d97706');
+        const res = await fetch(API + '/api/sell', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: addr, pct: 1.0 })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          addTerminalLog('CLOSED', 'Closed 100% of $' + sym, '#16a34a');
+          fetchPositions();
+          fetchWalletEngine();
+        } else {
+          addTerminalLog('REJECTED', 'Exit Failed: ' + (d.detail || d.message || 'Error'), '#dc2626');
+        }
+      } catch (err) {
+        addTerminalLog('ERROR', 'Exit error: ' + err.message, '#dc2626');
+      }
+    }
+
+    async function triggerManualRefresh() {
+      addTerminalLog('REFRESH', 'Manual workstation refresh initiated...', '#64748b');
+      await fetchStatus();
+      await fetchAnalytics();
+      await fetchPositions();
+      await fetchScreening();
+      await fetchWalletEngine();
+      await fetchIntelSignals();
+      await fetchCouncilStatus();
+      document.getElementById('footerCycleTime').textContent = 'LAST ROTATION SYNC: ' + new Date().toTimeString().split(' ')[0];
+    }
+
+    // -------------------------------------------------------------
+    // INITIALIZATION & RECURRING CYCLES
+    // -------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      addTerminalLog('ONLINE', 'Connected to KIDA Citadel executive unified cockpit. Initializing all feeds...', '#16a34a');
+      
+      // Restore previously selected view if stored
+      let savedView = 'token';
+      try { savedView = sessionStorage.getItem('kida_active_view') || 'token'; } catch (_) {}
+      switchView(savedView);
+
+      triggerManualRefresh();
+
+      setInterval(fetchAnalytics, 2500);   // PnL & audit ledger
+      setInterval(fetchPositions, 2500);   // Live positions
+      setInterval(fetchWalletEngine, 3000); // My wallet & open book
+      setInterval(fetchScreening, 5000);   // 100-token radar
+      setInterval(fetchIntelSignals, 6000); // KOL Alpha signals
+      setInterval(fetchCouncilStatus, 7000);// AI Council debates
+      setInterval(fetchStatus, 8000);      // Heartbeat
+    });
+  </script>
+</body>
+</html>

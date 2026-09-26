@@ -1,0 +1,20 @@
+{
+  "session_start": 1790036485.376536,
+  "elapsed_seconds": 3602.381150484085,
+  "cycle_count": 1145,
+  "total_trades_opened": 0,
+  "total_trades_closed": 0,
+  "winning_trades_count": 0,
+  "losing_trades_count": 0,
+  "win_rate_pct": 0.0,
+  "total_sol_gained": 0,
+  "total_sol_lost": 0,
+  "profit_factor": 0.0,
+  "total_realized_pnl_sol": 0.0,
+  "unrealized_pnl_sol": 0,
+  "net_portfolio_pnl_sol": 0.0,
+  "tokens_scanned": 112334,
+  "token_history": {},
+  "closed_trades": [],
+  "active_positions": []
+}

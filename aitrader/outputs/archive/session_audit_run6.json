@@ -1,0 +1,95 @@
+{
+  "session_start": 1790033581.414683,
+  "elapsed_seconds": 1871.061103105545,
+  "cycle_count": 583,
+  "total_trades_opened": 2,
+  "total_trades_closed": 4,
+  "winning_trades_count": 1,
+  "losing_trades_count": 3,
+  "win_rate_pct": 25.0,
+  "total_sol_gained": 0.00108,
+  "total_sol_lost": 0.012247,
+  "profit_factor": 0.09,
+  "total_realized_pnl_sol": -0.011167,
+  "unrealized_pnl_sol": 0,
+  "net_portfolio_pnl_sol": -0.011167,
+  "tokens_scanned": 32420,
+  "token_history": {
+    "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump": {
+      "symbol": "USDF",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.02,
+      "last_exit_time": 1790033669.420271
+    },
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump": {
+      "symbol": "baton",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -0.0025269999999999997,
+      "last_pnl_pct": 0.005,
+      "last_exit_time": 1790035253.5082567
+    },
+    "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump": {
+      "symbol": "GEOM",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00432,
+      "last_pnl_pct": -0.0289,
+      "last_exit_time": 1790034382.7145548
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "USDF",
+      "address": "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.00%)",
+      "percent": 100,
+      "entry_price": 0.00424812,
+      "exit_price": 0.00416316,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 1.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:34:29.420251"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -1.67%)",
+      "percent": 100,
+      "entry_price": 0.00171351,
+      "exit_price": 0.00168489,
+      "pnl_pct": -0.0167,
+      "pnl_sol": -0.003607,
+      "hold_minutes": 9.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:42:26.490291"
+    },
+    {
+      "symbol": "GEOM",
+      "address": "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump",
+      "reason": "MICRO_HARD_STOP (-1.5%) (PnL: -2.89%)",
+      "percent": 100,
+      "entry_price": 0.00369442,
+      "exit_price": 0.00362053,
+      "pnl_pct": -0.02,
+      "pnl_sol": -0.00432,
+      "hold_minutes": 3.2,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:46:22.714541"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "RATCHET_VAULT_EXIT (+0.50% floor hit, PnL: 0.50%)",
+      "percent": 100,
+      "entry_price": 0.00173082,
+      "exit_price": 0.00173947,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.00108,
+      "hold_minutes": 2.2,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T03:00:53.508220"
+    }
+  ],
+  "active_positions": []
+}

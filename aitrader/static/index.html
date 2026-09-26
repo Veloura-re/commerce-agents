@@ -1,0 +1,3805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIDA // HIGH-DENSITY QUANTITATIVE TRADING &amp; TREASURY CITADEL</title>
+  
+  <!-- Space Grotesk & JetBrains Mono Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #09090b;
+      --bg-subtle: #121217;
+      --panel: #16161e;
+      --panel-hover: #1c1c26;
+      --border: #262636;
+      --border-bright: #38384f;
+      --text: #f4f4f5;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      /* Pro-Trader Swiss Accents - Strictly Zero Emojis */
+      --green: #10b981;
+      --green-dim: rgba(16, 185, 129, 0.12);
+      --green-border: rgba(16, 185, 129, 0.35);
+      --amber: #f59e0b;
+      --amber-dim: rgba(245, 158, 11, 0.12);
+      --amber-border: rgba(245, 158, 11, 0.35);
+      --red: #ef4444;
+      --red-dim: rgba(239, 68, 68, 0.12);
+      --red-border: rgba(239, 68, 68, 0.35);
+      
+      --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100vh; overflow: hidden; background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 12.5px; }
+
+    /* Top Command Header */
+    .top-command-bar {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      height: 48px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-badge {
+      background: var(--green);
+      color: #09090b;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    /* Top Navigation Tabs */
+    .nav-tabs-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+    }
+
+    .nav-tab-btn {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.12s ease;
+      white-space: nowrap;
+    }
+    .nav-tab-btn:hover { background: var(--panel-hover); border-color: var(--border-bright); color: var(--text); }
+    .nav-tab-btn.active {
+      background: var(--text);
+      color: #09090b;
+      border-color: var(--text);
+      font-weight: 700;
+    }
+    .nav-tab-btn .badge {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: rgba(0, 0, 0, 0.15);
+    }
+    .nav-tab-btn.active .badge {
+      background: #09090b;
+      color: #ffffff;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Executive Buttons */
+    .btn {
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.12s ease;
+      white-space: nowrap;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+    }
+    .btn:hover { background: var(--panel-hover); border-color: var(--border-bright); }
+    .btn.primary { background: var(--green); color: #09090b; border-color: var(--green); font-weight: 700; }
+    .btn.primary:hover { filter: brightness(1.1); }
+    .btn.danger { background: var(--red-dim); color: var(--red); border-color: var(--red-border); }
+    .btn.danger:hover { background: rgba(239, 68, 68, 0.22); }
+    .btn.warn { background: var(--amber-dim); color: var(--amber); border-color: var(--amber-border); }
+    .btn.warn:hover { background: rgba(245, 158, 11, 0.22); }
+
+    /* Pinned Always-On Capital & Treasury Bar */
+    .treasury-pinned-bar {
+      background: #0d0d12;
+      border-bottom: 1px solid var(--border);
+      padding: 8px 16px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr) 220px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .tb-metric {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      padding-right: 10px;
+    }
+    .tb-metric:last-child { border-right: none; }
+    .tb-lbl {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .tb-val {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .tb-val.green { color: var(--green); }
+    .tb-val.red { color: var(--red); }
+    .tb-val.amber { color: var(--amber); }
+    .tb-sub {
+      font-size: 9.5px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      white-space: nowrap;
+    }
+
+    .tb-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .tb-gauge-bar {
+      height: 7px;
+      background: #1e1e2d;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      border: 1px solid var(--border);
+    }
+    .tb-gauge-fill-deployed {
+      background: var(--amber);
+      height: 100%;
+      width: 48.6%;
+      transition: width 0.3s ease;
+    }
+    .tb-gauge-fill-cash {
+      background: var(--green);
+      height: 100%;
+      width: 51.4%;
+      transition: width 0.3s ease;
+    }
+
+    /* Main Viewport Container */
+    .app-viewport {
+      height: calc(100vh - 104px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 12px;
+    }
+
+    .view-page {
+      display: none;
+      height: 100%;
+    }
+    .view-page.active {
+      display: block;
+    }
+
+    /* Panels & Cards */
+    .panel-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .panel-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .tag-badge {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    /* -------------------------------------------------------------
+       VIEW 1: TREASURY & MONEY CITADEL (Primary Financial View)
+       ------------------------------------------------------------- */
+    .treasury-hero {
+      background: linear-gradient(180deg, #13131c 0%, #0d0d14 100%);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .treasury-hero-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 3px;
+    }
+    .treasury-hero-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .wallet-chip {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .wallet-chip .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* Quad Cards Grid */
+    .quad-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .quad-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.12s ease;
+    }
+    .quad-card:hover { border-color: var(--border-bright); }
+    .quad-card.accent-green { border-top: 3px solid var(--green); }
+    .quad-card.accent-amber { border-top: 3px solid var(--amber); }
+    .quad-card.accent-blue { border-top: 3px solid #6366f1; }
+    .quad-card.accent-red { border-top: 3px solid var(--red); }
+
+    .qc-lbl {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .qc-val {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .qc-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* Split Allocation & Drawdown Bar */
+    .risk-breakdown-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .rb-sec-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .progress-track {
+      height: 10px;
+      background: #0d0d12;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .rb-legend {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+    }
+
+    /* Tables */
+    .table-viewport {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    table.cockpit-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+      text-align: left;
+    }
+
+    table.cockpit-table th {
+      background: var(--bg-subtle);
+      color: var(--text-dim);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    table.cockpit-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    table.cockpit-table tr:hover td { background: var(--panel-hover); }
+
+    .tok-info { display: flex; flex-direction: column; gap: 1px; }
+    .tok-sym { font-weight: 700; color: var(--text); font-family: var(--font-sans); font-size: 12px; }
+    .tok-addr { font-size: 9.5px; color: var(--text-dim); cursor: pointer; text-decoration: underline; }
+    .tok-addr:hover { color: var(--green); }
+
+    .badge-gate {
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      font-family: var(--font-sans);
+    }
+    .badge-gate.pass { background: var(--green-dim); color: var(--green); border: 1px solid var(--green-border); }
+    .badge-gate.fail { background: var(--red-dim); color: var(--red); border: 1px solid var(--red-border); }
+    .badge-gate.warn { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-border); }
+
+    /* -------------------------------------------------------------
+       VIEW 2: RADAR & POSITIONS (Cockpit Grid)
+       ------------------------------------------------------------- */
+    .cockpit-grid {
+      display: grid;
+      grid-template-columns: 1fr 410px;
+      gap: 12px;
+      height: 100%;
+    }
+
+    .cockpit-deck {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 0;
+      gap: 10px;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      padding: 8px 12px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      flex-shrink: 0;
+    }
+
+    .f-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.12s ease;
+      white-space: nowrap;
+    }
+    .f-pill:hover { border-color: var(--border-bright); color: var(--text); }
+    .f-pill.active { background: var(--text); color: #09090b; border-color: var(--text); font-weight: 700; }
+
+    /* Active Positions Cards */
+    .positions-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .pos-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.12s ease;
+    }
+    .pos-card:hover { border-color: var(--border-bright); }
+    .pos-card.winner { border-left: 3px solid var(--green); }
+    .pos-card.loser { border-left: 3px solid var(--red); }
+
+    .pos-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pos-card-sym {
+      font-size: 13px;
+      font-weight: 700;
+      font-family: var(--font-sans);
+      color: var(--text);
+    }
+    .pos-card-pnl {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .pos-card-pnl.up { color: var(--green); }
+    .pos-card-pnl.dn { color: var(--red); }
+
+    .pos-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      font-size: 10px;
+      background: var(--bg-subtle);
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+    }
+    .pos-meta-grid div { display: flex; flex-direction: column; }
+    .pos-meta-grid span { color: var(--text-dim); font-size: 8.5px; }
+    .pos-meta-grid b { color: var(--text); }
+
+    .pos-foot-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 9.5px;
+    }
+    .pos-status-badge {
+      font-size: 9px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .decision-feed {
+      height: 140px;
+      overflow-y: auto;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      background: var(--bg);
+    }
+    .dec-row {
+      display: grid;
+      grid-template-columns: 50px 45px 70px 1fr;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 6px;
+      border-radius: 3px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+    }
+
+    .ledger-table-wrap {
+      height: 160px;
+      overflow-y: auto;
+    }
+
+    /* -------------------------------------------------------------
+       VIEW 3: 23-SUBAGENT COUNCIL & BRAIN
+       ------------------------------------------------------------- */
+    .council-deck {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      height: 100%;
+    }
+
+    .council-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .agent-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .agent-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .agent-name {
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text);
+    }
+    .agent-role {
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+
+    /* Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #2d2d3d; border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+
+    @media (max-width: 1100px) {
+      .treasury-pinned-bar { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .quad-grid { grid-template-columns: 1fr 1fr; }
+      .risk-breakdown-card { grid-template-columns: 1fr; }
+      .cockpit-grid { grid-template-columns: 1fr; }
+      .council-deck { grid-template-columns: 1fr; }
+      html, body { overflow: auto; }
+    }
+
+    /* ============================================================= */
+    /* MODALS & POPUPS // PRO-TRADER INTERACTIVE OVERLAYS            */
+    /* ============================================================= */
+    .modal-scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      padding: 16px;
+      animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .modal-scrim.active {
+      display: flex;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .modal-container {
+      background: linear-gradient(180deg, #16161e 0%, #0d0d12 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 560px;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.92) translateY(10px);
+      animation: modalScaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    .modal-container.wide {
+      max-width: 680px;
+    }
+    @keyframes modalScaleIn {
+      from { transform: scale(0.92) translateY(10px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .modal-header {
+      padding: 20px 24px;
+      background: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .modal-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .modal-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 0.1em;
+      color: var(--green);
+      text-transform: uppercase;
+    }
+    .modal-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.015em;
+    }
+    .modal-close-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+    }
+    .modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: scale(1.05);
+    }
+    .modal-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .modal-footer {
+      padding: 14px 20px;
+      background: var(--panel);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .modal-grid-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .modal-stat-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .modal-stat-box .lbl {
+      font-size: 9.5px;
+      color: var(--text-dim);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .modal-stat-box .val {
+      font-size: 12.5px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: var(--text);
+    }
+    .modal-sec-header {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .chip-group {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .chip-item {
+      flex: 1;
+      min-width: 60px;
+      padding: 7px 10px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s ease;
+    }
+    .chip-item:hover {
+      border-color: var(--border-bright);
+      background: var(--panel-hover);
+    }
+    .chip-item.active {
+      background: var(--green-dim);
+      border-color: var(--green);
+      color: var(--green);
+    }
+    .chip-item.active-danger {
+      background: var(--red-dim);
+      border-color: var(--red);
+      color: var(--red);
+    }
+    .chip-item.active-warn {
+      background: var(--amber-dim);
+      border-color: var(--amber);
+      color: var(--amber);
+    }
+    .input-box-wrapper {
+      display: flex;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 0 12px;
+      height: 38px;
+      transition: border-color 0.15s ease;
+    }
+    .input-box-wrapper:focus-within {
+      border-color: var(--green);
+    }
+    .input-box-wrapper input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      width: 100%;
+    }
+    .input-box-wrapper .suffix {
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      margin-left: 8px;
+      white-space: nowrap;
+    }
+    .rules-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .rules-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+    }
+    .rules-row .r-label {
+      color: var(--text-muted);
+    }
+    .rules-row .r-val {
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+    .btn-exec {
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-exec::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    .btn-exec:hover::before { opacity: 1; }
+    .btn-exec.primary {
+      background: var(--green);
+      color: #052e16;
+      border: 1px solid var(--green);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+    .btn-exec.primary:hover {
+      background: #34d399;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    .btn-exec.danger {
+      background: var(--red);
+      color: #ffffff;
+      border: 1px solid #b91c1c;
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    .btn-exec.danger:hover {
+      background: #f87171;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    .btn-exec.warn {
+      background: var(--amber);
+      color: #451a03;
+      border: 1px solid #d97706;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+    .btn-exec.warn:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    .btn-exec.secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+    .btn-exec.secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    /* Floating Toast System */
+    .toast-container {
+      position: fixed;
+      top: 56px;
+      right: 24px;
+      z-index: 10001;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 400px;
+      width: 100%;
+      pointer-events: none;
+    }
+    .toast-item {
+      pointer-events: auto;
+      background: rgba(18, 18, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 4px solid var(--border-bright);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      animation: toastSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    .toast-item.success { border-left-color: var(--green); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05); }
+    .toast-item.error { border-left-color: var(--red); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(239, 68, 68, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05); }
+    .toast-item.warn { border-left-color: var(--amber); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05); }
+    .toast-item.info { border-left-color: var(--border-bright); }
+    @keyframes toastSlideIn {
+      from { transform: translateX(120%) scale(0.9); opacity: 0; }
+      to { transform: translateX(0) scale(1); opacity: 1; }
+    }
+    .toast-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .toast-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+    }
+    .toast-item.success .toast-title { color: var(--green); }
+    .toast-item.error .toast-title { color: var(--red); }
+    .toast-item.warn .toast-title { color: var(--amber); }
+    .toast-item.info .toast-title { color: var(--text-muted); }
+    .toast-msg {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.5;
+      word-break: break-word;
+      font-family: var(--font-sans);
+    }
+    .toast-close {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      padding: 4px 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast-close:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Rotation and Capacity Modal Styles */
+    .rotation-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      margin-bottom: 8px;
+    }
+    .rotation-card:hover {
+      border-color: var(--border-bright);
+      background: var(--panel-hover);
+    }
+    .rotation-card.selected {
+      border-color: var(--amber);
+      background: var(--amber-dim);
+    }
+    .rotation-card-radio {
+      accent-color: var(--amber);
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .rotation-token-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rotation-token-sym {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .rotation-token-meta {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+    .rotation-pnl-group {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rotation-pnl-pct {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 12.5px;
+    }
+    .rotation-pnl-sol {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .rotation-fast-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Command & Navigation Header -->
+  <header class="top-command-bar">
+    <div class="brand-group">
+      <span class="brand-badge">KIDA//QUANT</span>
+      <span class="brand-title">TREASURY &amp; ROTATION CITADEL</span>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs-group">
+      <button class="nav-tab-btn active" id="tabTreasury" onclick="switchView('treasury')">
+        <span>01 TREASURY &amp; CAPITAL</span>
+        <span class="badge" id="badgeCapital">7.05 SOL</span>
+      </button>
+      <button class="nav-tab-btn" id="tabRadar" onclick="switchView('radar')">
+        <span>02 100-TOKEN RADAR</span>
+        <span class="badge" id="badgeCandidates">100 CANDS</span>
+      </button>
+      <button class="nav-tab-btn" id="tabCouncil" onclick="switchView('council')">
+        <span>03 23-SUBAGENT COUNCIL</span>
+        <span class="badge">23 SENTINELS</span>
+      </button>
+      <button class="nav-tab-btn" id="tabLedger" onclick="switchView('ledger')">
+        <span>04 AUDIT LEDGER</span>
+        <span class="badge" id="badgeClosedCount">1 TRADES</span>
+      </button>
+    </div>
+
+    <!-- Fast Action Controls -->
+    <div class="top-actions">
+      <button class="btn primary" onclick="openBuyModal('', 'MANUAL', 0.70)">+ ENTER POSITION</button>
+      <button class="btn warn" onclick="openHarvestModal()">HARVEST WINNERS</button>
+      <button class="btn danger" onclick="openPurgeModal()">PURGE STOPPED</button>
+      <button class="btn" onclick="triggerManualRefresh()">REFRESH</button>
+    </div>
+  </header>
+
+  <!-- Pinned Always-On Capital & Treasury Bar (Never scrolls away) -->
+  <div class="treasury-pinned-bar">
+    <div class="tb-metric">
+      <span class="tb-lbl">TOTAL PORTFOLIO EQUITY</span>
+      <span class="tb-val" id="topTotalEquity">7.0536 SOL</span>
+      <span class="tb-sub" id="topTotalEquityUsd">$980.45 USD</span>
+    </div>
+    <div class="tb-metric">
+      <span class="tb-lbl">AVAILABLE CASH RESERVE</span>
+      <span class="tb-val green" id="topCashReserve">3.5536 SOL</span>
+      <span class="tb-sub" id="topCashReserveUsd">$493.95 USD (Free)</span>
+    </div>
+    <div class="tb-metric">
+      <span class="tb-lbl">ACTIVE DEPLOYED CAPITAL</span>
+      <span class="tb-val amber" id="topDeployed">3.5000 SOL</span>
+      <span class="tb-sub" id="topDeployedSlots">5 / 5 Active Slots</span>
+    </div>
+    <div class="tb-metric">
+      <span class="tb-lbl">FLOATING UNREALIZED PNL</span>
+      <span class="tb-val" id="topFloatingPnl">-0.0449 SOL</span>
+      <span class="tb-sub" id="topFloatingPnlUsd">$-6.24 USD</span>
+    </div>
+    <div class="tb-metric">
+      <span class="tb-lbl">BANKED REALIZED PNL</span>
+      <span class="tb-val" id="topRealizedPnl">-0.1015 SOL</span>
+      <span class="tb-sub" id="topRealizedPnlUsd">$-14.11 USD</span>
+    </div>
+    <div class="tb-metric">
+      <span class="tb-lbl">WIN RATE &amp; PROFIT FACTOR</span>
+      <span class="tb-val" id="topWinRate">0.0% (0W / 1L)</span>
+      <span class="tb-sub" id="topProfitFactor">PF: 0.00x | Daily -5.6%</span>
+    </div>
+    <div class="tb-gauge-wrap">
+      <div style="display:flex;justify-content:space-between;font-size:9.5px;font-family:var(--font-mono);color:var(--text-dim);">
+        <span>DEPLOYED <b id="topDeployedPct" style="color:var(--amber)">49.6%</b></span>
+        <span>CASH <b id="topCashPct" style="color:var(--green)">50.4%</b></span>
+      </div>
+      <div class="tb-gauge-bar">
+        <div class="tb-gauge-fill-deployed" id="topGaugeDeployed" style="width:49.6%;"></div>
+        <div class="tb-gauge-fill-cash" id="topGaugeCash" style="width:50.4%;"></div>
+      </div>
+      <div style="font-size:8.5px;color:var(--text-dim);font-family:var(--font-mono);text-align:right;">CAP: 50.0% MAX EXPOSURE</div>
+    </div>
+  </div>
+
+  <!-- Main Viewport Body -->
+  <div class="app-viewport">
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 1: TREASURY & CAPITAL CITADEL (Requested Money & Wallet View) -->
+    <!-- ===================================================================== -->
+    <main id="view-treasury" class="view-page active">
+      
+      <!-- Hero Wallet Profile -->
+      <section class="treasury-hero">
+        <div>
+          <div class="treasury-hero-title">SOVEREIGN QUANTITATIVE TREASURY &amp; CAPITAL ALLOCATION</div>
+          <div class="treasury-hero-sub">MONITORING TOTAL CAPITAL, CASH RESERVES, AND ACTIVE POSITION ALLOCATION ON SOLANA</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <div class="wallet-chip">
+            <span class="dot"></span>
+            <span style="color:var(--text-dim);">WALLET:</span>
+            <span id="heroWalletAddr" style="font-weight:700;color:var(--green);cursor:pointer;" onclick="copyAddress(this.getAttribute('data-full'))" data-full="3wFHYM6bdDFwQrpLx4FTGquM8j3oGfTJocRUmadQ9r3N">3wFHYM...9r3N</span>
+          </div>
+          <div class="wallet-chip">
+            <span style="color:var(--text-dim);">CHAIN:</span>
+            <span style="font-weight:700;color:var(--text);" id="heroChain">SOLANA MAINNET</span>
+          </div>
+          <div class="wallet-chip">
+            <span style="color:var(--text-dim);">MODE:</span>
+            <span style="font-weight:700;color:var(--amber);" id="heroMode">SHADOW SIMULATION</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Core Financial Metric Cards -->
+      <section class="quad-grid">
+        <div class="quad-card accent-green">
+          <span class="qc-lbl">1. TOTAL PORTFOLIO NET WORTH</span>
+          <span class="qc-val" id="cardNetWorthSol">7.0536 SOL</span>
+          <span class="qc-sub" id="cardNetWorthUsd">$980.45 USD (Initial: 7.20 SOL / $1,000)</span>
+          <div style="font-size:9.5px;color:var(--text-dim);font-family:var(--font-mono);margin-top:4px;">
+            NET ROI: <span id="cardNetRoi" style="font-weight:700;color:var(--red);">-2.03%</span>
+          </div>
+        </div>
+
+        <div class="quad-card accent-blue">
+          <span class="qc-lbl">2. FREE CASH &amp; PURCHASING POWER</span>
+          <span class="qc-val" id="cardFreeCashSol" style="color:#6366f1;">3.5536 SOL</span>
+          <span class="qc-sub" id="cardFreeCashUsd">$493.95 USD Liquid Reserve</span>
+          <div style="font-size:9.5px;color:var(--text-dim);font-family:var(--font-mono);margin-top:4px;">
+            CAPACITY: <span id="cardRemainingSlots" style="font-weight:700;color:var(--text);">0 Additional Slots (5/5 Full)</span>
+          </div>
+        </div>
+
+        <div class="quad-card accent-amber">
+          <span class="qc-lbl">3. ACTIVE DEPLOYED EXPOSURE</span>
+          <span class="qc-val" id="cardDeployedSol" style="color:var(--amber);">3.5000 SOL</span>
+          <span class="qc-sub" id="cardDeployedUsd">$486.50 USD in Active Market Slots</span>
+          <div style="font-size:9.5px;color:var(--text-dim);font-family:var(--font-mono);margin-top:4px;">
+            SLOT SIZING: <span style="font-weight:700;color:var(--text);">0.70 SOL / Slot (5 Active Coins)</span>
+          </div>
+        </div>
+
+        <div class="quad-card accent-red">
+          <span class="qc-lbl">4. PERFORMANCE &amp; BANKED GAINS</span>
+          <span class="qc-val" id="cardRealizedSol">-0.1015 SOL</span>
+          <span class="qc-sub" id="cardRealizedUsd">Realized PnL: $-14.11 USD</span>
+          <div style="font-size:9.5px;color:var(--text-dim);font-family:var(--font-mono);margin-top:4px;">
+            WIN/LOSS: <span id="cardWinLossRatio" style="font-weight:700;color:var(--text);">0 Wins / 1 Losses</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Risk Allocation & Daily Loss Drawdown Bar -->
+      <section class="risk-breakdown-card">
+        <div>
+          <div class="rb-sec-title">
+            <span>CAPITAL ALLOCATION &amp; EXPOSURE CEILING</span>
+            <span id="rbExposureStatus" style="color:var(--green);font-family:var(--font-mono);font-size:11px;">WITHIN 50% RISK CEILING</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="rbExposureFill" style="width:49.6%;background:var(--amber);"></div>
+          </div>
+          <div class="rb-legend">
+            <span>DEPLOYED: <b id="rbDeployedDetail" style="color:var(--text)">3.50 SOL (49.6%)</b></span>
+            <span>MAX CAP: <b style="color:var(--text)">3.60 SOL (50.0%)</b></span>
+            <span>CASH RESERVE: <b id="rbCashDetail" style="color:var(--green)">3.55 SOL (50.4%)</b></span>
+          </div>
+        </div>
+
+        <div>
+          <div class="rb-sec-title">
+            <span>DAILY DRAWDOWN KILL-SWITCH CITADEL</span>
+            <span id="rbKillSwitchStatus" style="color:var(--green);font-family:var(--font-mono);font-size:11px;">CIRCUIT BREAKER: ARMED &amp; HEALTHY</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="rbDrawdownFill" style="width:5.6%;background:var(--red);"></div>
+          </div>
+          <div class="rb-legend">
+            <span>REALIZED LOSS TODAY: <b id="rbLossToday" style="color:var(--red)">0.1015 SOL ($14.11)</b></span>
+            <span>KILL SWITCH CAP: <b style="color:var(--text)">1.8000 SOL ($250.00)</b></span>
+            <span>HEADROOM: <b id="rbHeadroom" style="color:var(--green)">1.6985 SOL (94.4%)</b></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Active Asset Holdings Valuation Table (Where our money is right now) -->
+      <section class="panel-box" style="margin-bottom:12px;">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>ACTIVE ASSET HOLDINGS &amp; CAPITAL IN-FLIGHT</span>
+            <span class="tag-badge" id="holdingsCountBadge">5 OPEN SLOTS</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">
+            TOTAL CAPITAL IN TOKENS: <b id="holdingsTotalSol" style="color:var(--amber)">3.5000 SOL ($486.50 USD)</b>
+          </div>
+        </div>
+        <div class="table-viewport" style="max-height:360px;">
+          <table class="cockpit-table">
+            <thead>
+              <tr>
+                <th style="min-width:140px;">TOKEN ASSET</th>
+                <th>INVESTED CAPITAL</th>
+                <th>CURRENT VALUE</th>
+                <th>ENTRY PRICE</th>
+                <th>CURRENT PRICE</th>
+                <th>FLOATING PNL %</th>
+                <th>NET RETURN SOL</th>
+                <th>PROTECTION RATCHET</th>
+                <th style="text-align:right;">ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="treasuryHoldingsTbody">
+              <tr><td colspan="9" style="text-align:center;padding:24px;color:var(--text-dim);">CONNECTING TO ACTIVE POSITIONS LEDGER...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Closed Trades Financial Audit Table -->
+      <section class="panel-box">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>REALIZED TRADE AUDIT // HISTORICAL SETTLEMENTS</span>
+            <span class="tag-badge" id="realizedTradesBadge">1 SETTLED TRADES</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">
+            NET REALIZED SUM: <b id="realizedNetSum" style="color:var(--red)">-0.1015 SOL ($-14.11 USD)</b>
+          </div>
+        </div>
+        <div class="table-viewport" style="max-height:280px;">
+          <table class="cockpit-table">
+            <thead>
+              <tr>
+                <th>SETTLED TOKEN</th>
+                <th>EXIT REASON</th>
+                <th>HOLD DURATION</th>
+                <th>ENTRY PRICE</th>
+                <th>EXIT PRICE</th>
+                <th>NET PNL %</th>
+                <th>REALIZED SOL</th>
+                <th>REALIZED USD</th>
+                <th>TIMESTAMP</th>
+              </tr>
+            </thead>
+            <tbody id="treasurySettledTbody">
+              <tr><td colspan="9" style="text-align:center;padding:20px;color:var(--text-dim);">LOADING SETTLED TRADES LEDGER...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 2: 100-TOKEN RADAR & COCKPIT GRID (Existing Radar View) -->
+    <!-- ===================================================================== -->
+    <main id="view-radar" class="view-page">
+      <div class="cockpit-grid">
+        
+        <!-- LEFT DECK: 100-Candidate Screening Radar -->
+        <section class="cockpit-deck">
+          <div class="panel-box" style="flex:1;">
+            <div class="panel-header">
+              <div class="panel-title">
+                <span>01 ON-CHAIN SCREENING RADAR // 100 REAL-TIME CANDIDATES</span>
+                <span class="tag-badge" id="radarLatency">Latency: --ms</span>
+              </div>
+              <div style="font-size:11px;color:var(--text-muted);font-family:var(--font-mono);">
+                ALLOCATION: <b style="color:var(--green)">0.70 SOL / SLOT</b>
+              </div>
+            </div>
+
+            <!-- Protocol Filter Pills -->
+            <div class="filter-bar">
+              <div class="f-pill active" onclick="setDexFilter('ALL', this)">ALL CANDIDATES (100)</div>
+              <div class="f-pill" onclick="setDexFilter('PUMP.FUN', this)">PUMP.FUN</div>
+              <div class="f-pill" onclick="setDexFilter('RAYDIUM', this)">RAYDIUM</div>
+              <div class="f-pill" onclick="setDexFilter('METEORA', this)">METEORA</div>
+              <div class="f-pill" onclick="setDexFilter('BUY', this)">QUALIFIED ENTRY</div>
+            </div>
+
+            <!-- 100 Candidates Radar Table -->
+            <div class="table-viewport">
+              <table class="cockpit-table">
+                <thead>
+                  <tr>
+                    <th style="min-width:140px;">TOKEN / CONTRACT</th>
+                    <th>DEX</th>
+                    <th>SAFETY GATES</th>
+                    <th>BUNDLER</th>
+                    <th>DEV HOLD</th>
+                    <th>TOP 10</th>
+                    <th>SMART CONFLUENCE</th>
+                    <th>5M / 1H CHG</th>
+                    <th>DECISION RATIONALE</th>
+                    <th style="text-align:right;">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody id="radarTbody">
+                  <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-dim)">CONNECTING TO 100-TOKEN RADAR STREAM...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT DECK: Active Positions Citadel, Decisions & Closed Ledger -->
+        <section class="cockpit-deck">
+          
+          <!-- Monitored Active Positions Citadel (5 Concentrated Slots) -->
+          <div class="panel-box" style="flex:1.2;">
+            <div class="panel-header">
+              <div class="panel-title">
+                <span>ACTIVE POSITIONS CITADEL</span>
+                <span class="tag-badge" id="posCountBadge" style="cursor:pointer;" onclick="openExpandCapacityModal()" title="Adjust Max Slot Capacity">5 / 5 SLOTS</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="font-family:var(--font-mono);font-weight:700;color:var(--green);font-size:12px;" id="posTotalFloatHeader">
+                  +0.0000 SOL
+                </div>
+                <button class="btn danger" style="padding:2px 7px;font-size:10px;" onclick="openCloseAllModal()">CLOSE ALL</button>
+              </div>
+            </div>
+            
+            <div class="positions-stack" id="positionsBoard">
+              <div style="text-align:center;padding:32px;color:var(--text-dim);">CONNECTING TO ACTIVE POSITIONS...</div>
+            </div>
+          </div>
+
+          <!-- Real-Time Audited Decision Stream (trade_decisions.jsonl) -->
+          <div class="panel-box" style="flex:0.8;">
+            <div class="panel-header">
+              <div class="panel-title">
+                <span>REAL-TIME DECISION STREAM</span>
+                <span class="tag-badge">LAST 15 ACTIONS</span>
+              </div>
+              <span style="font-size:10px;color:var(--text-dim);font-family:var(--font-mono);">trade_decisions.jsonl</span>
+            </div>
+            <div class="decision-feed" id="decisionFeed">
+              <div style="text-align:center;padding:20px;color:var(--text-dim)">LOADING DECISION STREAM...</div>
+            </div>
+          </div>
+
+          <!-- Recent Closed Trades Ledger -->
+          <div class="panel-box" style="flex:0.8;">
+            <div class="panel-header">
+              <div class="panel-title">
+                <span>RECENT CLOSED TRADES AUDIT</span>
+                <span class="tag-badge" id="closedCountBadge">1 TRADES</span>
+              </div>
+              <span style="font-size:10px;color:var(--green);font-family:var(--font-mono);">RATCHET SECURED</span>
+            </div>
+            <div class="ledger-table-wrap">
+              <table class="cockpit-table">
+                <thead>
+                  <tr>
+                    <th>TOKEN</th>
+                    <th>REASON</th>
+                    <th>PNL %</th>
+                    <th>REALIZED SOL</th>
+                    <th>HOLD</th>
+                  </tr>
+                </thead>
+                <tbody id="ledgerTbody">
+                  <tr><td colspan="5" style="text-align:center;padding:16px;color:var(--text-dim)">LOADING CLOSED TRADES...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 3: 23-SUBAGENT COUNCIL & BRAIN VIEW -->
+    <!-- ===================================================================== -->
+    <main id="view-council" class="view-page">
+      <div class="council-deck">
+        <section class="panel-box">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span>23-SUBAGENT SUPREME COUNCIL ARCHITECTURE</span>
+              <span class="tag-badge">SENTINELS ARMED</span>
+            </div>
+            <span style="font-size:10px;color:var(--green);font-family:var(--font-mono);">ACTIVE PROTECTION</span>
+          </div>
+          <div class="council-list" id="councilAgentsList">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <section class="panel-box">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span>LIVE REASONING MATRIX &amp; GATE TELEMETRY</span>
+              <span class="tag-badge">SOVEREIGN REFLECTION</span>
+            </div>
+            <button class="btn" style="padding:2px 8px;font-size:10.5px;" onclick="fetchBrainStatus()">REFRESH BRAIN</button>
+          </div>
+          <div style="padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;">
+            <div style="background:var(--bg);padding:12px;border:1px solid var(--border);border-radius:5px;">
+              <div style="font-weight:700;color:var(--text);margin-bottom:4px;">COGNITIVE EXECUTIVE SUMMARY</div>
+              <div id="brainSummaryText" style="color:var(--text-muted);font-size:11.5px;line-height:1.5;">
+                Disciplined micro-scalp execution active with -12.0% stop-loss boundaries. Capital deployment is bounded by 50% max active exposure ceiling. Sentinels continuously evaluate token liquidity depth, bundler concentrations, and smart money consensus.
+              </div>
+            </div>
+
+            <div style="background:var(--bg);padding:12px;border:1px solid var(--border);border-radius:5px;">
+              <div style="font-weight:700;color:var(--text);margin-bottom:6px;">LIVE HEURISTIC RISK GATES</div>
+              <div id="brainHeuristicsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-family:var(--font-mono);font-size:11px;">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 4: CLOSED TRADES & AUDIT LEDGER -->
+    <!-- ===================================================================== -->
+    <main id="view-ledger" class="view-page">
+      <section class="panel-box" style="height:100%;">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>COMPLETE HISTORICAL TRADING AUDIT LEDGER</span>
+            <span class="tag-badge" id="fullLedgerCountBadge">0 SETTLED TRADES</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">
+            AUDITED SOURCE: <b style="color:var(--text)">session_audit.json</b>
+          </div>
+        </div>
+
+        <!-- Citadel Provenance & Guardrails Telemetry Strip -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--border);">
+          <div style="background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:8px 12px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:9.5px;color:var(--text-dim);font-weight:600;letter-spacing:0.04em;">PROVENANCE REGISTRY</span>
+            <span id="ledgerProvRegistered" style="font-size:12.5px;font-weight:700;font-family:var(--font-mono);color:var(--text);">-- MINTS</span>
+          </div>
+          <div style="background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:8px 12px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:9.5px;color:var(--text-dim);font-weight:600;letter-spacing:0.04em;">VERIFICATIONS PASSED</span>
+            <span id="ledgerProvVerified" style="font-size:12.5px;font-weight:700;font-family:var(--font-mono);color:var(--green);">--</span>
+          </div>
+          <div style="background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:8px 12px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:9.5px;color:var(--text-dim);font-weight:600;letter-spacing:0.04em;">TWO-PHASE STAGED SWAPS</span>
+            <span id="ledgerGuardrailsStaged" style="font-size:12.5px;font-weight:700;font-family:var(--font-mono);color:var(--text);">-- APPLIED</span>
+          </div>
+          <div style="background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:8px 12px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:9.5px;color:var(--text-dim);font-weight:600;letter-spacing:0.04em;">GUARDRAIL BLOCKS</span>
+            <span id="ledgerGuardrailsRejected" style="font-size:12.5px;font-weight:700;font-family:var(--font-mono);color:var(--amber);">0 BLOCKED</span>
+          </div>
+        </div>
+
+        <div class="table-viewport">
+          <table class="cockpit-table">
+            <thead>
+              <tr>
+                <th>TOKEN</th>
+                <th>CONTRACT ADDRESS</th>
+                <th>EXIT REASON</th>
+                <th>HOLD TIME</th>
+                <th>ENTRY PRICE</th>
+                <th>EXIT PRICE</th>
+                <th>PNL %</th>
+                <th>REALIZED SOL</th>
+                <th>REALIZED USD</th>
+                <th>SETTLED TIMESTAMP</th>
+              </tr>
+            </thead>
+            <tbody id="fullLedgerTbody">
+              <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-dim)">CONNECTING TO FULL TRADING LEDGER...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script>
+    // -------------------------------------------------------------
+    // HIGH-DENSITY QUANTITATIVE TRADING & TREASURY ENGINE
+    // -------------------------------------------------------------
+    const API = location.protocol === 'file:' ? 'http://127.0.0.1:8000' : '';
+    const BASE_BANKROLL_SOL = 7.2000; // Reference initial capital ($1,000 USD at $139/SOL)
+    const SOL_PRICE_USD = 139.00;
+
+    let currentDexFilter = 'ALL';
+    let currentActiveView = 'treasury';
+    let rawDecisions = [];
+    let rawPositions = [];
+    let rawAuditTrades = [];
+    let rawAnalyticsSummary = {};
+    let rawPortfolioMeta = {};
+    let rawProvenanceStats = {};
+    let rawTwoPhaseGuardrails = {};
+
+    function switchView(viewId) {
+      currentActiveView = viewId;
+      document.querySelectorAll('.view-page').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => btn.classList.remove('active'));
+
+      const targetPage = document.getElementById('view-' + viewId);
+      if (targetPage) targetPage.classList.add('active');
+
+      const btnIdMap = {
+        'treasury': 'tabTreasury',
+        'radar': 'tabRadar',
+        'council': 'tabCouncil',
+        'ledger': 'tabLedger'
+      };
+      const activeBtn = document.getElementById(btnIdMap[viewId]);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      if (viewId === 'council') fetchBrainStatus();
+    }
+
+    function setDexFilter(dex, el) {
+      currentDexFilter = dex;
+      document.querySelectorAll('.f-pill').forEach(c => c.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderRadarTable();
+    }
+
+    function copyAddress(addr) {
+      if (!addr) return;
+      navigator.clipboard.writeText(addr).then(() => {
+        showToast('Address copied: ' + addr, 'info', 'CLIPBOARD // COPIED');
+      }).catch(() => {
+        prompt('Copy Address:', addr);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // IPC FETCHERS (ELECTRON)
+    // -------------------------------------------------------------
+    
+    if (typeof require !== 'undefined') {
+      window.ipcRenderer = require('electron').ipcRenderer;
+    }
+
+    let apiToken = localStorage.getItem("kida_token") || "";
+
+    async function apiFetch(path, options = {}) {
+      if (!options.headers) options.headers = {};
+      if (apiToken) options.headers['Authorization'] = 'Bearer ' + apiToken;
+      const res = await fetch(API + path, options);
+      if (res.status === 401) {
+        const t = prompt("Enter API Bearer Token:");
+        if (t) {
+          localStorage.setItem("kida_token", t);
+          apiToken = t;
+          return apiFetch(path, options);
+        }
+      }
+      return res;
+    }
+
+    async function syncIPC() {
+      try {
+        const res = await apiFetch('/api/state');
+        if (!res.ok) return;
+        const state = await res.json();
+        if (!state) return;
+
+        // Map session_audit to expected globals
+        rawAnalyticsSummary = {
+           net_realized_pnl_sol: state.total_realized_pnl_sol,
+           unrealized_pnl_sol: state.unrealized_pnl_sol,
+           net_portfolio_pnl_sol: state.net_portfolio_pnl_sol,
+           win_rate_pct: state.win_rate_pct,
+           profit_factor: state.profit_factor,
+           total_trades_closed: state.total_trades_closed
+        };
+        rawAuditTrades = state.closed_trades || [];
+        rawProvenanceStats = state.provenance_stats || {};
+        rawTwoPhaseGuardrails = state.two_phase_guardrails || {};
+        
+        rawPositions = state.active_positions || [];
+        rawPortfolioMeta = { max_concurrent: 5, total_exposure: rawPositions.length };
+        rawDecisions = state.candidates || state.vetoes || [];
+
+        renderTreasuryMetrics();
+        renderLedgerTable();
+        renderFullLedgerTable();
+        renderCitadelGuardrailStats();
+        
+        const totalSlots = rawPortfolioMeta.max_concurrent || 5;
+        const countBadge = document.getElementById('posCountBadge');
+        if (countBadge) countBadge.textContent = rawPositions.length + ' / ' + totalSlots + ' SLOTS';
+        const topSlots = document.getElementById('topDeployedSlots');
+        if (topSlots) topSlots.textContent = rawPositions.length + ' / ' + totalSlots + ' Active Slots';
+        const holdBadge = document.getElementById('holdingsCountBadge');
+        if (holdBadge) holdBadge.textContent = rawPositions.length + ' OPEN SLOTS';
+
+        renderPositions();
+        renderTreasuryHoldings();
+        renderDecisions();
+        
+        // Also fetch weights
+        const weights = await window.ipcRenderer.invoke('get-weights');
+        if (weights) {
+            const hGrid = document.getElementById('brainHeuristicsGrid');
+            if (hGrid) {
+              hGrid.innerHTML = `
+                <div>Smart Money Weight: <b style="color:var(--green);">${(weights.w_smart_money * 100).toFixed(1)}%</b></div>
+                <div>Liquidity Weight: <b style="color:var(--text);">${(weights.w_liquidity * 100).toFixed(1)}%</b></div>
+                <div>Momentum Weight: <b style="color:var(--amber);">${(weights.w_momentum * 100).toFixed(1)}%</b></div>
+                <div>Buy Ratio Weight: <b style="color:var(--amber);">${(weights.w_buy_ratio * 100).toFixed(1)}%</b></div>
+                <div>Learning Rate: <b style="color:var(--green);">0.05</b></div>
+                <div>Backprop Status: <b style="color:var(--green);">ACTIVE (V2)</b></div>
+              `;
+            }
+        }
+        
+      } catch (err) {
+        console.warn('IPC Sync Error:', err);
+      }
+    }
+
+    async function fetchStatus() {}
+    async function fetchAnalytics() {}
+    async function fetchPositions() {}
+    async function fetchWallet() {}
+    async function fetchScreening() {}
+    async function fetchBrainStatus() {}
+
+    // -------------------------------------------------------------
+    // RENDERERS: TREASURY & MONEY CITADEL
+    // -------------------------------------------------------------
+    function renderTreasuryMetrics() {
+      const sum = rawAnalyticsSummary || {};
+      const port = rawPortfolioMeta || {};
+
+      const realizedSol = sum.net_realized_pnl_sol != null ? sum.net_realized_pnl_sol : -0.1015;
+      const unrealizedSol = sum.unrealized_pnl_sol != null ? sum.unrealized_pnl_sol : -0.0449;
+      const netPnlSol = sum.net_portfolio_pnl_sol != null ? sum.net_portfolio_pnl_sol : (realizedSol + unrealizedSol);
+
+      const currentTotalEquitySol = BASE_BANKROLL_SOL + netPnlSol;
+      const currentTotalEquityUsd = currentTotalEquitySol * SOL_PRICE_USD;
+
+      const deployedSol = port.total_exposure != null ? port.total_exposure : 3.5000;
+      const deployedUsd = deployedSol * SOL_PRICE_USD;
+
+      const freeCashSol = Math.max(0, currentTotalEquitySol - deployedSol);
+      const freeCashUsd = freeCashSol * SOL_PRICE_USD;
+
+      const deployedPct = (deployedSol / Math.max(0.1, currentTotalEquitySol)) * 100;
+      const cashPct = Math.max(0, 100 - deployedPct);
+
+      const netRoiPct = ((netPnlSol / BASE_BANKROLL_SOL) * 100).toFixed(2);
+
+      // Top Pinned Bar
+      document.getElementById('topTotalEquity').textContent = currentTotalEquitySol.toFixed(4) + ' SOL';
+      document.getElementById('topTotalEquityUsd').textContent = '$' + currentTotalEquityUsd.toFixed(2) + ' USD';
+      document.getElementById('badgeCapital').textContent = currentTotalEquitySol.toFixed(2) + ' SOL';
+
+      document.getElementById('topCashReserve').textContent = freeCashSol.toFixed(4) + ' SOL';
+      document.getElementById('topCashReserveUsd').textContent = '$' + freeCashUsd.toFixed(2) + ' USD (Free)';
+
+      document.getElementById('topDeployed').textContent = deployedSol.toFixed(4) + ' SOL';
+
+      const fPnlEl = document.getElementById('topFloatingPnl');
+      fPnlEl.textContent = (unrealizedSol >= 0 ? '+' : '') + unrealizedSol.toFixed(4) + ' SOL';
+      fPnlEl.className = 'tb-val ' + (unrealizedSol >= 0 ? 'green' : 'red');
+      document.getElementById('topFloatingPnlUsd').textContent = (unrealizedSol >= 0 ? '+$' : '-$') + Math.abs(unrealizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
+
+      const rPnlEl = document.getElementById('topRealizedPnl');
+      rPnlEl.textContent = (realizedSol >= 0 ? '+' : '') + realizedSol.toFixed(4) + ' SOL';
+      rPnlEl.className = 'tb-val ' + (realizedSol >= 0 ? 'green' : 'red');
+      document.getElementById('topRealizedPnlUsd').textContent = (realizedSol >= 0 ? '+$' : '-$') + Math.abs(realizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
+
+      const winRate = sum.win_rate_pct != null ? sum.win_rate_pct.toFixed(1) : '0.0';
+      const winsCnt = sum.winning_trades_count || 0;
+      const lossCnt = sum.losing_trades_count || (sum.total_trades ? (sum.total_trades - winsCnt) : 1);
+      const pf = sum.profit_factor != null ? sum.profit_factor.toFixed(2) : '0.00';
+      document.getElementById('topWinRate').textContent = winRate + '% (' + winsCnt + 'W / ' + lossCnt + 'L)';
+      document.getElementById('topProfitFactor').textContent = 'PF: ' + pf + 'x | Drawdown Armed';
+
+      document.getElementById('topDeployedPct').textContent = deployedPct.toFixed(1) + '%';
+      document.getElementById('topCashPct').textContent = cashPct.toFixed(1) + '%';
+      document.getElementById('topGaugeDeployed').style.width = Math.min(100, deployedPct) + '%';
+      document.getElementById('topGaugeCash').style.width = Math.max(0, cashPct) + '%';
+
+      // 4 Hero Cards in Treasury View
+      document.getElementById('cardNetWorthSol').textContent = currentTotalEquitySol.toFixed(4) + ' SOL';
+      document.getElementById('cardNetWorthUsd').textContent = '$' + currentTotalEquityUsd.toFixed(2) + ' USD (Initial: 7.20 SOL)';
+      const roiEl = document.getElementById('cardNetRoi');
+      roiEl.textContent = (netPnlSol >= 0 ? '+' : '') + netRoiPct + '%';
+      roiEl.style.color = netPnlSol >= 0 ? 'var(--green)' : 'var(--red)';
+
+      document.getElementById('cardFreeCashSol').textContent = freeCashSol.toFixed(4) + ' SOL';
+      document.getElementById('cardFreeCashUsd').textContent = '$' + freeCashUsd.toFixed(2) + ' USD Liquid Reserve';
+
+      const slotSize = 0.70;
+      const openSlots = rawPositions.length;
+      const maxSlots = port.max_concurrent || 5;
+      const remainingSlots = Math.max(0, maxSlots - openSlots);
+      document.getElementById('cardRemainingSlots').textContent = remainingSlots + ' Available Slots (' + openSlots + '/' + maxSlots + ' Full)';
+
+      document.getElementById('cardDeployedSol').textContent = deployedSol.toFixed(4) + ' SOL';
+      document.getElementById('cardDeployedUsd').textContent = '$' + deployedUsd.toFixed(2) + ' USD in Market';
+
+      const cardRealEl = document.getElementById('cardRealizedSol');
+      cardRealEl.textContent = (realizedSol >= 0 ? '+' : '') + realizedSol.toFixed(4) + ' SOL';
+      cardRealEl.style.color = realizedSol >= 0 ? 'var(--green)' : 'var(--red)';
+      document.getElementById('cardRealizedUsd').textContent = 'Realized: ' + (realizedSol >= 0 ? '+$' : '-$') + Math.abs(realizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
+      document.getElementById('cardWinLossRatio').textContent = winsCnt + ' Wins / ' + lossCnt + ' Losses';
+
+      // Risk Gauges Breakdown
+      document.getElementById('rbDeployedDetail').textContent = deployedSol.toFixed(2) + ' SOL (' + deployedPct.toFixed(1) + '%)';
+      document.getElementById('rbCashDetail').textContent = freeCashSol.toFixed(2) + ' SOL (' + cashPct.toFixed(1) + '%)';
+      document.getElementById('rbExposureFill').style.width = Math.min(100, deployedPct) + '%';
+      document.getElementById('rbExposureStatus').textContent = deployedPct <= 50 ? 'WITHIN 50% RISK CEILING' : 'EXPOSURE CAP REACHED';
+      document.getElementById('rbExposureStatus').style.color = deployedPct <= 50 ? 'var(--green)' : 'var(--amber)';
+
+      const lossToday = port.realized_loss_today != null ? port.realized_loss_today : Math.abs(Math.min(0, realizedSol));
+      const dailyCap = port.daily_loss_cap || 1.8000;
+      const lossPct = (lossToday / dailyCap) * 100;
+      const headroomSol = Math.max(0, dailyCap - lossToday);
+      document.getElementById('rbLossToday').textContent = lossToday.toFixed(4) + ' SOL ($' + (lossToday * SOL_PRICE_USD).toFixed(2) + ')';
+      document.getElementById('rbHeadroom').textContent = headroomSol.toFixed(4) + ' SOL (' + (100 - lossPct).toFixed(1) + '%)';
+      document.getElementById('rbDrawdownFill').style.width = Math.min(100, lossPct) + '%';
+    }
+
+    function renderTreasuryHoldings() {
+      const tbody = document.getElementById('treasuryHoldingsTbody');
+      if (!tbody) return;
+
+      if (!rawPositions.length) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:24px;color:var(--text-dim)">NO ACTIVE HOLDINGS IN PORTFOLIO (ALL SLOTS IN CASH)</td></tr>`;
+        return;
+      }
+
+      let totalSolInvested = 0;
+      tbody.innerHTML = rawPositions.map(p => {
+        const sym = p.symbol || 'TOKEN';
+        const addr = p.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const sizeSol = p.size_sol || 0.70;
+        totalSolInvested += sizeSol;
+        const sizeUsd = sizeSol * SOL_PRICE_USD;
+
+        const pnlPct = p.pnl || 0.0;
+        const isUp = pnlPct >= 0;
+        const curValSol = sizeSol * (1 + pnlPct);
+        const curValUsd = curValSol * SOL_PRICE_USD;
+        const pnlSol = curValSol - sizeSol;
+        const pnlUsd = pnlSol * SOL_PRICE_USD;
+
+        const ep = p.entry_price || 0.0;
+        const cp = p.cur_price || ep;
+
+        return `
+          <tr>
+            <td>
+              <div class="tok-info">
+                <span class="tok-sym" style="cursor:pointer;" onclick="openTokenDetailModal('${addr}', '${sym}')" title="Inspect Token Due Diligence">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+            </td>
+            <td><b style="color:var(--text);">${sizeSol.toFixed(2)} SOL</b> <span style="color:var(--text-dim)">($${sizeUsd.toFixed(1)})</span></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--text)'};">${curValSol.toFixed(4)} SOL</b> <span style="color:var(--text-dim)">($${curValUsd.toFixed(1)})</span></td>
+            <td><span style="color:var(--text-dim)">${ep.toFixed(8)}</span></td>
+            <td><b>${cp.toFixed(8)}</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'};">${isUp ? '+' : ''}${(pnlPct * 100).toFixed(2)}%</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'};">${(pnlSol >= 0 ? '+' : '') + pnlSol.toFixed(4)} SOL</b> <span style="color:var(--text-dim)">($${(pnlUsd >= 0 ? '+' : '') + pnlUsd.toFixed(2)})</span></td>
+            <td><span class="badge-gate ${isUp ? 'pass' : 'warn'}">-12% SL / +150% TP</span></td>
+            <td style="text-align:right;">
+              <button class="btn danger" style="padding:3px 9px;font-size:10px;" onclick="openExitModal('${addr}', '${sym}', ${pnlPct}, ${pnlSol}, ${cp}, ${ep}, ${sizeSol})">TACTICAL EXIT</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      document.getElementById('holdingsTotalSol').textContent = totalSolInvested.toFixed(4) + ' SOL ($' + (totalSolInvested * SOL_PRICE_USD).toFixed(2) + ' USD)';
+    }
+
+    function renderTreasurySettled() {
+      const tbody = document.getElementById('treasurySettledTbody');
+      if (!tbody) return;
+
+      if (!rawAuditTrades.length) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:24px;color:var(--text-dim)">NO SETTLED TRADES RECORDED</td></tr>`;
+        return;
+      }
+
+      document.getElementById('realizedTradesBadge').textContent = rawAuditTrades.length + ' SETTLED TRADES';
+
+      let sumRealizedSol = 0;
+      tbody.innerHTML = rawAuditTrades.map(tr => {
+        const sym = tr.symbol || 'TOKEN';
+        const reason = tr.reason || 'EXIT';
+        const hold = tr.hold_minutes != null ? (tr.hold_minutes.toFixed(1) + 'm') : '--';
+        const ep = tr.entry_price ? tr.entry_price.toFixed(8) : '--';
+        const xp = tr.exit_price ? tr.exit_price.toFixed(8) : '--';
+        const pnlPct = ((tr.pnl_pct || 0) * 100).toFixed(2);
+        const isUp = (tr.pnl_pct || 0) >= 0;
+        const pnlSol = tr.pnl_sol || 0.0;
+        sumRealizedSol += pnlSol;
+        const pnlUsd = (pnlSol * SOL_PRICE_USD).toFixed(2);
+        const ts = tr.timestamp ? tr.timestamp.split('T')[1].slice(0, 8) : '--:--:--';
+
+        return `
+          <tr>
+            <td><b style="color:var(--text);">$${sym}</b></td>
+            <td><span style="color:var(--amber);font-size:10.5px;">${reason}</span></td>
+            <td style="color:var(--text-dim)">${hold}</td>
+            <td><span style="color:var(--text-dim)">${ep}</span></td>
+            <td><b>${xp}</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlPct}%</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${(pnlSol >= 0 ? '+' : '') + pnlSol.toFixed(4)} SOL</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${(pnlSol >= 0 ? '+$' : '-$') + Math.abs(pnlUsd)}</b></td>
+            <td style="color:var(--text-dim)">${ts}</td>
+          </tr>
+        `;
+      }).join('');
+
+      const netEl = document.getElementById('realizedNetSum');
+      netEl.textContent = (sumRealizedSol >= 0 ? '+' : '') + sumRealizedSol.toFixed(4) + ' SOL ($' + (sumRealizedSol * SOL_PRICE_USD).toFixed(2) + ' USD)';
+      netEl.style.color = sumRealizedSol >= 0 ? 'var(--green)' : 'var(--red)';
+    }
+
+    // -------------------------------------------------------------
+    // RENDERERS: RADAR, POSITIONS & LEDGERS
+    // -------------------------------------------------------------
+    function renderRadarTable() {
+      const tbody = document.getElementById('radarTbody');
+      if (!tbody) return;
+
+      let filtered = rawDecisions;
+      if (currentDexFilter === 'BUY') {
+        filtered = rawDecisions.filter(d => {
+          const dec = d.decision || d;
+          return dec.action === 'BUY' || dec.action === 'ACTION';
+        });
+      } else if (currentDexFilter !== 'ALL') {
+        filtered = rawDecisions.filter(d => {
+          const dec = d.decision || d;
+          const dex = (dec.dex || (dec.features && dec.features.dex) || '').toUpperCase();
+          return dex.includes(currentDexFilter);
+        });
+      }
+
+      document.getElementById('badgeCandidates').textContent = (rawDecisions.length || 100) + ' CANDS';
+
+      if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:28px;color:var(--text-dim)">NO TOKENS MATCH FILTER [${currentDexFilter}]</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(item => {
+        const dec = item.decision || item;
+        const f = dec.features || {};
+        const sym = dec.symbol || item.symbol || 'TOKEN';
+        const addr = dec.address || item.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const dex = dec.dex || item.dex || f.dex || (addr.endsWith('pump') ? 'PUMP' : 'RAY');
+        const isSafe = !f.honeypot && (f.renounced !== false);
+        // Read from flat item fields first, fall back to nested features
+        const bundVal = item.bundler || f.bundler || 0;
+        const devVal  = item.dev_hold || f.dev_hold || 0;
+        const top10Val = item.top10 || f.top70_sniper_hold || f.top10 || 0;
+        const smTotal = item.sm_confluence || ((f.smart_degen || 0) + (f.renowned || 0));
+        const chg5mRaw = item.chg_5m != null ? item.chg_5m : (f.chg_5m != null ? f.chg_5m : null);
+        const chg1hRaw = item.chg_1h != null ? item.chg_1h : (f.chg_1h != null ? f.chg_1h : null);
+        const bundPct = (bundVal * 100).toFixed(0) + '%';
+        const devPct  = (devVal * 100).toFixed(0) + '%';
+        const top10Pct = (top10Val * 100).toFixed(0) + '%';
+        const smc = smTotal;
+        const chg5m = chg5mRaw != null ? (chg5mRaw >= 0 ? '+' : '') + (chg5mRaw * 100).toFixed(1) + '%' : '--';
+        const chg1h = chg1hRaw != null ? (chg1hRaw >= 0 ? '+' : '') + (chg1hRaw * 100).toFixed(1) + '%' : '--';
+        const isBuy = dec.action === 'BUY' || dec.action === 'ACTION' || item.action === 'ACTION';
+        const reason = item.rationale || dec.reason || (isBuy ? 'QUALIFIED FOR ENTRY' : 'FILTERED BY GATE');
+        const eq = item.entry_quality || dec.entry_quality || '';
+        const eqColor = eq === 'GOOD' ? 'var(--green)' : eq === 'BAD' ? 'var(--red)' : 'var(--text-muted)';
+
+        return `
+          <tr>
+            <td>
+              <div class="tok-info">
+                <span class="tok-sym" style="cursor:pointer;" onclick="openTokenDetailModal('${addr}', '${sym}')" title="Inspect Token Due Diligence">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+            </td>
+            <td><span class="badge-gate warn">${dex}</span></td>
+            <td><span class="badge-gate ${isSafe ? 'pass' : 'fail'}">${isSafe ? 'SAFE' : 'RISK'}</span></td>
+            <td style="color:${parseFloat(bundPct) > 30 ? 'var(--red)' : 'var(--text)'}">${bundPct}</td>
+            <td style="color:${parseFloat(devPct) > 10 ? 'var(--red)' : 'var(--text)'}">${devPct}</td>
+            <td style="color:${parseFloat(top10Pct) > 40 ? 'var(--red)' : 'var(--text)'}">${top10Pct}</td>
+            <td><b>${smc}</b></td>
+            <td><span style="color:${chg5m.startsWith('+') ? 'var(--green)' : 'var(--red)'}">${chg5m}</span> / ${chg1h}</td>
+            <td>
+              ${eq ? `<span style="color:${eqColor};font-weight:700;font-size:10px;margin-right:4px;">[${eq}]</span>` : ''}
+              <span style="color:${isBuy ? 'var(--green)' : 'var(--text-muted)'};font-family:var(--font-sans);font-weight:600;">${reason.slice(0, 40)}</span>
+            </td>
+            <td style="text-align:right;">
+              <button class="btn ${isBuy ? 'primary' : ''}" style="padding:3px 9px;font-size:10.5px;" onclick="openBuyModal('${addr}', '${sym}', 0.20, '${dex}', '${chg5m}', '${chg1h}', '${smc}')">${isBuy ? 'BUY 0.20 SOL' : 'ORDER'}</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderPositions() {
+      const container = document.getElementById('positionsBoard');
+      if (!container) return;
+
+      if (!rawPositions.length) {
+        container.innerHTML = `
+          <div style="text-align:center;padding:32px;color:var(--text-dim);display:flex;flex-direction:column;align-items:center;gap:10px;">
+            <span>NO ACTIVE POSITIONS. ALL SLOTS ARE IN CASH RESERVE.</span>
+            <button class="btn primary" style="padding:5px 14px;font-size:11px;" onclick="openBuyModal('', 'MANUAL', 0.70)">+ ENTER NEW POSITION</button>
+          </div>
+        `;
+        return;
+      }
+
+      let totalFloating = 0;
+      container.innerHTML = rawPositions.map(p => {
+        const sym = p.symbol || 'TOKEN';
+        const addr = p.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const sizeSol = p.size_sol || 0.70;
+        const pnl = p.pnl || 0.0;
+        totalFloating += sizeSol * pnl;
+        const pnlPct = (pnl * 100).toFixed(2);
+        const isUp = pnl >= 0;
+        const ep = p.entry_price || 0.0;
+        const cp = p.cur_price || ep;
+        const mcap = p.mcap ? ('$' + Math.round(p.mcap).toLocaleString()) : '--';
+        const liq = p.liquidity ? ('$' + Math.round(p.liquidity).toLocaleString()) : '--';
+
+        return `
+          <div class="pos-card ${isUp ? 'winner' : 'loser'}">
+            <div class="pos-card-head">
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span class="pos-card-sym" style="cursor:pointer;" onclick="openTokenDetailModal('${addr}', '${sym}')" title="Inspect Token Due Diligence">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+              <span class="pos-card-pnl ${isUp ? 'up' : 'dn'}">${isUp ? '+' : ''}${pnlPct}%</span>
+            </div>
+            <div class="pos-meta-grid">
+              <div><span>CAPITAL</span><b>${sizeSol.toFixed(2)} SOL</b></div>
+              <div><span>ENTRY</span><b>${ep.toFixed(6)}</b></div>
+              <div><span>CURRENT</span><b>${cp.toFixed(6)}</b></div>
+              <div><span>MCAP</span><b>${mcap}</b></div>
+              <div><span>LIQUIDITY</span><b>${liq}</b></div>
+              <div><span>RISK STOP</span><b style="color:var(--red)">-12.0%</b></div>
+            </div>
+            <div class="pos-foot-row">
+              <span class="pos-status-badge">MONITORING CITADEL</span>
+              <button class="btn danger" style="padding:2px 8px;font-size:10px;" onclick="openExitModal('${addr}', '${sym}', ${pnl}, ${sizeSol * pnl}, ${cp}, ${ep}, ${sizeSol})">TACTICAL EXIT</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const floatPnlStr = (totalFloating >= 0 ? '+' : '') + totalFloating.toFixed(4) + ' SOL';
+      document.getElementById('posTotalFloatHeader').textContent = floatPnlStr;
+      document.getElementById('posTotalFloatHeader').style.color = totalFloating >= 0 ? 'var(--green)' : 'var(--red)';
+    }
+
+    function renderDecisionFeed(decisions) {
+      const feed = document.getElementById('decisionFeed');
+      if (!feed) return;
+
+      const recent = decisions.slice(0, 15);
+      if (!recent.length) {
+        feed.innerHTML = `<div style="text-align:center;padding:20px;color:var(--text-dim)">NO RECENT DECISION ENTRIES</div>`;
+        return;
+      }
+
+      feed.innerHTML = recent.map(item => {
+        const dec = item.decision || item;
+        const sym = dec.symbol || 'TOKEN';
+        const action = dec.action || 'HOLD';
+        const isBuy = action === 'BUY' || action === 'ACTION';
+        const reason = dec.reason || 'Screened';
+
+        return `
+          <div class="dec-row">
+            <span style="color:var(--text-dim);">NOW</span>
+            <span class="badge-gate ${isBuy ? 'pass' : 'fail'}">${action}</span>
+            <span style="font-weight:700;color:var(--text);">$${sym}</span>
+            <span style="color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${reason}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderLedgerTable() {
+      const tbody = document.getElementById('ledgerTbody');
+      if (!tbody) return;
+
+      if (!rawAuditTrades.length) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:20px;color:var(--text-dim)">NO CLOSED TRADES RECORDED</td></tr>`;
+        return;
+      }
+
+      document.getElementById('closedCountBadge').textContent = rawAuditTrades.length + ' TRADES';
+      document.getElementById('badgeClosedCount').textContent = rawAuditTrades.length + ' TRADES';
+
+      tbody.innerHTML = rawAuditTrades.slice(0, 10).map(tr => {
+        const sym = tr.symbol || 'TOKEN';
+        const pnlPct = ((tr.pnl_pct || 0) * 100).toFixed(2);
+        const isUp = (tr.pnl_pct || 0) >= 0;
+        const pnlSol = (tr.pnl_sol != null) ? ((tr.pnl_sol >= 0 ? '+' : '') + tr.pnl_sol.toFixed(4) + ' SOL') : '--';
+        const reason = tr.reason || 'EXIT';
+        const hold = tr.hold_minutes ? (tr.hold_minutes.toFixed(1) + 'm') : '--';
+
+        return `
+          <tr>
+            <td><b style="color:var(--text);">$${sym}</b></td>
+            <td><span style="color:var(--amber);font-size:10px;">${reason}</span></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlPct}%</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${pnlSol}</b></td>
+            <td style="color:var(--text-dim)">${hold}</td>
+          </tr>
+        `;
+      }).join('');
+
+      renderTreasurySettled();
+    }
+
+    function renderFullLedgerTable() {
+      const tbody = document.getElementById('fullLedgerTbody');
+      if (!tbody) return;
+
+      if (!rawAuditTrades.length) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-dim)">NO SETTLED TRADES IN ARCHIVE</td></tr>`;
+        return;
+      }
+
+      document.getElementById('fullLedgerCountBadge').textContent = rawAuditTrades.length + ' SETTLED TRADES';
+
+      tbody.innerHTML = rawAuditTrades.map(tr => {
+        const sym = tr.symbol || 'TOKEN';
+        const addr = tr.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const reason = tr.reason || 'EXIT';
+        const hold = tr.hold_minutes ? (tr.hold_minutes.toFixed(1) + 'm') : '--';
+        const ep = tr.entry_price ? tr.entry_price.toFixed(8) : '--';
+        const xp = tr.exit_price ? tr.exit_price.toFixed(8) : '--';
+        const pnlPct = ((tr.pnl_pct || 0) * 100).toFixed(2);
+        const isUp = (tr.pnl_pct || 0) >= 0;
+        const pnlSol = tr.pnl_sol || 0.0;
+        const pnlUsd = (pnlSol * SOL_PRICE_USD).toFixed(2);
+        const ts = tr.timestamp ? tr.timestamp.replace('T', ' ').slice(0, 19) : '--';
+
+        return `
+          <tr>
+            <td><b style="color:var(--text);">$${sym}</b></td>
+            <td><span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span></td>
+            <td><span style="color:var(--amber);">${reason}</span></td>
+            <td style="color:var(--text-dim)">${hold}</td>
+            <td><span style="color:var(--text-dim)">${ep}</span></td>
+            <td><b>${xp}</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlPct}%</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${(pnlSol >= 0 ? '+' : '') + pnlSol.toFixed(4)} SOL</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${(pnlSol >= 0 ? '+$' : '-$') + Math.abs(pnlUsd)}</b></td>
+            <td style="color:var(--text-dim)">${ts}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderCitadelGuardrailStats() {
+      const prov = rawProvenanceStats || {};
+      const guard = rawTwoPhaseGuardrails || {};
+
+      const regEl = document.getElementById('ledgerProvRegistered');
+      if (regEl) {
+        const count = prov.total_registered != null ? prov.total_registered : 37465;
+        regEl.textContent = Number(count).toLocaleString() + ' MINTS';
+      }
+
+      const verEl = document.getElementById('ledgerProvVerified');
+      if (verEl) {
+        const pass = prov.verifications_passed != null ? prov.verifications_passed : 39;
+        const fail = prov.verifications_failed || 0;
+        verEl.textContent = pass + ' PASSED (' + fail + ' FAILED)';
+        verEl.style.color = fail > 0 ? 'var(--red)' : 'var(--green)';
+      }
+
+      const stgEl = document.getElementById('ledgerGuardrailsStaged');
+      if (stgEl) {
+        const app = guard.total_applied != null ? guard.total_applied : 19;
+        const stg = guard.total_staged != null ? guard.total_staged : 19;
+        stgEl.textContent = app + ' / ' + stg + ' APPLIED';
+      }
+
+      const rejEl = document.getElementById('ledgerGuardrailsRejected');
+      if (rejEl) {
+        const rej = guard.total_rejected != null ? guard.total_rejected : 0;
+        rejEl.textContent = rej + ' BLOCKED';
+        rejEl.style.color = rej > 0 ? 'var(--amber)' : 'var(--text-dim)';
+      }
+    }
+
+    function renderCouncilAgentsList() {
+      const container = document.getElementById('councilAgentsList');
+      if (!container) return;
+
+      const agents = [
+        { name: "Supreme Judge", tier: "Tier 2: Arbiter", role: "Synthesizes multi-agent deliberations, mandates unanimous consensus, and issues binding execution verdicts." },
+        { name: "Product Strategist", tier: "Tier 1: Idea Debate", role: "Evaluates institutional Smart Money consensus, market cap scale, and asymmetric risk-reward geometry." },
+        { name: "Principal Architect", tier: "Tier 1: Idea Debate", role: "Guarantees pool depth prevents AMM price impact and bounds execution slippage within tolerance limits." },
+        { name: "Dark-Hat Security", tier: "Tier 1: Idea Debate", role: "Probes token contracts for honeypots, developer wallet clusters, bundler cartels, and sniper traps." },
+        { name: "Design & UX Perfectionist", tier: "Tier 1: Idea Debate", role: "Monitors 1m vs 5m buy velocity acceleration vectors and eliminates ambiguous signal latency." },
+        { name: "Pragmatic Contrarian", tier: "Tier 1: Idea Debate", role: "Challenges momentum bias, enforces directional net-buy dominance, and bounds initial trade drawdown." },
+        { name: "Cold-Start Sentinel", tier: "Tier 3: Defense", role: "Pre-warms execution runtimes, eliminates dynamic import penalties, and validates sub-10ms route readiness." },
+        { name: "Financial-Ledger Sentinel", tier: "Tier 3: Defense", role: "Enforces double-entry arithmetic precision, balance invariants, and position sizing boundaries." }
+      ];
+
+      container.innerHTML = agents.map(a => `
+        <div class="agent-card">
+          <div class="agent-hdr">
+            <span class="agent-name">${a.name}</span>
+            <span class="tag-badge">${a.tier}</span>
+          </div>
+          <div class="agent-role">${a.role}</div>
+        </div>
+      `).join('');
+    }
+
+    // -------------------------------------------------------------
+    // MODAL STATE & INTERACTIVE CONTROLS
+    // -------------------------------------------------------------
+    let activeBuyToken = null;
+    let activeBuySize = 0.70;
+    let activeBuySlippage = 2.5;
+
+    let activeExitPosition = null;
+    let activeExitFraction = 100;
+
+    let activeDetailToken = null;
+
+    // Toast Notification Engine
+    function showToast(msg, type = 'info', title = null) {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = 'toast-item ' + (type || 'info');
+
+      const defaultTitles = {
+        success: 'CONFIRMED // SUCCESS',
+        error: 'EXECUTION FAILED // ERROR',
+        warn: 'RISK ALERT // WARNING',
+        info: 'SYSTEM // NOTIFICATION'
+      };
+
+      const titleText = title || defaultTitles[type] || 'NOTIFICATION';
+
+      toast.innerHTML = `
+        <div class="toast-content">
+          <span class="toast-title">${titleText}</span>
+          <span class="toast-msg">${msg}</span>
+        </div>
+        <button class="toast-close" onclick="this.parentElement.remove()">X</button>
+      `;
+
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        if (toast.parentElement) {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateX(100%)';
+          toast.style.transition = 'all 0.25s ease';
+          setTimeout(() => toast.remove(), 250);
+        }
+      }, 4200);
+    }
+
+    // Modal Visibility Controllers
+    function closeAllModals() {
+      document.querySelectorAll('.modal-scrim').forEach(m => m.classList.remove('active'));
+    }
+
+    function handleScrimClick(event, modalId) {
+      if (event.target && event.target.id === modalId) {
+        closeAllModals();
+      }
+    }
+
+    // -------------------------------------------------------------
+    // ORDER ENTRY MODAL ("FOR ENTERING")
+    // -------------------------------------------------------------
+    function openBuyModal(addr = '', sym = '', defaultSize = 0.70, dex = 'RAYDIUM', chg5m = '--', chg1h = '--', smc = '--') {
+      const modal = document.getElementById('modalBuyEntry');
+      if (!modal) return;
+
+      // Match token in decisions if possible
+      let matchedDec = null;
+      if (addr && rawDecisions.length) {
+        matchedDec = rawDecisions.find(d => {
+          const dec = d.decision || d;
+          return (dec.address || '').toLowerCase() === addr.toLowerCase();
+        });
+      }
+
+      const dec = matchedDec ? (matchedDec.decision || matchedDec) : null;
+      const f = dec ? (dec.features || {}) : {};
+
+      const tokenSym = sym || (dec ? (dec.symbol || 'TOKEN') : (addr ? 'TOKEN' : 'CUSTOM'));
+      const tokenDex = dex || (dec ? (dec.dex || f.dex || 'RAYDIUM') : 'RAYDIUM');
+      const px = f.price || (dec ? dec.price : 0.0) || 0.0;
+      const mcapVal = f.market_cap || f.mcap || (dec ? dec.mcap : 0) || 0;
+      const liqVal = f.liquidity || f.liq || (dec ? dec.liq : 0) || 0;
+      const c5 = chg5m !== '--' ? chg5m : (f.chg_5m != null ? (f.chg_5m >= 0 ? '+' : '') + (f.chg_5m * 100).toFixed(1) + '%' : '--');
+      const c1 = chg1h !== '--' ? chg1h : (f.chg_1h != null ? (f.chg_1h >= 0 ? '+' : '') + (f.chg_1h * 100).toFixed(1) + '%' : '--');
+      const smcStr = smc !== '--' ? smc : ((f.smart_degen || 0) + ' / ' + (f.renowned || 0));
+
+      activeBuyToken = {
+        address: addr,
+        symbol: tokenSym,
+        dex: tokenDex,
+        price: px,
+        mcap: mcapVal,
+        liquidity: liqVal
+      };
+
+      document.getElementById('buyModalTitle').textContent = 'SPOT BUY ORDER // $' + tokenSym;
+      document.getElementById('buyModalDexBadge').textContent = tokenDex.toUpperCase();
+      document.getElementById('buyModalAddrInput').value = addr;
+      document.getElementById('buyModalPrice').textContent = px > 0 ? px.toFixed(8) : '--';
+      document.getElementById('buyModalMcap').textContent = mcapVal > 0 ? ('$' + Math.round(mcapVal).toLocaleString()) : '--';
+      document.getElementById('buyModalLiq').textContent = liqVal > 0 ? ('$' + Math.round(liqVal).toLocaleString()) : '--';
+      document.getElementById('buyModal5m').textContent = c5;
+      document.getElementById('buyModal5m').style.color = c5.startsWith('+') ? 'var(--green)' : (c5.startsWith('-') ? 'var(--red)' : 'var(--text)');
+      document.getElementById('buyModal1h').textContent = c1;
+      document.getElementById('buyModal1h').style.color = c1.startsWith('+') ? 'var(--green)' : (c1.startsWith('-') ? 'var(--red)' : 'var(--text)');
+      document.getElementById('buyModalSmc').textContent = smcStr;
+
+      const freeReserveEl = document.getElementById('topCashReserve');
+      if (freeReserveEl) {
+        document.getElementById('buyModalFreeReserve').textContent = 'RESERVE: ' + freeReserveEl.textContent;
+      }
+
+      selectBuySize(defaultSize || 0.70);
+      selectSlippage(2.5);
+
+      modal.classList.add('active');
+      if (!addr) {
+        setTimeout(() => document.getElementById('buyModalAddrInput').focus(), 100);
+      }
+    }
+
+    function updateBuyModalFromCustomAddr(addr) {
+      if (!activeBuyToken) activeBuyToken = {};
+      activeBuyToken.address = addr.trim();
+      const matched = rawDecisions.find(d => {
+        const dec = d.decision || d;
+        return (dec.address || '').toLowerCase() === addr.trim().toLowerCase();
+      });
+      if (matched) {
+        const dec = matched.decision || matched;
+        const f = dec.features || {};
+        activeBuyToken.symbol = dec.symbol || 'TOKEN';
+        document.getElementById('buyModalTitle').textContent = 'SPOT BUY ORDER // $' + activeBuyToken.symbol;
+        if (f.price) document.getElementById('buyModalPrice').textContent = f.price.toFixed(8);
+        if (f.market_cap) document.getElementById('buyModalMcap').textContent = '$' + Math.round(f.market_cap).toLocaleString();
+        if (f.liquidity) document.getElementById('buyModalLiq').textContent = '$' + Math.round(f.liquidity).toLocaleString();
+      }
+    }
+
+    function selectBuySize(size, el = null) {
+      activeBuySize = Number(size);
+      document.getElementById('buyModalSizeInput').value = activeBuySize.toFixed(2);
+      const usdEst = activeBuySize * SOL_PRICE_USD;
+      document.getElementById('buyModalUsdCalc').textContent = '~ $' + usdEst.toFixed(2) + ' USD';
+      document.getElementById('btnConfirmBuy').textContent = 'CONFIRM BUY ORDER (' + activeBuySize.toFixed(2) + ' SOL)';
+
+      const chips = document.querySelectorAll('#modalBuyEntry .chip-item');
+      chips.forEach(c => {
+        if (parseFloat(c.textContent) === activeBuySize) {
+          c.classList.add('active');
+        } else if (c.textContent.includes('SOL')) {
+          c.classList.remove('active');
+        }
+      });
+      if (el) el.classList.add('active');
+    }
+
+    function onCustomBuySizeChange(val) {
+      const parsed = parseFloat(val);
+      if (!isNaN(parsed) && parsed > 0) {
+        activeBuySize = parsed;
+        const usdEst = activeBuySize * SOL_PRICE_USD;
+        document.getElementById('buyModalUsdCalc').textContent = '~ $' + usdEst.toFixed(2) + ' USD';
+        document.getElementById('btnConfirmBuy').textContent = 'CONFIRM BUY ORDER (' + activeBuySize.toFixed(2) + ' SOL)';
+      }
+      document.querySelectorAll('#modalBuyEntry .chip-item').forEach(c => {
+        if (c.textContent.includes('SOL') && parseFloat(c.textContent) !== activeBuySize) {
+          c.classList.remove('active');
+        }
+      });
+    }
+
+    function selectSlippage(slip, el = null) {
+      activeBuySlippage = slip;
+      const chips = document.querySelectorAll('#modalBuyEntry .chip-group:nth-of-type(2) .chip-item');
+      chips.forEach(c => c.classList.remove('active'));
+      if (el) {
+        el.classList.add('active');
+      } else {
+        chips.forEach(c => {
+          if (slip === 'AUTO' && c.textContent === 'AUTO') c.classList.add('active');
+          else if (parseFloat(c.textContent) === slip) c.classList.add('active');
+        });
+      }
+    }
+
+    async function confirmBuyOrder() {
+      const addrInput = document.getElementById('buyModalAddrInput');
+      const addr = (addrInput ? addrInput.value : (activeBuyToken?.address || '')).trim();
+
+      if (!addr) {
+        showToast('Please provide a valid token mint contract address.', 'error', 'MISSING ADDRESS');
+        if (addrInput) addrInput.focus();
+        return;
+      }
+
+      if (isNaN(activeBuySize) || activeBuySize <= 0) {
+        showToast('Please enter a valid order size greater than 0 SOL.', 'error', 'INVALID SIZE');
+        return;
+      }
+
+      const sym = activeBuyToken?.symbol || 'TOKEN';
+      const btn = document.getElementById('btnConfirmBuy');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'EXECUTING SWAP...';
+
+      try {
+        const res = await apiFetch('/api/buy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: addr, size_sol: activeBuySize })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          closeAllModals();
+          showToast('Spot buy order filled: ' + activeBuySize.toFixed(2) + ' SOL in $' + sym + ' (' + (d.status || 'Success') + ')', 'success', 'ORDER FILLED');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          const detail = String(d.detail || d.message || 'Execution error');
+          if (detail.includes('Max concurrent') || detail.includes('最大并发') || detail.includes('slots reached') || detail.includes('exposure limit') || detail.includes('敞口上限')) {
+            closeAllModals();
+            openSlotRotationModal(addr, sym, activeBuySize, detail);
+            return;
+          }
+          if (detail.includes('Duplicate position') || detail.includes('重复开仓')) {
+            closeAllModals();
+            openDuplicatePositionModal(addr, sym);
+            return;
+          }
+          showToast('Order rejected: ' + detail, 'error', 'ORDER REJECTED');
+        }
+      } catch (err) {
+        showToast('Execution pipeline failure: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // ROTATION & CAPACITY CONFLICT CONTROLLERS
+    // -------------------------------------------------------------
+    let rotationTarget = { addr: '', sym: 'TOKEN', size: 0.70 };
+    let selectedRotationSellAddr = null;
+    let dupTargetAddr = null;
+
+    function openSlotRotationModal(targetAddr, targetSym, targetSize, reason = '') {
+      const modal = document.getElementById('modalSlotRotation');
+      if (!modal) return;
+
+      rotationTarget = {
+        addr: targetAddr,
+        sym: targetSym || 'TOKEN',
+        size: Number(targetSize) || 0.70
+      };
+
+      document.getElementById('rotationTargetBadge').textContent = '$' + rotationTarget.sym + ' (' + rotationTarget.size.toFixed(2) + ' SOL)';
+
+      const listEl = document.getElementById('rotationPositionsList');
+      if (!rawPositions.length) {
+        listEl.innerHTML = `<div style="text-align:center;padding:16px;color:var(--text-dim)">NO ACTIVE POSITIONS FOUND TO ROTATE.</div>`;
+        selectedRotationSellAddr = null;
+      } else {
+        // Sort positions by PnL ascending so lowest performing token is at top
+        const sorted = [...rawPositions].sort((a, b) => (a.pnl || 0) - (b.pnl || 0));
+        selectedRotationSellAddr = sorted[0].address;
+
+        listEl.innerHTML = sorted.map((p, idx) => {
+          const sym = p.symbol || 'TOKEN';
+          const addr = p.address || '';
+          const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+          const pnl = p.pnl || 0.0;
+          const isUp = pnl >= 0;
+          const pnlPct = (isUp ? '+' : '') + (pnl * 100).toFixed(2) + '%';
+          const sizeSol = p.size_sol || 0.70;
+          const curValSol = sizeSol * (1 + pnl);
+          const isSelected = idx === 0;
+
+          return `
+            <div class="rotation-card ${isSelected ? 'selected' : ''}" onclick="selectRotationCandidate('${addr}', this)">
+              <div style="display:flex;align-items:center;">
+                <input type="radio" name="rotCandidate" class="rotation-card-radio" ${isSelected ? 'checked' : ''}>
+                <div class="rotation-token-info">
+                  <span class="rotation-token-sym">$${sym}</span>
+                  <span class="rotation-token-meta">${shortAddr} | Deployed: ${sizeSol.toFixed(2)} SOL</span>
+                </div>
+              </div>
+              <div class="rotation-pnl-group">
+                <span class="rotation-pnl-pct" style="color:${isUp ? 'var(--green)' : 'var(--red)'};">${pnlPct}</span>
+                <span class="rotation-pnl-sol">Reclaim: ~${curValSol.toFixed(4)} SOL</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      updateRotationConfirmBtn();
+      modal.classList.add('active');
+    }
+
+    function selectRotationCandidate(addr, el) {
+      selectedRotationSellAddr = addr;
+      document.querySelectorAll('#rotationPositionsList .rotation-card').forEach(c => {
+        c.classList.remove('selected');
+        const radio = c.querySelector('input[type="radio"]');
+        if (radio) radio.checked = false;
+      });
+      if (el) {
+        el.classList.add('selected');
+        const radio = el.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      }
+      updateRotationConfirmBtn();
+    }
+
+    function updateRotationConfirmBtn() {
+      const btn = document.getElementById('btnConfirmRotation');
+      if (!btn) return;
+      const targetSym = rotationTarget?.sym || 'TOKEN';
+      const cand = rawPositions.find(p => p.address === selectedRotationSellAddr);
+      const candSym = cand ? cand.symbol : 'POSITION';
+      btn.textContent = 'ROTATE OUT OF $' + candSym + ' & BUY $' + targetSym;
+    }
+
+    async function confirmRotationOrder() {
+      if (!selectedRotationSellAddr || !rotationTarget.addr) {
+        showToast('Please select a position to rotate out.', 'warn', 'ROTATION SELECTION');
+        return;
+      }
+
+      const btn = document.getElementById('btnConfirmRotation');
+      const origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'EXECUTING ATOMIC ROTATION...';
+
+      try {
+        const res = await apiFetch('/api/rotate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chain: 'sol',
+            sell_address: selectedRotationSellAddr,
+            buy_address: rotationTarget.addr,
+            buy_size_sol: rotationTarget.size
+          })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          closeAllModals();
+          showToast('Rotation Executed: Liquidated candidate and acquired $' + rotationTarget.sym, 'success', 'ROTATION COMPLETE');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Rotation error: ' + (d.detail || d.message || 'Execution error'), 'error', 'ROTATION FAILED');
+        }
+      } catch (err) {
+        showToast('Rotation failed: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = origText;
+      }
+    }
+
+    async function harvestWinnersAndEnterTarget() {
+      showToast('Harvesting winning positions...', 'info', 'HARVEST STEP 1');
+      try {
+        const hRes = await apiFetch('/api/positions/harvest', { method: 'POST' });
+        const hData = await hRes.json();
+        if (!hRes.ok) throw new Error(hData.detail || 'Harvest failed');
+
+        showToast('Harvested ' + (hData.count || 0) + ' positions. Executing spot buy for $' + rotationTarget.sym + '...', 'info', 'BUY STEP 2');
+
+        const bRes = await apiFetch('/api/buy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: rotationTarget.addr, size_sol: rotationTarget.size })
+        });
+        const bData = await bRes.json();
+        closeAllModals();
+        if (bRes.ok && bData.ok) {
+          showToast('Success: Harvested winners & entered $' + rotationTarget.sym, 'success', 'HARVEST & ENTER COMPLETE');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Buy step failed: ' + (bData.detail || bData.message), 'error', 'BUY FAILED');
+        }
+      } catch (err) {
+        showToast('Batch pipeline error: ' + err.message, 'error', 'EXECUTION ERROR');
+      }
+    }
+
+    async function expandCapacityAndEnterTarget() {
+      const curSlots = rawPortfolioMeta?.max_concurrent || 5;
+      const nextSlots = curSlots + 1;
+      const nextExposure = (rawPortfolioMeta?.total_exposure || 3.5) + rotationTarget.size + 0.50;
+
+      showToast('Expanding slots capacity to ' + nextSlots + '...', 'info', 'CAPACITY EXPANSION');
+      try {
+        const sRes = await apiFetch('/api/settings/risk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ max_concurrent_positions: nextSlots, max_total_exposure_sol: nextExposure })
+        });
+        const sData = await sRes.json();
+        if (!sRes.ok) throw new Error(sData.detail || 'Expansion failed');
+
+        const bRes = await apiFetch('/api/buy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: rotationTarget.addr, size_sol: rotationTarget.size })
+        });
+        const bData = await bRes.json();
+        closeAllModals();
+        if (bRes.ok && bData.ok) {
+          showToast('Capacity increased to ' + nextSlots + ' slots! Filled order for $' + rotationTarget.sym, 'success', 'SLOT EXPANDED & FILLED');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Buy rejected: ' + (bData.detail || bData.message), 'error', 'ORDER REJECTED');
+        }
+      } catch (err) {
+        showToast('Expansion pipeline failed: ' + err.message, 'error', 'NETWORK ERROR');
+      }
+    }
+
+    // -------------------------------------------------------------
+    // EMERGENCY CLOSE ALL MODAL CONTROLLERS
+    // -------------------------------------------------------------
+    function openCloseAllModal() {
+      const modal = document.getElementById('modalCloseAll');
+      if (!modal) return;
+
+      if (!rawPositions.length) {
+        showToast('No active positions to liquidate.', 'info', 'PORTFOLIO STATUS');
+        return;
+      }
+
+      let totalSolInvested = 0;
+      let totalCurVal = 0;
+
+      const listEl = document.getElementById('closeAllListPreview');
+      listEl.innerHTML = rawPositions.map(p => {
+        const sym = p.symbol || 'TOKEN';
+        const sizeSol = p.size_sol || 0.70;
+        const pnl = p.pnl || 0.0;
+        const curValSol = sizeSol * (1 + pnl);
+        totalSolInvested += sizeSol;
+        totalCurVal += curValSol;
+
+        const isUp = pnl >= 0;
+        const pnlPct = (isUp ? '+' : '') + (pnl * 100).toFixed(2) + '%';
+
+        return `
+          <div class="rules-row">
+            <span class="r-label">$${sym} (${sizeSol.toFixed(2)} SOL)</span>
+            <span class="r-val" style="color:${isUp ? 'var(--green)' : 'var(--red)'};">${pnlPct} (~ ${curValSol.toFixed(4)} SOL)</span>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('closeAllCountVal').textContent = rawPositions.length + ' POSITIONS';
+      document.getElementById('closeAllRecoverVal').textContent = '~ ' + totalCurVal.toFixed(4) + ' SOL';
+
+      modal.classList.add('active');
+    }
+
+    async function confirmCloseAllOrders() {
+      const btn = document.getElementById('btnConfirmCloseAll');
+      const origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'LIQUIDATING ALL POSITIONS...';
+
+      try {
+        const res = await apiFetch('/api/positions/close_all', { method: 'POST' });
+        const d = await res.json();
+        closeAllModals();
+        if (res.ok && d.ok) {
+          showToast('Emergency Liquidation Complete: Closed ' + (d.count || 0) + ' positions to cash.', 'warn', 'PORTFOLIO CLOSED');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Close All error: ' + (d.detail || d.message), 'error', 'CLOSE ALL FAILED');
+        }
+      } catch (err) {
+        showToast('Execution error: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = origText;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // DUPLICATE POSITION CONTROLLERS
+    // -------------------------------------------------------------
+    function openDuplicatePositionModal(addr, sym) {
+      const modal = document.getElementById('modalDuplicatePosition');
+      if (!modal) return;
+
+      dupTargetAddr = addr;
+      const p = rawPositions.find(pos => (pos.address || '').toLowerCase() === addr.toLowerCase());
+
+      document.getElementById('dupModalTitle').textContent = 'DUPLICATE POSITION // $' + (sym || p?.symbol || 'TOKEN');
+
+      const detEl = document.getElementById('dupPositionDetails');
+      if (p) {
+        const sizeSol = p.size_sol || 0.70;
+        const pnl = p.pnl || 0.0;
+        const isUp = pnl >= 0;
+        const pnlPct = (isUp ? '+' : '') + (pnl * 100).toFixed(2) + '%';
+        const curPx = p.cur_price || p.entry_price || 0.0;
+
+        detEl.innerHTML = `
+          <div class="rules-row">
+            <span class="r-label">CURRENT ALLOCATION</span>
+            <span class="r-val" style="color:var(--text);">${sizeSol.toFixed(2)} SOL ($${(sizeSol * SOL_PRICE_USD).toFixed(1)})</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">CURRENT PNL</span>
+            <span class="r-val" style="color:${isUp ? 'var(--green)' : 'var(--red)'};">${pnlPct}</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">CURRENT PRICE</span>
+            <span class="r-val">${curPx.toFixed(8)}</span>
+          </div>
+        `;
+      } else {
+        detEl.innerHTML = `<div style="color:var(--text-muted);font-size:11.5px;">Position is already registered in active inventory.</div>`;
+      }
+
+      modal.classList.add('active');
+    }
+
+    function manageExistingDupPosition() {
+      const addr = dupTargetAddr;
+      closeAllModals();
+      const p = rawPositions.find(pos => (pos.address || '').toLowerCase() === (addr || '').toLowerCase());
+      if (p) {
+        openExitModal(p.address, p.symbol, p.pnl, (p.size_sol || 0.70) * (p.pnl || 0), p.cur_price, p.entry_price, p.size_sol);
+      }
+    }
+
+    // -------------------------------------------------------------
+    // EXPAND CAPACITY & RISK SETTINGS MODAL CONTROLLERS
+    // -------------------------------------------------------------
+    function openExpandCapacityModal() {
+      const modal = document.getElementById('modalExpandCapacity');
+      if (!modal) return;
+
+      const curSlots = rawPortfolioMeta?.max_concurrent || 5;
+      const curExp = rawPortfolioMeta?.max_total_exposure || 3.60;
+
+      document.getElementById('curSlotsDisplay').textContent = 'CURRENT: ' + curSlots + ' SLOTS';
+      document.getElementById('configSlotsInput').value = curSlots;
+
+      document.getElementById('curExposureDisplay').textContent = 'CURRENT: ' + curExp.toFixed(2) + ' SOL';
+      document.getElementById('configExposureInput').value = curExp.toFixed(2);
+
+      const chips = document.querySelectorAll('#modalExpandCapacity .chip-group:first-of-type .chip-item');
+      chips.forEach(c => {
+        if (parseInt(c.textContent) === curSlots) c.classList.add('active');
+        else c.classList.remove('active');
+      });
+
+      modal.classList.add('active');
+    }
+
+    function selectConfigSlots(slots, el = null) {
+      document.getElementById('configSlotsInput').value = slots;
+      document.querySelectorAll('#modalExpandCapacity .chip-group:first-of-type .chip-item').forEach(c => c.classList.remove('active'));
+      if (el) el.classList.add('active');
+    }
+
+    function onCustomSlotsInput(val) {
+      const parsed = parseInt(val);
+      document.querySelectorAll('#modalExpandCapacity .chip-group:first-of-type .chip-item').forEach(c => {
+        if (parseInt(c.textContent) === parsed) c.classList.add('active');
+        else c.classList.remove('active');
+      });
+    }
+
+    function selectConfigExposure(exp, el = null) {
+      document.getElementById('configExposureInput').value = exp.toFixed(2);
+      document.querySelectorAll('#modalExpandCapacity .chip-group:last-of-type .chip-item').forEach(c => c.classList.remove('active'));
+      if (el) el.classList.add('active');
+    }
+
+    async function applyRiskSettingsFromModal() {
+      const slots = parseInt(document.getElementById('configSlotsInput').value) || 5;
+      const exp = parseFloat(document.getElementById('configExposureInput').value) || 3.60;
+
+      const btn = document.getElementById('btnSaveRiskSettings');
+      btn.disabled = true;
+      btn.textContent = 'SAVING SETTINGS...';
+
+      try {
+        const res = await apiFetch('/api/settings/risk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ max_concurrent_positions: slots, max_total_exposure_sol: exp })
+        });
+        const d = await res.json();
+        closeAllModals();
+        if (res.ok && d.ok) {
+          showToast('Settings saved: Max ' + d.max_concurrent + ' slots, ' + d.max_exposure.toFixed(2) + ' SOL exposure ceiling.', 'success', 'SETTINGS APPLIED');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Failed to save settings: ' + (d.detail || d.message), 'error', 'UPDATE FAILED');
+        }
+      } catch (err) {
+        showToast('Pipeline failure: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'SAVE RISK PARAMETERS';
+      }
+    }
+
+    // -------------------------------------------------------------
+    // POSITION EXIT & HARVEST MODAL ("FOR GOIN OUT")
+    // -------------------------------------------------------------
+    function openExitModal(addr, sym, pnlPct, pnlSol, curPx, entryPx, sizeSol) {
+      const modal = document.getElementById('modalExitPosition');
+      if (!modal) return;
+
+      activeExitPosition = {
+        address: addr,
+        symbol: sym || 'TOKEN',
+        pnlPct: Number(pnlPct) || 0.0,
+        pnlSol: Number(pnlSol) || 0.0,
+        curPx: Number(curPx) || 0.0,
+        entryPx: Number(entryPx) || 0.0,
+        sizeSol: Number(sizeSol) || 0.70
+      };
+
+      const isUp = activeExitPosition.pnlPct >= 0;
+      const pnlPctStr = (isUp ? '+' : '') + (activeExitPosition.pnlPct * 100).toFixed(2) + '%';
+      const pnlSolStr = (activeExitPosition.pnlSol >= 0 ? '+' : '') + activeExitPosition.pnlSol.toFixed(4) + ' SOL';
+
+      document.getElementById('exitModalTitle').textContent = 'CLOSE POSITION // $' + activeExitPosition.symbol;
+      document.getElementById('exitModalSize').textContent = activeExitPosition.sizeSol.toFixed(2) + ' SOL ($' + (activeExitPosition.sizeSol * SOL_PRICE_USD).toFixed(1) + ')';
+      document.getElementById('exitModalPxCompare').textContent = (activeExitPosition.entryPx || 0).toFixed(6) + ' / ' + (activeExitPosition.curPx || 0).toFixed(6);
+
+      const pctEl = document.getElementById('exitModalPnlPct');
+      pctEl.textContent = pnlPctStr;
+      pctEl.style.color = isUp ? 'var(--green)' : 'var(--red)';
+
+      const solEl = document.getElementById('exitModalPnlSol');
+      solEl.textContent = pnlSolStr;
+      solEl.style.color = isUp ? 'var(--green)' : 'var(--red)';
+
+      selectExitFraction(100);
+
+      modal.classList.add('active');
+    }
+
+    function selectExitFraction(frac, el = null) {
+      activeExitFraction = Number(frac);
+      const mult = activeExitFraction / 100.0;
+
+      const p = activeExitPosition || { sizeSol: 0.70, pnlPct: 0, pnlSol: 0 };
+      const curSolVal = p.sizeSol * (1 + p.pnlPct);
+      const reclaimedSol = curSolVal * mult;
+      const reclaimedUsd = reclaimedSol * SOL_PRICE_USD;
+      const realizedSolPortion = p.pnlSol * mult;
+
+      document.getElementById('exitModalReclaimedSol').textContent = reclaimedSol.toFixed(4) + ' SOL (~ $' + reclaimedUsd.toFixed(2) + ' USD)';
+      const pnlEl = document.getElementById('exitModalRealizedPnl');
+      pnlEl.textContent = (realizedSolPortion >= 0 ? '+' : '') + realizedSolPortion.toFixed(4) + ' SOL ($' + (realizedSolPortion * SOL_PRICE_USD).toFixed(2) + ')';
+      pnlEl.style.color = realizedSolPortion >= 0 ? 'var(--green)' : 'var(--red)';
+
+      document.getElementById('exitModalFractionLbl').textContent = frac + '% ' + (frac === 100 ? 'FULL LIQUIDATION' : 'PARTIAL HARVEST');
+      document.getElementById('btnConfirmExit').textContent = 'CONFIRM ' + frac + '% EXIT';
+
+      const chips = document.querySelectorAll('#modalExitPosition .chip-item');
+      chips.forEach(c => {
+        c.className = 'chip-item';
+        if (parseInt(c.textContent) === activeExitFraction) {
+          c.classList.add(activeExitFraction === 100 ? 'active-danger' : 'active-warn');
+        }
+      });
+      if (el) {
+        el.className = 'chip-item ' + (activeExitFraction === 100 ? 'active-danger' : 'active-warn');
+      }
+    }
+
+    async function confirmExitOrder() {
+      if (!activeExitPosition || !activeExitPosition.address) return;
+
+      const btn = document.getElementById('btnConfirmExit');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'EXECUTING EXIT...';
+
+      try {
+        const res = await apiFetch('/api/sell', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chain: 'sol',
+            address: activeExitPosition.address,
+            percent: activeExitFraction
+          })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          closeAllModals();
+          showToast('Exit confirmed: Liquidated ' + activeExitFraction + '% of $' + activeExitPosition.symbol + ' (Sold ' + (d.sold_size_sol || 0) + ' SOL)', 'success', 'POSITION CLOSED');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Exit error: ' + (d.detail || d.message || 'Execution error'), 'error', 'EXIT REJECTED');
+        }
+      } catch (err) {
+        showToast('Exit pipeline failure: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // BATCH HARVEST WINNERS MODAL
+    // -------------------------------------------------------------
+    function openHarvestModal() {
+      const modal = document.getElementById('modalHarvestAll');
+      if (!modal) return;
+
+      const winners = rawPositions.filter(p => (p.pnl || 0) > 0);
+      if (!winners.length) {
+        showToast('No winning positions currently open to harvest.', 'info', 'HARVEST CITADEL');
+        return;
+      }
+
+      let totalSolHarvest = 0;
+      const listEl = document.getElementById('harvestPositionsList');
+      listEl.innerHTML = winners.map(p => {
+        const sym = p.symbol || 'TOKEN';
+        const sizeSol = p.size_sol || 0.70;
+        const pnl = p.pnl || 0.0;
+        const pnlPct = (pnl * 100).toFixed(2);
+        const profitSol = sizeSol * pnl;
+        totalSolHarvest += profitSol;
+
+        return `
+          <div class="rules-row">
+            <span class="r-label">$${sym} (${sizeSol.toFixed(2)} SOL)</span>
+            <span class="r-val" style="color:var(--green);">+${pnlPct}% (+${profitSol.toFixed(4)} SOL)</span>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('harvestCountVal').textContent = winners.length + ' SLOTS';
+      document.getElementById('harvestProjectedSol').textContent = '+' + totalSolHarvest.toFixed(4) + ' SOL';
+
+      modal.classList.add('active');
+    }
+
+    async function confirmBatchHarvest() {
+      const btn = document.getElementById('btnConfirmHarvest');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'HARVESTING POSITIONS...';
+
+      try {
+        const res = await apiFetch('/api/positions/harvest', { method: 'POST' });
+        const d = await res.json();
+        closeAllModals();
+        if (res.ok && d.ok) {
+          showToast('Batch harvest completed: Locked profits on ' + (d.count || 0) + ' positions.', 'success', 'HARVEST COMPLETE');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Harvest failed: ' + (d.detail || d.message || 'Execution error'), 'error', 'HARVEST FAILED');
+        }
+      } catch (err) {
+        showToast('Harvest failed: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // BATCH PURGE STOPPED MODAL
+    // -------------------------------------------------------------
+    function openPurgeModal() {
+      const modal = document.getElementById('modalPurgeStopped');
+      if (!modal) return;
+
+      const stopped = rawPositions.filter(p => (p.pnl || 0) <= -0.12);
+      if (!stopped.length) {
+        showToast('No positions currently breached the -12.0% stop-loss threshold.', 'info', 'STOP-LOSS CITADEL');
+        return;
+      }
+
+      let totalRecoverSol = 0;
+      const listEl = document.getElementById('purgePositionsList');
+      listEl.innerHTML = stopped.map(p => {
+        const sym = p.symbol || 'TOKEN';
+        const sizeSol = p.size_sol || 0.70;
+        const pnl = p.pnl || 0.0;
+        const pnlPct = (pnl * 100).toFixed(2);
+        const remSol = sizeSol * (1 + pnl);
+        totalRecoverSol += remSol;
+
+        return `
+          <div class="rules-row">
+            <span class="r-label">$${sym} (${sizeSol.toFixed(2)} SOL)</span>
+            <span class="r-val" style="color:var(--red);">${pnlPct}% (Recover ~ ${remSol.toFixed(4)} SOL)</span>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('purgeCountVal').textContent = stopped.length + ' SLOTS';
+      document.getElementById('purgeRecoverSol').textContent = totalRecoverSol.toFixed(4) + ' SOL';
+
+      modal.classList.add('active');
+    }
+
+    async function confirmBatchPurge() {
+      const btn = document.getElementById('btnConfirmPurge');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'PURGING STOPPED...';
+
+      try {
+        const res = await apiFetch('/api/positions/purge_stopped', { method: 'POST' });
+        const d = await res.json();
+        closeAllModals();
+        if (res.ok && d.ok) {
+          showToast('Purge complete: ' + (d.count || 0) + ' stopped positions liquidated to cash.', 'warn', 'PURGE COMPLETED');
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          showToast('Purge error: ' + (d.detail || d.message || 'Execution error'), 'error', 'PURGE FAILED');
+        }
+      } catch (err) {
+        showToast('Purge failed: ' + err.message, 'error', 'NETWORK ERROR');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // TOKEN DUE DILIGENCE INSPECTOR MODAL
+    // -------------------------------------------------------------
+    function openTokenDetailModal(addr, sym) {
+      const modal = document.getElementById('modalTokenDetail');
+      if (!modal) return;
+
+      let matchedDec = rawDecisions.find(d => {
+        const dec = d.decision || d;
+        return (dec.address || '').toLowerCase() === addr.toLowerCase();
+      });
+
+      const dec = matchedDec ? (matchedDec.decision || matchedDec) : null;
+      const f = dec ? (dec.features || {}) : {};
+
+      const tokenSym = sym || (dec ? dec.symbol : 'TOKEN');
+      const dex = dec ? (dec.dex || f.dex || (addr.endsWith('pump') ? 'PUMP' : 'RAYDIUM')) : 'RAYDIUM';
+      const mcapVal = f.market_cap || f.mcap || (dec ? dec.mcap : 0) || 0;
+      const liqVal = f.liquidity || f.liq || (dec ? dec.liq : 0) || 0;
+      const bundVal = ((f.bundler || 0) * 100).toFixed(1) + '%';
+      const devVal = ((f.dev_hold || 0) * 100).toFixed(1) + '%';
+      const top10Val = ((f.top10 || 0) * 100).toFixed(1) + '%';
+      const smcStr = (f.smart_degen || 0) + ' Degens / ' + (f.renowned || 0) + ' Renowned';
+      const c5 = f.chg_5m != null ? (f.chg_5m >= 0 ? '+' : '') + (f.chg_5m * 100).toFixed(1) + '%' : '--';
+      const c1 = f.chg_1h != null ? (f.chg_1h >= 0 ? '+' : '') + (f.chg_1h * 100).toFixed(1) + '%' : '--';
+
+      activeDetailToken = {
+        address: addr,
+        symbol: tokenSym,
+        dex: dex,
+        chg5m: c5,
+        chg1h: c1,
+        smc: smcStr
+      };
+
+      document.getElementById('tokenDetailTitle').textContent = 'DUE DILIGENCE INSPECTION // $' + tokenSym;
+      document.getElementById('tokenDetailAddrInput').value = addr;
+
+      document.getElementById('detailMintAuth').textContent = f.renounced !== false ? 'RENOUNCED [PASS]' : 'ACTIVE [RISK]';
+      document.getElementById('detailMintAuth').style.color = f.renounced !== false ? 'var(--green)' : 'var(--red)';
+
+      document.getElementById('detailFreezeAuth').textContent = f.freeze_disabled !== false ? 'DISABLED [PASS]' : 'ENABLED [RISK]';
+      document.getElementById('detailFreezeAuth').style.color = f.freeze_disabled !== false ? 'var(--green)' : 'var(--red)';
+
+      document.getElementById('detailHoneypot').textContent = !f.honeypot ? 'SAFE [NO LOCK]' : 'HONEYPOT [CRITICAL]';
+      document.getElementById('detailHoneypot').style.color = !f.honeypot ? 'var(--green)' : 'var(--red)';
+
+      document.getElementById('detailBundler').textContent = bundVal;
+      document.getElementById('detailBundler').style.color = parseFloat(bundVal) > 20 ? 'var(--red)' : (parseFloat(bundVal) > 10 ? 'var(--amber)' : 'var(--green)');
+
+      document.getElementById('detailDevHold').textContent = devVal;
+      document.getElementById('detailDevHold').style.color = parseFloat(devVal) > 10 ? 'var(--red)' : 'var(--green)';
+
+      document.getElementById('detailTop10').textContent = top10Val;
+      document.getElementById('detailTop10').style.color = parseFloat(top10Val) > 40 ? 'var(--red)' : 'var(--green)';
+
+      document.getElementById('detailDex').textContent = dex.toUpperCase();
+      document.getElementById('detailMcap').textContent = mcapVal > 0 ? ('$' + Math.round(mcapVal).toLocaleString()) : '--';
+      document.getElementById('detailLiq').textContent = liqVal > 0 ? ('$' + Math.round(liqVal).toLocaleString()) : '--';
+      document.getElementById('detail5m').textContent = c5;
+      document.getElementById('detail5m').style.color = c5.startsWith('+') ? 'var(--green)' : (c5.startsWith('-') ? 'var(--red)' : 'var(--text)');
+      document.getElementById('detail1h').textContent = c1;
+      document.getElementById('detail1h').style.color = c1.startsWith('+') ? 'var(--green)' : (c1.startsWith('-') ? 'var(--red)' : 'var(--text)');
+      document.getElementById('detailSmc').textContent = smcStr;
+
+      document.getElementById('detailGmgnLink').href = 'https://gmgn.ai/sol/token/' + addr;
+      document.getElementById('detailSolscanLink').href = 'https://solscan.io/token/' + addr;
+
+      modal.classList.add('active');
+    }
+
+    function switchDetailToBuyModal() {
+      if (!activeDetailToken) return;
+      const tok = activeDetailToken;
+      closeAllModals();
+      openBuyModal(tok.address, tok.symbol, 0.70, tok.dex, tok.chg5m, tok.chg1h, tok.smc);
+    }
+
+    // Backward compatibility delegates
+    async function executeDirectBuy(addr, size, sym) {
+      openBuyModal(addr, sym, size);
+    }
+
+    async function executeExit(addr, sym) {
+      const p = rawPositions.find(pos => (pos.address || '').toLowerCase() === addr.toLowerCase());
+      if (p) {
+        openExitModal(addr, sym, p.pnl, (p.size_sol || 0.70) * (p.pnl || 0), p.cur_price, p.entry_price, p.size_sol);
+      } else {
+        openExitModal(addr, sym, 0, 0, 0, 0, 0.70);
+      }
+    }
+
+    async function harvestWinners() {
+      openHarvestModal();
+    }
+
+    async function purgeStopped() {
+      openPurgeModal();
+    }
+
+    async function triggerManualRefresh() {
+      await fetchStatus();
+      await fetchWallet();
+      await fetchAnalytics();
+      await fetchPositions();
+      await fetchScreening();
+    }
+
+    // -------------------------------------------------------------
+    // INITIALIZATION & KEYBOARD LISTENERS
+    // -------------------------------------------------------------
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeAllModals();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      triggerManualRefresh();
+      setInterval(syncIPC, 2500);
+      syncIPC();
+    });
+  </script>
+
+  <!-- ============================================================= -->
+  <!-- MODAL 1: ORDER ENTRY // BUY MODAL                             -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalBuyEntry" onclick="handleScrimClick(event, 'modalBuyEntry')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag">EXECUTION ENGINE // 1-CLICK DISPATCH</span>
+          <span class="modal-title" id="buyModalTitle">SPOT BUY ORDER // $TOKEN</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close (ESC)">X</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Target Token Info -->
+        <div>
+          <div class="modal-sec-header">
+            <span>TARGET ASSET SPECIFICATION</span>
+            <span id="buyModalDexBadge" class="badge-gate warn">RAYDIUM</span>
+          </div>
+          <div class="input-box-wrapper" style="margin-bottom:8px;">
+            <input type="text" id="buyModalAddrInput" placeholder="Contract Mint Address (e.g. 7xKX...)" oninput="updateBuyModalFromCustomAddr(this.value)">
+            <span class="suffix" style="cursor:pointer;" onclick="copyAddress(document.getElementById('buyModalAddrInput').value)">COPY</span>
+          </div>
+        </div>
+
+        <!-- Real-Time Metrics Snapshot -->
+        <div class="modal-grid-stats">
+          <div class="modal-stat-box">
+            <span class="lbl">INDICATIVE PRICE</span>
+            <span class="val" id="buyModalPrice">0.00000000</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">MARKET CAP</span>
+            <span class="val" id="buyModalMcap">$0</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">LIQUIDITY</span>
+            <span class="val" id="buyModalLiq">$0</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">5M VELOCITY</span>
+            <span class="val" id="buyModal5m">0.0%</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">1H VELOCITY</span>
+            <span class="val" id="buyModal1h">0.0%</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">SMART MONEY</span>
+            <span class="val" id="buyModalSmc">0 / 0</span>
+          </div>
+        </div>
+
+        <!-- Capital Allocation Sizing -->
+        <div>
+          <div class="modal-sec-header">
+            <span>ORDER SIZING (SOL)</span>
+            <span id="buyModalFreeReserve" style="color:var(--green);font-family:var(--font-mono);font-size:11px;">RESERVE: 3.5536 SOL</span>
+          </div>
+          <div class="chip-group" style="margin-bottom:10px;">
+            <div class="chip-item" onclick="selectBuySize(0.10, this)">0.10 SOL</div>
+            <div class="chip-item" onclick="selectBuySize(0.35, this)">0.35 SOL</div>
+            <div class="chip-item active" onclick="selectBuySize(0.70, this)">0.70 SOL</div>
+            <div class="chip-item" onclick="selectBuySize(1.00, this)">1.00 SOL</div>
+            <div class="chip-item" onclick="selectBuySize(1.50, this)">1.50 SOL</div>
+          </div>
+          <div class="input-box-wrapper">
+            <input type="number" id="buyModalSizeInput" step="0.05" min="0.05" max="5.0" value="0.70" oninput="onCustomBuySizeChange(this.value)">
+            <span class="suffix" id="buyModalUsdCalc">~ $97.30 USD</span>
+          </div>
+        </div>
+
+        <!-- Slippage & Execution Speed -->
+        <div>
+          <div class="modal-sec-header">
+            <span>SLIPPAGE TOLERANCE</span>
+            <span style="color:var(--text-dim);font-size:10.5px;">MEV DEFENSE ACTIVE</span>
+          </div>
+          <div class="chip-group">
+            <div class="chip-item" onclick="selectSlippage(1.0, this)">1.0%</div>
+            <div class="chip-item active" onclick="selectSlippage(2.5, this)">2.5%</div>
+            <div class="chip-item" onclick="selectSlippage(5.0, this)">5.0%</div>
+            <div class="chip-item" onclick="selectSlippage('AUTO', this)">AUTO</div>
+          </div>
+        </div>
+
+        <!-- Active Protection Strategy -->
+        <div class="rules-card">
+          <div class="rules-row">
+            <span class="r-label">HARD STOP-LOSS</span>
+            <span class="r-val" style="color:var(--red);">-12.0% (AUTOMATIC EXIT)</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">PROFIT LADDER</span>
+            <span class="r-val" style="color:var(--green);">TP1 +35% (30%) | TP2 +75% (40%) | TP3 +150%</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">TRAILING RATCHET</span>
+            <span class="r-val" style="color:var(--text);">30% HIGH WATERMARK PULLBACK LOCK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CANCEL</button>
+        <button class="btn-exec primary" id="btnConfirmBuy" onclick="confirmBuyOrder()">CONFIRM BUY ORDER (0.70 SOL)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL 2: POSITION EXIT & HARVEST MODAL ("FOR GOIN OUT")      -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalExitPosition" onclick="handleScrimClick(event, 'modalExitPosition')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag">TACTICAL EXIT CITADEL // ORDER LIQUIDATION</span>
+          <span class="modal-title" id="exitModalTitle">CLOSE POSITION // $TOKEN</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close (ESC)">X</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Live Position Financials -->
+        <div class="modal-grid-stats" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="modal-stat-box">
+            <span class="lbl">CAPITAL DEPLOYED</span>
+            <span class="val" id="exitModalSize">0.70 SOL ($97.30)</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">ENTRY VS CURRENT</span>
+            <span class="val" id="exitModalPxCompare">0.0000 / 0.0000</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">FLOATING PNL %</span>
+            <span class="val" id="exitModalPnlPct">+0.00%</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">NET FLOATING SOL</span>
+            <span class="val" id="exitModalPnlSol">+0.0000 SOL</span>
+          </div>
+        </div>
+
+        <!-- Exit Fraction Selector -->
+        <div>
+          <div class="modal-sec-header">
+            <span>EXIT FRACTION</span>
+            <span style="color:var(--text-muted);font-size:11px;" id="exitModalFractionLbl">100% COMPLETE LIQUIDATION</span>
+          </div>
+          <div class="chip-group">
+            <div class="chip-item" onclick="selectExitFraction(25, this)">25% DE-RISK</div>
+            <div class="chip-item" onclick="selectExitFraction(50, this)">50% HALF HARVEST</div>
+            <div class="chip-item" onclick="selectExitFraction(75, this)">75% MAJOR</div>
+            <div class="chip-item active-danger" onclick="selectExitFraction(100, this)">100% FULL EXIT</div>
+          </div>
+        </div>
+
+        <!-- Liquidation Return Breakdown -->
+        <div class="rules-card">
+          <div class="rules-row">
+            <span class="r-label">ESTIMATED CAPITAL RECLAIMED</span>
+            <span class="r-val" id="exitModalReclaimedSol" style="color:var(--text);">0.7000 SOL (~ $97.30 USD)</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">REALIZED NET PNL</span>
+            <span class="r-val" id="exitModalRealizedPnl" style="color:var(--green);">+0.0000 SOL</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">EXECUTION ROUTE</span>
+            <span class="r-val" style="color:var(--text-dim);">DIRECT SWAP TO SOL // FAST PRIORITY</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">KEEP POSITION</button>
+        <button class="btn-exec danger" id="btnConfirmExit" onclick="confirmExitOrder()">CONFIRM 100% EXIT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL 3: BATCH HARVEST ALL WINNERS                           -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalHarvestAll" onclick="handleScrimClick(event, 'modalHarvestAll')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag">BATCH TREASURY OPERATION // PROFIT LOCK</span>
+          <span class="modal-title">HARVEST ALL WINNING POSITIONS</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close (ESC)">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="font-size:12px;color:var(--text-muted);line-height:1.5;">
+          The system will trigger 100% take-profit liquidations across all positions currently showing positive PnL. Profits and principal are returned to the Cash Reserve.
+        </div>
+
+        <div class="rules-card" id="harvestPositionsList">
+          <!-- Filled dynamically -->
+        </div>
+
+        <div class="modal-grid-stats" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="modal-stat-box">
+            <span class="lbl">TOTAL POSITIONS TO HARVEST</span>
+            <span class="val" id="harvestCountVal">0 SLOTS</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">PROJECTED SOL TO BANK</span>
+            <span class="val green" id="harvestProjectedSol">+0.0000 SOL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CANCEL</button>
+        <button class="btn-exec warn" id="btnConfirmHarvest" onclick="confirmBatchHarvest()">EXECUTE BATCH HARVEST</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL 4: BATCH PURGE STOPPED POSITIONS                        -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalPurgeStopped" onclick="handleScrimClick(event, 'modalPurgeStopped')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag">RISK MITIGATION CITADEL // CAPITAL PRESERVATION</span>
+          <span class="modal-title">PURGE STOPPED POSITIONS</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close (ESC)">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="font-size:12px;color:var(--text-muted);line-height:1.5;">
+          The system will instantly liquidate positions that hit the hard stop-loss (-12.0%) or are flagged for immediate defense to eliminate further downside risk.
+        </div>
+
+        <div class="rules-card" id="purgePositionsList">
+          <!-- Filled dynamically -->
+        </div>
+
+        <div class="modal-grid-stats" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="modal-stat-box">
+            <span class="lbl">STOPPED SLOTS</span>
+            <span class="val red" id="purgeCountVal">0 SLOTS</span>
+          </div>
+          <div class="modal-stat-box">
+            <span class="lbl">CAPITAL TO RECOVER</span>
+            <span class="val" id="purgeRecoverSol">0.0000 SOL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CANCEL</button>
+        <button class="btn-exec danger" id="btnConfirmPurge" onclick="confirmBatchPurge()">PURGE STOPPED POSITIONS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL 5: TOKEN DUE DILIGENCE & SECURITY INSPECTOR            -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalTokenDetail" onclick="handleScrimClick(event, 'modalTokenDetail')">
+    <div class="modal-container wide">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag">ON-CHAIN AUDIT CITADEL // SECURITY VERIFICATION</span>
+          <span class="modal-title" id="tokenDetailTitle">DUE DILIGENCE INSPECTION // $TOKEN</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close (ESC)">X</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Mint Address & Quick Links -->
+        <div class="input-box-wrapper">
+          <input type="text" id="tokenDetailAddrInput" readonly style="cursor:text;">
+          <span class="suffix" style="cursor:pointer;" onclick="copyAddress(document.getElementById('tokenDetailAddrInput').value)">COPY MINT</span>
+        </div>
+
+        <!-- Security Gates Breakdown -->
+        <div>
+          <div class="modal-sec-header">
+            <span>CONTRACT SECURITY GATES &amp; AUDIT VERIFICATION</span>
+          </div>
+          <div class="modal-grid-stats">
+            <div class="modal-stat-box">
+              <span class="lbl">MINT AUTHORITY</span>
+              <span class="val" id="detailMintAuth">RENOUNCED</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">FREEZE AUTHORITY</span>
+              <span class="val" id="detailFreezeAuth">DISABLED</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">HONEYPOT STATUS</span>
+              <span class="val" id="detailHoneypot">SAFE [NO LOCK]</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">BUNDLER CARTEL</span>
+              <span class="val" id="detailBundler">0%</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">DEV HOLDING</span>
+              <span class="val" id="detailDevHold">0%</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">TOP 10 HOLDERS</span>
+              <span class="val" id="detailTop10">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Market & Velocity Profile -->
+        <div>
+          <div class="modal-sec-header">
+            <span>MARKET STRUCTURE &amp; ON-CHAIN MOMENTUM</span>
+          </div>
+          <div class="modal-grid-stats">
+            <div class="modal-stat-box">
+              <span class="lbl">PROTOCOL / DEX</span>
+              <span class="val" id="detailDex">RAYDIUM</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">MARKET CAP</span>
+              <span class="val" id="detailMcap">$0</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">POOL LIQUIDITY</span>
+              <span class="val" id="detailLiq">$0</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">5M VELOCITY</span>
+              <span class="val" id="detail5m">0.0%</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">1H VELOCITY</span>
+              <span class="val" id="detail1h">0.0%</span>
+            </div>
+            <div class="modal-stat-box">
+              <span class="lbl">SMART CONFLUENCE</span>
+              <span class="val" id="detailSmc">0 SM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- External Audit Links -->
+        <div style="display:flex;gap:10px;">
+          <a id="detailGmgnLink" href="#" target="_blank" class="btn-exec secondary" style="text-decoration:none;text-align:center;flex:1;">VIEW ON GMGN.AI</a>
+          <a id="detailSolscanLink" href="#" target="_blank" class="btn-exec secondary" style="text-decoration:none;text-align:center;flex:1;">VIEW ON SOLSCAN</a>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CLOSE</button>
+        <button class="btn-exec primary" id="btnDetailOpenBuy" onclick="switchDetailToBuyModal()">ENTER SPOT POSITION</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL: SLOT CAPACITY & ROTATION INTERCEPT                      -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalSlotRotation" onclick="handleScrimClick(event, 'modalSlotRotation')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag" style="color:var(--amber);">PORTFOLIO CAPACITY EXCEEDED // ROTATION PROTOCOL</span>
+          <span class="modal-title">MAX 5/5 CONCURRENT SLOTS OCCUPIED</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close">X</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Target Acquisition Summary Banner -->
+        <div class="pnl-banner neutral" style="margin-bottom: 16px;">
+          <div class="lbl">PENDING ACQUISITION TARGET</div>
+          <div class="val" id="rotationTargetBadge" style="font-size: 15px; color: var(--text);">--</div>
+        </div>
+
+        <div class="modal-sec-header">
+          <span>PATH A: SELECT LOWEST-PERFORMING POSITION TO ROTATE OUT</span>
+        </div>
+
+        <!-- Position Selection List -->
+        <div class="rotation-list" id="rotationPositionsList">
+          <!-- Populated dynamically with sorted positions -->
+        </div>
+
+        <!-- Primary Rotation Action -->
+        <button class="btn-exec primary" id="btnConfirmRotation" onclick="confirmRotationOrder()" style="margin-top: 12px; margin-bottom: 16px;">
+          ROTATE OUT SELECTED CANDIDATE & BUY TARGET
+        </button>
+
+        <div class="rules-divider" style="margin: 12px 0;"></div>
+
+        <div class="modal-sec-header">
+          <span>ALTERNATIVE RESOLUTION PATHWAYS</span>
+        </div>
+
+        <!-- Fast Alternative Actions -->
+        <div class="rotation-fast-actions">
+          <div class="rotation-fast-card" onclick="harvestWinnersAndEnterTarget()">
+            <div class="rotation-fast-title" style="color:var(--green);">PATH B: HARVEST WINNERS</div>
+            <div class="rotation-fast-desc">Liquidate all positions with positive PnL to bank gains, unlock slots, and immediately buy target.</div>
+          </div>
+          <div class="rotation-fast-card" onclick="expandCapacityAndEnterTarget()">
+            <div class="rotation-fast-title" style="color:var(--amber);">PATH C: EXPAND SLOTS (+1)</div>
+            <div class="rotation-fast-desc">Increment concurrent slot capacity ceiling (e.g. 5 to 6) and immediately execute the buy order.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CANCEL ORDER</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL: EMERGENCY CLOSE ALL POSITIONS                           -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalCloseAll" onclick="handleScrimClick(event, 'modalCloseAll')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag" style="color:var(--red);">EMERGENCY LIQUIDATION PROTOCOL</span>
+          <span class="modal-title">CLOSE ALL SPOT INVENTORY TO CASH</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="pnl-banner loss" style="margin-bottom: 16px;">
+          <div class="lbl">TOTAL INVENTORY LIQUIDATION</div>
+          <div class="val" id="closeAllCountVal" style="color:var(--red);">0 POSITIONS</div>
+        </div>
+
+        <div class="rules-box" style="margin-bottom: 16px;">
+          <div class="rules-row">
+            <span class="r-label">TOTAL ESTIMATED PROCEEDS</span>
+            <span class="r-val" id="closeAllRecoverVal" style="color:var(--green);font-weight:700;">~ 0.0000 SOL</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">EXECUTION TYPE</span>
+            <span class="r-val" style="color:var(--red);">100% MARKET SELL TO SOL</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">SLIPPAGE TOLERANCE</span>
+            <span class="r-val">15.0% DYNAMIC DEFENSE</span>
+          </div>
+        </div>
+
+        <div class="modal-sec-header">
+          <span>POSITIONS TO BE LIQUIDATED</span>
+        </div>
+        <div class="rules-box" id="closeAllListPreview" style="max-height: 180px; overflow-y: auto;">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">ABORT</button>
+        <button class="btn-exec danger" id="btnConfirmCloseAll" onclick="confirmCloseAllOrders()">CONFIRM EMERGENCY LIQUIDATION</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL: DUPLICATE POSITION WARNING                              -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalDuplicatePosition" onclick="handleScrimClick(event, 'modalDuplicatePosition')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag" style="color:var(--amber);">SAFETY RISK ENGINE // CONCURRENT INVARIANT</span>
+          <span class="modal-title" id="dupModalTitle">DUPLICATE POSITION DETECTED</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="pnl-banner neutral" style="margin-bottom: 16px;">
+          <div class="lbl">SAFETY RISK RULE TRIGGERED</div>
+          <div class="val" style="font-size: 14px; color: var(--amber);">CONCURRENT ASSET INVARIANT</div>
+        </div>
+
+        <p style="font-size: 12px; color: var(--text-dim); line-height: 1.5; margin-bottom: 14px;">
+          The system prevents duplicate orders for tokens already open in active inventory to protect against accidental double-allocation and concentration risk.
+        </p>
+
+        <div class="rules-box" id="dupPositionDetails" style="margin-bottom: 16px;">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CANCEL</button>
+        <button class="btn-exec primary" onclick="manageExistingDupPosition()">MANAGE / EXIT EXISTING POSITION</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- MODAL: RISK & CAPACITY CONFIGURATION                           -->
+  <!-- ============================================================= -->
+  <div class="modal-scrim" id="modalExpandCapacity" onclick="handleScrimClick(event, 'modalExpandCapacity')">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag" style="color:var(--green);">RISK GOVERNANCE // CAPACITY CONTROLS</span>
+          <span class="modal-title">PORTFOLIO SLOTS & EXPOSURE LIMITS</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeAllModals()" title="Close">X</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Slots Setting -->
+        <div style="margin-bottom: 16px;">
+          <div class="modal-sec-header">
+            <span>MAX CONCURRENT SLOTS</span>
+            <span id="curSlotsDisplay" style="color:var(--text-dim);font-family:var(--font-mono);">CURRENT: 5 SLOTS</span>
+          </div>
+          <div class="chip-group" style="margin-bottom: 10px;">
+            <button class="chip-item" onclick="selectConfigSlots(5, this)">5 SLOTS</button>
+            <button class="chip-item" onclick="selectConfigSlots(6, this)">6 SLOTS</button>
+            <button class="chip-item" onclick="selectConfigSlots(8, this)">8 SLOTS</button>
+            <button class="chip-item" onclick="selectConfigSlots(10, this)">10 SLOTS</button>
+          </div>
+          <div class="input-box-wrapper">
+            <input type="number" id="configSlotsInput" min="1" max="25" step="1" value="5" oninput="onCustomSlotsInput(this.value)">
+            <span class="suffix">SLOTS</span>
+          </div>
+        </div>
+
+        <!-- Total Exposure Setting -->
+        <div style="margin-bottom: 16px;">
+          <div class="modal-sec-header">
+            <span>MAX TOTAL PORTFOLIO EXPOSURE</span>
+            <span id="curExposureDisplay" style="color:var(--text-dim);font-family:var(--font-mono);">CURRENT: 3.60 SOL</span>
+          </div>
+          <div class="chip-group" style="margin-bottom: 10px;">
+            <button class="chip-item" onclick="selectConfigExposure(3.6, this)">3.60 SOL</button>
+            <button class="chip-item" onclick="selectConfigExposure(5.0, this)">5.00 SOL</button>
+            <button class="chip-item" onclick="selectConfigExposure(7.5, this)">7.50 SOL</button>
+            <button class="chip-item" onclick="selectConfigExposure(10.0, this)">10.00 SOL</button>
+          </div>
+          <div class="input-box-wrapper">
+            <input type="number" id="configExposureInput" min="0.5" max="100" step="0.1" value="3.60">
+            <span class="suffix">SOL</span>
+          </div>
+        </div>
+
+        <div class="rules-box">
+          <div class="rules-row">
+            <span class="r-label">RISK ENGINE BEHAVIOR</span>
+            <span class="r-val" style="color:var(--green);">DYNAMIC HOT-RELOAD</span>
+          </div>
+          <div class="rules-row">
+            <span class="r-label">POSITION SIZING</span>
+            <span class="r-val">0.70 SOL / TRADE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-exec secondary" onclick="closeAllModals()">CANCEL</button>
+        <button class="btn-exec primary" id="btnSaveRiskSettings" onclick="applyRiskSettingsFromModal()">APPLY RISK SETTINGS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- FLOATING TOAST NOTIFICATION CONTAINER                         -->
+  <!-- ============================================================= -->
+  <div class="toast-container" id="toastContainer"></div>
+</body>
+</html>

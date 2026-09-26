@@ -1,0 +1,1639 @@
+{
+  "session_start": 1790155741.2237046,
+  "elapsed_seconds": 3602.007973909378,
+  "cycle_count": 736,
+  "total_trades_opened": 46,
+  "total_trades_closed": 46,
+  "winning_trades_count": 18,
+  "losing_trades_count": 28,
+  "win_rate_pct": 39.1,
+  "total_sol_gained": 0.111856,
+  "total_sol_lost": 0.17403,
+  "profit_factor": 0.64,
+  "total_realized_pnl_sol": -0.062174,
+  "unrealized_pnl_sol": 0.32847,
+  "net_portfolio_pnl_sol": 0.266296,
+  "tokens_scanned": 12287,
+  "token_history": {
+    "GkBZGFgNy9Q6jHjBuYeTqsvugfEMhniACF9ieV8H3TtC": {
+      "symbol": "BLEE",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.009,
+      "last_pnl_pct": -0.1197,
+      "last_exit_time": 1790156289.0803149
+    },
+    "FTjYFyQLRX34RmfX1Xxh1VUJe9c2H8WFr7XophMa55g4": {
+      "symbol": "WISE",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -0.0172,
+      "last_pnl_pct": -0.0908,
+      "last_exit_time": 1790158062.2318118
+    },
+    "14B91ALy7fmzRmatmSD7XyYTut9323E47WqGyLyopump": {
+      "symbol": "PURRL",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.0005,
+      "last_pnl_pct": -0.0428,
+      "last_exit_time": 1790156490.1727898
+    },
+    "Eii9T6RPJXaFeWgLg5jYrnco7Fwz1RChFj6A5eqh39Ab": {
+      "symbol": "Inu",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00795,
+      "last_pnl_pct": -0.0795,
+      "last_exit_time": 1790156792.282756
+    },
+    "4wYd4vPhzaUQs5vqUrEJ7CPtKg1qzXHhauERuh4MiNMB": {
+      "symbol": "based",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00851,
+      "last_pnl_pct": -0.0851,
+      "last_exit_time": 1790156792.2939966
+    },
+    "EGTFrUPym8JnEMAddZjuhBkcSGEGTM75qymxUZgTpump": {
+      "symbol": "Lobby",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -0.01656,
+      "last_pnl_pct": -0.0863,
+      "last_exit_time": 1790159330.7463214
+    },
+    "527PdUTGwcFxVEMXt8tyRJA1nYbVedgSiSfh4s2LWTWz": {
+      "symbol": "BOP",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -0.0024200000000000003,
+      "last_pnl_pct": -0.0449,
+      "last_exit_time": 1790158118.2401376
+    },
+    "6LrDt7nBiHraUuk9PZoUL8Qy9WX6pnSpDz1RkWWRR7hN": {
+      "symbol": "INU",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.009,
+      "last_pnl_pct": -0.0958,
+      "last_exit_time": 1790157068.5981905
+    },
+    "AqoPZcUumKUBHrnfBsNtoNuneYEjoimaiWYq8GH8gpX9": {
+      "symbol": "STONK10",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00751,
+      "last_pnl_pct": -0.0751,
+      "last_exit_time": 1790157124.0171494
+    },
+    "CgxXsJnDszZ4E2mhrXU4tQBKrwSk138o7PVgtCkJDDPC": {
+      "symbol": "\u2801\u280f\u2811",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.0078,
+      "last_pnl_pct": -0.078,
+      "last_exit_time": 1790157254.656063
+    },
+    "6AUURRdHb9TrfPHv9AMofa8NEVoZDXcsbWKcUBpFSRXs": {
+      "symbol": "CYPHERCAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00755,
+      "last_pnl_pct": -0.0755,
+      "last_exit_time": 1790157254.6672475
+    },
+    "DDVUsN8sDFxbaX6gNBoD44kjZhFETWJnwAn4EX1dpump": {
+      "symbol": "BABYCATE",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00213,
+      "last_pnl_pct": -0.0213,
+      "last_exit_time": 1790157268.5275455
+    },
+    "C3b3fpyRWsJf3bo6vay2vo1bQ7CezwumZwTrP82Lpump": {
+      "symbol": "Tokens",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00235,
+      "last_pnl_pct": -0.0235,
+      "last_exit_time": 1790157268.543916
+    },
+    "AGi2s9zPRPHs3zEDPhPTroumTEXK5ufymYSfEFndCSSW": {
+      "symbol": "LEVERCAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00461,
+      "last_pnl_pct": -0.0461,
+      "last_exit_time": 1790157268.5589128
+    },
+    "CdhZy8wrRxNxoV8HtoByXKN7mvS46avtuZ1b39tKfx7": {
+      "symbol": "X7",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.0005,
+      "last_pnl_pct": -0.0098,
+      "last_exit_time": 1790157520.8659372
+    },
+    "DFQHUegJWE29Xu3BUxPezqi77uyHURRyxJpdtyvLpump": {
+      "symbol": "PUMPCAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00266,
+      "last_pnl_pct": -0.0266,
+      "last_exit_time": 1790157840.4470923
+    },
+    "BT845WxZtv9qmmEiGXB9rueBi1LT1ViHr6gbYx142FFP": {
+      "symbol": "TOPCAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.009,
+      "last_pnl_pct": -0.1259,
+      "last_exit_time": 1790157857.520874
+    },
+    "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr": {
+      "symbol": "NEARKAT",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00225,
+      "last_pnl_pct": -0.0225,
+      "last_exit_time": 1790157870.5368588
+    },
+    "6HU4CmRb15C2nQDx8Ld2f2W2wTdmog6aZiiXdrT5Pzi8": {
+      "symbol": "GROK",
+      "trades_count": 2,
+      "cumulative_pnl_sol": -0.01052,
+      "last_pnl_pct": -0.0895,
+      "last_exit_time": 1790159007.2189832
+    },
+    "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m": {
+      "symbol": "VBUCKS",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00106,
+      "last_pnl_pct": -0.0106,
+      "last_exit_time": 1790157979.4146435
+    },
+    "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8": {
+      "symbol": "ALLINU",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00142,
+      "last_pnl_pct": -0.0142,
+      "last_exit_time": 1790158065.6457343
+    },
+    "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA": {
+      "symbol": "CALI",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.009,
+      "last_pnl_pct": -0.1325,
+      "last_exit_time": 1790158118.216165
+    },
+    "3nqHijNUExsnjNBb15WJsJ2xisyMVGN6FK4aUgZk1Rwj": {
+      "symbol": "TACZ",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.0005,
+      "last_pnl_pct": 0.0028,
+      "last_exit_time": 1790158130.4587405
+    },
+    "HgcxVs6kJhPAaGqnPNGaa7zYgNT49hJrLufiqcNMuYZT": {
+      "symbol": "FEELSGOOD",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00456,
+      "last_pnl_pct": -0.0456,
+      "last_exit_time": 1790158173.2707152
+    },
+    "7MCgYMzq3fov6oERdtTMAYbN2U9LZrrSYS1MBhjixZFr": {
+      "symbol": "POLLY",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00758,
+      "last_pnl_pct": -0.0758,
+      "last_exit_time": 1790158240.8768365
+    },
+    "EKtmPPLaCbEEKiwoHHtV7TsRsmPXs5CMGtQtZFSiinsc": {
+      "symbol": "Stamp",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.00332,
+      "last_pnl_pct": -0.0332,
+      "last_exit_time": 1790158373.364754
+    },
+    "4MjrGwD4SpjVN6JPZJfmHCUmnJynoTz56tbzCX71SxE9": {
+      "symbol": "FINE",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.009,
+      "last_pnl_pct": -0.0964,
+      "last_exit_time": 1790159330.771999
+    },
+    "26d5rwV5emnGJSzr5CKpgq66LmYqqddk33ybUMioYLTU": {
+      "symbol": "BASKET",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.009,
+      "last_pnl_pct": -0.265,
+      "last_exit_time": 1790159330.8042662
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "PIGGYBANK",
+      "address": "G4PZQ4tTMjeNQfrSyMUMXN919NTeKA8hXUEzjRmr9btr",
+      "reason": "PARTIAL_TP_TIER2 (+23.8% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000159562,
+      "exit_price": 0.00019754,
+      "pnl_pct": 0.238,
+      "pnl_sol": 0.006497,
+      "hold_minutes": 0.0,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:29:18.521062"
+    },
+    {
+      "symbol": "BOP",
+      "address": "527PdUTGwcFxVEMXt8tyRJA1nYbVedgSiSfh4s2LWTWz",
+      "reason": "PARTIAL_TP_TIER2 (+45.5% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000715828,
+      "exit_price": 0.0010416,
+      "pnl_pct": 0.4551,
+      "pnl_sol": 0.008055,
+      "hold_minutes": 0.0,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:29:18.533935"
+    },
+    {
+      "symbol": "LYNKS",
+      "address": "E8fsmahzoa4WGZ1dCnGBTzgXRxz9T7nC17KWGkzGxray",
+      "reason": "PARTIAL_TP_TIER2 (+29.4% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000257149,
+      "exit_price": 0.00033265,
+      "pnl_pct": 0.2936,
+      "pnl_sol": 0.006665,
+      "hold_minutes": 0.0,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:29:18.547331"
+    },
+    {
+      "symbol": "BOP",
+      "address": "527PdUTGwcFxVEMXt8tyRJA1nYbVedgSiSfh4s2LWTWz",
+      "reason": "PARTIAL_TP_TIER3 (+54.4% hit: 35% banked, floor +20.0%)",
+      "percent": 35,
+      "entry_price": 0.000715828,
+      "exit_price": 0.00110531,
+      "pnl_pct": 0.5441,
+      "pnl_sol": 0.006257,
+      "hold_minutes": 0.1,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:29:23.883597"
+    },
+    {
+      "symbol": "LYNKS",
+      "address": "E8fsmahzoa4WGZ1dCnGBTzgXRxz9T7nC17KWGkzGxray",
+      "reason": "PARTIAL_TP_TIER3 (+99.7% hit: 35% banked, floor +20.0%)",
+      "percent": 35,
+      "entry_price": 0.000257149,
+      "exit_price": 0.00051353,
+      "pnl_pct": 0.997,
+      "pnl_sol": 0.014756,
+      "hold_minutes": 7.0,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:36:17.544240"
+    },
+    {
+      "symbol": "BLEE",
+      "address": "GkBZGFgNy9Q6jHjBuYeTqsvugfEMhniACF9ieV8H3TtC",
+      "reason": "HARD_STOP (-7.5%) (PnL: -12.0%)",
+      "percent": 100,
+      "entry_price": 0.00050626,
+      "exit_price": 0.0004607,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 8.8,
+      "mcap": 506260.0,
+      "market_cap": 506260.0,
+      "liquidity": 69331.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:38:09.080201"
+    },
+    {
+      "symbol": "WISE",
+      "address": "FTjYFyQLRX34RmfX1Xxh1VUJe9c2H8WFr7XophMa55g4",
+      "reason": "HARD_STOP (-7.5%) (PnL: -8.2%)",
+      "percent": 100,
+      "entry_price": 0.000541667,
+      "exit_price": 0.00049725,
+      "pnl_pct": -0.082,
+      "pnl_sol": -0.0082,
+      "hold_minutes": 1.4,
+      "mcap": 541576.0,
+      "market_cap": 541576.0,
+      "liquidity": 104939.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:39:40.519954"
+    },
+    {
+      "symbol": "PURRL",
+      "address": "14B91ALy7fmzRmatmSD7XyYTut9323E47WqGyLyopump",
+      "reason": "RATCHET_FLOOR_EXIT (+1.5% floor hit, PnL: -4.3%)",
+      "percent": 100,
+      "entry_price": 0.000218552,
+      "exit_price": 0.00021964,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.0005,
+      "hold_minutes": 1.5,
+      "mcap": 212553.0,
+      "market_cap": 212553.0,
+      "liquidity": 39209.7,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:41:30.172689"
+    },
+    {
+      "symbol": "Inu",
+      "address": "Eii9T6RPJXaFeWgLg5jYrnco7Fwz1RChFj6A5eqh39Ab",
+      "reason": "HARD_STOP (-7.5%) (PnL: -8.0%)",
+      "percent": 100,
+      "entry_price": 0.000278541,
+      "exit_price": 0.0002564,
+      "pnl_pct": -0.0795,
+      "pnl_sol": -0.00795,
+      "hold_minutes": 8.6,
+      "mcap": 267974.0,
+      "market_cap": 267974.0,
+      "liquidity": 119271.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:46:32.282606"
+    },
+    {
+      "symbol": "based",
+      "address": "4wYd4vPhzaUQs5vqUrEJ7CPtKg1qzXHhauERuh4MiNMB",
+      "reason": "HARD_STOP (-7.5%) (PnL: -8.5%)",
+      "percent": 100,
+      "entry_price": 0.00026652,
+      "exit_price": 0.00024384,
+      "pnl_pct": -0.0851,
+      "pnl_sol": -0.00851,
+      "hold_minutes": 7.5,
+      "mcap": 260046.0,
+      "market_cap": 260046.0,
+      "liquidity": 50696.9,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:46:32.293891"
+    },
+    {
+      "symbol": "Lobby",
+      "address": "EGTFrUPym8JnEMAddZjuhBkcSGEGTM75qymxUZgTpump",
+      "reason": "HARD_STOP (-7.5%) (PnL: -7.9%)",
+      "percent": 100,
+      "entry_price": 0.000171903,
+      "exit_price": 0.00015827,
+      "pnl_pct": -0.0793,
+      "pnl_sol": -0.00793,
+      "hold_minutes": 7.5,
+      "mcap": 163649.0,
+      "market_cap": 163649.0,
+      "liquidity": 37022.4,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:46:58.488818"
+    },
+    {
+      "symbol": "STONKERAGE",
+      "address": "5Tg69VASHq7HYet48q5wQYdj3dP6wTsWNey9Dak6JUEU",
+      "reason": "PARTIAL_TP_TIER2 (+24.5% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000263579,
+      "exit_price": 0.00032808,
+      "pnl_pct": 0.2447,
+      "pnl_sol": 0.008565,
+      "hold_minutes": 20.3,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:49:35.038501"
+    },
+    {
+      "symbol": "BOP",
+      "address": "527PdUTGwcFxVEMXt8tyRJA1nYbVedgSiSfh4s2LWTWz",
+      "reason": "EMERGENCY_FLASH_DRAIN (Pool Liquidity dropped 15.5%)",
+      "percent": 100,
+      "entry_price": 0.000715828,
+      "exit_price": 0.00078476,
+      "pnl_pct": 0.0963,
+      "pnl_sol": 0.00207,
+      "hold_minutes": 21.4,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:50:43.368816"
+    },
+    {
+      "symbol": "SATOSHINU",
+      "address": "HzaCANKGkhNcQGb1VWL8f4tHJYrCmaXrPWk9eHR7GYYX",
+      "reason": "PARTIAL_TP_TIER2 (+20.3% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000618336,
+      "exit_price": 0.0007438,
+      "pnl_pct": 0.2029,
+      "pnl_sol": 0.007102,
+      "hold_minutes": 21.8,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:51:08.586676"
+    },
+    {
+      "symbol": "INU",
+      "address": "6LrDt7nBiHraUuk9PZoUL8Qy9WX6pnSpDz1RkWWRR7hN",
+      "reason": "HARD_STOP (-7.5%) (PnL: -9.6%)",
+      "percent": 100,
+      "entry_price": 0.000594007,
+      "exit_price": 0.00054055,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 21.8,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:51:08.598124"
+    },
+    {
+      "symbol": "STONK10",
+      "address": "AqoPZcUumKUBHrnfBsNtoNuneYEjoimaiWYq8GH8gpX9",
+      "reason": "HARD_STOP (-7.5%) (PnL: -7.5%)",
+      "percent": 100,
+      "entry_price": 0.00106462,
+      "exit_price": 0.00098467,
+      "pnl_pct": -0.0751,
+      "pnl_sol": -0.00751,
+      "hold_minutes": 7.6,
+      "mcap": 1062250.0,
+      "market_cap": 1062250.0,
+      "liquidity": 117193.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:52:04.017069"
+    },
+    {
+      "symbol": "STONKCATS",
+      "address": "9h5AzEQzYu9CV5K6uLtFRMD1KcbxZSFNxZEgBTNfw5Na",
+      "reason": "PARTIAL_TP_TIER2 (+21.1% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000844671,
+      "exit_price": 0.00102273,
+      "pnl_pct": 0.2108,
+      "pnl_sol": 0.007378,
+      "hold_minutes": 24.3,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:53:34.841093"
+    },
+    {
+      "symbol": "\u2801\u280f\u2811",
+      "address": "CgxXsJnDszZ4E2mhrXU4tQBKrwSk138o7PVgtCkJDDPC",
+      "reason": "HARD_STOP (-7.5%) (PnL: -7.8%)",
+      "percent": 100,
+      "entry_price": 0.000399657,
+      "exit_price": 0.00036848,
+      "pnl_pct": -0.078,
+      "pnl_sol": -0.0078,
+      "hold_minutes": 24.9,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:54:14.655977"
+    },
+    {
+      "symbol": "CYPHERCAT",
+      "address": "6AUURRdHb9TrfPHv9AMofa8NEVoZDXcsbWKcUBpFSRXs",
+      "reason": "HARD_STOP (-7.5%) (PnL: -7.5%)",
+      "percent": 100,
+      "entry_price": 0.00149171,
+      "exit_price": 0.00137909,
+      "pnl_pct": -0.0755,
+      "pnl_sol": -0.00755,
+      "hold_minutes": 18.0,
+      "mcap": 1491660.0,
+      "market_cap": 1491660.0,
+      "liquidity": 125366.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:54:14.667138"
+    },
+    {
+      "symbol": "BABYCATE",
+      "address": "DDVUsN8sDFxbaX6gNBoD44kjZhFETWJnwAn4EX1dpump",
+      "reason": "DYNAMIC_STAGNATION (25.2m, PnL: -2.1% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.00125812,
+      "exit_price": 0.00123132,
+      "pnl_pct": -0.0213,
+      "pnl_sol": -0.00213,
+      "hold_minutes": 25.2,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:54:28.527429"
+    },
+    {
+      "symbol": "Tokens",
+      "address": "C3b3fpyRWsJf3bo6vay2vo1bQ7CezwumZwTrP82Lpump",
+      "reason": "DYNAMIC_STAGNATION (25.2m, PnL: -2.4% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.000292041,
+      "exit_price": 0.00028518,
+      "pnl_pct": -0.0235,
+      "pnl_sol": -0.00235,
+      "hold_minutes": 25.2,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:54:28.543794"
+    },
+    {
+      "symbol": "LEVERCAT",
+      "address": "AGi2s9zPRPHs3zEDPhPTroumTEXK5ufymYSfEFndCSSW",
+      "reason": "DYNAMIC_STAGNATION (25.2m, PnL: -4.6% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.00221505,
+      "exit_price": 0.00211294,
+      "pnl_pct": -0.0461,
+      "pnl_sol": -0.00461,
+      "hold_minutes": 25.2,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:54:28.558785"
+    },
+    {
+      "symbol": "FLAME",
+      "address": "9oXA1VWKNiYDYa6VKHBFFBBvZdvuhw1b2eD5Aka7YrVt",
+      "reason": "PARTIAL_TP_TIER2 (+23.4% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000889523,
+      "exit_price": 0.00109767,
+      "pnl_pct": 0.234,
+      "pnl_sol": 0.00819,
+      "hold_minutes": 7.2,
+      "mcap": 889481.0,
+      "market_cap": 889481.0,
+      "liquidity": 114270.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:55:02.487705"
+    },
+    {
+      "symbol": "AQUA",
+      "address": "AQVcP67EpMyu4cBZZjqMu91cVsWy1aX98JmcZm1FyY9",
+      "reason": "PARTIAL_TP_TIER2 (+20.3% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000858204,
+      "exit_price": 0.00103216,
+      "pnl_pct": 0.2027,
+      "pnl_sol": 0.007095,
+      "hold_minutes": 5.7,
+      "mcap": 834481.0,
+      "market_cap": 834481.0,
+      "liquidity": 105164.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:56:25.222576"
+    },
+    {
+      "symbol": "X7",
+      "address": "CdhZy8wrRxNxoV8HtoByXKN7mvS46avtuZ1b39tKfx7",
+      "reason": "RATCHET_FLOOR_EXIT (+1.5% floor hit, PnL: -1.0%)",
+      "percent": 100,
+      "entry_price": 0.00100399,
+      "exit_price": 0.00100901,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.0005,
+      "hold_minutes": 29.4,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T12:58:40.865795"
+    },
+    {
+      "symbol": "PIGGYBANK",
+      "address": "G4PZQ4tTMjeNQfrSyMUMXN919NTeKA8hXUEzjRmr9btr",
+      "reason": "PARTIAL_TP_TIER3 (+41.3% hit: 35% banked, floor +20.0%)",
+      "percent": 35,
+      "entry_price": 0.000159562,
+      "exit_price": 0.00022545,
+      "pnl_pct": 0.4129,
+      "pnl_sol": 0.007308,
+      "hold_minutes": 33.1,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:02:27.203351"
+    },
+    {
+      "symbol": "PUMPCAT",
+      "address": "DFQHUegJWE29Xu3BUxPezqi77uyHURRyxJpdtyvLpump",
+      "reason": "DYNAMIC_STAGNATION (25.0m, PnL: -2.7% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.000164859,
+      "exit_price": 0.00016047,
+      "pnl_pct": -0.0266,
+      "pnl_sol": -0.00266,
+      "hold_minutes": 25.0,
+      "mcap": 159076.0,
+      "market_cap": 159076.0,
+      "liquidity": 42151.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:04:00.446991"
+    },
+    {
+      "symbol": "TOPCAT",
+      "address": "BT845WxZtv9qmmEiGXB9rueBi1LT1ViHr6gbYx142FFP",
+      "reason": "HARD_STOP (-7.5%) (PnL: -12.6%)",
+      "percent": 100,
+      "entry_price": 0.00016329,
+      "exit_price": 0.00014859,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 35.0,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:04:17.520734"
+    },
+    {
+      "symbol": "NEARKAT",
+      "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
+      "reason": "DYNAMIC_STAGNATION (35.2m, PnL: -2.2% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.00799684,
+      "exit_price": 0.00781691,
+      "pnl_pct": -0.0225,
+      "pnl_sol": -0.00225,
+      "hold_minutes": 35.2,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:04:30.536737"
+    },
+    {
+      "symbol": "KCAT",
+      "address": "MboMMGXjGDi45hfjCVzYru32kEM5nw7VzCqCofZpump",
+      "reason": "PARTIAL_TP_TIER2 (+20.9% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000241847,
+      "exit_price": 0.00029234,
+      "pnl_pct": 0.2088,
+      "pnl_sol": 0.001566,
+      "hold_minutes": 36.4,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:05:42.306470"
+    },
+    {
+      "symbol": "GROK",
+      "address": "6HU4CmRb15C2nQDx8Ld2f2W2wTdmog6aZiiXdrT5Pzi8",
+      "reason": "DYNAMIC_STAGNATION (25.7m, PnL: -1.6% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.00316303,
+      "exit_price": 0.00311337,
+      "pnl_pct": -0.0157,
+      "pnl_sol": -0.00157,
+      "hold_minutes": 25.7,
+      "mcap": 3162980.0,
+      "market_cap": 3162980.0,
+      "liquidity": 197756.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:05:42.325737"
+    },
+    {
+      "symbol": "VBUCKS",
+      "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
+      "reason": "DYNAMIC_STAGNATION (37.0m, PnL: -1.1% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.000492232,
+      "exit_price": 0.00048701,
+      "pnl_pct": -0.0106,
+      "pnl_sol": -0.00106,
+      "hold_minutes": 37.0,
+      "mcap": 492226.0,
+      "market_cap": 492226.0,
+      "liquidity": 76761.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:06:19.414329"
+    },
+    {
+      "symbol": "WISE",
+      "address": "FTjYFyQLRX34RmfX1Xxh1VUJe9c2H8WFr7XophMa55g4",
+      "reason": "HARD_STOP (-7.5%) (PnL: -9.1%)",
+      "percent": 100,
+      "entry_price": 0.000445923,
+      "exit_price": 0.00040579,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 0.9,
+      "mcap": 445848.0,
+      "market_cap": 445848.0,
+      "liquidity": 95791.5,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:07:42.231563"
+    },
+    {
+      "symbol": "ALLINU",
+      "address": "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8",
+      "reason": "DYNAMIC_STAGNATION (25.0m, PnL: -1.4% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.00964416,
+      "exit_price": 0.00950721,
+      "pnl_pct": -0.0142,
+      "pnl_sol": -0.00142,
+      "hold_minutes": 25.0,
+      "mcap": 9605650.0,
+      "market_cap": 9605650.0,
+      "liquidity": 481012.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:07:45.645620"
+    },
+    {
+      "symbol": "CALI",
+      "address": "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA",
+      "reason": "HARD_STOP (-7.5%) (PnL: -13.2%)",
+      "percent": 100,
+      "entry_price": 0.00125727,
+      "exit_price": 0.00114412,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 24.6,
+      "mcap": 1245590.0,
+      "market_cap": 1245590.0,
+      "liquidity": 117313.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:08:38.216030"
+    },
+    {
+      "symbol": "BOP",
+      "address": "527PdUTGwcFxVEMXt8tyRJA1nYbVedgSiSfh4s2LWTWz",
+      "reason": "REENTRY_STOP (-4.0%) (PnL: -4.5%)",
+      "percent": 100,
+      "entry_price": 0.000860104,
+      "exit_price": 0.00082149,
+      "pnl_pct": -0.0449,
+      "pnl_sol": -0.00449,
+      "hold_minutes": 1.8,
+      "mcap": 860041.0,
+      "market_cap": 860041.0,
+      "liquidity": 94492.5,
+      "is_reentry": true,
+      "timestamp": "2026-09-23T13:08:38.239960"
+    },
+    {
+      "symbol": "TACZ",
+      "address": "3nqHijNUExsnjNBb15WJsJ2xisyMVGN6FK4aUgZk1Rwj",
+      "reason": "RATCHET_FLOOR_EXIT (+1.5% floor hit, PnL: 0.3%)",
+      "percent": 100,
+      "entry_price": 0.000506181,
+      "exit_price": 0.00050871,
+      "pnl_pct": 0.005,
+      "pnl_sol": 0.0005,
+      "hold_minutes": 14.9,
+      "mcap": 505974.0,
+      "market_cap": 505974.0,
+      "liquidity": 58915.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:08:50.458625"
+    },
+    {
+      "symbol": "FEELSGOOD",
+      "address": "HgcxVs6kJhPAaGqnPNGaa7zYgNT49hJrLufiqcNMuYZT",
+      "reason": "DYNAMIC_STAGNATION (25.5m, PnL: -4.6% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.00471715,
+      "exit_price": 0.00450205,
+      "pnl_pct": -0.0456,
+      "pnl_sol": -0.00456,
+      "hold_minutes": 25.5,
+      "mcap": 4706430.0,
+      "market_cap": 4706430.0,
+      "liquidity": 431586.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:09:33.270536"
+    },
+    {
+      "symbol": "POLLY",
+      "address": "7MCgYMzq3fov6oERdtTMAYbN2U9LZrrSYS1MBhjixZFr",
+      "reason": "HARD_STOP (-7.5%) (PnL: -7.6%)",
+      "percent": 100,
+      "entry_price": 0.00229631,
+      "exit_price": 0.00212225,
+      "pnl_pct": -0.0758,
+      "pnl_sol": -0.00758,
+      "hold_minutes": 2.9,
+      "mcap": 2296070.0,
+      "market_cap": 2296070.0,
+      "liquidity": 179802.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:10:40.876730"
+    },
+    {
+      "symbol": "Stamp",
+      "address": "EKtmPPLaCbEEKiwoHHtV7TsRsmPXs5CMGtQtZFSiinsc",
+      "reason": "DYNAMIC_STAGNATION (25.0m, PnL: -3.3% \u2014 capital redeployed)",
+      "percent": 100,
+      "entry_price": 0.000547707,
+      "exit_price": 0.00052952,
+      "pnl_pct": -0.0332,
+      "pnl_sol": -0.00332,
+      "hold_minutes": 25.0,
+      "mcap": 542516.0,
+      "market_cap": 542516.0,
+      "liquidity": 98410.9,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:12:53.364615"
+    },
+    {
+      "symbol": "fomopay",
+      "address": "BP4Wic5LNKsqpmiREW6uNVEC16juvFCSd4WzVBatpump",
+      "reason": "PARTIAL_TP_TIER2 (+28.7% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.000815157,
+      "exit_price": 0.00104951,
+      "pnl_pct": 0.2875,
+      "pnl_sol": 0.010063,
+      "hold_minutes": 54.1,
+      "mcap": 0.0,
+      "market_cap": 0.0,
+      "liquidity": 0.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:23:27.162845"
+    },
+    {
+      "symbol": "MISTAKE",
+      "address": "HKZDfZnkHZxd9agRDNPyDv4iT6LmAurJnpRtj9wpump",
+      "reason": "PARTIAL_TP_TIER2 (+25.1% hit: 35% banked, floor +8.0%)",
+      "percent": 35,
+      "entry_price": 0.00146462,
+      "exit_price": 0.00183239,
+      "pnl_pct": 0.2511,
+      "pnl_sol": 0.008789,
+      "hold_minutes": 44.4,
+      "mcap": 1410440.0,
+      "market_cap": 1410440.0,
+      "liquidity": 115217.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:23:27.190577"
+    },
+    {
+      "symbol": "GROK",
+      "address": "6HU4CmRb15C2nQDx8Ld2f2W2wTdmog6aZiiXdrT5Pzi8",
+      "reason": "HARD_STOP (-7.5%) (PnL: -8.9%)",
+      "percent": 100,
+      "entry_price": 0.00336209,
+      "exit_price": 0.00306118,
+      "pnl_pct": -0.0895,
+      "pnl_sol": -0.00895,
+      "hold_minutes": 2.4,
+      "mcap": 3362040.0,
+      "market_cap": 3362040.0,
+      "liquidity": 199515.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:23:27.218828"
+    },
+    {
+      "symbol": "Lobby",
+      "address": "EGTFrUPym8JnEMAddZjuhBkcSGEGTM75qymxUZgTpump",
+      "reason": "HARD_STOP (-7.5%) (PnL: -8.6%)",
+      "percent": 100,
+      "entry_price": 0.000172153,
+      "exit_price": 0.0001573,
+      "pnl_pct": -0.0863,
+      "pnl_sol": -0.00863,
+      "hold_minutes": 22.0,
+      "mcap": 163887.0,
+      "market_cap": 163887.0,
+      "liquidity": 38252.9,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:28:50.746044"
+    },
+    {
+      "symbol": "FINE",
+      "address": "4MjrGwD4SpjVN6JPZJfmHCUmnJynoTz56tbzCX71SxE9",
+      "reason": "HARD_STOP (-7.5%) (PnL: -9.6%)",
+      "percent": 100,
+      "entry_price": 0.000238079,
+      "exit_price": 0.00021665,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 19.8,
+      "mcap": 238078.0,
+      "market_cap": 238078.0,
+      "liquidity": 38609.8,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:28:50.771823"
+    },
+    {
+      "symbol": "BASKET",
+      "address": "26d5rwV5emnGJSzr5CKpgq66LmYqqddk33ybUMioYLTU",
+      "reason": "HARD_STOP (-7.5%) (PnL: -26.5%)",
+      "percent": 100,
+      "entry_price": 0.000697369,
+      "exit_price": 0.00063461,
+      "pnl_pct": -0.09,
+      "pnl_sol": -0.009,
+      "hold_minutes": 5.4,
+      "mcap": 697349.0,
+      "market_cap": 697349.0,
+      "liquidity": 71228.6,
+      "is_reentry": false,
+      "timestamp": "2026-09-23T13:28:50.804102"
+    }
+  ],
+  "active_positions": [
+    {
+      "symbol": "KCAT",
+      "address": "MboMMGXjGDi45hfjCVzYru32kEM5nw7VzCqCofZpump",
+      "size_sol": 0.014,
+      "pnl": 0.2011,
+      "entry_price": 0.000241847,
+      "cur_price": 0.000290478,
+      "mcap": 279991.0,
+      "liquidity": 50088.3,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "PIGGYBANK",
+      "address": "G4PZQ4tTMjeNQfrSyMUMXN919NTeKA8hXUEzjRmr9btr",
+      "size_sol": 0.033,
+      "pnl": 0.3436,
+      "entry_price": 0.000159562,
+      "cur_price": 0.00021438601,
+      "mcap": 168077.0,
+      "liquidity": 34666.2,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "LYNKS",
+      "address": "E8fsmahzoa4WGZ1dCnGBTzgXRxz9T7nC17KWGkzGxray",
+      "size_sol": 0.0275,
+      "pnl": 0.7451,
+      "entry_price": 0.000257149,
+      "cur_price": 0.000448742,
+      "mcap": 448504.0,
+      "liquidity": 70166.4,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "TOKEN",
+      "address": "BVdbH7PLTSQxBssqvWTxVDoA8qfsztdVtMsZQSS9CScZ",
+      "size_sol": 0.1,
+      "pnl": 0.0,
+      "entry_price": 0.0,
+      "cur_price": 0.0,
+      "mcap": 425568.0,
+      "liquidity": 63465.5,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "Tilcayo",
+      "address": "AyYNfPtftg2zDP4ZbgcoQMggQtwLh4zpfVVmUJs2thto",
+      "size_sol": 0.1,
+      "pnl": 0.054,
+      "entry_price": 0.00115887,
+      "cur_price": 0.00122149,
+      "mcap": 1192340.0,
+      "liquidity": 144718.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "SATOSHINU",
+      "address": "HzaCANKGkhNcQGb1VWL8f4tHJYrCmaXrPWk9eHR7GYYX",
+      "size_sol": 0.065,
+      "pnl": 0.1241,
+      "entry_price": 0.000618336,
+      "cur_price": 0.00069508043,
+      "mcap": 733322.0,
+      "liquidity": 88617.9,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "STONKERAGE",
+      "address": "5Tg69VASHq7HYet48q5wQYdj3dP6wTsWNey9Dak6JUEU",
+      "size_sol": 0.065,
+      "pnl": 0.2597,
+      "entry_price": 0.000263579,
+      "cur_price": 0.000332025,
+      "mcap": 329454.0,
+      "liquidity": 56894.4,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "nosis",
+      "address": "FPfi9q1AixdUeWQVPFHJMJQ7a43S78dm6UZ4fzN4pump",
+      "size_sol": 0.1,
+      "pnl": 0.041,
+      "entry_price": 0.000261173,
+      "cur_price": 0.00027188643,
+      "mcap": 254222.0,
+      "liquidity": 69540.1,
+      "council_score": 40,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "CTO",
+      "address": "EWgq2xUb6eVCApeQombkPxd6uFjM8j9zRUXFS9MjKTiv",
+      "size_sol": 0.1,
+      "pnl": 0.0902,
+      "entry_price": 0.000315521,
+      "cur_price": 0.00034398783,
+      "mcap": 273163.0,
+      "liquidity": 53022.2,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "PERPSPAD",
+      "address": "PerPsCe2SJ7Q25CN4R5TTX4fmBdmknE2hQmqCt96fHL",
+      "size_sol": 0.1,
+      "pnl": 0.0386,
+      "entry_price": 0.0036706,
+      "cur_price": 0.0038123709,
+      "mcap": 2786850.0,
+      "liquidity": 220647.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "LinkedInu",
+      "address": "FvhorDts9M8uJekzs3pBcYUPUjWtCTrGLhdv3ADHyeRY",
+      "size_sol": 0.1,
+      "pnl": 0.1111,
+      "entry_price": 0.000711639,
+      "cur_price": 0.000790708,
+      "mcap": 790706.0,
+      "liquidity": 91414.2,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "fomopay",
+      "address": "BP4Wic5LNKsqpmiREW6uNVEC16juvFCSd4WzVBatpump",
+      "size_sol": 0.065,
+      "pnl": 0.216,
+      "entry_price": 0.000815157,
+      "cur_price": 0.000991208,
+      "mcap": 950518.0,
+      "liquidity": 120990.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "STONKCATS",
+      "address": "9h5AzEQzYu9CV5K6uLtFRMD1KcbxZSFNxZEgBTNfw5Na",
+      "size_sol": 0.065,
+      "pnl": 0.2312,
+      "entry_price": 0.000844671,
+      "cur_price": 0.00103998,
+      "mcap": 1021750.0,
+      "liquidity": 114660.0,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "MISTAKE",
+      "address": "HKZDfZnkHZxd9agRDNPyDv4iT6LmAurJnpRtj9wpump",
+      "size_sol": 0.065,
+      "pnl": 0.2145,
+      "entry_price": 0.00146462,
+      "cur_price": 0.00177875,
+      "mcap": 1712950.0,
+      "liquidity": 128061.0,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "CLIP",
+      "address": "9DdHxVe1BSPaTy3iGEwvWsooRchNLK61XFAvzot59FwD",
+      "size_sol": 0.1,
+      "pnl": 0.1035,
+      "entry_price": 0.000366943,
+      "cur_price": 0.000404929,
+      "mcap": 386489.0,
+      "liquidity": 72068.9,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "RAGEBAIT",
+      "address": "H1L5hW33MEbfNu13991ZREJSZrPzor2KXPFQwtMZpump",
+      "size_sol": 0.1,
+      "pnl": 0.0206,
+      "entry_price": 0.000156188,
+      "cur_price": 0.00015940024,
+      "mcap": 149380.0,
+      "liquidity": 40382.6,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "FLAME",
+      "address": "9oXA1VWKNiYDYa6VKHBFFBBvZdvuhw1b2eD5Aka7YrVt",
+      "size_sol": 0.065,
+      "pnl": 0.1682,
+      "entry_price": 0.000889523,
+      "cur_price": 0.00103916,
+      "mcap": 1039110.0,
+      "liquidity": 168523.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "RAYCAT",
+      "address": "CFNRDaxFcvRwRSNnA5cHrCCr6AHhk9dNkHWpRUjNupFL",
+      "size_sol": 0.1,
+      "pnl": 0.0323,
+      "entry_price": 0.00440218,
+      "cur_price": 0.0045443,
+      "mcap": 4376410.0,
+      "liquidity": 486122.0,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "AQUA",
+      "address": "AQVcP67EpMyu4cBZZjqMu91cVsWy1aX98JmcZm1FyY9",
+      "size_sol": 0.065,
+      "pnl": 0.1926,
+      "entry_price": 0.000858204,
+      "cur_price": 0.0010235,
+      "mcap": 995181.0,
+      "liquidity": 113891.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "size_sol": 0.1,
+      "pnl": -0.0011,
+      "entry_price": 0.00182226,
+      "cur_price": 0.00182019,
+      "mcap": 1817920.0,
+      "liquidity": 223981.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "STONK10",
+      "address": "AqoPZcUumKUBHrnfBsNtoNuneYEjoimaiWYq8GH8gpX9",
+      "size_sol": 0.1,
+      "pnl": 0.0803,
+      "entry_price": 0.00102527,
+      "cur_price": 0.00110756,
+      "mcap": 1105100.0,
+      "liquidity": 120070.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "CYPHERCAT",
+      "address": "6AUURRdHb9TrfPHv9AMofa8NEVoZDXcsbWKcUBpFSRXs",
+      "size_sol": 0.1,
+      "pnl": 0.0474,
+      "entry_price": 0.00154859,
+      "cur_price": 0.00162203,
+      "mcap": 1621970.0,
+      "liquidity": 131035.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "SOLCAT",
+      "address": "HmJDgky11u77hpBss6D8sjNpYPD5B6fWgSVDj58jpump",
+      "size_sol": 0.1,
+      "pnl": -0.0148,
+      "entry_price": 0.000152402,
+      "cur_price": 0.0001501507,
+      "mcap": 150790.0,
+      "liquidity": 57469.9,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "MCAT",
+      "address": "241aTYhVXZ4WBVSFpfY37RqoCGBQ73KiRFAKvTtnmoon",
+      "size_sol": 0.1,
+      "pnl": 0.0216,
+      "entry_price": 0.000136146,
+      "cur_price": 0.000139089,
+      "mcap": 139050.0,
+      "liquidity": 49332.6,
+      "council_score": 40,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "LEVERCAT",
+      "address": "AGi2s9zPRPHs3zEDPhPTroumTEXK5ufymYSfEFndCSSW",
+      "size_sol": 0.1,
+      "pnl": -0.0506,
+      "entry_price": 0.00210818,
+      "cur_price": 0.00200159,
+      "mcap": 1988990.0,
+      "liquidity": 207330.0,
+      "council_score": 40,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "SOMETHING",
+      "address": "6kNNgyrdvjkRC8eRGQqx5sLfZG2jTmg3NCFmkX2hYP4j",
+      "size_sol": 0.1,
+      "pnl": -0.0618,
+      "entry_price": 0.00151468,
+      "cur_price": 0.00142103,
+      "mcap": 1421020.0,
+      "liquidity": 104786.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "Aiden",
+      "address": "4i5FqkfYDAPcEVcXyuVyaaBcz3bpwJPqDkmaF36kpump",
+      "size_sol": 0.1,
+      "pnl": 0.0,
+      "entry_price": 0.000152293,
+      "cur_price": 0.000152293,
+      "mcap": 148168.0,
+      "liquidity": 43193.4,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "Inu",
+      "address": "Eii9T6RPJXaFeWgLg5jYrnco7Fwz1RChFj6A5eqh39Ab",
+      "size_sol": 0.1,
+      "pnl": -0.0029,
+      "entry_price": 0.000281702,
+      "cur_price": 0.000280879,
+      "mcap": 270224.0,
+      "liquidity": 118929.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "UCAT",
+      "address": "26Kg27kpPHBN2MHqgrsJh3LzMZboxZyUpbeVonmpZwVm",
+      "size_sol": 0.1,
+      "pnl": 0.126,
+      "entry_price": 0.000211877,
+      "cur_price": 0.000238579,
+      "mcap": 238579.0,
+      "liquidity": 42256.5,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "NEARKAT",
+      "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
+      "size_sol": 0.1,
+      "pnl": 0.0161,
+      "entry_price": 0.00793336,
+      "cur_price": 0.0080608,
+      "mcap": 8010530.0,
+      "liquidity": 409442.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "VBUCKS",
+      "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
+      "size_sol": 0.1,
+      "pnl": 0.0,
+      "entry_price": 0.000511182,
+      "cur_price": 0.000511182,
+      "mcap": 511176.0,
+      "liquidity": 77850.2,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "MONKINU",
+      "address": "58TYyM2LTcex8juCuM4mDGcrAYY6bxumqUgJvbPepump",
+      "size_sol": 0.1,
+      "pnl": -0.0591,
+      "entry_price": 0.000256664,
+      "cur_price": 0.000241492,
+      "mcap": 237592.0,
+      "liquidity": 41405.6,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "based",
+      "address": "4wYd4vPhzaUQs5vqUrEJ7CPtKg1qzXHhauERuh4MiNMB",
+      "size_sol": 0.1,
+      "pnl": -0.0038,
+      "entry_price": 0.000226208,
+      "cur_price": 0.000225348,
+      "mcap": 219874.0,
+      "liquidity": 46014.8,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "Stamp",
+      "address": "EKtmPPLaCbEEKiwoHHtV7TsRsmPXs5CMGtQtZFSiinsc",
+      "size_sol": 0.1,
+      "pnl": 0.0,
+      "entry_price": 0.000565666,
+      "cur_price": 0.000565666,
+      "mcap": 560305.0,
+      "liquidity": 100301.0,
+      "council_score": 80,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "WISE",
+      "address": "FTjYFyQLRX34RmfX1Xxh1VUJe9c2H8WFr7XophMa55g4",
+      "size_sol": 0.1,
+      "pnl": 0.0,
+      "entry_price": 0.000466815,
+      "cur_price": 0.000466815,
+      "mcap": 466736.0,
+      "liquidity": 100152.0,
+      "council_score": 60,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "FEELSGOOD",
+      "address": "HgcxVs6kJhPAaGqnPNGaa7zYgNT49hJrLufiqcNMuYZT",
+      "size_sol": 0.1,
+      "pnl": 0.0,
+      "entry_price": 0.00481155,
+      "cur_price": 0.00481155,
+      "mcap": 4800600.0,
+      "liquidity": 428676.0,
+      "council_score": null,
+      "council_risk": null,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    }
+  ]
+}

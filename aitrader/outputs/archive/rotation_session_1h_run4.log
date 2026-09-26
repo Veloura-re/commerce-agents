@@ -1,0 +1,1183 @@
+[00:43:54] INFO: ================================================================
+[00:43:54] INFO:   GMGN $100 MICRO-SCALP WAVE RIDER ENGINE (SHADOW MODE)
+[00:43:54] INFO:   Target Chain: SOL | Concurrent Slots: 3
+[00:43:54] INFO:   Fixed Position Size: 0.216 SOL (~$30 USD) per slot
+[00:43:54] INFO:   Micro-Monitor Cadence: 3.0s (Fast In-Memory Tick)
+[00:43:54] INFO:   Take-Profit Target: +3.0% | Base Stop-Loss: -2.8%
+[00:43:54] INFO:   House Money Re-Entry Stop: -2.0% (Tightened Protection)
+[00:43:54] INFO:   Liquidity Moat: >= $60,000 Pool Depth | >= $150,000 Mcap
+[00:43:54] INFO: ================================================================
+[00:43:54] INFO: Cycle #  1 | Elapsed:  0.0m/60.0m | Slots: 3/3 [Tilcayo (-0.66%), baton (+0.96%), Stamp (+0.89%)] | Realized PnL: +0.0000 SOL
+[00:43:57] INFO: Cycle #  2 | Elapsed:  0.1m/60.0m | Slots: 3/3 [Tilcayo (-0.66%), baton (+0.96%), Stamp (+0.89%)] | Realized PnL: +0.0000 SOL
+[00:44:00] INFO: Cycle #  3 | Elapsed:  0.1m/60.0m | Slots: 3/3 [Tilcayo (-0.66%), baton (+0.96%), Stamp (+0.89%)] | Realized PnL: +0.0000 SOL
+[00:44:03] INFO: Cycle #  4 | Elapsed:  0.2m/60.0m | Slots: 3/3 [Tilcayo (-0.66%), baton (+0.96%), Stamp (+0.89%)] | Realized PnL: +0.0000 SOL
+[00:44:06] INFO: Cycle #  5 | Elapsed:  0.2m/60.0m | Slots: 3/3 [Tilcayo (-0.66%), baton (+0.96%), Stamp (+0.89%)] | Realized PnL: +0.0000 SOL
+[00:44:10] INFO: ROTATING OUT (100%): Tilcayo — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.17%) | PnL: -3.17% (-0.0068 SOL)
+[00:44:10] INFO: SLOT UPDATED: Tilcayo — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.17%) (Sold 100%)
+[00:44:10] INFO: CONSOLIDATION COOLDOWN: Tilcayo exited. Enforcing 15m cooldown before re-evaluation.
+[00:44:10] INFO: BREAK-EVEN FLOOR LOCKED: Stamp reached +2.31%. Stop floor raised to +0.50% (risk-free).
+[00:44:10] INFO: Cycle #  6 | Elapsed:  0.3m/60.0m | Slots: 2/3 [baton (+1.10%), Stamp (+2.31%)] | Realized PnL: -0.0068 SOL
+[00:44:10] INFO: FRESH CANDIDATE BLOCKED: TIGRINO — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $159 < 40% of 5m avg)
+[00:44:11] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $4,178,970 | Liq: $191,663 | SM: 6 | Size: 0.216 SOL (~$30)
+[00:44:11] INFO: SLOT FILLED: USDF | Tx: SHADOW_SIM
+[00:44:14] INFO: Cycle #  7 | Elapsed:  0.3m/60.0m | Slots: 3/3 [baton (+1.10%), Stamp (+2.31%), USDF (+0.00%)] | Realized PnL: -0.0068 SOL
+[00:44:17] INFO: Cycle #  8 | Elapsed:  0.4m/60.0m | Slots: 3/3 [baton (+1.10%), Stamp (+2.31%), USDF (+0.00%)] | Realized PnL: -0.0068 SOL
+[00:44:20] INFO: Cycle #  9 | Elapsed:  0.4m/60.0m | Slots: 3/3 [baton (+1.10%), Stamp (+2.31%), USDF (+0.00%)] | Realized PnL: -0.0068 SOL
+[00:44:23] INFO: Cycle # 10 | Elapsed:  0.5m/60.0m | Slots: 3/3 [baton (+1.10%), Stamp (+2.31%), USDF (+0.00%)] | Realized PnL: -0.0068 SOL
+[00:44:26] INFO: Cycle # 11 | Elapsed:  0.5m/60.0m | Slots: 3/3 [baton (+1.10%), Stamp (+2.31%), USDF (+0.00%)] | Realized PnL: -0.0068 SOL
+[00:44:30] INFO: ROTATING OUT (100%): Stamp — Reason: BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: 0.44%) | PnL: +0.44% (+0.0009 SOL)
+[00:44:30] INFO: SLOT UPDATED: Stamp — BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: 0.44%) (Sold 100%)
+[00:44:30] INFO: CONSOLIDATION COOLDOWN: Stamp exited. Enforcing 15m cooldown before re-evaluation.
+[00:44:30] INFO: Cycle # 12 | Elapsed:  0.6m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:33] INFO: Cycle # 13 | Elapsed:  0.7m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:36] INFO: Cycle # 14 | Elapsed:  0.7m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:39] INFO: Cycle # 15 | Elapsed:  0.8m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:42] INFO: Cycle # 16 | Elapsed:  0.8m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:43] INFO: FRESH CANDIDATE BLOCKED: CLIP — REJECT_MEMEX_SKILL4 (1m Sell Dump: Sell $1,564 > Buy $1,095)
+[00:44:46] INFO: Cycle # 17 | Elapsed:  0.9m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:49] INFO: Cycle # 18 | Elapsed:  0.9m/60.0m | Slots: 2/3 [baton (+0.36%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:52] INFO: Cycle # 19 | Elapsed:  1.0m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:55] INFO: Cycle # 20 | Elapsed:  1.0m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:44:58] INFO: Cycle # 21 | Elapsed:  1.1m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:01] INFO: Cycle # 22 | Elapsed:  1.1m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:04] INFO: Cycle # 23 | Elapsed:  1.2m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:07] INFO: Cycle # 24 | Elapsed:  1.2m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:10] INFO: Cycle # 25 | Elapsed:  1.3m/60.0m | Slots: 2/3 [baton (+0.48%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:14] INFO: Cycle # 26 | Elapsed:  1.3m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:17] INFO: Cycle # 27 | Elapsed:  1.4m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:20] INFO: Cycle # 28 | Elapsed:  1.4m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:23] INFO: Cycle # 29 | Elapsed:  1.5m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:26] INFO: Cycle # 30 | Elapsed:  1.5m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:29] INFO: Cycle # 31 | Elapsed:  1.6m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:32] INFO: Cycle # 32 | Elapsed:  1.6m/60.0m | Slots: 2/3 [baton (+0.52%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:36] INFO: Cycle # 33 | Elapsed:  1.7m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:39] INFO: Cycle # 34 | Elapsed:  1.8m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:42] INFO: Cycle # 35 | Elapsed:  1.8m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:45] INFO: Cycle # 36 | Elapsed:  1.9m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:48] INFO: Cycle # 37 | Elapsed:  1.9m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:51] INFO: Cycle # 38 | Elapsed:  2.0m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:54] INFO: Cycle # 39 | Elapsed:  2.0m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:45:58] INFO: Cycle # 40 | Elapsed:  2.1m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:01] INFO: Cycle # 41 | Elapsed:  2.1m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:04] INFO: Cycle # 42 | Elapsed:  2.2m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:07] INFO: Cycle # 43 | Elapsed:  2.2m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:10] INFO: Cycle # 44 | Elapsed:  2.3m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:13] INFO: Cycle # 45 | Elapsed:  2.3m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:16] INFO: Cycle # 46 | Elapsed:  2.4m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:20] INFO: Cycle # 47 | Elapsed:  2.4m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:23] INFO: Cycle # 48 | Elapsed:  2.5m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:26] INFO: Cycle # 49 | Elapsed:  2.5m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:29] INFO: Cycle # 50 | Elapsed:  2.6m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:32] INFO: Cycle # 51 | Elapsed:  2.6m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:35] INFO: Cycle # 52 | Elapsed:  2.7m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:38] INFO: Cycle # 53 | Elapsed:  2.7m/60.0m | Slots: 2/3 [baton (+0.50%), USDF (-0.05%)] | Realized PnL: -0.0059 SOL
+[00:46:42] INFO: Cycle # 54 | Elapsed:  2.8m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:46:45] INFO: Cycle # 55 | Elapsed:  2.9m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:46:48] INFO: Cycle # 56 | Elapsed:  2.9m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:46:48] INFO: FRESH CANDIDATE BLOCKED: GEOM — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $70 < 40% of 5m avg)
+[00:46:51] INFO: Cycle # 57 | Elapsed:  3.0m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:46:55] INFO: Cycle # 58 | Elapsed:  3.0m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:46:58] INFO: Cycle # 59 | Elapsed:  3.1m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:01] INFO: Cycle # 60 | Elapsed:  3.1m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:04] INFO: Cycle # 61 | Elapsed:  3.2m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:07] INFO: Cycle # 62 | Elapsed:  3.2m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:10] INFO: Cycle # 63 | Elapsed:  3.3m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:13] INFO: Cycle # 64 | Elapsed:  3.3m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:16] INFO: Cycle # 65 | Elapsed:  3.4m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:19] INFO: Cycle # 66 | Elapsed:  3.4m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:22] INFO: Cycle # 67 | Elapsed:  3.5m/60.0m | Slots: 2/3 [baton (+0.31%), USDF (-0.32%)] | Realized PnL: -0.0059 SOL
+[00:47:32] INFO: Cycle # 68 | Elapsed:  3.6m/60.0m | Slots: 2/3 [baton (+0.34%), USDF (-1.20%)] | Realized PnL: -0.0059 SOL
+[00:47:44] INFO: Cycle # 69 | Elapsed:  3.8m/60.0m | Slots: 2/3 [baton (+0.34%), USDF (-1.20%)] | Realized PnL: -0.0059 SOL
+[00:47:49] INFO: Cycle # 70 | Elapsed:  3.9m/60.0m | Slots: 2/3 [baton (+0.34%), USDF (-1.20%)] | Realized PnL: -0.0059 SOL
+[00:47:52] INFO: Cycle # 71 | Elapsed:  4.0m/60.0m | Slots: 2/3 [baton (+0.34%), USDF (-1.20%)] | Realized PnL: -0.0059 SOL
+[00:47:53] INFO: ENTERING FRESH ROTATION SLOT: BABYCATE (DDVUsN8s...1dpump) | Mcap: $1,357,770 | Liq: $135,306 | SM: 87 | Size: 0.216 SOL (~$30)
+[00:47:53] INFO: SLOT FILLED: BABYCATE | Tx: SHADOW_SIM
+[00:47:56] INFO: Cycle # 72 | Elapsed:  4.0m/60.0m | Slots: 3/3 [baton (+0.34%), USDF (-1.20%), BABYCATE (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:47:59] INFO: Cycle # 73 | Elapsed:  4.1m/60.0m | Slots: 3/3 [baton (+0.34%), USDF (-1.20%), BABYCATE (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:48:02] INFO: Cycle # 74 | Elapsed:  4.1m/60.0m | Slots: 3/3 [baton (+0.34%), USDF (-1.20%), BABYCATE (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:48:05] INFO: Cycle # 75 | Elapsed:  4.2m/60.0m | Slots: 3/3 [baton (+0.34%), USDF (-1.20%), BABYCATE (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:48:08] INFO: Cycle # 76 | Elapsed:  4.2m/60.0m | Slots: 3/3 [baton (+0.34%), USDF (-1.20%), BABYCATE (+0.00%)] | Realized PnL: -0.0059 SOL
+[00:48:11] INFO: BREAK-EVEN FLOOR LOCKED: BABYCATE reached +2.35%. Stop floor raised to +0.50% (risk-free).
+[00:48:11] INFO: Cycle # 77 | Elapsed:  4.3m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:14] INFO: Cycle # 78 | Elapsed:  4.3m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:17] INFO: Cycle # 79 | Elapsed:  4.4m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:20] INFO: Cycle # 80 | Elapsed:  4.4m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:23] INFO: Cycle # 81 | Elapsed:  4.5m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:26] INFO: Cycle # 82 | Elapsed:  4.5m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:29] INFO: Cycle # 83 | Elapsed:  4.6m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.82%), BABYCATE (+2.35%)] | Realized PnL: -0.0059 SOL
+[00:48:33] INFO: Cycle # 84 | Elapsed:  4.7m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:36] INFO: Cycle # 85 | Elapsed:  4.7m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:39] INFO: Cycle # 86 | Elapsed:  4.8m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:42] INFO: Cycle # 87 | Elapsed:  4.8m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:45] INFO: Cycle # 88 | Elapsed:  4.9m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:48] INFO: Cycle # 89 | Elapsed:  4.9m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:51] INFO: Cycle # 90 | Elapsed:  5.0m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+2.34%)] | Realized PnL: -0.0059 SOL
+[00:48:55] INFO: PARTIAL TP (50%): BABYCATE — Reason: PARTIAL_TP_50_PCT (+3.56% net banked, 50% runner riding) | PnL: +3.56% (+0.0038 SOL)
+[00:48:55] INFO: SLOT UPDATED: BABYCATE — PARTIAL_TP_50_PCT (+3.56% net banked, 50% runner riding) (Sold 50%)
+[00:48:55] INFO: Cycle # 91 | Elapsed:  5.0m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:48:58] INFO: Cycle # 92 | Elapsed:  5.1m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:49:01] INFO: Cycle # 93 | Elapsed:  5.1m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:49:04] INFO: Cycle # 94 | Elapsed:  5.2m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:49:07] INFO: Cycle # 95 | Elapsed:  5.2m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:49:10] INFO: Cycle # 96 | Elapsed:  5.3m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:49:13] INFO: Cycle # 97 | Elapsed:  5.3m/60.0m | Slots: 3/3 [baton (+0.41%), USDF (+0.96%), BABYCATE (+3.56%)] | Realized PnL: -0.0021 SOL
+[00:49:17] INFO: Cycle # 98 | Elapsed:  5.4m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:20] INFO: Cycle # 99 | Elapsed:  5.4m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:23] INFO: Cycle #100 | Elapsed:  5.5m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:26] INFO: Cycle #101 | Elapsed:  5.5m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:29] INFO: Cycle #102 | Elapsed:  5.6m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:32] INFO: Cycle #103 | Elapsed:  5.6m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:35] INFO: Cycle #104 | Elapsed:  5.7m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+3.63%)] | Realized PnL: -0.0021 SOL
+[00:49:46] INFO: Cycle #105 | Elapsed:  5.8m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.41%)] | Realized PnL: -0.0021 SOL
+[00:49:58] INFO: Cycle #106 | Elapsed:  6.0m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.41%)] | Realized PnL: -0.0021 SOL
+[00:50:03] INFO: Cycle #107 | Elapsed:  6.2m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:06] INFO: Cycle #108 | Elapsed:  6.2m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:09] INFO: Cycle #109 | Elapsed:  6.3m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:12] INFO: Cycle #110 | Elapsed:  6.3m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:15] INFO: Cycle #111 | Elapsed:  6.4m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:18] INFO: Cycle #112 | Elapsed:  6.4m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:21] INFO: Cycle #113 | Elapsed:  6.5m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-0.95%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:25] INFO: Cycle #114 | Elapsed:  6.5m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:28] INFO: Cycle #115 | Elapsed:  6.6m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:31] INFO: Cycle #116 | Elapsed:  6.6m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:34] INFO: Cycle #117 | Elapsed:  6.7m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:37] INFO: Cycle #118 | Elapsed:  6.7m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:40] INFO: Cycle #119 | Elapsed:  6.8m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:43] INFO: Cycle #120 | Elapsed:  6.8m/60.0m | Slots: 3/3 [baton (+0.42%), USDF (-1.20%), BABYCATE (+3.45%)] | Realized PnL: -0.0021 SOL
+[00:50:47] INFO: Cycle #121 | Elapsed:  6.9m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:50] INFO: Cycle #122 | Elapsed:  6.9m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:53] INFO: Cycle #123 | Elapsed:  7.0m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:56] INFO: Cycle #124 | Elapsed:  7.0m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:50:59] INFO: Cycle #125 | Elapsed:  7.1m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:02] INFO: Cycle #126 | Elapsed:  7.1m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:05] INFO: Cycle #127 | Elapsed:  7.2m/60.0m | Slots: 3/3 [baton (+0.99%), USDF (-0.20%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:08] INFO: Cycle #128 | Elapsed:  7.2m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:11] INFO: Cycle #129 | Elapsed:  7.3m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:15] INFO: Cycle #130 | Elapsed:  7.3m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:18] INFO: Cycle #131 | Elapsed:  7.4m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:21] INFO: Cycle #132 | Elapsed:  7.4m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:24] INFO: Cycle #133 | Elapsed:  7.5m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:27] INFO: Cycle #134 | Elapsed:  7.5m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+1.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:30] INFO: Cycle #135 | Elapsed:  7.6m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:34] INFO: Cycle #136 | Elapsed:  7.7m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:37] INFO: Cycle #137 | Elapsed:  7.7m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:40] INFO: Cycle #138 | Elapsed:  7.8m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:43] INFO: Cycle #139 | Elapsed:  7.8m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:46] INFO: Cycle #140 | Elapsed:  7.9m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:49] INFO: Cycle #141 | Elapsed:  7.9m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.27%), BABYCATE (+2.25%)] | Realized PnL: -0.0021 SOL
+[00:51:52] INFO: Cycle #142 | Elapsed:  8.0m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:51:55] INFO: Cycle #143 | Elapsed:  8.0m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:51:58] INFO: Cycle #144 | Elapsed:  8.1m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:52:01] INFO: Cycle #145 | Elapsed:  8.1m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:52:04] INFO: Cycle #146 | Elapsed:  8.2m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:52:07] INFO: Cycle #147 | Elapsed:  8.2m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:52:10] INFO: Cycle #148 | Elapsed:  8.3m/60.0m | Slots: 3/3 [baton (+0.71%), USDF (+0.59%), BABYCATE (+3.44%)] | Realized PnL: -0.0021 SOL
+[00:52:14] INFO: Cycle #149 | Elapsed:  8.3m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:17] INFO: Cycle #150 | Elapsed:  8.4m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:20] INFO: Cycle #151 | Elapsed:  8.4m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:23] INFO: Cycle #152 | Elapsed:  8.5m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:26] INFO: Cycle #153 | Elapsed:  8.5m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:29] INFO: Cycle #154 | Elapsed:  8.6m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:32] INFO: Cycle #155 | Elapsed:  8.6m/60.0m | Slots: 3/3 [baton (+0.26%), USDF (+0.65%), BABYCATE (+2.00%)] | Realized PnL: -0.0021 SOL
+[00:52:36] INFO: Cycle #156 | Elapsed:  8.7m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:39] INFO: Cycle #157 | Elapsed:  8.8m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:42] INFO: Cycle #158 | Elapsed:  8.8m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:45] INFO: Cycle #159 | Elapsed:  8.9m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:48] INFO: Cycle #160 | Elapsed:  8.9m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:51] INFO: Cycle #161 | Elapsed:  9.0m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:54] INFO: Cycle #162 | Elapsed:  9.0m/60.0m | Slots: 3/3 [baton (+0.22%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:52:58] INFO: Cycle #163 | Elapsed:  9.1m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:01] INFO: Cycle #164 | Elapsed:  9.1m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:04] INFO: Cycle #165 | Elapsed:  9.2m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:07] INFO: Cycle #166 | Elapsed:  9.2m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:10] INFO: Cycle #167 | Elapsed:  9.3m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:13] INFO: Cycle #168 | Elapsed:  9.3m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:16] INFO: Cycle #169 | Elapsed:  9.4m/60.0m | Slots: 3/3 [baton (+0.54%), USDF (+0.56%), BABYCATE (+1.58%)] | Realized PnL: -0.0021 SOL
+[00:53:20] INFO: Cycle #170 | Elapsed:  9.4m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:23] INFO: Cycle #171 | Elapsed:  9.5m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:26] INFO: Cycle #172 | Elapsed:  9.5m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:29] INFO: Cycle #173 | Elapsed:  9.6m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:32] INFO: Cycle #174 | Elapsed:  9.6m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:35] INFO: Cycle #175 | Elapsed:  9.7m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:38] INFO: Cycle #176 | Elapsed:  9.7m/60.0m | Slots: 3/3 [baton (+0.35%), USDF (+0.70%), BABYCATE (+1.46%)] | Realized PnL: -0.0021 SOL
+[00:53:42] INFO: Cycle #177 | Elapsed:  9.8m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:53:45] INFO: Cycle #178 | Elapsed:  9.9m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:53:48] INFO: Cycle #179 | Elapsed:  9.9m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:53:51] INFO: Cycle #180 | Elapsed: 10.0m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:53:54] INFO: Cycle #181 | Elapsed: 10.0m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:53:57] INFO: Cycle #182 | Elapsed: 10.1m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:00] INFO: Cycle #183 | Elapsed: 10.1m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:04] INFO: Cycle #184 | Elapsed: 10.2m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:07] INFO: Cycle #185 | Elapsed: 10.2m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:10] INFO: Cycle #186 | Elapsed: 10.3m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:13] INFO: Cycle #187 | Elapsed: 10.3m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:16] INFO: Cycle #188 | Elapsed: 10.4m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:19] INFO: Cycle #189 | Elapsed: 10.4m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:22] INFO: Cycle #190 | Elapsed: 10.5m/60.0m | Slots: 3/3 [baton (+1.23%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:26] INFO: Cycle #191 | Elapsed: 10.5m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:29] INFO: Cycle #192 | Elapsed: 10.6m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:32] INFO: Cycle #193 | Elapsed: 10.6m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:35] INFO: Cycle #194 | Elapsed: 10.7m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:38] INFO: Cycle #195 | Elapsed: 10.7m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:41] INFO: Cycle #196 | Elapsed: 10.8m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:44] INFO: Cycle #197 | Elapsed: 10.8m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+0.70%), BABYCATE (+1.30%)] | Realized PnL: -0.0021 SOL
+[00:54:48] INFO: Cycle #198 | Elapsed: 10.9m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:54:51] INFO: Cycle #199 | Elapsed: 10.9m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:54:54] INFO: Cycle #200 | Elapsed: 11.0m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:54:57] INFO: Cycle #201 | Elapsed: 11.0m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:55:00] INFO: Cycle #202 | Elapsed: 11.1m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:55:03] INFO: Cycle #203 | Elapsed: 11.2m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:55:06] INFO: Cycle #204 | Elapsed: 11.2m/60.0m | Slots: 3/3 [baton (+1.22%), USDF (+1.06%), BABYCATE (+1.23%)] | Realized PnL: -0.0021 SOL
+[00:55:09] INFO: Cycle #205 | Elapsed: 11.3m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:12] INFO: Cycle #206 | Elapsed: 11.3m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:15] INFO: Cycle #207 | Elapsed: 11.4m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:18] INFO: Cycle #208 | Elapsed: 11.4m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:21] INFO: Cycle #209 | Elapsed: 11.5m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:24] INFO: Cycle #210 | Elapsed: 11.5m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:27] INFO: Cycle #211 | Elapsed: 11.6m/60.0m | Slots: 3/3 [baton (-0.28%), USDF (+1.79%), BABYCATE (+2.46%)] | Realized PnL: -0.0021 SOL
+[00:55:31] INFO: BREAK-EVEN FLOOR LOCKED: USDF reached +1.95%. Stop floor raised to +0.50% (risk-free).
+[00:55:31] INFO: Cycle #212 | Elapsed: 11.6m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:34] INFO: Cycle #213 | Elapsed: 11.7m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:37] INFO: Cycle #214 | Elapsed: 11.7m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:40] INFO: Cycle #215 | Elapsed: 11.8m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:43] INFO: Cycle #216 | Elapsed: 11.8m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:46] INFO: Cycle #217 | Elapsed: 11.9m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:49] INFO: Cycle #218 | Elapsed: 11.9m/60.0m | Slots: 3/3 [baton (-1.26%), USDF (+1.95%), BABYCATE (+3.67%)] | Realized PnL: -0.0021 SOL
+[00:55:53] INFO: Cycle #219 | Elapsed: 12.0m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:55:56] INFO: Cycle #220 | Elapsed: 12.0m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:55:59] INFO: Cycle #221 | Elapsed: 12.1m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:02] INFO: Cycle #222 | Elapsed: 12.1m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:05] INFO: Cycle #223 | Elapsed: 12.2m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:08] INFO: Cycle #224 | Elapsed: 12.2m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:11] INFO: Cycle #225 | Elapsed: 12.3m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.95%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:15] INFO: Cycle #226 | Elapsed: 12.4m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:18] INFO: Cycle #227 | Elapsed: 12.4m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:21] INFO: Cycle #228 | Elapsed: 12.5m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:24] INFO: Cycle #229 | Elapsed: 12.5m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:27] INFO: Cycle #230 | Elapsed: 12.6m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:30] INFO: Cycle #231 | Elapsed: 12.6m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:33] INFO: Cycle #232 | Elapsed: 12.7m/60.0m | Slots: 3/3 [baton (-0.26%), USDF (+1.99%), BABYCATE (+3.70%)] | Realized PnL: -0.0021 SOL
+[00:56:37] INFO: Cycle #233 | Elapsed: 12.7m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:56:40] INFO: Cycle #234 | Elapsed: 12.8m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:56:43] INFO: Cycle #235 | Elapsed: 12.8m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:56:46] INFO: Cycle #236 | Elapsed: 12.9m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:56:49] INFO: Cycle #237 | Elapsed: 12.9m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:56:52] INFO: Cycle #238 | Elapsed: 13.0m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:56:55] INFO: Cycle #239 | Elapsed: 13.0m/60.0m | Slots: 3/3 [baton (-0.58%), USDF (+0.64%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:57:07] INFO: Cycle #240 | Elapsed: 13.2m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:57:10] INFO: Cycle #241 | Elapsed: 13.3m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:57:13] INFO: Cycle #242 | Elapsed: 13.3m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:57:16] INFO: Cycle #243 | Elapsed: 13.4m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.57%)] | Realized PnL: -0.0021 SOL
+[00:57:20] INFO: Cycle #244 | Elapsed: 13.4m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:23] INFO: Cycle #245 | Elapsed: 13.5m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:26] INFO: Cycle #246 | Elapsed: 13.5m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:29] INFO: Cycle #247 | Elapsed: 13.6m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:32] INFO: Cycle #248 | Elapsed: 13.6m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:35] INFO: Cycle #249 | Elapsed: 13.7m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:38] INFO: Cycle #250 | Elapsed: 13.7m/60.0m | Slots: 3/3 [baton (+0.19%), USDF (+1.32%), BABYCATE (+2.51%)] | Realized PnL: -0.0021 SOL
+[00:57:41] INFO: Cycle #251 | Elapsed: 13.8m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:57:44] INFO: Cycle #252 | Elapsed: 13.8m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:57:47] INFO: Cycle #253 | Elapsed: 13.9m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:57:50] INFO: Cycle #254 | Elapsed: 13.9m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:57:53] INFO: Cycle #255 | Elapsed: 14.0m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:57:56] INFO: Cycle #256 | Elapsed: 14.0m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:57:59] INFO: Cycle #257 | Elapsed: 14.1m/60.0m | Slots: 3/3 [baton (+0.15%), USDF (+1.42%), BABYCATE (+2.26%)] | Realized PnL: -0.0021 SOL
+[00:58:05] INFO: Cycle #258 | Elapsed: 14.2m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.42%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:08] INFO: Cycle #259 | Elapsed: 14.2m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.42%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:11] INFO: Cycle #260 | Elapsed: 14.3m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.42%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:14] INFO: Cycle #261 | Elapsed: 14.3m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.42%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:17] INFO: Cycle #262 | Elapsed: 14.4m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.42%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:20] INFO: Cycle #263 | Elapsed: 14.4m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.42%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:23] INFO: Cycle #264 | Elapsed: 14.5m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:26] INFO: Cycle #265 | Elapsed: 14.5m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:29] INFO: Cycle #266 | Elapsed: 14.6m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:32] INFO: Cycle #267 | Elapsed: 14.6m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:35] INFO: Cycle #268 | Elapsed: 14.7m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:38] INFO: Cycle #269 | Elapsed: 14.7m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:42] INFO: Cycle #270 | Elapsed: 14.8m/60.0m | Slots: 3/3 [baton (+1.24%), USDF (+1.52%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:45] INFO: Cycle #271 | Elapsed: 14.9m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+1.53%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:48] INFO: Cycle #272 | Elapsed: 14.9m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+1.53%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:51] INFO: Cycle #273 | Elapsed: 15.0m/60.0m | Slots: 3/3 [baton (+0.80%), USDF (+1.53%), BABYCATE (+3.66%)] | Realized PnL: -0.0021 SOL
+[00:58:54] INFO: ROTATING OUT (100%): baton — Reason: STAGNATION_TIMEOUT (15m flat, PnL: 0.80%) | PnL: +0.80% (+0.0017 SOL)
+[00:58:54] INFO: SLOT UPDATED: baton — STAGNATION_TIMEOUT (15m flat, PnL: 0.80%) (Sold 100%)
+[00:58:54] INFO: CONSOLIDATION COOLDOWN: baton exited. Enforcing 15m cooldown before re-evaluation.
+[00:58:54] INFO: Cycle #274 | Elapsed: 15.0m/60.0m | Slots: 2/3 [USDF (+1.53%), BABYCATE (+3.66%)] | Realized PnL: -0.0003 SOL
+[00:58:55] INFO: ENTERING FRESH ROTATION SLOT: HUHCAT (A9AHYeqb...FHKRdH) | Mcap: $256,542 | Liq: $60,394 | SM: 142 | Size: 0.216 SOL (~$30)
+[00:58:55] INFO: SLOT FILLED: HUHCAT | Tx: SHADOW_SIM
+[00:58:58] INFO: Cycle #275 | Elapsed: 15.1m/60.0m | Slots: 3/3 [USDF (+1.53%), BABYCATE (+3.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:01] INFO: Cycle #276 | Elapsed: 15.1m/60.0m | Slots: 3/3 [USDF (+1.53%), BABYCATE (+3.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:04] INFO: Cycle #277 | Elapsed: 15.2m/60.0m | Slots: 3/3 [USDF (+1.53%), BABYCATE (+3.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:08] INFO: Cycle #278 | Elapsed: 15.2m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:11] INFO: Cycle #279 | Elapsed: 15.3m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:14] INFO: Cycle #280 | Elapsed: 15.3m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:17] INFO: Cycle #281 | Elapsed: 15.4m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:20] INFO: Cycle #282 | Elapsed: 15.4m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:23] INFO: Cycle #283 | Elapsed: 15.5m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:26] INFO: Cycle #284 | Elapsed: 15.5m/60.0m | Slots: 3/3 [USDF (+1.59%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:30] INFO: Cycle #285 | Elapsed: 15.6m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:33] INFO: Cycle #286 | Elapsed: 15.7m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:36] INFO: Cycle #287 | Elapsed: 15.7m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:39] INFO: Cycle #288 | Elapsed: 15.8m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:42] INFO: Cycle #289 | Elapsed: 15.8m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:45] INFO: Cycle #290 | Elapsed: 15.9m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:48] INFO: Cycle #291 | Elapsed: 15.9m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (+0.00%)] | Realized PnL: -0.0003 SOL
+[00:59:52] INFO: Cycle #292 | Elapsed: 16.0m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[00:59:55] INFO: Cycle #293 | Elapsed: 16.0m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[00:59:58] INFO: Cycle #294 | Elapsed: 16.1m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[01:00:01] INFO: Cycle #295 | Elapsed: 16.1m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[01:00:04] INFO: Cycle #296 | Elapsed: 16.2m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[01:00:07] INFO: Cycle #297 | Elapsed: 16.2m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[01:00:10] INFO: Cycle #298 | Elapsed: 16.3m/60.0m | Slots: 3/3 [USDF (+1.70%), BABYCATE (+2.66%), HUHCAT (-1.23%)] | Realized PnL: -0.0003 SOL
+[01:00:14] INFO: ROTATING OUT (100%): HUHCAT — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -6.20%) | PnL: -6.20% (-0.0134 SOL)
+[01:00:14] INFO: SLOT UPDATED: HUHCAT — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -6.20%) (Sold 100%)
+[01:00:14] INFO: CONSOLIDATION COOLDOWN: HUHCAT exited. Enforcing 15m cooldown before re-evaluation.
+[01:00:14] INFO: Cycle #299 | Elapsed: 16.3m/60.0m | Slots: 2/3 [USDF (+1.73%), BABYCATE (+2.66%)] | Realized PnL: -0.0137 SOL
+[01:00:14] INFO: FRESH CANDIDATE BLOCKED: ELON — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $40 < 40% of 5m avg)
+[01:00:15] INFO: FRESH CANDIDATE BLOCKED: Tilcayo — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $148 < 40% of 5m avg)
+[01:00:16] INFO: ENTERING FRESH ROTATION SLOT: biketyson (CbyTNf7U...Pwpump) | Mcap: $1,286,720 | Liq: $160,480 | SM: 458 | Size: 0.216 SOL (~$30)
+[01:00:16] INFO: SLOT FILLED: biketyson | Tx: SHADOW_SIM
+[01:00:19] INFO: Cycle #300 | Elapsed: 16.4m/60.0m | Slots: 3/3 [USDF (+1.73%), BABYCATE (+2.66%), biketyson (+0.00%)] | Realized PnL: -0.0137 SOL
+[01:00:22] INFO: Cycle #301 | Elapsed: 16.5m/60.0m | Slots: 3/3 [USDF (+1.73%), BABYCATE (+2.66%), biketyson (+0.00%)] | Realized PnL: -0.0137 SOL
+[01:00:25] INFO: Cycle #302 | Elapsed: 16.5m/60.0m | Slots: 3/3 [USDF (+1.73%), BABYCATE (+2.66%), biketyson (+0.00%)] | Realized PnL: -0.0137 SOL
+[01:00:28] INFO: Cycle #303 | Elapsed: 16.6m/60.0m | Slots: 3/3 [USDF (+1.73%), BABYCATE (+2.66%), biketyson (+0.00%)] | Realized PnL: -0.0137 SOL
+[01:00:31] INFO: Cycle #304 | Elapsed: 16.6m/60.0m | Slots: 3/3 [USDF (+1.73%), BABYCATE (+2.66%), biketyson (+0.00%)] | Realized PnL: -0.0137 SOL
+[01:00:34] INFO: ROTATING OUT (100%): USDF — Reason: STAGNATION_TIMEOUT (16m flat, PnL: 0.84%) | PnL: +0.84% (+0.0018 SOL)
+[01:00:34] INFO: SLOT UPDATED: USDF — STAGNATION_TIMEOUT (16m flat, PnL: 0.84%) (Sold 100%)
+[01:00:34] INFO: CONSOLIDATION COOLDOWN: USDF exited. Enforcing 15m cooldown before re-evaluation.
+[01:00:34] INFO: Cycle #305 | Elapsed: 16.7m/60.0m | Slots: 2/3 [BABYCATE (+3.93%), biketyson (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:37] INFO: Cycle #306 | Elapsed: 16.7m/60.0m | Slots: 2/3 [BABYCATE (+3.93%), biketyson (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:40] INFO: Cycle #307 | Elapsed: 16.8m/60.0m | Slots: 2/3 [BABYCATE (+3.93%), biketyson (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:43] INFO: Cycle #308 | Elapsed: 16.8m/60.0m | Slots: 2/3 [BABYCATE (+3.93%), biketyson (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:47] INFO: Cycle #309 | Elapsed: 16.9m/60.0m | Slots: 2/3 [BABYCATE (+3.93%), biketyson (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:47] INFO: ENTERING FRESH ROTATION SLOT: GEOM (6dX5M8DY...6cpump) | Mcap: $3,729,920 | Liq: $229,534 | SM: 46 | Size: 0.216 SOL (~$30)
+[01:00:47] INFO: SLOT FILLED: GEOM | Tx: SHADOW_SIM
+[01:00:50] INFO: Cycle #310 | Elapsed: 16.9m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (+0.00%), GEOM (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:53] INFO: Cycle #311 | Elapsed: 17.0m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (+0.00%), GEOM (+0.00%)] | Realized PnL: -0.0119 SOL
+[01:00:57] INFO: Cycle #312 | Elapsed: 17.1m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:00] INFO: Cycle #313 | Elapsed: 17.1m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:03] INFO: Cycle #314 | Elapsed: 17.2m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:06] INFO: Cycle #315 | Elapsed: 17.2m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:09] INFO: Cycle #316 | Elapsed: 17.3m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:12] INFO: Cycle #317 | Elapsed: 17.3m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:15] INFO: Cycle #318 | Elapsed: 17.4m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-1.22%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:19] INFO: Cycle #319 | Elapsed: 17.4m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:22] INFO: Cycle #320 | Elapsed: 17.5m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:25] INFO: Cycle #321 | Elapsed: 17.5m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:28] INFO: Cycle #322 | Elapsed: 17.6m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:31] INFO: Cycle #323 | Elapsed: 17.6m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:34] INFO: Cycle #324 | Elapsed: 17.7m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:37] INFO: Cycle #325 | Elapsed: 17.7m/60.0m | Slots: 3/3 [BABYCATE (+3.93%), biketyson (-0.77%), GEOM (-0.45%)] | Realized PnL: -0.0119 SOL
+[01:01:41] INFO: Cycle #326 | Elapsed: 17.8m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:01:44] INFO: Cycle #327 | Elapsed: 17.8m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:01:47] INFO: Cycle #328 | Elapsed: 17.9m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:01:50] INFO: Cycle #329 | Elapsed: 17.9m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:01:53] INFO: Cycle #330 | Elapsed: 18.0m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:01:56] INFO: Cycle #331 | Elapsed: 18.0m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:01:59] INFO: Cycle #332 | Elapsed: 18.1m/60.0m | Slots: 3/3 [BABYCATE (+2.69%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:10] INFO: Cycle #333 | Elapsed: 18.2m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:22] INFO: Cycle #334 | Elapsed: 18.4m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:26] INFO: Cycle #335 | Elapsed: 18.5m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:29] INFO: Cycle #336 | Elapsed: 18.6m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:32] INFO: Cycle #337 | Elapsed: 18.6m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:35] INFO: Cycle #338 | Elapsed: 18.7m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:38] INFO: Cycle #339 | Elapsed: 18.7m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:41] INFO: Cycle #340 | Elapsed: 18.8m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:45] INFO: Cycle #341 | Elapsed: 18.9m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:48] INFO: Cycle #342 | Elapsed: 18.9m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:51] INFO: Cycle #343 | Elapsed: 19.0m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:54] INFO: Cycle #344 | Elapsed: 19.0m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:02:57] INFO: Cycle #345 | Elapsed: 19.1m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:03:00] INFO: Cycle #346 | Elapsed: 19.1m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:03:03] INFO: Cycle #347 | Elapsed: 19.2m/60.0m | Slots: 3/3 [BABYCATE (+3.87%), biketyson (-2.34%), GEOM (-0.57%)] | Realized PnL: -0.0119 SOL
+[01:03:07] INFO: Cycle #348 | Elapsed: 19.2m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:10] INFO: Cycle #349 | Elapsed: 19.3m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:13] INFO: Cycle #350 | Elapsed: 19.3m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:16] INFO: Cycle #351 | Elapsed: 19.4m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:19] INFO: Cycle #352 | Elapsed: 19.4m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:22] INFO: Cycle #353 | Elapsed: 19.5m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:25] INFO: Cycle #354 | Elapsed: 19.5m/60.0m | Slots: 3/3 [BABYCATE (+2.84%), biketyson (-2.34%), GEOM (-0.42%)] | Realized PnL: -0.0119 SOL
+[01:03:42] INFO: Cycle #355 | Elapsed: 19.7m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:03:56] INFO: Cycle #356 | Elapsed: 20.0m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:07] INFO: Cycle #357 | Elapsed: 20.2m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:12] INFO: Cycle #358 | Elapsed: 20.3m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:15] INFO: Cycle #359 | Elapsed: 20.4m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:18] INFO: Cycle #360 | Elapsed: 20.4m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:21] INFO: Cycle #361 | Elapsed: 20.5m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:24] INFO: Cycle #362 | Elapsed: 20.5m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:27] INFO: Cycle #363 | Elapsed: 20.6m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:30] INFO: Cycle #364 | Elapsed: 20.6m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-2.34%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:04:34] INFO: Cycle #365 | Elapsed: 20.7m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:37] INFO: Cycle #366 | Elapsed: 20.7m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:40] INFO: Cycle #367 | Elapsed: 20.8m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:43] INFO: Cycle #368 | Elapsed: 20.8m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:46] INFO: Cycle #369 | Elapsed: 20.9m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:49] INFO: Cycle #370 | Elapsed: 20.9m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:52] INFO: Cycle #371 | Elapsed: 21.0m/60.0m | Slots: 3/3 [BABYCATE (+2.77%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:56] INFO: Cycle #372 | Elapsed: 21.0m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:04:59] INFO: Cycle #373 | Elapsed: 21.1m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:05:02] INFO: Cycle #374 | Elapsed: 21.1m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:05:05] INFO: Cycle #375 | Elapsed: 21.2m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:05:08] INFO: Cycle #376 | Elapsed: 21.2m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:05:11] INFO: Cycle #377 | Elapsed: 21.3m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:05:14] INFO: Cycle #378 | Elapsed: 21.3m/60.0m | Slots: 3/3 [BABYCATE (+2.87%), biketyson (-1.47%), GEOM (-0.31%)] | Realized PnL: -0.0119 SOL
+[01:05:18] INFO: Cycle #379 | Elapsed: 21.4m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:21] INFO: Cycle #380 | Elapsed: 21.5m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:24] INFO: Cycle #381 | Elapsed: 21.5m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:27] INFO: Cycle #382 | Elapsed: 21.6m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:30] INFO: Cycle #383 | Elapsed: 21.6m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:33] INFO: Cycle #384 | Elapsed: 21.7m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:36] INFO: Cycle #385 | Elapsed: 21.7m/60.0m | Slots: 3/3 [BABYCATE (+2.95%), biketyson (-1.69%), GEOM (+0.55%)] | Realized PnL: -0.0119 SOL
+[01:05:40] INFO: Cycle #386 | Elapsed: 21.8m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:05:43] INFO: Cycle #387 | Elapsed: 21.8m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:05:46] INFO: Cycle #388 | Elapsed: 21.9m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:05:49] INFO: Cycle #389 | Elapsed: 21.9m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:05:52] INFO: Cycle #390 | Elapsed: 22.0m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:05:55] INFO: Cycle #391 | Elapsed: 22.0m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:05:58] INFO: Cycle #392 | Elapsed: 22.1m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-1.69%), GEOM (+1.01%)] | Realized PnL: -0.0119 SOL
+[01:06:02] INFO: Cycle #393 | Elapsed: 22.1m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:05] INFO: Cycle #394 | Elapsed: 22.2m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:08] INFO: Cycle #395 | Elapsed: 22.2m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:11] INFO: Cycle #396 | Elapsed: 22.3m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:14] INFO: Cycle #397 | Elapsed: 22.3m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:17] INFO: Cycle #398 | Elapsed: 22.4m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:20] INFO: Cycle #399 | Elapsed: 22.4m/60.0m | Slots: 3/3 [BABYCATE (+2.78%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:23] INFO: Cycle #400 | Elapsed: 22.5m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:26] INFO: Cycle #401 | Elapsed: 22.5m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:29] INFO: Cycle #402 | Elapsed: 22.6m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:32] INFO: Cycle #403 | Elapsed: 22.6m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:35] INFO: Cycle #404 | Elapsed: 22.7m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:38] INFO: Cycle #405 | Elapsed: 22.7m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:41] INFO: Cycle #406 | Elapsed: 22.8m/60.0m | Slots: 3/3 [BABYCATE (+2.68%), biketyson (-2.41%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:45] INFO: Cycle #407 | Elapsed: 22.9m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:48] INFO: Cycle #408 | Elapsed: 22.9m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:51] INFO: Cycle #409 | Elapsed: 23.0m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:54] INFO: Cycle #410 | Elapsed: 23.0m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:06:57] INFO: Cycle #411 | Elapsed: 23.1m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:00] INFO: Cycle #412 | Elapsed: 23.1m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:03] INFO: Cycle #413 | Elapsed: 23.2m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:07] INFO: Cycle #414 | Elapsed: 23.2m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:10] INFO: Cycle #415 | Elapsed: 23.3m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:13] INFO: Cycle #416 | Elapsed: 23.3m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:16] INFO: Cycle #417 | Elapsed: 23.4m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:19] INFO: Cycle #418 | Elapsed: 23.4m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:22] INFO: Cycle #419 | Elapsed: 23.5m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:25] INFO: Cycle #420 | Elapsed: 23.5m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.55%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:36] INFO: Cycle #421 | Elapsed: 23.7m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+1.04%)] | Realized PnL: -0.0119 SOL
+[01:07:47] INFO: Cycle #422 | Elapsed: 23.8m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+1.35%)] | Realized PnL: -0.0119 SOL
+[01:07:52] INFO: Cycle #423 | Elapsed: 24.0m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:07:55] INFO: Cycle #424 | Elapsed: 24.0m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:07:58] INFO: Cycle #425 | Elapsed: 24.1m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:01] INFO: Cycle #426 | Elapsed: 24.1m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:04] INFO: Cycle #427 | Elapsed: 24.2m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:07] INFO: Cycle #428 | Elapsed: 24.2m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:11] INFO: Cycle #429 | Elapsed: 24.3m/60.0m | Slots: 3/3 [BABYCATE (+3.77%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:14] INFO: Cycle #430 | Elapsed: 24.3m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:17] INFO: Cycle #431 | Elapsed: 24.4m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:20] INFO: Cycle #432 | Elapsed: 24.4m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:23] INFO: Cycle #433 | Elapsed: 24.5m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:26] INFO: Cycle #434 | Elapsed: 24.5m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:29] INFO: Cycle #435 | Elapsed: 24.6m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:32] INFO: Cycle #436 | Elapsed: 24.6m/60.0m | Slots: 3/3 [BABYCATE (+3.62%), biketyson (-2.52%), GEOM (+0.84%)] | Realized PnL: -0.0119 SOL
+[01:08:36] INFO: Cycle #437 | Elapsed: 24.7m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:39] INFO: Cycle #438 | Elapsed: 24.8m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:42] INFO: Cycle #439 | Elapsed: 24.8m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:45] INFO: Cycle #440 | Elapsed: 24.9m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:48] INFO: Cycle #441 | Elapsed: 24.9m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:51] INFO: Cycle #442 | Elapsed: 25.0m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:54] INFO: Cycle #443 | Elapsed: 25.0m/60.0m | Slots: 3/3 [BABYCATE (+2.42%), biketyson (-2.52%), GEOM (+1.74%)] | Realized PnL: -0.0119 SOL
+[01:08:58] INFO: Cycle #444 | Elapsed: 25.1m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:01] INFO: Cycle #445 | Elapsed: 25.1m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:04] INFO: Cycle #446 | Elapsed: 25.2m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:07] INFO: Cycle #447 | Elapsed: 25.2m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:10] INFO: Cycle #448 | Elapsed: 25.3m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:13] INFO: Cycle #449 | Elapsed: 25.3m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:16] INFO: Cycle #450 | Elapsed: 25.4m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.52%), GEOM (+0.86%)] | Realized PnL: -0.0119 SOL
+[01:09:20] INFO: Cycle #451 | Elapsed: 25.4m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:23] INFO: Cycle #452 | Elapsed: 25.5m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:26] INFO: Cycle #453 | Elapsed: 25.5m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:29] INFO: Cycle #454 | Elapsed: 25.6m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:32] INFO: Cycle #455 | Elapsed: 25.6m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:35] INFO: Cycle #456 | Elapsed: 25.7m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:38] INFO: Cycle #457 | Elapsed: 25.7m/60.0m | Slots: 3/3 [BABYCATE (+2.32%), biketyson (-2.73%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:42] INFO: Cycle #458 | Elapsed: 25.8m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:45] INFO: Cycle #459 | Elapsed: 25.9m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:48] INFO: Cycle #460 | Elapsed: 25.9m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:51] INFO: Cycle #461 | Elapsed: 26.0m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:54] INFO: Cycle #462 | Elapsed: 26.0m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:09:57] INFO: Cycle #463 | Elapsed: 26.1m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:00] INFO: Cycle #464 | Elapsed: 26.1m/60.0m | Slots: 3/3 [BABYCATE (+3.41%), biketyson (-1.63%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:04] INFO: Cycle #465 | Elapsed: 26.2m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:07] INFO: Cycle #466 | Elapsed: 26.2m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:10] INFO: Cycle #467 | Elapsed: 26.3m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:13] INFO: Cycle #468 | Elapsed: 26.3m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:16] INFO: Cycle #469 | Elapsed: 26.4m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:19] INFO: Cycle #470 | Elapsed: 26.4m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:22] INFO: Cycle #471 | Elapsed: 26.5m/60.0m | Slots: 3/3 [BABYCATE (+3.40%), biketyson (-2.60%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:25] INFO: Cycle #472 | Elapsed: 26.5m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:28] INFO: Cycle #473 | Elapsed: 26.6m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:31] INFO: Cycle #474 | Elapsed: 26.6m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:35] INFO: Cycle #475 | Elapsed: 26.7m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:38] INFO: Cycle #476 | Elapsed: 26.7m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:41] INFO: Cycle #477 | Elapsed: 26.8m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:44] INFO: Cycle #478 | Elapsed: 26.8m/60.0m | Slots: 3/3 [BABYCATE (+3.47%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:47] INFO: Cycle #479 | Elapsed: 26.9m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:50] INFO: Cycle #480 | Elapsed: 26.9m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:53] INFO: Cycle #481 | Elapsed: 27.0m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:56] INFO: Cycle #482 | Elapsed: 27.0m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:10:59] INFO: Cycle #483 | Elapsed: 27.1m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:02] INFO: Cycle #484 | Elapsed: 27.1m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:05] INFO: Cycle #485 | Elapsed: 27.2m/60.0m | Slots: 3/3 [BABYCATE (+2.19%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:09] INFO: Cycle #486 | Elapsed: 27.3m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:12] INFO: Cycle #487 | Elapsed: 27.3m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:15] INFO: Cycle #488 | Elapsed: 27.4m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:18] INFO: Cycle #489 | Elapsed: 27.4m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:21] INFO: Cycle #490 | Elapsed: 27.5m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:24] INFO: Cycle #491 | Elapsed: 27.5m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:27] INFO: Cycle #492 | Elapsed: 27.6m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.65%), GEOM (+0.85%)] | Realized PnL: -0.0119 SOL
+[01:11:31] INFO: Cycle #493 | Elapsed: 27.6m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:34] INFO: Cycle #494 | Elapsed: 27.7m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:37] INFO: Cycle #495 | Elapsed: 27.7m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:40] INFO: Cycle #496 | Elapsed: 27.8m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:43] INFO: Cycle #497 | Elapsed: 27.8m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:46] INFO: Cycle #498 | Elapsed: 27.9m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:49] INFO: Cycle #499 | Elapsed: 27.9m/60.0m | Slots: 3/3 [BABYCATE (+3.16%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:53] INFO: Cycle #500 | Elapsed: 28.0m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:56] INFO: Cycle #501 | Elapsed: 28.0m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:11:59] INFO: Cycle #502 | Elapsed: 28.1m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:12:02] INFO: Cycle #503 | Elapsed: 28.1m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:12:05] INFO: Cycle #504 | Elapsed: 28.2m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:12:08] INFO: Cycle #505 | Elapsed: 28.2m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:12:11] INFO: Cycle #506 | Elapsed: 28.3m/60.0m | Slots: 3/3 [BABYCATE (+1.55%), biketyson (-2.58%), GEOM (+0.89%)] | Realized PnL: -0.0119 SOL
+[01:12:15] INFO: ROTATING OUT (100%): BABYCATE — Reason: RUNNER_FLOOR_PROTECTION (+1.0% guaranteed floor, PnL: -9.47%) | PnL: -9.47% (-0.0205 SOL)
+[01:12:15] INFO: SLOT UPDATED: BABYCATE — RUNNER_FLOOR_PROTECTION (+1.0% guaranteed floor, PnL: -9.47%) (Sold 100%)
+[01:12:15] INFO: CONSOLIDATION COOLDOWN: BABYCATE exited. Enforcing 15m cooldown before re-evaluation.
+[01:12:15] INFO: Cycle #507 | Elapsed: 28.4m/60.0m | Slots: 2/3 [biketyson (-2.58%), GEOM (+0.90%)] | Realized PnL: -0.0324 SOL
+[01:12:15] INFO: FRESH CANDIDATE BLOCKED: CLIP — REJECT_MEMEX_SKILL4 (1m Sell Dump: Sell $1,911 > Buy $372)
+[01:12:16] INFO: ENTERING FRESH ROTATION SLOT: Jimothy (Ge87Etsj...xTpump) | Mcap: $4,393,620 | Liq: $587,302 | SM: 312 | Size: 0.216 SOL (~$30)
+[01:12:16] INFO: SLOT FILLED: Jimothy | Tx: SHADOW_SIM
+[01:12:19] INFO: Cycle #508 | Elapsed: 28.4m/60.0m | Slots: 3/3 [biketyson (-2.58%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:22] INFO: Cycle #509 | Elapsed: 28.5m/60.0m | Slots: 3/3 [biketyson (-2.58%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:25] INFO: Cycle #510 | Elapsed: 28.5m/60.0m | Slots: 3/3 [biketyson (-2.58%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:28] INFO: Cycle #511 | Elapsed: 28.6m/60.0m | Slots: 3/3 [biketyson (-2.58%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:31] INFO: Cycle #512 | Elapsed: 28.6m/60.0m | Slots: 3/3 [biketyson (-2.58%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:35] INFO: Cycle #513 | Elapsed: 28.7m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:38] INFO: Cycle #514 | Elapsed: 28.7m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:41] INFO: Cycle #515 | Elapsed: 28.8m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:44] INFO: Cycle #516 | Elapsed: 28.8m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:47] INFO: Cycle #517 | Elapsed: 28.9m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:50] INFO: Cycle #518 | Elapsed: 28.9m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:53] INFO: Cycle #519 | Elapsed: 29.0m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+0.90%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:12:57] INFO: BREAK-EVEN FLOOR LOCKED: GEOM reached +1.92%. Stop floor raised to +0.50% (risk-free).
+[01:12:57] INFO: Cycle #520 | Elapsed: 29.1m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:00] INFO: Cycle #521 | Elapsed: 29.1m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:03] INFO: Cycle #522 | Elapsed: 29.2m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:06] INFO: Cycle #523 | Elapsed: 29.2m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:09] INFO: Cycle #524 | Elapsed: 29.3m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:12] INFO: Cycle #525 | Elapsed: 29.3m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:15] INFO: Cycle #526 | Elapsed: 29.4m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:19] INFO: Cycle #527 | Elapsed: 29.4m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:22] INFO: Cycle #528 | Elapsed: 29.5m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:25] INFO: Cycle #529 | Elapsed: 29.5m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:28] INFO: Cycle #530 | Elapsed: 29.6m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:31] INFO: Cycle #531 | Elapsed: 29.6m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:34] INFO: Cycle #532 | Elapsed: 29.7m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:37] INFO: Cycle #533 | Elapsed: 29.7m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.00%)] | Realized PnL: -0.0324 SOL
+[01:13:40] INFO: Cycle #534 | Elapsed: 29.8m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:13:43] INFO: Cycle #535 | Elapsed: 29.8m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:13:46] INFO: Cycle #536 | Elapsed: 29.9m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:13:50] INFO: Cycle #537 | Elapsed: 29.9m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:13:53] INFO: Cycle #538 | Elapsed: 30.0m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:13:56] INFO: Cycle #539 | Elapsed: 30.0m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:13:59] INFO: Cycle #540 | Elapsed: 30.1m/60.0m | Slots: 3/3 [biketyson (-0.55%), GEOM (+1.92%), Jimothy (+0.10%)] | Realized PnL: -0.0324 SOL
+[01:14:02] INFO: Cycle #541 | Elapsed: 30.1m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:05] INFO: Cycle #542 | Elapsed: 30.2m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:08] INFO: Cycle #543 | Elapsed: 30.2m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:11] INFO: Cycle #544 | Elapsed: 30.3m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:14] INFO: Cycle #545 | Elapsed: 30.3m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:17] INFO: Cycle #546 | Elapsed: 30.4m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:20] INFO: Cycle #547 | Elapsed: 30.4m/60.0m | Slots: 3/3 [biketyson (-2.38%), GEOM (+1.92%), Jimothy (+0.11%)] | Realized PnL: -0.0324 SOL
+[01:14:24] INFO: Cycle #548 | Elapsed: 30.5m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:27] INFO: Cycle #549 | Elapsed: 30.6m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:30] INFO: Cycle #550 | Elapsed: 30.6m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:33] INFO: Cycle #551 | Elapsed: 30.7m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:36] INFO: Cycle #552 | Elapsed: 30.7m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:39] INFO: Cycle #553 | Elapsed: 30.8m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:42] INFO: Cycle #554 | Elapsed: 30.8m/60.0m | Slots: 3/3 [biketyson (-2.36%), GEOM (+1.92%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:46] INFO: Cycle #555 | Elapsed: 30.9m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:49] INFO: Cycle #556 | Elapsed: 30.9m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:52] INFO: Cycle #557 | Elapsed: 31.0m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:55] INFO: Cycle #558 | Elapsed: 31.0m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:14:58] INFO: Cycle #559 | Elapsed: 31.1m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:15:01] INFO: Cycle #560 | Elapsed: 31.1m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:15:04] INFO: Cycle #561 | Elapsed: 31.2m/60.0m | Slots: 3/3 [biketyson (-2.13%), GEOM (+2.36%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:15:08] INFO: Cycle #562 | Elapsed: 31.2m/60.0m | Slots: 3/3 [biketyson (-2.29%), GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:15:11] INFO: Cycle #563 | Elapsed: 31.3m/60.0m | Slots: 3/3 [biketyson (-2.29%), GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:15:14] INFO: Cycle #564 | Elapsed: 31.3m/60.0m | Slots: 3/3 [biketyson (-2.29%), GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0324 SOL
+[01:15:17] INFO: ROTATING OUT (100%): biketyson — Reason: STAGNATION_TIMEOUT (15m flat, PnL: -2.29%) | PnL: -2.29% (-0.0049 SOL)
+[01:15:17] INFO: SLOT UPDATED: biketyson — STAGNATION_TIMEOUT (15m flat, PnL: -2.29%) (Sold 100%)
+[01:15:17] INFO: CONSOLIDATION COOLDOWN: biketyson exited. Enforcing 15m cooldown before re-evaluation.
+[01:15:17] INFO: Cycle #565 | Elapsed: 31.4m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:18] INFO: FRESH CANDIDATE BLOCKED: JEANPHIL — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $2,118 > Buy $1,721)
+[01:15:21] INFO: Cycle #566 | Elapsed: 31.5m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:24] INFO: Cycle #567 | Elapsed: 31.5m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:27] INFO: Cycle #568 | Elapsed: 31.6m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:31] INFO: Cycle #569 | Elapsed: 31.6m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:34] INFO: Cycle #570 | Elapsed: 31.7m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:37] INFO: Cycle #571 | Elapsed: 31.7m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:40] INFO: Cycle #572 | Elapsed: 31.8m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:43] INFO: Cycle #573 | Elapsed: 31.8m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:46] INFO: Cycle #574 | Elapsed: 31.9m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:49] INFO: Cycle #575 | Elapsed: 31.9m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:49] INFO: FRESH CANDIDATE BLOCKED: USDF — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $616 > Buy $515)
+[01:15:50] INFO: FRESH CANDIDATE BLOCKED: Stamp — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $8,417 > Buy $4,642)
+[01:15:54] INFO: Cycle #576 | Elapsed: 32.0m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:15:57] INFO: Cycle #577 | Elapsed: 32.1m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:16:00] INFO: Cycle #578 | Elapsed: 32.1m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:16:03] INFO: Cycle #579 | Elapsed: 32.2m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:16:06] INFO: Cycle #580 | Elapsed: 32.2m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:16:09] INFO: Cycle #581 | Elapsed: 32.3m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:16:12] INFO: Cycle #582 | Elapsed: 32.3m/60.0m | Slots: 2/3 [GEOM (+2.99%), Jimothy (-0.08%)] | Realized PnL: -0.0373 SOL
+[01:16:16] INFO: PARTIAL TP (50%): GEOM — Reason: PARTIAL_TP_50_PCT (+3.19% net banked, 50% runner riding) | PnL: +3.19% (+0.0034 SOL)
+[01:16:16] INFO: SLOT UPDATED: GEOM — PARTIAL_TP_50_PCT (+3.19% net banked, 50% runner riding) (Sold 50%)
+[01:16:16] INFO: Cycle #583 | Elapsed: 32.4m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:19] INFO: Cycle #584 | Elapsed: 32.4m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:22] INFO: Cycle #585 | Elapsed: 32.5m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:25] INFO: Cycle #586 | Elapsed: 32.5m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:28] INFO: Cycle #587 | Elapsed: 32.6m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:31] INFO: Cycle #588 | Elapsed: 32.6m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:34] INFO: Cycle #589 | Elapsed: 32.7m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.08%)] | Realized PnL: -0.0339 SOL
+[01:16:38] INFO: Cycle #590 | Elapsed: 32.7m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:16:41] INFO: Cycle #591 | Elapsed: 32.8m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:16:44] INFO: Cycle #592 | Elapsed: 32.8m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:16:47] INFO: Cycle #593 | Elapsed: 32.9m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:16:50] INFO: Cycle #594 | Elapsed: 32.9m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:16:53] INFO: Cycle #595 | Elapsed: 33.0m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:16:56] INFO: Cycle #596 | Elapsed: 33.0m/60.0m | Slots: 2/3 [GEOM (+3.19%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:00] INFO: Cycle #597 | Elapsed: 33.1m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:03] INFO: Cycle #598 | Elapsed: 33.2m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:06] INFO: Cycle #599 | Elapsed: 33.2m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:09] INFO: Cycle #600 | Elapsed: 33.3m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:12] INFO: Cycle #601 | Elapsed: 33.3m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:15] INFO: Cycle #602 | Elapsed: 33.4m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:18] INFO: Cycle #603 | Elapsed: 33.4m/60.0m | Slots: 2/3 [GEOM (+3.26%), Jimothy (-0.33%)] | Realized PnL: -0.0339 SOL
+[01:17:37] INFO: Cycle #604 | Elapsed: 33.6m/60.0m | Slots: 2/3 [GEOM (+2.12%), Jimothy (+0.30%)] | Realized PnL: -0.0339 SOL
+[01:17:43] INFO: ENTERING FRESH ROTATION SLOT: TRUMPTV (D4sBdmPa...CRtdkN) | Mcap: $521,904 | Liq: $64,008 | SM: 12 | Size: 0.216 SOL (~$30)
+[01:17:44] INFO: SLOT FILLED: TRUMPTV | Tx: SHADOW_SIM
+[01:17:47] INFO: Cycle #605 | Elapsed: 33.9m/60.0m | Slots: 3/3 [GEOM (+3.11%), Jimothy (+0.34%), TRUMPTV (+0.00%)] | Realized PnL: -0.0339 SOL
+[01:17:50] INFO: Cycle #606 | Elapsed: 33.9m/60.0m | Slots: 3/3 [GEOM (+3.11%), Jimothy (+0.34%), TRUMPTV (+0.00%)] | Realized PnL: -0.0339 SOL
+[01:17:53] INFO: Cycle #607 | Elapsed: 34.0m/60.0m | Slots: 3/3 [GEOM (+3.11%), Jimothy (+0.34%), TRUMPTV (+0.00%)] | Realized PnL: -0.0339 SOL
+[01:17:56] INFO: Cycle #608 | Elapsed: 34.0m/60.0m | Slots: 3/3 [GEOM (+3.11%), Jimothy (+0.34%), TRUMPTV (+0.00%)] | Realized PnL: -0.0339 SOL
+[01:17:59] INFO: Cycle #609 | Elapsed: 34.1m/60.0m | Slots: 3/3 [GEOM (+3.11%), Jimothy (+0.34%), TRUMPTV (+0.00%)] | Realized PnL: -0.0339 SOL
+[01:18:02] INFO: Cycle #610 | Elapsed: 34.1m/60.0m | Slots: 3/3 [GEOM (+3.11%), Jimothy (+0.34%), TRUMPTV (+0.00%)] | Realized PnL: -0.0339 SOL
+[01:18:06] INFO: Cycle #611 | Elapsed: 34.2m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:09] INFO: Cycle #612 | Elapsed: 34.3m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:12] INFO: Cycle #613 | Elapsed: 34.3m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:15] INFO: Cycle #614 | Elapsed: 34.4m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:18] INFO: Cycle #615 | Elapsed: 34.4m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:21] INFO: Cycle #616 | Elapsed: 34.5m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:24] INFO: Cycle #617 | Elapsed: 34.5m/60.0m | Slots: 3/3 [GEOM (+3.24%), Jimothy (+0.47%), TRUMPTV (+1.28%)] | Realized PnL: -0.0339 SOL
+[01:18:28] INFO: ROTATING OUT (100%): TRUMPTV — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -7.57%) | PnL: -7.57% (-0.0164 SOL)
+[01:18:28] INFO: SLOT UPDATED: TRUMPTV — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -7.57%) (Sold 100%)
+[01:18:28] INFO: CONSOLIDATION COOLDOWN: TRUMPTV exited. Enforcing 15m cooldown before re-evaluation.
+[01:18:28] INFO: Cycle #618 | Elapsed: 34.6m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:28] INFO: FRESH CANDIDATE BLOCKED: baton — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $893 > Buy $221)
+[01:18:31] INFO: Cycle #619 | Elapsed: 34.6m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:34] INFO: Cycle #620 | Elapsed: 34.7m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:37] INFO: Cycle #621 | Elapsed: 34.7m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:40] INFO: Cycle #622 | Elapsed: 34.8m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:43] INFO: Cycle #623 | Elapsed: 34.8m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:46] INFO: Cycle #624 | Elapsed: 34.9m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:50] INFO: Cycle #625 | Elapsed: 34.9m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:53] INFO: Cycle #626 | Elapsed: 35.0m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:56] INFO: Cycle #627 | Elapsed: 35.0m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:18:59] INFO: Cycle #628 | Elapsed: 35.1m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:02] INFO: Cycle #629 | Elapsed: 35.1m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:05] INFO: Cycle #630 | Elapsed: 35.2m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:08] INFO: Cycle #631 | Elapsed: 35.2m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:12] INFO: Cycle #632 | Elapsed: 35.3m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:15] INFO: Cycle #633 | Elapsed: 35.4m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:18] INFO: Cycle #634 | Elapsed: 35.4m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:21] INFO: Cycle #635 | Elapsed: 35.5m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:24] INFO: Cycle #636 | Elapsed: 35.5m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:27] INFO: Cycle #637 | Elapsed: 35.6m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:30] INFO: Cycle #638 | Elapsed: 35.6m/60.0m | Slots: 2/3 [GEOM (+2.26%), Jimothy (+0.47%)] | Realized PnL: -0.0502 SOL
+[01:19:34] INFO: Cycle #639 | Elapsed: 35.7m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:19:37] INFO: Cycle #640 | Elapsed: 35.7m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:19:40] INFO: Cycle #641 | Elapsed: 35.8m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:19:43] INFO: Cycle #642 | Elapsed: 35.8m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:19:46] INFO: Cycle #643 | Elapsed: 35.9m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:19:49] INFO: Cycle #644 | Elapsed: 35.9m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:19:52] INFO: Cycle #645 | Elapsed: 36.0m/60.0m | Slots: 2/3 [GEOM (+3.30%), Jimothy (+0.40%)] | Realized PnL: -0.0502 SOL
+[01:20:10] INFO: Cycle #646 | Elapsed: 36.2m/60.0m | Slots: 2/3 [GEOM (+3.18%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:21] INFO: Cycle #647 | Elapsed: 36.5m/60.0m | Slots: 2/3 [GEOM (+2.13%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:24] INFO: Cycle #648 | Elapsed: 36.5m/60.0m | Slots: 2/3 [GEOM (+2.13%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:27] INFO: Cycle #649 | Elapsed: 36.6m/60.0m | Slots: 2/3 [GEOM (+2.13%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:30] INFO: Cycle #650 | Elapsed: 36.6m/60.0m | Slots: 2/3 [GEOM (+2.13%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:33] INFO: Cycle #651 | Elapsed: 36.7m/60.0m | Slots: 2/3 [GEOM (+2.13%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:36] INFO: Cycle #652 | Elapsed: 36.7m/60.0m | Slots: 2/3 [GEOM (+2.13%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:40] INFO: Cycle #653 | Elapsed: 36.8m/60.0m | Slots: 2/3 [GEOM (+2.12%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:43] INFO: Cycle #654 | Elapsed: 36.8m/60.0m | Slots: 2/3 [GEOM (+2.12%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:46] INFO: Cycle #655 | Elapsed: 36.9m/60.0m | Slots: 2/3 [GEOM (+2.12%), Jimothy (-0.59%)] | Realized PnL: -0.0502 SOL
+[01:20:47] INFO: ENTERING FRESH ROTATION SLOT: ELON (GY9mZfyP...zxpump) | Mcap: $897,306 | Liq: $129,925 | SM: 214 | Size: 0.216 SOL (~$30)
+[01:20:47] INFO: SLOT FILLED: ELON | Tx: SHADOW_SIM
+[01:20:50] INFO: Cycle #656 | Elapsed: 36.9m/60.0m | Slots: 3/3 [GEOM (+2.12%), Jimothy (-0.59%), ELON (+0.00%)] | Realized PnL: -0.0502 SOL
+[01:20:53] INFO: Cycle #657 | Elapsed: 37.0m/60.0m | Slots: 3/3 [GEOM (+2.12%), Jimothy (-0.59%), ELON (+0.00%)] | Realized PnL: -0.0502 SOL
+[01:20:56] INFO: Cycle #658 | Elapsed: 37.0m/60.0m | Slots: 3/3 [GEOM (+2.12%), Jimothy (-0.59%), ELON (+0.00%)] | Realized PnL: -0.0502 SOL
+[01:20:59] INFO: Cycle #659 | Elapsed: 37.1m/60.0m | Slots: 3/3 [GEOM (+2.12%), Jimothy (-0.59%), ELON (+0.00%)] | Realized PnL: -0.0502 SOL
+[01:21:03] INFO: Cycle #660 | Elapsed: 37.1m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:06] INFO: Cycle #661 | Elapsed: 37.2m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:09] INFO: Cycle #662 | Elapsed: 37.3m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:12] INFO: Cycle #663 | Elapsed: 37.3m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:15] INFO: Cycle #664 | Elapsed: 37.4m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:18] INFO: Cycle #665 | Elapsed: 37.4m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:21] INFO: Cycle #666 | Elapsed: 37.5m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (-0.59%), ELON (+0.49%)] | Realized PnL: -0.0502 SOL
+[01:21:24] INFO: Cycle #667 | Elapsed: 37.5m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:21:27] INFO: Cycle #668 | Elapsed: 37.6m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:21:30] INFO: Cycle #669 | Elapsed: 37.6m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:21:34] INFO: Cycle #670 | Elapsed: 37.7m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:21:37] INFO: Cycle #671 | Elapsed: 37.7m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:21:40] INFO: Cycle #672 | Elapsed: 37.8m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:21:43] INFO: Cycle #673 | Elapsed: 37.8m/60.0m | Slots: 3/3 [GEOM (+2.79%), Jimothy (+0.32%), ELON (+1.50%)] | Realized PnL: -0.0502 SOL
+[01:22:08] INFO: Cycle #674 | Elapsed: 38.1m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:11] INFO: Cycle #675 | Elapsed: 38.3m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:14] INFO: Cycle #676 | Elapsed: 38.3m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:17] INFO: Cycle #677 | Elapsed: 38.4m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:20] INFO: Cycle #678 | Elapsed: 38.4m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:23] INFO: Cycle #679 | Elapsed: 38.5m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:26] INFO: Cycle #680 | Elapsed: 38.5m/60.0m | Slots: 3/3 [GEOM (+2.46%), Jimothy (+0.32%), ELON (-0.05%)] | Realized PnL: -0.0502 SOL
+[01:22:30] INFO: Cycle #681 | Elapsed: 38.6m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:33] INFO: Cycle #682 | Elapsed: 38.7m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:36] INFO: Cycle #683 | Elapsed: 38.7m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:39] INFO: Cycle #684 | Elapsed: 38.8m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:42] INFO: Cycle #685 | Elapsed: 38.8m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:45] INFO: Cycle #686 | Elapsed: 38.9m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:48] INFO: Cycle #687 | Elapsed: 38.9m/60.0m | Slots: 3/3 [GEOM (+3.37%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:52] INFO: Cycle #688 | Elapsed: 39.0m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:55] INFO: Cycle #689 | Elapsed: 39.0m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:22:58] INFO: Cycle #690 | Elapsed: 39.1m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:23:01] INFO: Cycle #691 | Elapsed: 39.1m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:23:04] INFO: Cycle #692 | Elapsed: 39.2m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:23:07] INFO: Cycle #693 | Elapsed: 39.2m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:23:10] INFO: Cycle #694 | Elapsed: 39.3m/60.0m | Slots: 3/3 [GEOM (+3.83%), Jimothy (+0.32%), ELON (-0.42%)] | Realized PnL: -0.0502 SOL
+[01:23:14] INFO: Cycle #695 | Elapsed: 39.3m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:17] INFO: Cycle #696 | Elapsed: 39.4m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:20] INFO: Cycle #697 | Elapsed: 39.4m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:23] INFO: Cycle #698 | Elapsed: 39.5m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:26] INFO: Cycle #699 | Elapsed: 39.5m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:29] INFO: Cycle #700 | Elapsed: 39.6m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:32] INFO: Cycle #701 | Elapsed: 39.6m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:36] INFO: Cycle #702 | Elapsed: 39.7m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:39] INFO: Cycle #703 | Elapsed: 39.8m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:42] INFO: Cycle #704 | Elapsed: 39.8m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:45] INFO: Cycle #705 | Elapsed: 39.9m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:48] INFO: Cycle #706 | Elapsed: 39.9m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:51] INFO: Cycle #707 | Elapsed: 40.0m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:23:54] INFO: Cycle #708 | Elapsed: 40.0m/60.0m | Slots: 3/3 [GEOM (+2.39%), Jimothy (+0.10%), ELON (+0.81%)] | Realized PnL: -0.0502 SOL
+[01:24:18] INFO: Cycle #709 | Elapsed: 40.3m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:22] INFO: Cycle #710 | Elapsed: 40.5m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:25] INFO: Cycle #711 | Elapsed: 40.5m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:28] INFO: Cycle #712 | Elapsed: 40.6m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:31] INFO: Cycle #713 | Elapsed: 40.6m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:34] INFO: Cycle #714 | Elapsed: 40.7m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:37] INFO: Cycle #715 | Elapsed: 40.7m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.10%), ELON (+1.11%)] | Realized PnL: -0.0502 SOL
+[01:24:41] INFO: Cycle #716 | Elapsed: 40.8m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:24:44] INFO: Cycle #717 | Elapsed: 40.8m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:24:47] INFO: Cycle #718 | Elapsed: 40.9m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:24:50] INFO: Cycle #719 | Elapsed: 40.9m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:24:53] INFO: Cycle #720 | Elapsed: 41.0m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:24:56] INFO: Cycle #721 | Elapsed: 41.0m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:24:59] INFO: Cycle #722 | Elapsed: 41.1m/60.0m | Slots: 3/3 [GEOM (+3.32%), Jimothy (+0.26%), ELON (+1.22%)] | Realized PnL: -0.0502 SOL
+[01:25:03] INFO: Cycle #723 | Elapsed: 41.2m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:06] INFO: Cycle #724 | Elapsed: 41.2m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:09] INFO: Cycle #725 | Elapsed: 41.3m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:12] INFO: Cycle #726 | Elapsed: 41.3m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:15] INFO: Cycle #727 | Elapsed: 41.4m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:18] INFO: Cycle #728 | Elapsed: 41.4m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:21] INFO: Cycle #729 | Elapsed: 41.5m/60.0m | Slots: 3/3 [GEOM (+3.86%), Jimothy (+0.23%), ELON (+1.24%)] | Realized PnL: -0.0502 SOL
+[01:25:46] INFO: Cycle #730 | Elapsed: 41.7m/60.0m | Slots: 3/3 [GEOM (+3.59%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:25:50] INFO: Cycle #731 | Elapsed: 41.9m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:25:53] INFO: Cycle #732 | Elapsed: 42.0m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:25:56] INFO: Cycle #733 | Elapsed: 42.0m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:25:59] INFO: Cycle #734 | Elapsed: 42.1m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:26:02] INFO: Cycle #735 | Elapsed: 42.1m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:26:05] INFO: Cycle #736 | Elapsed: 42.2m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.01%)] | Realized PnL: -0.0502 SOL
+[01:26:08] INFO: Cycle #737 | Elapsed: 42.2m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:11] INFO: Cycle #738 | Elapsed: 42.3m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:14] INFO: Cycle #739 | Elapsed: 42.3m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:17] INFO: Cycle #740 | Elapsed: 42.4m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:20] INFO: Cycle #741 | Elapsed: 42.4m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:23] INFO: Cycle #742 | Elapsed: 42.5m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:26] INFO: Cycle #743 | Elapsed: 42.5m/60.0m | Slots: 3/3 [GEOM (+4.66%), Jimothy (+0.57%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:44] INFO: Cycle #744 | Elapsed: 42.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (-0.37%)] | Realized PnL: -0.0502 SOL
+[01:26:51] INFO: BREAK-EVEN FLOOR LOCKED: ELON reached +1.98%. Stop floor raised to +0.50% (risk-free).
+[01:26:51] INFO: Cycle #745 | Elapsed: 42.9m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:26:54] INFO: Cycle #746 | Elapsed: 43.0m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:26:57] INFO: Cycle #747 | Elapsed: 43.0m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:27:00] INFO: Cycle #748 | Elapsed: 43.1m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:27:03] INFO: Cycle #749 | Elapsed: 43.2m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:27:06] INFO: Cycle #750 | Elapsed: 43.2m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:27:09] INFO: Cycle #751 | Elapsed: 43.3m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+1.98%)] | Realized PnL: -0.0502 SOL
+[01:27:13] INFO: PARTIAL TP (50%): ELON — Reason: PARTIAL_TP_50_PCT (+9.14% net banked, 50% runner riding) | PnL: +9.14% (+0.0099 SOL)
+[01:27:13] INFO: SLOT UPDATED: ELON — PARTIAL_TP_50_PCT (+9.14% net banked, 50% runner riding) (Sold 50%)
+[01:27:13] INFO: Cycle #752 | Elapsed: 43.3m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+9.14%)] | Realized PnL: -0.0403 SOL
+[01:27:16] INFO: Cycle #753 | Elapsed: 43.4m/60.0m | Slots: 3/3 [GEOM (+2.51%), Jimothy (-0.06%), ELON (+9.14%)] | Realized PnL: -0.0403 SOL
+[01:27:19] INFO: ROTATING OUT (100%): Jimothy — Reason: STAGNATION_TIMEOUT (15m flat, PnL: -0.06%) | PnL: -0.06% (-0.0001 SOL)
+[01:27:19] INFO: SLOT UPDATED: Jimothy — STAGNATION_TIMEOUT (15m flat, PnL: -0.06%) (Sold 100%)
+[01:27:19] INFO: CONSOLIDATION COOLDOWN: Jimothy exited. Enforcing 15m cooldown before re-evaluation.
+[01:27:19] INFO: Cycle #754 | Elapsed: 43.4m/60.0m | Slots: 2/3 [GEOM (+2.51%), ELON (+9.14%)] | Realized PnL: -0.0405 SOL
+[01:27:20] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $4,341,530 | Liq: $193,451 | SM: 6 | Size: 0.216 SOL (~$30)
+[01:27:20] INFO: SLOT FILLED: USDF | Tx: SHADOW_SIM
+[01:27:23] INFO: Cycle #755 | Elapsed: 43.5m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+9.14%), USDF (+0.00%)] | Realized PnL: -0.0405 SOL
+[01:27:26] INFO: Cycle #756 | Elapsed: 43.5m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+9.14%), USDF (+0.00%)] | Realized PnL: -0.0405 SOL
+[01:27:29] INFO: Cycle #757 | Elapsed: 43.6m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+9.14%), USDF (+0.00%)] | Realized PnL: -0.0405 SOL
+[01:27:32] INFO: Cycle #758 | Elapsed: 43.6m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+9.14%), USDF (+0.00%)] | Realized PnL: -0.0405 SOL
+[01:27:35] INFO: BREAK-EVEN FLOOR LOCKED: USDF reached +1.90%. Stop floor raised to +0.50% (risk-free).
+[01:27:35] INFO: Cycle #759 | Elapsed: 43.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:38] INFO: Cycle #760 | Elapsed: 43.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:41] INFO: Cycle #761 | Elapsed: 43.8m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:44] INFO: Cycle #762 | Elapsed: 43.8m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:47] INFO: Cycle #763 | Elapsed: 43.9m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:50] INFO: Cycle #764 | Elapsed: 43.9m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:53] INFO: Cycle #765 | Elapsed: 44.0m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:27:57] INFO: Cycle #766 | Elapsed: 44.1m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:00] INFO: Cycle #767 | Elapsed: 44.1m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:03] INFO: Cycle #768 | Elapsed: 44.2m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:06] INFO: Cycle #769 | Elapsed: 44.2m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:09] INFO: Cycle #770 | Elapsed: 44.3m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:12] INFO: Cycle #771 | Elapsed: 44.3m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:15] INFO: Cycle #772 | Elapsed: 44.4m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:18] INFO: Cycle #773 | Elapsed: 44.4m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:21] INFO: Cycle #774 | Elapsed: 44.5m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:24] INFO: Cycle #775 | Elapsed: 44.5m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:27] INFO: Cycle #776 | Elapsed: 44.6m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:30] INFO: Cycle #777 | Elapsed: 44.6m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:33] INFO: Cycle #778 | Elapsed: 44.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:36] INFO: Cycle #779 | Elapsed: 44.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:39] INFO: Cycle #780 | Elapsed: 44.8m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:42] INFO: Cycle #781 | Elapsed: 44.8m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:45] INFO: Cycle #782 | Elapsed: 44.9m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:48] INFO: Cycle #783 | Elapsed: 44.9m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:51] INFO: Cycle #784 | Elapsed: 45.0m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:54] INFO: Cycle #785 | Elapsed: 45.0m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:28:57] INFO: Cycle #786 | Elapsed: 45.1m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:00] INFO: Cycle #787 | Elapsed: 45.1m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:03] INFO: Cycle #788 | Elapsed: 45.2m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:07] INFO: Cycle #789 | Elapsed: 45.2m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:10] INFO: Cycle #790 | Elapsed: 45.3m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:13] INFO: Cycle #791 | Elapsed: 45.3m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:16] INFO: Cycle #792 | Elapsed: 45.4m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:19] INFO: Cycle #793 | Elapsed: 45.4m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:22] INFO: Cycle #794 | Elapsed: 45.5m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:25] INFO: Cycle #795 | Elapsed: 45.5m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:28] INFO: Cycle #796 | Elapsed: 45.6m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:31] INFO: Cycle #797 | Elapsed: 45.6m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:34] INFO: Cycle #798 | Elapsed: 45.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:37] INFO: Cycle #799 | Elapsed: 45.7m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:40] INFO: Cycle #800 | Elapsed: 45.8m/60.0m | Slots: 3/3 [GEOM (+2.51%), ELON (+10.15%), USDF (+1.90%)] | Realized PnL: -0.0405 SOL
+[01:29:45] INFO: Cycle #801 | Elapsed: 45.9m/60.0m | Slots: 3/3 [GEOM (+2.16%), ELON (+16.78%), USDF (+0.82%)] | Realized PnL: -0.0405 SOL
+[01:29:48] INFO: Cycle #802 | Elapsed: 45.9m/60.0m | Slots: 3/3 [GEOM (+2.16%), ELON (+16.78%), USDF (+0.82%)] | Realized PnL: -0.0405 SOL
+[01:29:51] INFO: Cycle #803 | Elapsed: 46.0m/60.0m | Slots: 3/3 [GEOM (+2.16%), ELON (+16.78%), USDF (+0.82%)] | Realized PnL: -0.0405 SOL
+[01:29:54] INFO: Cycle #804 | Elapsed: 46.0m/60.0m | Slots: 3/3 [GEOM (+2.16%), ELON (+16.78%), USDF (+0.82%)] | Realized PnL: -0.0405 SOL
+[01:29:57] INFO: Cycle #805 | Elapsed: 46.1m/60.0m | Slots: 3/3 [GEOM (+2.16%), ELON (+16.78%), USDF (+0.82%)] | Realized PnL: -0.0405 SOL
+[01:30:00] INFO: Cycle #806 | Elapsed: 46.1m/60.0m | Slots: 3/3 [GEOM (+2.16%), ELON (+16.78%), USDF (+0.82%)] | Realized PnL: -0.0405 SOL
+[01:30:04] INFO: ROTATING OUT (100%): USDF — Reason: BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: -0.88%) | PnL: -0.88% (-0.0019 SOL)
+[01:30:04] INFO: SLOT UPDATED: USDF — BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: -0.88%) (Sold 100%)
+[01:30:04] INFO: CONSOLIDATION COOLDOWN: USDF exited. Enforcing 15m cooldown before re-evaluation.
+[01:30:04] INFO: Cycle #807 | Elapsed: 46.2m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:05] INFO: FRESH CANDIDATE BLOCKED: JEANPHIL — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $3,651 > Buy $3,473)
+[01:30:08] INFO: Cycle #808 | Elapsed: 46.2m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:11] INFO: Cycle #809 | Elapsed: 46.3m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:14] INFO: Cycle #810 | Elapsed: 46.3m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:17] INFO: Cycle #811 | Elapsed: 46.4m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:20] INFO: Cycle #812 | Elapsed: 46.4m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:23] INFO: Cycle #813 | Elapsed: 46.5m/60.0m | Slots: 2/3 [GEOM (+2.16%), ELON (+18.80%)] | Realized PnL: -0.0424 SOL
+[01:30:26] INFO: Cycle #814 | Elapsed: 46.5m/60.0m | Slots: 2/3 [GEOM (+1.30%), ELON (+20.60%)] | Realized PnL: -0.0424 SOL
+[01:30:29] INFO: Cycle #815 | Elapsed: 46.6m/60.0m | Slots: 2/3 [GEOM (+1.30%), ELON (+20.60%)] | Realized PnL: -0.0424 SOL
+[01:30:33] INFO: Cycle #816 | Elapsed: 46.6m/60.0m | Slots: 2/3 [GEOM (+1.30%), ELON (+20.60%)] | Realized PnL: -0.0424 SOL
+[01:30:36] INFO: Cycle #817 | Elapsed: 46.7m/60.0m | Slots: 2/3 [GEOM (+1.30%), ELON (+20.60%)] | Realized PnL: -0.0424 SOL
+[01:30:36] INFO: FRESH CANDIDATE BLOCKED: CLIP — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $1,433 > Buy $1,391)
+[01:30:37] INFO: ENTERING FRESH ROTATION SLOT: baton (Hg5Ja55T...hgpump) | Mcap: $1,772,740 | Liq: $220,354 | SM: 455 | Size: 0.216 SOL (~$30)
+[01:30:37] INFO: SLOT FILLED: baton | Tx: SHADOW_SIM
+[01:30:40] INFO: Cycle #818 | Elapsed: 46.8m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+20.60%), baton (+0.00%)] | Realized PnL: -0.0424 SOL
+[01:30:43] INFO: Cycle #819 | Elapsed: 46.8m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+20.60%), baton (+0.00%)] | Realized PnL: -0.0424 SOL
+[01:30:46] INFO: Cycle #820 | Elapsed: 46.9m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:30:50] INFO: Cycle #821 | Elapsed: 46.9m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:30:53] INFO: Cycle #822 | Elapsed: 47.0m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:30:56] INFO: Cycle #823 | Elapsed: 47.0m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:30:59] INFO: Cycle #824 | Elapsed: 47.1m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:02] INFO: Cycle #825 | Elapsed: 47.1m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:05] INFO: Cycle #826 | Elapsed: 47.2m/60.0m | Slots: 3/3 [GEOM (+1.30%), ELON (+21.81%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:08] INFO: Cycle #827 | Elapsed: 47.2m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:11] INFO: Cycle #828 | Elapsed: 47.3m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:14] INFO: Cycle #829 | Elapsed: 47.3m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:17] INFO: Cycle #830 | Elapsed: 47.4m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:20] INFO: Cycle #831 | Elapsed: 47.4m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:23] INFO: Cycle #832 | Elapsed: 47.5m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:26] INFO: Cycle #833 | Elapsed: 47.5m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+20.36%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:31:30] INFO: Cycle #834 | Elapsed: 47.6m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:33] INFO: Cycle #835 | Elapsed: 47.7m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:36] INFO: Cycle #836 | Elapsed: 47.7m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:39] INFO: Cycle #837 | Elapsed: 47.8m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:42] INFO: Cycle #838 | Elapsed: 47.8m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:45] INFO: Cycle #839 | Elapsed: 47.9m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:48] INFO: Cycle #840 | Elapsed: 47.9m/60.0m | Slots: 3/3 [GEOM (+2.29%), ELON (+18.53%), baton (+0.84%)] | Realized PnL: -0.0424 SOL
+[01:31:52] INFO: Cycle #841 | Elapsed: 48.0m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:31:55] INFO: Cycle #842 | Elapsed: 48.0m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:31:58] INFO: Cycle #843 | Elapsed: 48.1m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:32:01] INFO: Cycle #844 | Elapsed: 48.1m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:32:04] INFO: Cycle #845 | Elapsed: 48.2m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:32:07] INFO: Cycle #846 | Elapsed: 48.2m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:32:10] INFO: Cycle #847 | Elapsed: 48.3m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+19.50%), baton (+0.83%)] | Realized PnL: -0.0424 SOL
+[01:32:14] INFO: Cycle #848 | Elapsed: 48.3m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:17] INFO: Cycle #849 | Elapsed: 48.4m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:20] INFO: Cycle #850 | Elapsed: 48.4m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:23] INFO: Cycle #851 | Elapsed: 48.5m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:26] INFO: Cycle #852 | Elapsed: 48.5m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:29] INFO: Cycle #853 | Elapsed: 48.6m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:32] INFO: Cycle #854 | Elapsed: 48.6m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.51%), baton (+0.36%)] | Realized PnL: -0.0424 SOL
+[01:32:35] INFO: Cycle #855 | Elapsed: 48.7m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:38] INFO: Cycle #856 | Elapsed: 48.7m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:41] INFO: Cycle #857 | Elapsed: 48.8m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:44] INFO: Cycle #858 | Elapsed: 48.8m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:47] INFO: Cycle #859 | Elapsed: 48.9m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:50] INFO: Cycle #860 | Elapsed: 48.9m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:53] INFO: Cycle #861 | Elapsed: 49.0m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+17.41%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:32:57] INFO: Cycle #862 | Elapsed: 49.1m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:00] INFO: Cycle #863 | Elapsed: 49.1m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:03] INFO: Cycle #864 | Elapsed: 49.2m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:06] INFO: Cycle #865 | Elapsed: 49.2m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:09] INFO: Cycle #866 | Elapsed: 49.3m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:12] INFO: Cycle #867 | Elapsed: 49.3m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:15] INFO: Cycle #868 | Elapsed: 49.4m/60.0m | Slots: 3/3 [GEOM (+1.87%), ELON (+18.90%), baton (+1.44%)] | Realized PnL: -0.0424 SOL
+[01:33:19] INFO: Cycle #869 | Elapsed: 49.4m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:22] INFO: Cycle #870 | Elapsed: 49.5m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:25] INFO: Cycle #871 | Elapsed: 49.5m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:28] INFO: Cycle #872 | Elapsed: 49.6m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:31] INFO: Cycle #873 | Elapsed: 49.6m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:34] INFO: Cycle #874 | Elapsed: 49.7m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:37] INFO: Cycle #875 | Elapsed: 49.7m/60.0m | Slots: 3/3 [GEOM (+1.97%), ELON (+19.07%), baton (+1.43%)] | Realized PnL: -0.0424 SOL
+[01:33:41] INFO: Cycle #876 | Elapsed: 49.8m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:33:44] INFO: Cycle #877 | Elapsed: 49.8m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:33:47] INFO: Cycle #878 | Elapsed: 49.9m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:33:50] INFO: Cycle #879 | Elapsed: 49.9m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:33:53] INFO: Cycle #880 | Elapsed: 50.0m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:33:56] INFO: Cycle #881 | Elapsed: 50.0m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:33:59] INFO: Cycle #882 | Elapsed: 50.1m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.86%), baton (+0.75%)] | Realized PnL: -0.0424 SOL
+[01:34:03] INFO: Cycle #883 | Elapsed: 50.1m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:06] INFO: Cycle #884 | Elapsed: 50.2m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:09] INFO: Cycle #885 | Elapsed: 50.2m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:12] INFO: Cycle #886 | Elapsed: 50.3m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:15] INFO: Cycle #887 | Elapsed: 50.3m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:18] INFO: Cycle #888 | Elapsed: 50.4m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:21] INFO: Cycle #889 | Elapsed: 50.5m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:24] INFO: Cycle #890 | Elapsed: 50.5m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:27] INFO: Cycle #891 | Elapsed: 50.6m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:30] INFO: Cycle #892 | Elapsed: 50.6m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:33] INFO: Cycle #893 | Elapsed: 50.7m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:36] INFO: Cycle #894 | Elapsed: 50.7m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:39] INFO: Cycle #895 | Elapsed: 50.8m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:42] INFO: Cycle #896 | Elapsed: 50.8m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+18.98%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:46] INFO: Cycle #897 | Elapsed: 50.9m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:49] INFO: Cycle #898 | Elapsed: 50.9m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:52] INFO: Cycle #899 | Elapsed: 51.0m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:55] INFO: Cycle #900 | Elapsed: 51.0m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:34:58] INFO: Cycle #901 | Elapsed: 51.1m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:35:01] INFO: Cycle #902 | Elapsed: 51.1m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:35:04] INFO: Cycle #903 | Elapsed: 51.2m/60.0m | Slots: 3/3 [GEOM (+1.91%), ELON (+17.89%), baton (+0.78%)] | Realized PnL: -0.0424 SOL
+[01:35:08] INFO: Cycle #904 | Elapsed: 51.2m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:11] INFO: Cycle #905 | Elapsed: 51.3m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:14] INFO: Cycle #906 | Elapsed: 51.3m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:17] INFO: Cycle #907 | Elapsed: 51.4m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:20] INFO: Cycle #908 | Elapsed: 51.4m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:23] INFO: Cycle #909 | Elapsed: 51.5m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:26] INFO: Cycle #910 | Elapsed: 51.5m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+17.69%), baton (+1.67%)] | Realized PnL: -0.0424 SOL
+[01:35:30] INFO: Cycle #911 | Elapsed: 51.6m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:33] INFO: Cycle #912 | Elapsed: 51.7m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:36] INFO: Cycle #913 | Elapsed: 51.7m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:39] INFO: Cycle #914 | Elapsed: 51.8m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:42] INFO: Cycle #915 | Elapsed: 51.8m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:45] INFO: Cycle #916 | Elapsed: 51.9m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:48] INFO: Cycle #917 | Elapsed: 51.9m/60.0m | Slots: 3/3 [GEOM (+1.16%), ELON (+18.48%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:52] INFO: Cycle #918 | Elapsed: 52.0m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:55] INFO: Cycle #919 | Elapsed: 52.0m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:35:58] INFO: Cycle #920 | Elapsed: 52.1m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:36:01] INFO: Cycle #921 | Elapsed: 52.1m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:36:04] INFO: Cycle #922 | Elapsed: 52.2m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:36:07] INFO: Cycle #923 | Elapsed: 52.2m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:36:10] INFO: Cycle #924 | Elapsed: 52.3m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+19.51%), baton (+0.29%)] | Realized PnL: -0.0424 SOL
+[01:36:13] INFO: Cycle #925 | Elapsed: 52.3m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:16] INFO: Cycle #926 | Elapsed: 52.4m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:20] INFO: Cycle #927 | Elapsed: 52.4m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:23] INFO: Cycle #928 | Elapsed: 52.5m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:26] INFO: Cycle #929 | Elapsed: 52.5m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:29] INFO: Cycle #930 | Elapsed: 52.6m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:32] INFO: Cycle #931 | Elapsed: 52.6m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+22.58%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:36:35] INFO: Cycle #932 | Elapsed: 52.7m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:38] INFO: Cycle #933 | Elapsed: 52.7m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:41] INFO: Cycle #934 | Elapsed: 52.8m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:44] INFO: Cycle #935 | Elapsed: 52.8m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:47] INFO: Cycle #936 | Elapsed: 52.9m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:50] INFO: Cycle #937 | Elapsed: 52.9m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:53] INFO: Cycle #938 | Elapsed: 53.0m/60.0m | Slots: 3/3 [GEOM (+2.15%), ELON (+24.30%), baton (+1.00%)] | Realized PnL: -0.0424 SOL
+[01:36:57] INFO: Cycle #939 | Elapsed: 53.1m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:00] INFO: Cycle #940 | Elapsed: 53.1m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:03] INFO: Cycle #941 | Elapsed: 53.2m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:06] INFO: Cycle #942 | Elapsed: 53.2m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:09] INFO: Cycle #943 | Elapsed: 53.3m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:12] INFO: Cycle #944 | Elapsed: 53.3m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:15] INFO: Cycle #945 | Elapsed: 53.4m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.32%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:37:19] INFO: Cycle #946 | Elapsed: 53.4m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:22] INFO: Cycle #947 | Elapsed: 53.5m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:25] INFO: Cycle #948 | Elapsed: 53.5m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:28] INFO: Cycle #949 | Elapsed: 53.6m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:31] INFO: Cycle #950 | Elapsed: 53.6m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:34] INFO: Cycle #951 | Elapsed: 53.7m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:37] INFO: Cycle #952 | Elapsed: 53.7m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+23.96%), baton (+0.86%)] | Realized PnL: -0.0424 SOL
+[01:37:41] INFO: Cycle #953 | Elapsed: 53.8m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:37:44] INFO: Cycle #954 | Elapsed: 53.8m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:37:47] INFO: Cycle #955 | Elapsed: 53.9m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:37:50] INFO: Cycle #956 | Elapsed: 53.9m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:37:53] INFO: Cycle #957 | Elapsed: 54.0m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:37:56] INFO: Cycle #958 | Elapsed: 54.0m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:37:59] INFO: Cycle #959 | Elapsed: 54.1m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.05%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:02] INFO: Cycle #960 | Elapsed: 54.1m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:05] INFO: Cycle #961 | Elapsed: 54.2m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:08] INFO: Cycle #962 | Elapsed: 54.2m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:11] INFO: Cycle #963 | Elapsed: 54.3m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:14] INFO: Cycle #964 | Elapsed: 54.3m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:17] INFO: Cycle #965 | Elapsed: 54.4m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:20] INFO: Cycle #966 | Elapsed: 54.4m/60.0m | Slots: 3/3 [GEOM (+3.05%), ELON (+24.92%), baton (+1.56%)] | Realized PnL: -0.0424 SOL
+[01:38:24] INFO: Cycle #967 | Elapsed: 54.5m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:27] INFO: Cycle #968 | Elapsed: 54.6m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:30] INFO: Cycle #969 | Elapsed: 54.6m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:33] INFO: Cycle #970 | Elapsed: 54.7m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:36] INFO: Cycle #971 | Elapsed: 54.7m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:39] INFO: Cycle #972 | Elapsed: 54.8m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:42] INFO: Cycle #973 | Elapsed: 54.8m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+21.06%), baton (+0.95%)] | Realized PnL: -0.0424 SOL
+[01:38:46] INFO: Cycle #974 | Elapsed: 54.9m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:38:49] INFO: Cycle #975 | Elapsed: 54.9m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:38:52] INFO: Cycle #976 | Elapsed: 55.0m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:38:55] INFO: Cycle #977 | Elapsed: 55.0m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:38:58] INFO: Cycle #978 | Elapsed: 55.1m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:39:01] INFO: Cycle #979 | Elapsed: 55.1m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:39:04] INFO: Cycle #980 | Elapsed: 55.2m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.38%), baton (+0.82%)] | Realized PnL: -0.0424 SOL
+[01:39:08] INFO: Cycle #981 | Elapsed: 55.2m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:11] INFO: Cycle #982 | Elapsed: 55.3m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:14] INFO: Cycle #983 | Elapsed: 55.3m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:17] INFO: Cycle #984 | Elapsed: 55.4m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:20] INFO: Cycle #985 | Elapsed: 55.4m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:23] INFO: Cycle #986 | Elapsed: 55.5m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:26] INFO: Cycle #987 | Elapsed: 55.5m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.26%), baton (+0.89%)] | Realized PnL: -0.0424 SOL
+[01:39:30] INFO: Cycle #988 | Elapsed: 55.6m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:33] INFO: Cycle #989 | Elapsed: 55.6m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:36] INFO: Cycle #990 | Elapsed: 55.7m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:39] INFO: Cycle #991 | Elapsed: 55.7m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:42] INFO: Cycle #992 | Elapsed: 55.8m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:45] INFO: Cycle #993 | Elapsed: 55.9m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:48] INFO: Cycle #994 | Elapsed: 55.9m/60.0m | Slots: 3/3 [GEOM (+3.35%), ELON (+20.15%), baton (+0.80%)] | Realized PnL: -0.0424 SOL
+[01:39:51] INFO: Cycle #995 | Elapsed: 56.0m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:39:55] INFO: Cycle #996 | Elapsed: 56.0m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:39:58] INFO: Cycle #997 | Elapsed: 56.1m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:40:01] INFO: Cycle #998 | Elapsed: 56.1m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:40:04] INFO: Cycle #999 | Elapsed: 56.2m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:40:07] INFO: Cycle #1000 | Elapsed: 56.2m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:40:10] INFO: Cycle #1001 | Elapsed: 56.3m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.99%), baton (+0.76%)] | Realized PnL: -0.0424 SOL
+[01:40:13] INFO: Cycle #1002 | Elapsed: 56.3m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:16] INFO: Cycle #1003 | Elapsed: 56.4m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:19] INFO: Cycle #1004 | Elapsed: 56.4m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:22] INFO: Cycle #1005 | Elapsed: 56.5m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:25] INFO: Cycle #1006 | Elapsed: 56.5m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:28] INFO: Cycle #1007 | Elapsed: 56.6m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:32] INFO: Cycle #1008 | Elapsed: 56.6m/60.0m | Slots: 3/3 [GEOM (+3.40%), ELON (+19.64%), baton (+0.40%)] | Realized PnL: -0.0424 SOL
+[01:40:35] INFO: BREAK-EVEN FLOOR LOCKED: baton reached +1.87%. Stop floor raised to +0.50% (risk-free).
+[01:40:35] INFO: Cycle #1009 | Elapsed: 56.7m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:38] INFO: Cycle #1010 | Elapsed: 56.7m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:41] INFO: Cycle #1011 | Elapsed: 56.8m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:44] INFO: Cycle #1012 | Elapsed: 56.8m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:47] INFO: Cycle #1013 | Elapsed: 56.9m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:50] INFO: Cycle #1014 | Elapsed: 56.9m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:53] INFO: Cycle #1015 | Elapsed: 57.0m/60.0m | Slots: 3/3 [GEOM (+2.48%), ELON (+18.97%), baton (+1.87%)] | Realized PnL: -0.0424 SOL
+[01:40:57] INFO: ROTATING OUT (100%): baton — Reason: BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: 0.14%) | PnL: +0.14% (+0.0003 SOL)
+[01:40:57] INFO: SLOT UPDATED: baton — BREAK_EVEN_EXIT (+0.50% guaranteed floor, PnL: 0.14%) (Sold 100%)
+[01:40:57] INFO: CONSOLIDATION COOLDOWN: baton exited. Enforcing 15m cooldown before re-evaluation.
+[01:40:57] INFO: Cycle #1016 | Elapsed: 57.1m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+18.97%)] | Realized PnL: -0.0421 SOL
+[01:40:58] INFO: FRESH CANDIDATE BLOCKED: pill — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $2,185 > Buy $1,760)
+[01:40:58] INFO: FRESH CANDIDATE BLOCKED: JEANPHIL — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $16,446 > Buy $14,696)
+[01:40:59] INFO: ENTERING FRESH ROTATION SLOT: fomopay (BP4Wic5L...atpump) | Mcap: $451,849 | Liq: $76,866 | SM: 148 | Size: 0.216 SOL (~$30)
+[01:40:59] INFO: SLOT FILLED: fomopay | Tx: SHADOW_SIM
+[01:41:02] INFO: Cycle #1017 | Elapsed: 57.1m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+18.97%), fomopay (+0.00%)] | Realized PnL: -0.0421 SOL
+[01:41:05] INFO: Cycle #1018 | Elapsed: 57.2m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+18.97%), fomopay (+0.00%)] | Realized PnL: -0.0421 SOL
+[01:41:08] INFO: Cycle #1019 | Elapsed: 57.2m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+18.97%), fomopay (+0.00%)] | Realized PnL: -0.0421 SOL
+[01:41:11] INFO: Cycle #1020 | Elapsed: 57.3m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+18.97%), fomopay (+0.00%)] | Realized PnL: -0.0421 SOL
+[01:41:14] INFO: Cycle #1021 | Elapsed: 57.3m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+18.97%), fomopay (+0.00%)] | Realized PnL: -0.0421 SOL
+[01:41:18] INFO: Cycle #1022 | Elapsed: 57.4m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:21] INFO: Cycle #1023 | Elapsed: 57.5m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:24] INFO: Cycle #1024 | Elapsed: 57.5m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:27] INFO: Cycle #1025 | Elapsed: 57.6m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:30] INFO: Cycle #1026 | Elapsed: 57.6m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:33] INFO: Cycle #1027 | Elapsed: 57.7m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:36] INFO: Cycle #1028 | Elapsed: 57.7m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+19.49%), fomopay (-1.31%)] | Realized PnL: -0.0421 SOL
+[01:41:39] INFO: Cycle #1029 | Elapsed: 57.8m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:41:42] INFO: Cycle #1030 | Elapsed: 57.8m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:41:45] INFO: Cycle #1031 | Elapsed: 57.9m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:41:48] INFO: Cycle #1032 | Elapsed: 57.9m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:41:51] INFO: Cycle #1033 | Elapsed: 58.0m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:41:54] INFO: Cycle #1034 | Elapsed: 58.0m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:41:57] INFO: Cycle #1035 | Elapsed: 58.1m/60.0m | Slots: 3/3 [GEOM (+5.16%), ELON (+16.62%), fomopay (-0.22%)] | Realized PnL: -0.0421 SOL
+[01:42:02] INFO: ROTATING OUT (100%): fomopay — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.49%) | PnL: -3.49% (-0.0075 SOL)
+[01:42:02] INFO: SLOT UPDATED: fomopay — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.49%) (Sold 100%)
+[01:42:02] INFO: CONSOLIDATION COOLDOWN: fomopay exited. Enforcing 15m cooldown before re-evaluation.
+[01:42:02] INFO: Cycle #1036 | Elapsed: 58.1m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+17.57%)] | Realized PnL: -0.0496 SOL
+[01:42:03] INFO: FRESH CANDIDATE BLOCKED: CALI — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $10 < 40% of 5m avg)
+[01:42:04] INFO: FRESH CANDIDATE BLOCKED: CLIP — REJECT_MEMEX_SKILL4 (1m Sell Dump: Sell $856 > Buy $747)
+[01:42:07] INFO: Cycle #1037 | Elapsed: 58.2m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+17.57%)] | Realized PnL: -0.0496 SOL
+[01:42:10] INFO: Cycle #1038 | Elapsed: 58.3m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+17.57%)] | Realized PnL: -0.0496 SOL
+[01:42:13] INFO: Cycle #1039 | Elapsed: 58.3m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+17.57%)] | Realized PnL: -0.0496 SOL
+[01:42:16] INFO: Cycle #1040 | Elapsed: 58.4m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+17.57%)] | Realized PnL: -0.0496 SOL
+[01:42:19] INFO: Cycle #1041 | Elapsed: 58.4m/60.0m | Slots: 2/3 [GEOM (+5.16%), ELON (+17.57%)] | Realized PnL: -0.0496 SOL
+[01:42:25] INFO: ROTATING OUT (100%): ELON — Reason: RUNNER_TRAILING_EXIT (Peak: 0.001208, Pullback: -12.5%, PnL: +9.36%) | PnL: +9.36% (+0.0202 SOL)
+[01:42:25] INFO: SLOT UPDATED: ELON — RUNNER_TRAILING_EXIT (Peak: 0.001208, Pullback: -12.5%, PnL: +9.36%) (Sold 100%)
+[01:42:25] INFO: CONSOLIDATION COOLDOWN: ELON exited. Enforcing 15m cooldown before re-evaluation.
+[01:42:30] INFO: Cycle #1042 | Elapsed: 58.6m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:42:41] INFO: Cycle #1043 | Elapsed: 58.8m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:42:44] INFO: FRESH CANDIDATE BLOCKED: Stamp — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $1,318 > Buy $1,105)
+[01:42:47] INFO: Cycle #1044 | Elapsed: 58.9m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:42:50] INFO: Cycle #1045 | Elapsed: 58.9m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:42:53] INFO: Cycle #1046 | Elapsed: 59.0m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:42:56] INFO: Cycle #1047 | Elapsed: 59.0m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:42:59] INFO: Cycle #1048 | Elapsed: 59.1m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:02] INFO: Cycle #1049 | Elapsed: 59.1m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:06] INFO: Cycle #1050 | Elapsed: 59.2m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:09] INFO: Cycle #1051 | Elapsed: 59.3m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:12] INFO: Cycle #1052 | Elapsed: 59.3m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:15] INFO: Cycle #1053 | Elapsed: 59.4m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:18] INFO: Cycle #1054 | Elapsed: 59.4m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:21] INFO: Cycle #1055 | Elapsed: 59.5m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:24] INFO: Cycle #1056 | Elapsed: 59.5m/60.0m | Slots: 1/3 [GEOM (+5.16%)] | Realized PnL: -0.0294 SOL
+[01:43:27] INFO: Cycle #1057 | Elapsed: 59.6m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:30] INFO: Cycle #1058 | Elapsed: 59.6m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:33] INFO: Cycle #1059 | Elapsed: 59.7m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:36] INFO: Cycle #1060 | Elapsed: 59.7m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:39] INFO: Cycle #1061 | Elapsed: 59.8m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:42] INFO: Cycle #1062 | Elapsed: 59.8m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:45] INFO: Cycle #1063 | Elapsed: 59.9m/60.0m | Slots: 1/3 [GEOM (+4.18%)] | Realized PnL: -0.0294 SOL
+[01:43:56] INFO: Cycle #1064 | Elapsed: 60.0m/60.0m | Slots: 1/3 [GEOM (+4.45%)] | Realized PnL: -0.0294 SOL
+[01:44:01] INFO: 1-Hour target duration (3600s) reached.
+[01:44:02] INFO: ================================================================
+[01:44:02] INFO:     GMGN $100 MICRO-SCALP WAVE RIDER SESSION AUDIT COMPLETE
+[01:44:02] INFO: ================================================================
+[01:44:02] INFO:   Total Session Duration: 60.1 minutes
+[01:44:02] INFO:   Total Screening Cycles: 1064
+[01:44:02] INFO:   Tokens Scanned on-Chain: 2836
+[01:44:02] INFO:   Total Positions Opened: 11
+[01:44:02] INFO:   Total Trades Closed: 16
+[01:44:02] INFO:   Winning Trades: 8 | Losing Trades: 8 | Win Rate: 50.0%
+[01:44:02] INFO:   Total SOL Gained: +0.042173 SOL
+[01:44:02] INFO:   Total SOL Lost: -0.071560 SOL
+[01:44:02] INFO:   Realized PnL: -0.029387 SOL
+[01:44:02] INFO:   Unrealized PnL: +0.009612 SOL
+[01:44:02] INFO:   Net Portfolio PnL: -0.019775 SOL
+[01:44:02] INFO:   Active Slots at Close: 1/3
+[01:44:02] INFO:   Session Log File: /home/liora/Documents/prjs/tr--kida--bot--config/aitrader/outputs/rotation_session_1h.log
+[01:44:02] INFO:   Audit State File: /home/liora/Documents/prjs/tr--kida--bot--config/aitrader/outputs/session_audit.json
+[01:44:02] INFO: ================================================================

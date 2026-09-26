@@ -1,0 +1,608 @@
+[01:47:11] INFO: ================================================================
+[01:47:11] INFO:   GMGN $100 MICRO-SCALP WAVE RIDER ENGINE (SHADOW MODE)
+[01:47:11] INFO:   Target Chain: SOL | Concurrent Slots: 3
+[01:47:11] INFO:   Fixed Position Size: 0.216 SOL (~$30 USD) per slot
+[01:47:11] INFO:   Micro-Monitor Cadence: 3.0s (Fast In-Memory Tick)
+[01:47:11] INFO:   Take-Profit Target: +3.0% | Base Stop-Loss: -2.8%
+[01:47:11] INFO:   House Money Re-Entry Stop: -2.0% (Tightened Protection)
+[01:47:11] INFO:   Liquidity Moat: >= $80,000 Pool Depth | >= $150,000 Mcap
+[01:47:11] INFO: ================================================================
+[01:47:11] INFO: Cycle #  1 | Elapsed:  0.0m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:12] INFO: FRESH CANDIDATE BLOCKED: pill — REJECT_MEMEX_SKILL4 (1m Sell Dump: Sell $259 > Buy $0)
+[01:47:15] INFO: Cycle #  2 | Elapsed:  0.1m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:18] INFO: Cycle #  3 | Elapsed:  0.1m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:21] INFO: Cycle #  4 | Elapsed:  0.2m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:24] INFO: Cycle #  5 | Elapsed:  0.2m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:27] INFO: Cycle #  6 | Elapsed:  0.3m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:30] INFO: Cycle #  7 | Elapsed:  0.3m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:33] INFO: Cycle #  8 | Elapsed:  0.4m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:36] INFO: Cycle #  9 | Elapsed:  0.4m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:39] INFO: Cycle # 10 | Elapsed:  0.5m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:42] INFO: Cycle # 11 | Elapsed:  0.5m/60.0m | Slots: 1/3 [GEOM (+5.25%)] | Realized PnL: +0.0000 SOL
+[01:47:43] INFO: FRESH CANDIDATE BLOCKED: Stamp — REJECT_MEMEX_SKILL4 (1m Sell Dump: Sell $1,339 > Buy $1,242)
+[01:47:44] INFO: ENTERING FRESH ROTATION SLOT: CALI (8k4sBtEe...k5PbAA) | Mcap: $1,323,930 | Liq: $120,241 | SM: 82 | Size: 0.216 SOL (~$30)
+[01:47:46] INFO: SLOT FILLED: CALI | Tx: SHADOW_SIM
+[01:48:05] INFO: Cycle # 12 | Elapsed:  0.8m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:08] INFO: Cycle # 13 | Elapsed:  0.9m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:11] INFO: Cycle # 14 | Elapsed:  1.0m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:14] INFO: Cycle # 15 | Elapsed:  1.0m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:17] INFO: Cycle # 16 | Elapsed:  1.1m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:20] INFO: Cycle # 17 | Elapsed:  1.1m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:23] INFO: Cycle # 18 | Elapsed:  1.2m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.09%)] | Realized PnL: +0.0000 SOL
+[01:48:26] INFO: Cycle # 19 | Elapsed:  1.3m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:29] INFO: Cycle # 20 | Elapsed:  1.3m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:32] INFO: Cycle # 21 | Elapsed:  1.4m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:35] INFO: Cycle # 22 | Elapsed:  1.4m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:38] INFO: Cycle # 23 | Elapsed:  1.5m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:41] INFO: Cycle # 24 | Elapsed:  1.5m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:44] INFO: Cycle # 25 | Elapsed:  1.6m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.12%)] | Realized PnL: +0.0000 SOL
+[01:48:45] INFO: FRESH CANDIDATE BLOCKED: JEANPHIL — REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell $24,364 > Buy $23,322)
+[01:48:49] INFO: Cycle # 26 | Elapsed:  1.6m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:48:52] INFO: Cycle # 27 | Elapsed:  1.7m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:48:55] INFO: Cycle # 28 | Elapsed:  1.7m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:48:58] INFO: Cycle # 29 | Elapsed:  1.8m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:49:01] INFO: Cycle # 30 | Elapsed:  1.8m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:49:04] INFO: Cycle # 31 | Elapsed:  1.9m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:49:07] INFO: Cycle # 32 | Elapsed:  1.9m/60.0m | Slots: 2/3 [GEOM (+4.06%), CALI (-1.98%)] | Realized PnL: +0.0000 SOL
+[01:49:11] INFO: Cycle # 33 | Elapsed:  2.0m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:14] INFO: Cycle # 34 | Elapsed:  2.0m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:17] INFO: Cycle # 35 | Elapsed:  2.1m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:20] INFO: Cycle # 36 | Elapsed:  2.1m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:23] INFO: Cycle # 37 | Elapsed:  2.2m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:26] INFO: Cycle # 38 | Elapsed:  2.2m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:29] INFO: Cycle # 39 | Elapsed:  2.3m/60.0m | Slots: 2/3 [GEOM (+4.93%), CALI (-0.62%)] | Realized PnL: +0.0000 SOL
+[01:49:32] INFO: Cycle # 40 | Elapsed:  2.4m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:35] INFO: Cycle # 41 | Elapsed:  2.4m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:38] INFO: Cycle # 42 | Elapsed:  2.5m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:41] INFO: Cycle # 43 | Elapsed:  2.5m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:44] INFO: Cycle # 44 | Elapsed:  2.6m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:47] INFO: Cycle # 45 | Elapsed:  2.6m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:50] INFO: Cycle # 46 | Elapsed:  2.7m/60.0m | Slots: 2/3 [GEOM (+5.07%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:54] INFO: Cycle # 47 | Elapsed:  2.7m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:49:57] INFO: Cycle # 48 | Elapsed:  2.8m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:50:00] INFO: Cycle # 49 | Elapsed:  2.8m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:50:03] INFO: Cycle # 50 | Elapsed:  2.9m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:50:06] INFO: Cycle # 51 | Elapsed:  2.9m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:50:09] INFO: Cycle # 52 | Elapsed:  3.0m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:50:12] INFO: Cycle # 53 | Elapsed:  3.0m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (+0.51%)] | Realized PnL: +0.0000 SOL
+[01:50:16] INFO: Cycle # 54 | Elapsed:  3.1m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (-0.69%)] | Realized PnL: +0.0000 SOL
+[01:50:19] INFO: Cycle # 55 | Elapsed:  3.1m/60.0m | Slots: 2/3 [GEOM (+5.33%), CALI (-0.69%)] | Realized PnL: +0.0000 SOL
+[01:50:20] INFO: FRESH CANDIDATE BLOCKED: ELON — REJECT_MEMEX_SKILL4 (Volume Divergence: 1m Buy $59 < 40% of 5m avg)
+[01:50:20] INFO: ENTERING FRESH ROTATION SLOT: USDF (DRMnFyek...Gjpump) | Mcap: $4,104,380 | Liq: $190,074 | SM: 6 | Size: 0.216 SOL (~$30)
+[01:50:20] INFO: SLOT FILLED: USDF | Tx: SHADOW_SIM
+[01:50:23] INFO: Cycle # 56 | Elapsed:  3.2m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.69%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:26] INFO: Cycle # 57 | Elapsed:  3.3m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.69%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:29] INFO: Cycle # 58 | Elapsed:  3.3m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.69%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:32] INFO: Cycle # 59 | Elapsed:  3.4m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.69%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:36] INFO: Cycle # 60 | Elapsed:  3.4m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:39] INFO: Cycle # 61 | Elapsed:  3.5m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:42] INFO: Cycle # 62 | Elapsed:  3.5m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:45] INFO: Cycle # 63 | Elapsed:  3.6m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:48] INFO: Cycle # 64 | Elapsed:  3.6m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:51] INFO: Cycle # 65 | Elapsed:  3.7m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:54] INFO: Cycle # 66 | Elapsed:  3.7m/60.0m | Slots: 3/3 [GEOM (+5.33%), CALI (-0.88%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:50:58] INFO: Cycle # 67 | Elapsed:  3.8m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:01] INFO: Cycle # 68 | Elapsed:  3.8m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:04] INFO: Cycle # 69 | Elapsed:  3.9m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:07] INFO: Cycle # 70 | Elapsed:  3.9m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:10] INFO: Cycle # 71 | Elapsed:  4.0m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:13] INFO: Cycle # 72 | Elapsed:  4.0m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:16] INFO: Cycle # 73 | Elapsed:  4.1m/60.0m | Slots: 3/3 [GEOM (+5.45%), CALI (+0.05%), USDF (+0.00%)] | Realized PnL: +0.0000 SOL
+[01:51:20] INFO: Cycle # 74 | Elapsed:  4.1m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:23] INFO: Cycle # 75 | Elapsed:  4.2m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:26] INFO: Cycle # 76 | Elapsed:  4.2m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:29] INFO: Cycle # 77 | Elapsed:  4.3m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:32] INFO: Cycle # 78 | Elapsed:  4.3m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:35] INFO: Cycle # 79 | Elapsed:  4.4m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:38] INFO: Cycle # 80 | Elapsed:  4.5m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (+0.05%), USDF (-0.13%)] | Realized PnL: +0.0000 SOL
+[01:51:42] INFO: Cycle # 81 | Elapsed:  4.5m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:51:45] INFO: Cycle # 82 | Elapsed:  4.6m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:51:48] INFO: Cycle # 83 | Elapsed:  4.6m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:51:51] INFO: Cycle # 84 | Elapsed:  4.7m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:51:54] INFO: Cycle # 85 | Elapsed:  4.7m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:51:57] INFO: Cycle # 86 | Elapsed:  4.8m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:00] INFO: Cycle # 87 | Elapsed:  4.8m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.39%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:03] INFO: Cycle # 88 | Elapsed:  4.9m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:06] INFO: Cycle # 89 | Elapsed:  4.9m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:09] INFO: Cycle # 90 | Elapsed:  5.0m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:12] INFO: Cycle # 91 | Elapsed:  5.0m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:15] INFO: Cycle # 92 | Elapsed:  5.1m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:18] INFO: Cycle # 93 | Elapsed:  5.1m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:21] INFO: Cycle # 94 | Elapsed:  5.2m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:25] INFO: Cycle # 95 | Elapsed:  5.2m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:28] INFO: Cycle # 96 | Elapsed:  5.3m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:31] INFO: Cycle # 97 | Elapsed:  5.3m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:34] INFO: Cycle # 98 | Elapsed:  5.4m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:37] INFO: Cycle # 99 | Elapsed:  5.4m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:40] INFO: Cycle #100 | Elapsed:  5.5m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:43] INFO: Cycle #101 | Elapsed:  5.5m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-1.54%), USDF (+0.63%)] | Realized PnL: +0.0000 SOL
+[01:52:47] INFO: Cycle #102 | Elapsed:  5.6m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:52:50] INFO: Cycle #103 | Elapsed:  5.7m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:52:53] INFO: Cycle #104 | Elapsed:  5.7m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:52:56] INFO: Cycle #105 | Elapsed:  5.8m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:52:59] INFO: Cycle #106 | Elapsed:  5.8m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:53:02] INFO: Cycle #107 | Elapsed:  5.9m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:53:05] INFO: Cycle #108 | Elapsed:  5.9m/60.0m | Slots: 3/3 [GEOM (+4.35%), CALI (-0.33%), USDF (+0.01%)] | Realized PnL: +0.0000 SOL
+[01:53:10] INFO: Cycle #109 | Elapsed:  6.0m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.33%), USDF (+0.75%)] | Realized PnL: +0.0000 SOL
+[01:53:13] INFO: Cycle #110 | Elapsed:  6.0m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.33%), USDF (+0.75%)] | Realized PnL: +0.0000 SOL
+[01:53:16] INFO: Cycle #111 | Elapsed:  6.1m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.33%), USDF (+0.75%)] | Realized PnL: +0.0000 SOL
+[01:53:19] INFO: Cycle #112 | Elapsed:  6.1m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.33%), USDF (+0.75%)] | Realized PnL: +0.0000 SOL
+[01:53:22] INFO: Cycle #113 | Elapsed:  6.2m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.33%), USDF (+0.75%)] | Realized PnL: +0.0000 SOL
+[01:53:25] INFO: Cycle #114 | Elapsed:  6.2m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.33%), USDF (+0.75%)] | Realized PnL: +0.0000 SOL
+[01:53:29] INFO: Cycle #115 | Elapsed:  6.3m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:32] INFO: Cycle #116 | Elapsed:  6.3m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:35] INFO: Cycle #117 | Elapsed:  6.4m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:38] INFO: Cycle #118 | Elapsed:  6.4m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:41] INFO: Cycle #119 | Elapsed:  6.5m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:44] INFO: Cycle #120 | Elapsed:  6.5m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:47] INFO: Cycle #121 | Elapsed:  6.6m/60.0m | Slots: 3/3 [GEOM (+4.17%), CALI (-0.23%), USDF (+0.88%)] | Realized PnL: +0.0000 SOL
+[01:53:57] INFO: Cycle #122 | Elapsed:  6.7m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:08] INFO: Cycle #123 | Elapsed:  6.9m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:13] INFO: Cycle #124 | Elapsed:  7.0m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:16] INFO: Cycle #125 | Elapsed:  7.1m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:19] INFO: Cycle #126 | Elapsed:  7.1m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:22] INFO: Cycle #127 | Elapsed:  7.2m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:25] INFO: Cycle #128 | Elapsed:  7.2m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:28] INFO: Cycle #129 | Elapsed:  7.3m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:31] INFO: Cycle #130 | Elapsed:  7.3m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-0.23%), USDF (-0.18%)] | Realized PnL: +0.0000 SOL
+[01:54:34] INFO: Cycle #131 | Elapsed:  7.4m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:37] INFO: Cycle #132 | Elapsed:  7.4m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:40] INFO: Cycle #133 | Elapsed:  7.5m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:43] INFO: Cycle #134 | Elapsed:  7.5m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:46] INFO: Cycle #135 | Elapsed:  7.6m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:49] INFO: Cycle #136 | Elapsed:  7.6m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:52] INFO: Cycle #137 | Elapsed:  7.7m/60.0m | Slots: 3/3 [GEOM (+5.07%), CALI (-2.54%), USDF (+1.23%)] | Realized PnL: +0.0000 SOL
+[01:54:56] INFO: ROTATING OUT (100%): CALI — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.64%) | PnL: -3.64% (-0.0079 SOL)
+[01:54:56] INFO: SLOT UPDATED: CALI — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.64%) (Sold 100%)
+[01:54:56] INFO: CONSOLIDATION COOLDOWN: CALI exited. Enforcing 15m cooldown before re-evaluation.
+[01:54:56] INFO: Cycle #138 | Elapsed:  7.8m/60.0m | Slots: 2/3 [GEOM (+5.07%), USDF (+1.28%)] | Realized PnL: -0.0079 SOL
+[01:54:57] INFO: ENTERING FRESH ROTATION SLOT: baton (Hg5Ja55T...hgpump) | Mcap: $1,743,010 | Liq: $218,745 | SM: 455 | Size: 0.216 SOL (~$30)
+[01:54:57] INFO: SLOT FILLED: baton | Tx: SHADOW_SIM
+[01:55:00] INFO: Cycle #139 | Elapsed:  7.8m/60.0m | Slots: 3/3 [GEOM (+5.07%), USDF (+1.28%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:03] INFO: Cycle #140 | Elapsed:  7.9m/60.0m | Slots: 3/3 [GEOM (+5.07%), USDF (+1.28%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:06] INFO: Cycle #141 | Elapsed:  7.9m/60.0m | Slots: 3/3 [GEOM (+5.07%), USDF (+1.28%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:09] INFO: Cycle #142 | Elapsed:  8.0m/60.0m | Slots: 3/3 [GEOM (+5.07%), USDF (+1.28%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:12] INFO: Cycle #143 | Elapsed:  8.0m/60.0m | Slots: 3/3 [GEOM (+5.07%), USDF (+1.28%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:15] INFO: Cycle #144 | Elapsed:  8.1m/60.0m | Slots: 3/3 [GEOM (+5.07%), USDF (+1.28%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:19] INFO: Cycle #145 | Elapsed:  8.1m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:22] INFO: Cycle #146 | Elapsed:  8.2m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:25] INFO: Cycle #147 | Elapsed:  8.2m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:28] INFO: Cycle #148 | Elapsed:  8.3m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:31] INFO: Cycle #149 | Elapsed:  8.3m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:34] INFO: Cycle #150 | Elapsed:  8.4m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:37] INFO: Cycle #151 | Elapsed:  8.4m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.00%)] | Realized PnL: -0.0079 SOL
+[01:55:41] INFO: Cycle #152 | Elapsed:  8.5m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:55:44] INFO: Cycle #153 | Elapsed:  8.5m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:55:47] INFO: Cycle #154 | Elapsed:  8.6m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:55:50] INFO: Cycle #155 | Elapsed:  8.6m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:55:53] INFO: Cycle #156 | Elapsed:  8.7m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:55:56] INFO: Cycle #157 | Elapsed:  8.7m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:55:59] INFO: Cycle #158 | Elapsed:  8.8m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (+0.03%)] | Realized PnL: -0.0079 SOL
+[01:56:03] INFO: Cycle #159 | Elapsed:  8.9m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:06] INFO: Cycle #160 | Elapsed:  8.9m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:09] INFO: Cycle #161 | Elapsed:  9.0m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:12] INFO: Cycle #162 | Elapsed:  9.0m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:15] INFO: Cycle #163 | Elapsed:  9.1m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:18] INFO: Cycle #164 | Elapsed:  9.1m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:21] INFO: Cycle #165 | Elapsed:  9.2m/60.0m | Slots: 3/3 [GEOM (+5.51%), USDF (+0.30%), baton (-0.98%)] | Realized PnL: -0.0079 SOL
+[01:56:25] INFO: Cycle #166 | Elapsed:  9.2m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:28] INFO: Cycle #167 | Elapsed:  9.3m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:31] INFO: Cycle #168 | Elapsed:  9.3m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:34] INFO: Cycle #169 | Elapsed:  9.4m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:37] INFO: Cycle #170 | Elapsed:  9.4m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:40] INFO: Cycle #171 | Elapsed:  9.5m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:43] INFO: Cycle #172 | Elapsed:  9.5m/60.0m | Slots: 3/3 [GEOM (+4.57%), USDF (+1.17%), baton (-0.67%)] | Realized PnL: -0.0079 SOL
+[01:56:47] INFO: Cycle #173 | Elapsed:  9.6m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:56:50] INFO: Cycle #174 | Elapsed:  9.6m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:56:53] INFO: Cycle #175 | Elapsed:  9.7m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:56:56] INFO: Cycle #176 | Elapsed:  9.7m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:56:59] INFO: Cycle #177 | Elapsed:  9.8m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:57:02] INFO: Cycle #178 | Elapsed:  9.8m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:57:05] INFO: Cycle #179 | Elapsed:  9.9m/60.0m | Slots: 3/3 [GEOM (+5.65%), USDF (+1.26%), baton (-0.49%)] | Realized PnL: -0.0079 SOL
+[01:57:08] INFO: Cycle #180 | Elapsed: 10.0m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:11] INFO: Cycle #181 | Elapsed: 10.0m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:14] INFO: Cycle #182 | Elapsed: 10.1m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:17] INFO: Cycle #183 | Elapsed: 10.1m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:20] INFO: Cycle #184 | Elapsed: 10.2m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:23] INFO: Cycle #185 | Elapsed: 10.2m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:26] INFO: Cycle #186 | Elapsed: 10.3m/60.0m | Slots: 3/3 [GEOM (+6.01%), USDF (+1.35%), baton (-0.96%)] | Realized PnL: -0.0079 SOL
+[01:57:30] INFO: Cycle #187 | Elapsed: 10.3m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:33] INFO: Cycle #188 | Elapsed: 10.4m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:36] INFO: Cycle #189 | Elapsed: 10.4m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:39] INFO: Cycle #190 | Elapsed: 10.5m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:42] INFO: Cycle #191 | Elapsed: 10.5m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:45] INFO: Cycle #192 | Elapsed: 10.6m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:48] INFO: Cycle #193 | Elapsed: 10.6m/60.0m | Slots: 3/3 [GEOM (+6.19%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:52] INFO: Cycle #194 | Elapsed: 10.7m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:55] INFO: Cycle #195 | Elapsed: 10.7m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:57:58] INFO: Cycle #196 | Elapsed: 10.8m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:58:01] INFO: Cycle #197 | Elapsed: 10.8m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:58:04] INFO: Cycle #198 | Elapsed: 10.9m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:58:07] INFO: Cycle #199 | Elapsed: 10.9m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:58:10] INFO: Cycle #200 | Elapsed: 11.0m/60.0m | Slots: 3/3 [GEOM (+6.22%), USDF (+1.35%), baton (-1.41%)] | Realized PnL: -0.0079 SOL
+[01:58:14] INFO: BREAK-EVEN FLOOR LOCKED: USDF reached +1.81%. Stop floor raised to +0.50% (risk-free).
+[01:58:14] INFO: ROTATING OUT (100%): baton — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -8.11%) | PnL: -8.11% (-0.0175 SOL)
+[01:58:14] INFO: SLOT UPDATED: baton — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -8.11%) (Sold 100%)
+[01:58:14] INFO: CONSOLIDATION COOLDOWN: baton exited. Enforcing 15m cooldown before re-evaluation.
+[01:58:14] INFO: Cycle #201 | Elapsed: 11.1m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:17] INFO: Cycle #202 | Elapsed: 11.1m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:20] INFO: Cycle #203 | Elapsed: 11.2m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:23] INFO: Cycle #204 | Elapsed: 11.2m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:26] INFO: Cycle #205 | Elapsed: 11.3m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:29] INFO: Cycle #206 | Elapsed: 11.3m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:32] INFO: Cycle #207 | Elapsed: 11.4m/60.0m | Slots: 2/3 [GEOM (+6.21%), USDF (+1.81%)] | Realized PnL: -0.0254 SOL
+[01:58:36] INFO: Cycle #208 | Elapsed: 11.4m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:39] INFO: Cycle #209 | Elapsed: 11.5m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:42] INFO: Cycle #210 | Elapsed: 11.5m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:45] INFO: Cycle #211 | Elapsed: 11.6m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:48] INFO: Cycle #212 | Elapsed: 11.6m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:51] INFO: Cycle #213 | Elapsed: 11.7m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:54] INFO: Cycle #214 | Elapsed: 11.7m/60.0m | Slots: 2/3 [GEOM (+6.24%), USDF (+1.04%)] | Realized PnL: -0.0254 SOL
+[01:58:59] INFO: Cycle #215 | Elapsed: 11.8m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:02] INFO: Cycle #216 | Elapsed: 11.9m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:05] INFO: Cycle #217 | Elapsed: 11.9m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:08] INFO: Cycle #218 | Elapsed: 12.0m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:11] INFO: Cycle #219 | Elapsed: 12.0m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:14] INFO: Cycle #220 | Elapsed: 12.1m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:17] INFO: Cycle #221 | Elapsed: 12.1m/60.0m | Slots: 2/3 [GEOM (+5.98%), USDF (+0.82%)] | Realized PnL: -0.0254 SOL
+[01:59:18] INFO: ENTERING FRESH ROTATION SLOT: CLIP (9DdHxVe1...t59FwD) | Mcap: $732,842 | Liq: $96,794 | SM: 145 | Size: 0.216 SOL (~$30)
+[01:59:19] INFO: SLOT FILLED: CLIP | Tx: SHADOW_SIM
+[01:59:22] INFO: Cycle #222 | Elapsed: 12.2m/60.0m | Slots: 3/3 [GEOM (+6.00%), USDF (+0.68%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[01:59:25] INFO: Cycle #223 | Elapsed: 12.2m/60.0m | Slots: 3/3 [GEOM (+6.00%), USDF (+0.68%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[01:59:28] INFO: Cycle #224 | Elapsed: 12.3m/60.0m | Slots: 3/3 [GEOM (+6.00%), USDF (+0.68%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[01:59:31] INFO: Cycle #225 | Elapsed: 12.3m/60.0m | Slots: 3/3 [GEOM (+6.00%), USDF (+0.68%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[01:59:34] INFO: Cycle #226 | Elapsed: 12.4m/60.0m | Slots: 3/3 [GEOM (+6.00%), USDF (+0.68%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[01:59:37] INFO: Cycle #227 | Elapsed: 12.4m/60.0m | Slots: 3/3 [GEOM (+6.00%), USDF (+0.68%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[01:59:41] INFO: Cycle #228 | Elapsed: 12.5m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[01:59:44] INFO: Cycle #229 | Elapsed: 12.5m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[01:59:47] INFO: Cycle #230 | Elapsed: 12.6m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[01:59:50] INFO: Cycle #231 | Elapsed: 12.6m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[01:59:53] INFO: Cycle #232 | Elapsed: 12.7m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[01:59:56] INFO: Cycle #233 | Elapsed: 12.8m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[01:59:59] INFO: Cycle #234 | Elapsed: 12.8m/60.0m | Slots: 3/3 [GEOM (+4.60%), USDF (+1.69%), CLIP (-2.15%)] | Realized PnL: -0.0254 SOL
+[02:00:03] INFO: Cycle #235 | Elapsed: 12.9m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:06] INFO: Cycle #236 | Elapsed: 12.9m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:09] INFO: Cycle #237 | Elapsed: 13.0m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:12] INFO: Cycle #238 | Elapsed: 13.0m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:15] INFO: Cycle #239 | Elapsed: 13.1m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:18] INFO: Cycle #240 | Elapsed: 13.1m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:21] INFO: Cycle #241 | Elapsed: 13.2m/60.0m | Slots: 3/3 [GEOM (+4.62%), USDF (+0.71%), CLIP (+0.00%)] | Realized PnL: -0.0254 SOL
+[02:00:25] INFO: BREAK-EVEN FLOOR LOCKED: CLIP reached +2.51%. Stop floor raised to +0.50% (risk-free).
+[02:00:25] INFO: Cycle #242 | Elapsed: 13.2m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:28] INFO: Cycle #243 | Elapsed: 13.3m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:31] INFO: Cycle #244 | Elapsed: 13.3m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:34] INFO: Cycle #245 | Elapsed: 13.4m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:37] INFO: Cycle #246 | Elapsed: 13.4m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:40] INFO: Cycle #247 | Elapsed: 13.5m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:43] INFO: Cycle #248 | Elapsed: 13.5m/60.0m | Slots: 3/3 [GEOM (+4.61%), USDF (+0.71%), CLIP (+2.51%)] | Realized PnL: -0.0254 SOL
+[02:00:47] INFO: Cycle #249 | Elapsed: 13.6m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:00:50] INFO: Cycle #250 | Elapsed: 13.7m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:00:53] INFO: Cycle #251 | Elapsed: 13.7m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:00:56] INFO: Cycle #252 | Elapsed: 13.8m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:00:59] INFO: Cycle #253 | Elapsed: 13.8m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:01:02] INFO: Cycle #254 | Elapsed: 13.9m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:01:05] INFO: Cycle #255 | Elapsed: 13.9m/60.0m | Slots: 3/3 [GEOM (+4.42%), USDF (+0.58%), CLIP (+1.79%)] | Realized PnL: -0.0254 SOL
+[02:01:09] INFO: PARTIAL TP (50%): CLIP — Reason: PARTIAL_TP_50_PCT (+3.64% net banked, 50% runner riding) | PnL: +3.64% (+0.0039 SOL)
+[02:01:09] INFO: SLOT UPDATED: CLIP — PARTIAL_TP_50_PCT (+3.64% net banked, 50% runner riding) (Sold 50%)
+[02:01:09] INFO: Cycle #256 | Elapsed: 14.0m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:12] INFO: Cycle #257 | Elapsed: 14.0m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:15] INFO: Cycle #258 | Elapsed: 14.1m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:18] INFO: Cycle #259 | Elapsed: 14.1m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:21] INFO: Cycle #260 | Elapsed: 14.2m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:24] INFO: Cycle #261 | Elapsed: 14.2m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:27] INFO: Cycle #262 | Elapsed: 14.3m/60.0m | Slots: 3/3 [GEOM (+4.49%), USDF (+0.58%), CLIP (+3.64%)] | Realized PnL: -0.0214 SOL
+[02:01:31] INFO: Cycle #263 | Elapsed: 14.3m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:34] INFO: Cycle #264 | Elapsed: 14.4m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:37] INFO: Cycle #265 | Elapsed: 14.4m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:40] INFO: Cycle #266 | Elapsed: 14.5m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:43] INFO: Cycle #267 | Elapsed: 14.5m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:46] INFO: Cycle #268 | Elapsed: 14.6m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:49] INFO: Cycle #269 | Elapsed: 14.6m/60.0m | Slots: 3/3 [GEOM (+4.43%), USDF (+0.58%), CLIP (+2.43%)] | Realized PnL: -0.0214 SOL
+[02:01:52] INFO: Cycle #270 | Elapsed: 14.7m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:01:55] INFO: Cycle #271 | Elapsed: 14.7m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:01:58] INFO: Cycle #272 | Elapsed: 14.8m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:02:01] INFO: Cycle #273 | Elapsed: 14.8m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:02:04] INFO: Cycle #274 | Elapsed: 14.9m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:02:07] INFO: Cycle #275 | Elapsed: 14.9m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:02:10] INFO: Cycle #276 | Elapsed: 15.0m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+1.65%), CLIP (+3.37%)] | Realized PnL: -0.0214 SOL
+[02:02:14] INFO: Cycle #277 | Elapsed: 15.1m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:17] INFO: Cycle #278 | Elapsed: 15.1m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:20] INFO: Cycle #279 | Elapsed: 15.2m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:23] INFO: Cycle #280 | Elapsed: 15.2m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:26] INFO: Cycle #281 | Elapsed: 15.3m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:29] INFO: Cycle #282 | Elapsed: 15.3m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:32] INFO: Cycle #283 | Elapsed: 15.4m/60.0m | Slots: 3/3 [GEOM (+4.50%), USDF (+0.92%), CLIP (+8.14%)] | Realized PnL: -0.0214 SOL
+[02:02:36] INFO: Cycle #284 | Elapsed: 15.4m/60.0m | Slots: 3/3 [GEOM (+4.54%), USDF (+0.92%), CLIP (+8.81%)] | Realized PnL: -0.0214 SOL
+[02:02:39] INFO: Cycle #285 | Elapsed: 15.5m/60.0m | Slots: 3/3 [GEOM (+4.54%), USDF (+0.92%), CLIP (+8.81%)] | Realized PnL: -0.0214 SOL
+[02:02:42] INFO: Cycle #286 | Elapsed: 15.5m/60.0m | Slots: 3/3 [GEOM (+4.54%), USDF (+0.92%), CLIP (+8.81%)] | Realized PnL: -0.0214 SOL
+[02:02:45] INFO: Cycle #287 | Elapsed: 15.6m/60.0m | Slots: 3/3 [GEOM (+4.54%), USDF (+0.92%), CLIP (+8.81%)] | Realized PnL: -0.0214 SOL
+[02:02:49] INFO: Cycle #288 | Elapsed: 15.6m/60.0m | Slots: 3/3 [GEOM (+4.54%), USDF (+0.92%), CLIP (+8.81%)] | Realized PnL: -0.0214 SOL
+[02:02:52] INFO: Cycle #289 | Elapsed: 15.7m/60.0m | Slots: 3/3 [GEOM (+4.54%), USDF (+0.92%), CLIP (+8.81%)] | Realized PnL: -0.0214 SOL
+[02:02:55] INFO: Cycle #290 | Elapsed: 15.7m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:02:58] INFO: Cycle #291 | Elapsed: 15.8m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:03:01] INFO: Cycle #292 | Elapsed: 15.8m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:03:04] INFO: Cycle #293 | Elapsed: 15.9m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:03:07] INFO: Cycle #294 | Elapsed: 15.9m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:03:10] INFO: Cycle #295 | Elapsed: 16.0m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:03:13] INFO: Cycle #296 | Elapsed: 16.0m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+1.80%), CLIP (+13.21%)] | Realized PnL: -0.0214 SOL
+[02:03:17] INFO: Cycle #297 | Elapsed: 16.1m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:20] INFO: Cycle #298 | Elapsed: 16.2m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:23] INFO: Cycle #299 | Elapsed: 16.2m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:26] INFO: Cycle #300 | Elapsed: 16.3m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:29] INFO: Cycle #301 | Elapsed: 16.3m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:32] INFO: Cycle #302 | Elapsed: 16.4m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:35] INFO: Cycle #303 | Elapsed: 16.4m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+15.99%)] | Realized PnL: -0.0214 SOL
+[02:03:39] INFO: Cycle #304 | Elapsed: 16.5m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:03:42] INFO: Cycle #305 | Elapsed: 16.5m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:03:45] INFO: Cycle #306 | Elapsed: 16.6m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:03:48] INFO: Cycle #307 | Elapsed: 16.6m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:03:51] INFO: Cycle #308 | Elapsed: 16.7m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:03:54] INFO: Cycle #309 | Elapsed: 16.7m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:03:57] INFO: Cycle #310 | Elapsed: 16.8m/60.0m | Slots: 3/3 [GEOM (+4.55%), USDF (+2.07%), CLIP (+14.80%)] | Realized PnL: -0.0214 SOL
+[02:04:01] INFO: Cycle #311 | Elapsed: 16.8m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:04] INFO: Cycle #312 | Elapsed: 16.9m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:07] INFO: Cycle #313 | Elapsed: 16.9m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:10] INFO: Cycle #314 | Elapsed: 17.0m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:13] INFO: Cycle #315 | Elapsed: 17.0m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:16] INFO: Cycle #316 | Elapsed: 17.1m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:19] INFO: Cycle #317 | Elapsed: 17.1m/60.0m | Slots: 3/3 [GEOM (+4.65%), USDF (+1.22%), CLIP (+14.10%)] | Realized PnL: -0.0214 SOL
+[02:04:23] INFO: Cycle #318 | Elapsed: 17.2m/60.0m | Slots: 3/3 [GEOM (+5.57%), USDF (+1.22%), CLIP (+15.04%)] | Realized PnL: -0.0214 SOL
+[02:04:26] INFO: Cycle #319 | Elapsed: 17.3m/60.0m | Slots: 3/3 [GEOM (+5.57%), USDF (+1.22%), CLIP (+15.04%)] | Realized PnL: -0.0214 SOL
+[02:04:29] INFO: Cycle #320 | Elapsed: 17.3m/60.0m | Slots: 3/3 [GEOM (+5.57%), USDF (+1.22%), CLIP (+15.04%)] | Realized PnL: -0.0214 SOL
+[02:04:32] INFO: Cycle #321 | Elapsed: 17.4m/60.0m | Slots: 3/3 [GEOM (+5.57%), USDF (+1.22%), CLIP (+15.04%)] | Realized PnL: -0.0214 SOL
+[02:04:35] INFO: Cycle #322 | Elapsed: 17.4m/60.0m | Slots: 3/3 [GEOM (+5.57%), USDF (+1.22%), CLIP (+15.04%)] | Realized PnL: -0.0214 SOL
+[02:04:38] INFO: Cycle #323 | Elapsed: 17.5m/60.0m | Slots: 3/3 [GEOM (+5.57%), USDF (+1.22%), CLIP (+15.04%)] | Realized PnL: -0.0214 SOL
+[02:04:42] INFO: Cycle #324 | Elapsed: 17.5m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:04:45] INFO: Cycle #325 | Elapsed: 17.6m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:04:48] INFO: Cycle #326 | Elapsed: 17.6m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:04:51] INFO: Cycle #327 | Elapsed: 17.7m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:04:54] INFO: Cycle #328 | Elapsed: 17.7m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:04:57] INFO: Cycle #329 | Elapsed: 17.8m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:05:00] INFO: Cycle #330 | Elapsed: 17.8m/60.0m | Slots: 3/3 [GEOM (+11.34%), USDF (+1.22%), CLIP (+14.46%)] | Realized PnL: -0.0214 SOL
+[02:05:04] INFO: Cycle #331 | Elapsed: 17.9m/60.0m | Slots: 3/3 [GEOM (+12.37%), USDF (+1.22%), CLIP (+13.29%)] | Realized PnL: -0.0214 SOL
+[02:05:07] INFO: Cycle #332 | Elapsed: 17.9m/60.0m | Slots: 3/3 [GEOM (+12.37%), USDF (+1.22%), CLIP (+13.29%)] | Realized PnL: -0.0214 SOL
+[02:05:10] INFO: Cycle #333 | Elapsed: 18.0m/60.0m | Slots: 3/3 [GEOM (+12.37%), USDF (+1.22%), CLIP (+13.29%)] | Realized PnL: -0.0214 SOL
+[02:05:13] INFO: Cycle #334 | Elapsed: 18.0m/60.0m | Slots: 3/3 [GEOM (+12.37%), USDF (+1.22%), CLIP (+13.29%)] | Realized PnL: -0.0214 SOL
+[02:05:16] INFO: Cycle #335 | Elapsed: 18.1m/60.0m | Slots: 3/3 [GEOM (+12.37%), USDF (+1.22%), CLIP (+13.29%)] | Realized PnL: -0.0214 SOL
+[02:05:19] INFO: Cycle #336 | Elapsed: 18.1m/60.0m | Slots: 3/3 [GEOM (+12.37%), USDF (+1.22%), CLIP (+13.29%)] | Realized PnL: -0.0214 SOL
+[02:05:22] INFO: ROTATING OUT (100%): USDF — Reason: STAGNATION_TIMEOUT (15m flat, PnL: 1.22%) | PnL: +1.22% (+0.0026 SOL)
+[02:05:22] INFO: SLOT UPDATED: USDF — STAGNATION_TIMEOUT (15m flat, PnL: 1.22%) (Sold 100%)
+[02:05:22] INFO: CONSOLIDATION COOLDOWN: USDF exited. Enforcing 15m cooldown before re-evaluation.
+[02:05:22] INFO: Cycle #337 | Elapsed: 18.2m/60.0m | Slots: 2/3 [GEOM (+12.37%), CLIP (+13.29%)] | Realized PnL: -0.0188 SOL
+[02:05:23] INFO: ENTERING FRESH ROTATION SLOT: ELON (GY9mZfyP...zxpump) | Mcap: $868,046 | Liq: $127,661 | SM: 214 | Size: 0.216 SOL (~$30)
+[02:05:23] INFO: SLOT FILLED: ELON | Tx: SHADOW_SIM
+[02:05:27] INFO: Cycle #338 | Elapsed: 18.3m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:30] INFO: Cycle #339 | Elapsed: 18.3m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:33] INFO: Cycle #340 | Elapsed: 18.4m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:36] INFO: Cycle #341 | Elapsed: 18.4m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:39] INFO: Cycle #342 | Elapsed: 18.5m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:42] INFO: Cycle #343 | Elapsed: 18.5m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:45] INFO: Cycle #344 | Elapsed: 18.6m/60.0m | Slots: 3/3 [GEOM (+11.92%), CLIP (+10.38%), ELON (+0.00%)] | Realized PnL: -0.0188 SOL
+[02:05:49] INFO: Cycle #345 | Elapsed: 18.6m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:05:52] INFO: Cycle #346 | Elapsed: 18.7m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:05:55] INFO: Cycle #347 | Elapsed: 18.7m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:05:58] INFO: Cycle #348 | Elapsed: 18.8m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:06:01] INFO: Cycle #349 | Elapsed: 18.8m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:06:04] INFO: Cycle #350 | Elapsed: 18.9m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:06:07] INFO: Cycle #351 | Elapsed: 18.9m/60.0m | Slots: 3/3 [GEOM (+11.89%), CLIP (+8.26%), ELON (-0.01%)] | Realized PnL: -0.0188 SOL
+[02:06:12] INFO: Cycle #352 | Elapsed: 19.0m/60.0m | Slots: 3/3 [GEOM (+12.14%), CLIP (+8.45%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:15] INFO: Cycle #353 | Elapsed: 19.1m/60.0m | Slots: 3/3 [GEOM (+12.14%), CLIP (+8.45%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:18] INFO: Cycle #354 | Elapsed: 19.1m/60.0m | Slots: 3/3 [GEOM (+12.14%), CLIP (+8.45%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:21] INFO: Cycle #355 | Elapsed: 19.2m/60.0m | Slots: 3/3 [GEOM (+12.14%), CLIP (+8.45%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:24] INFO: Cycle #356 | Elapsed: 19.2m/60.0m | Slots: 3/3 [GEOM (+12.14%), CLIP (+8.45%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:27] INFO: Cycle #357 | Elapsed: 19.3m/60.0m | Slots: 3/3 [GEOM (+12.14%), CLIP (+8.45%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:31] INFO: Cycle #358 | Elapsed: 19.3m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:34] INFO: Cycle #359 | Elapsed: 19.4m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:37] INFO: Cycle #360 | Elapsed: 19.4m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:40] INFO: Cycle #361 | Elapsed: 19.5m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:43] INFO: Cycle #362 | Elapsed: 19.5m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:46] INFO: Cycle #363 | Elapsed: 19.6m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:49] INFO: Cycle #364 | Elapsed: 19.6m/60.0m | Slots: 3/3 [GEOM (+12.23%), CLIP (+7.13%), ELON (-1.37%)] | Realized PnL: -0.0188 SOL
+[02:06:53] INFO: Cycle #365 | Elapsed: 19.7m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:06:56] INFO: Cycle #366 | Elapsed: 19.7m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:06:59] INFO: Cycle #367 | Elapsed: 19.8m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:02] INFO: Cycle #368 | Elapsed: 19.9m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:05] INFO: Cycle #369 | Elapsed: 19.9m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:08] INFO: Cycle #370 | Elapsed: 20.0m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:11] INFO: Cycle #371 | Elapsed: 20.0m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+7.47%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:15] INFO: Cycle #372 | Elapsed: 20.1m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:18] INFO: Cycle #373 | Elapsed: 20.1m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:21] INFO: Cycle #374 | Elapsed: 20.2m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:24] INFO: Cycle #375 | Elapsed: 20.2m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:27] INFO: Cycle #376 | Elapsed: 20.3m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:30] INFO: Cycle #377 | Elapsed: 20.3m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:33] INFO: Cycle #378 | Elapsed: 20.4m/60.0m | Slots: 3/3 [GEOM (+11.08%), CLIP (+8.54%), ELON (+0.49%)] | Realized PnL: -0.0188 SOL
+[02:07:37] INFO: ROTATING OUT (100%): CLIP — Reason: RUNNER_TRAILING_EXIT (Peak: 0.000901, Pullback: -9.1%, PnL: +5.48%) | PnL: +5.48% (+0.0059 SOL)
+[02:07:37] INFO: SLOT UPDATED: CLIP — RUNNER_TRAILING_EXIT (Peak: 0.000901, Pullback: -9.1%, PnL: +5.48%) (Sold 100%)
+[02:07:37] INFO: CONSOLIDATION COOLDOWN: CLIP exited. Enforcing 15m cooldown before re-evaluation.
+[02:07:37] INFO: Cycle #379 | Elapsed: 20.4m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:40] INFO: Cycle #380 | Elapsed: 20.5m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:43] INFO: Cycle #381 | Elapsed: 20.5m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:46] INFO: Cycle #382 | Elapsed: 20.6m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:49] INFO: Cycle #383 | Elapsed: 20.6m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:52] INFO: Cycle #384 | Elapsed: 20.7m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:55] INFO: Cycle #385 | Elapsed: 20.7m/60.0m | Slots: 2/3 [GEOM (+10.57%), ELON (+0.49%)] | Realized PnL: -0.0129 SOL
+[02:07:59] INFO: Cycle #386 | Elapsed: 20.8m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:02] INFO: Cycle #387 | Elapsed: 20.9m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:05] INFO: Cycle #388 | Elapsed: 20.9m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:08] INFO: Cycle #389 | Elapsed: 21.0m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:11] INFO: Cycle #390 | Elapsed: 21.0m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:14] INFO: Cycle #391 | Elapsed: 21.1m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:17] INFO: Cycle #392 | Elapsed: 21.1m/60.0m | Slots: 2/3 [GEOM (+11.61%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:21] INFO: Cycle #393 | Elapsed: 21.2m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:24] INFO: Cycle #394 | Elapsed: 21.2m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:27] INFO: Cycle #395 | Elapsed: 21.3m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:30] INFO: Cycle #396 | Elapsed: 21.3m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:33] INFO: Cycle #397 | Elapsed: 21.4m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:36] INFO: Cycle #398 | Elapsed: 21.4m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:39] INFO: Cycle #399 | Elapsed: 21.5m/60.0m | Slots: 2/3 [GEOM (+10.64%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:42] INFO: Cycle #400 | Elapsed: 21.5m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:45] INFO: Cycle #401 | Elapsed: 21.6m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:48] INFO: Cycle #402 | Elapsed: 21.6m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:51] INFO: Cycle #403 | Elapsed: 21.7m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:54] INFO: Cycle #404 | Elapsed: 21.7m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:08:57] INFO: Cycle #405 | Elapsed: 21.8m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:09:01] INFO: Cycle #406 | Elapsed: 21.8m/60.0m | Slots: 2/3 [GEOM (+10.60%), ELON (-0.85%)] | Realized PnL: -0.0129 SOL
+[02:09:04] INFO: Cycle #407 | Elapsed: 21.9m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:07] INFO: Cycle #408 | Elapsed: 21.9m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:10] INFO: Cycle #409 | Elapsed: 22.0m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:13] INFO: Cycle #410 | Elapsed: 22.0m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:16] INFO: Cycle #411 | Elapsed: 22.1m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:19] INFO: Cycle #412 | Elapsed: 22.1m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:22] INFO: Cycle #413 | Elapsed: 22.2m/60.0m | Slots: 2/3 [GEOM (+10.09%), ELON (+0.10%)] | Realized PnL: -0.0129 SOL
+[02:09:35] INFO: Cycle #414 | Elapsed: 22.4m/60.0m | Slots: 2/3 [GEOM (+9.83%), ELON (-0.60%)] | Realized PnL: -0.0129 SOL
+[02:09:47] INFO: Cycle #415 | Elapsed: 22.6m/60.0m | Slots: 2/3 [GEOM (+9.73%), ELON (-0.60%)] | Realized PnL: -0.0129 SOL
+[02:09:48] INFO: ENTERING FRESH ROTATION SLOT: OTC (MukLDtJ8...udpump) | Mcap: $3,519,320 | Liq: $411,171 | SM: 381 | Size: 0.216 SOL (~$30)
+[02:09:48] INFO: SLOT FILLED: OTC | Tx: SHADOW_SIM
+[02:09:51] INFO: Cycle #416 | Elapsed: 22.7m/60.0m | Slots: 3/3 [GEOM (+9.73%), ELON (-0.60%), OTC (+0.00%)] | Realized PnL: -0.0129 SOL
+[02:09:54] INFO: Cycle #417 | Elapsed: 22.7m/60.0m | Slots: 3/3 [GEOM (+9.73%), ELON (-0.60%), OTC (+0.00%)] | Realized PnL: -0.0129 SOL
+[02:09:57] INFO: Cycle #418 | Elapsed: 22.8m/60.0m | Slots: 3/3 [GEOM (+9.73%), ELON (-0.60%), OTC (+0.00%)] | Realized PnL: -0.0129 SOL
+[02:10:00] INFO: Cycle #419 | Elapsed: 22.8m/60.0m | Slots: 3/3 [GEOM (+9.73%), ELON (-0.60%), OTC (+0.00%)] | Realized PnL: -0.0129 SOL
+[02:10:03] INFO: Cycle #420 | Elapsed: 22.9m/60.0m | Slots: 3/3 [GEOM (+9.73%), ELON (-0.60%), OTC (+0.00%)] | Realized PnL: -0.0129 SOL
+[02:10:06] INFO: Cycle #421 | Elapsed: 22.9m/60.0m | Slots: 3/3 [GEOM (+9.73%), ELON (-0.60%), OTC (+0.00%)] | Realized PnL: -0.0129 SOL
+[02:10:09] INFO: ROTATING OUT (100%): GEOM — Reason: RUNNER_STAGNATION_HARVEST (Held 23.0m, PnL: -1.20%) | PnL: -1.20% (-0.0013 SOL)
+[02:10:09] INFO: SLOT UPDATED: GEOM — RUNNER_STAGNATION_HARVEST (Held 23.0m, PnL: -1.20%) (Sold 100%)
+[02:10:09] INFO: CONSOLIDATION COOLDOWN: GEOM exited. Enforcing 15m cooldown before re-evaluation.
+[02:10:09] INFO: Cycle #422 | Elapsed: 23.0m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:12] INFO: Cycle #423 | Elapsed: 23.0m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:15] INFO: Cycle #424 | Elapsed: 23.1m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:18] INFO: Cycle #425 | Elapsed: 23.1m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:21] INFO: Cycle #426 | Elapsed: 23.2m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:24] INFO: Cycle #427 | Elapsed: 23.2m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:27] INFO: Cycle #428 | Elapsed: 23.3m/60.0m | Slots: 2/3 [ELON (-1.46%), OTC (-1.39%)] | Realized PnL: -0.0142 SOL
+[02:10:31] INFO: Cycle #429 | Elapsed: 23.3m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:34] INFO: Cycle #430 | Elapsed: 23.4m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:37] INFO: Cycle #431 | Elapsed: 23.4m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:40] INFO: Cycle #432 | Elapsed: 23.5m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:43] INFO: Cycle #433 | Elapsed: 23.5m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:46] INFO: Cycle #434 | Elapsed: 23.6m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:49] INFO: Cycle #435 | Elapsed: 23.6m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.17%)] | Realized PnL: -0.0142 SOL
+[02:10:53] INFO: Cycle #436 | Elapsed: 23.7m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:10:56] INFO: Cycle #437 | Elapsed: 23.7m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:10:59] INFO: Cycle #438 | Elapsed: 23.8m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:11:02] INFO: Cycle #439 | Elapsed: 23.8m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:11:05] INFO: Cycle #440 | Elapsed: 23.9m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:11:08] INFO: Cycle #441 | Elapsed: 23.9m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:11:11] INFO: Cycle #442 | Elapsed: 24.0m/60.0m | Slots: 2/3 [ELON (-1.52%), OTC (-0.74%)] | Realized PnL: -0.0142 SOL
+[02:11:15] INFO: Cycle #443 | Elapsed: 24.1m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:18] INFO: Cycle #444 | Elapsed: 24.1m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:21] INFO: Cycle #445 | Elapsed: 24.2m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:24] INFO: Cycle #446 | Elapsed: 24.2m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:27] INFO: Cycle #447 | Elapsed: 24.3m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:30] INFO: Cycle #448 | Elapsed: 24.3m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:33] INFO: Cycle #449 | Elapsed: 24.4m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:36] INFO: Cycle #450 | Elapsed: 24.4m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:39] INFO: Cycle #451 | Elapsed: 24.5m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:42] INFO: Cycle #452 | Elapsed: 24.5m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:45] INFO: Cycle #453 | Elapsed: 24.6m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:48] INFO: Cycle #454 | Elapsed: 24.6m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:51] INFO: Cycle #455 | Elapsed: 24.7m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:11:54] INFO: Cycle #456 | Elapsed: 24.7m/60.0m | Slots: 2/3 [ELON (-1.45%), OTC (+0.09%)] | Realized PnL: -0.0142 SOL
+[02:12:06] INFO: Cycle #457 | Elapsed: 24.9m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:18] INFO: Cycle #458 | Elapsed: 25.1m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:21] INFO: Cycle #459 | Elapsed: 25.2m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:24] INFO: Cycle #460 | Elapsed: 25.2m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:27] INFO: Cycle #461 | Elapsed: 25.3m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:30] INFO: Cycle #462 | Elapsed: 25.3m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:33] INFO: Cycle #463 | Elapsed: 25.4m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:36] INFO: Cycle #464 | Elapsed: 25.4m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:40] INFO: Cycle #465 | Elapsed: 25.5m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:43] INFO: Cycle #466 | Elapsed: 25.5m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:46] INFO: Cycle #467 | Elapsed: 25.6m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:49] INFO: Cycle #468 | Elapsed: 25.6m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:52] INFO: Cycle #469 | Elapsed: 25.7m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:55] INFO: Cycle #470 | Elapsed: 25.7m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:12:58] INFO: Cycle #471 | Elapsed: 25.8m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:02] INFO: Cycle #472 | Elapsed: 25.8m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:05] INFO: Cycle #473 | Elapsed: 25.9m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:08] INFO: Cycle #474 | Elapsed: 25.9m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:11] INFO: Cycle #475 | Elapsed: 26.0m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:14] INFO: Cycle #476 | Elapsed: 26.0m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:17] INFO: Cycle #477 | Elapsed: 26.1m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:20] INFO: Cycle #478 | Elapsed: 26.2m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (-0.98%)] | Realized PnL: -0.0142 SOL
+[02:13:24] INFO: Cycle #479 | Elapsed: 26.2m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (+0.08%)] | Realized PnL: -0.0142 SOL
+[02:13:27] INFO: Cycle #480 | Elapsed: 26.3m/60.0m | Slots: 2/3 [ELON (-1.56%), OTC (+0.08%)] | Realized PnL: -0.0142 SOL
+[02:13:27] INFO: ENTERING FRESH ROTATION SLOT: baton (Hg5Ja55T...hgpump) | Mcap: $1,581,730 | Liq: $209,837 | SM: 455 | Size: 0.216 SOL (~$30)
+[02:13:27] INFO: SLOT FILLED: baton | Tx: SHADOW_SIM
+[02:13:30] INFO: Cycle #481 | Elapsed: 26.3m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (+0.08%), baton (+0.00%)] | Realized PnL: -0.0142 SOL
+[02:13:33] INFO: Cycle #482 | Elapsed: 26.4m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (+0.08%), baton (+0.00%)] | Realized PnL: -0.0142 SOL
+[02:13:36] INFO: Cycle #483 | Elapsed: 26.4m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (+0.08%), baton (+0.00%)] | Realized PnL: -0.0142 SOL
+[02:13:39] INFO: Cycle #484 | Elapsed: 26.5m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (+0.08%), baton (+0.00%)] | Realized PnL: -0.0142 SOL
+[02:13:42] INFO: Cycle #485 | Elapsed: 26.5m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (+0.08%), baton (+0.00%)] | Realized PnL: -0.0142 SOL
+[02:13:46] INFO: Cycle #486 | Elapsed: 26.6m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:13:49] INFO: Cycle #487 | Elapsed: 26.6m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:13:52] INFO: Cycle #488 | Elapsed: 26.7m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:13:55] INFO: Cycle #489 | Elapsed: 26.7m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:13:58] INFO: Cycle #490 | Elapsed: 26.8m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:14:01] INFO: Cycle #491 | Elapsed: 26.8m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:14:04] INFO: Cycle #492 | Elapsed: 26.9m/60.0m | Slots: 3/3 [ELON (-1.56%), OTC (-2.57%), baton (+0.23%)] | Realized PnL: -0.0142 SOL
+[02:14:08] INFO: ROTATING OUT (100%): ELON — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.86%) | PnL: -3.86% (-0.0083 SOL)
+[02:14:08] INFO: SLOT UPDATED: ELON — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.86%) (Sold 100%)
+[02:14:08] INFO: CONSOLIDATION COOLDOWN: ELON exited. Enforcing 15m cooldown before re-evaluation.
+[02:14:08] INFO: ROTATING OUT (100%): OTC — Reason: TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -4.90%) | PnL: -4.90% (-0.0106 SOL)
+[02:14:08] INFO: SLOT UPDATED: OTC — TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -4.90%) (Sold 100%)
+[02:14:08] INFO: CONSOLIDATION COOLDOWN: OTC exited. Enforcing 15m cooldown before re-evaluation.
+[02:14:08] INFO: Cycle #493 | Elapsed: 27.0m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:11] INFO: Cycle #494 | Elapsed: 27.0m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:14] INFO: Cycle #495 | Elapsed: 27.1m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:17] INFO: Cycle #496 | Elapsed: 27.1m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:20] INFO: Cycle #497 | Elapsed: 27.2m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:23] INFO: Cycle #498 | Elapsed: 27.2m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:26] INFO: Cycle #499 | Elapsed: 27.3m/60.0m | Slots: 1/3 [baton (+0.54%)] | Realized PnL: -0.0331 SOL
+[02:14:30] INFO: Cycle #500 | Elapsed: 27.3m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:33] INFO: Cycle #501 | Elapsed: 27.4m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:36] INFO: Cycle #502 | Elapsed: 27.4m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:39] INFO: Cycle #503 | Elapsed: 27.5m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:42] INFO: Cycle #504 | Elapsed: 27.5m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:45] INFO: Cycle #505 | Elapsed: 27.6m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:48] INFO: Cycle #506 | Elapsed: 27.6m/60.0m | Slots: 1/3 [baton (+0.49%)] | Realized PnL: -0.0331 SOL
+[02:14:52] INFO: Cycle #507 | Elapsed: 27.7m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:14:55] INFO: Cycle #508 | Elapsed: 27.7m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:14:58] INFO: Cycle #509 | Elapsed: 27.8m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:15:01] INFO: Cycle #510 | Elapsed: 27.8m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:15:04] INFO: Cycle #511 | Elapsed: 27.9m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:15:07] INFO: Cycle #512 | Elapsed: 27.9m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:15:10] INFO: Cycle #513 | Elapsed: 28.0m/60.0m | Slots: 1/3 [baton (+0.64%)] | Realized PnL: -0.0331 SOL
+[02:15:13] INFO: Cycle #514 | Elapsed: 28.0m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:16] INFO: Cycle #515 | Elapsed: 28.1m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:19] INFO: Cycle #516 | Elapsed: 28.1m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:22] INFO: Cycle #517 | Elapsed: 28.2m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:26] INFO: Cycle #518 | Elapsed: 28.2m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:29] INFO: Cycle #519 | Elapsed: 28.3m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:32] INFO: Cycle #520 | Elapsed: 28.3m/60.0m | Slots: 1/3 [baton (+0.77%)] | Realized PnL: -0.0331 SOL
+[02:15:35] INFO: Cycle #521 | Elapsed: 28.4m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:38] INFO: Cycle #522 | Elapsed: 28.5m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:41] INFO: Cycle #523 | Elapsed: 28.5m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:44] INFO: Cycle #524 | Elapsed: 28.6m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:47] INFO: Cycle #525 | Elapsed: 28.6m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:50] INFO: Cycle #526 | Elapsed: 28.7m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:53] INFO: Cycle #527 | Elapsed: 28.7m/60.0m | Slots: 1/3 [baton (+1.51%)] | Realized PnL: -0.0331 SOL
+[02:15:56] INFO: Cycle #528 | Elapsed: 28.8m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:15:59] INFO: Cycle #529 | Elapsed: 28.8m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:16:02] INFO: Cycle #530 | Elapsed: 28.9m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:16:06] INFO: Cycle #531 | Elapsed: 28.9m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:16:09] INFO: Cycle #532 | Elapsed: 29.0m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:16:12] INFO: Cycle #533 | Elapsed: 29.0m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:16:15] INFO: Cycle #534 | Elapsed: 29.1m/60.0m | Slots: 1/3 [baton (+0.88%)] | Realized PnL: -0.0331 SOL
+[02:16:19] INFO: Cycle #535 | Elapsed: 29.1m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:22] INFO: Cycle #536 | Elapsed: 29.2m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:25] INFO: Cycle #537 | Elapsed: 29.2m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:28] INFO: Cycle #538 | Elapsed: 29.3m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:31] INFO: Cycle #539 | Elapsed: 29.3m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:34] INFO: Cycle #540 | Elapsed: 29.4m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:37] INFO: Cycle #541 | Elapsed: 29.4m/60.0m | Slots: 1/3 [baton (+0.83%)] | Realized PnL: -0.0331 SOL
+[02:16:41] INFO: Cycle #542 | Elapsed: 29.5m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:16:44] INFO: Cycle #543 | Elapsed: 29.6m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:16:47] INFO: Cycle #544 | Elapsed: 29.6m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:16:50] INFO: Cycle #545 | Elapsed: 29.7m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:16:53] INFO: Cycle #546 | Elapsed: 29.7m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:16:56] INFO: Cycle #547 | Elapsed: 29.8m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:16:59] INFO: Cycle #548 | Elapsed: 29.8m/60.0m | Slots: 1/3 [baton (+1.01%)] | Realized PnL: -0.0331 SOL
+[02:17:03] INFO: Cycle #549 | Elapsed: 29.9m/60.0m | Slots: 1/3 [baton (+0.41%)] | Realized PnL: -0.0331 SOL
+[02:17:07] INFO: Cycle #550 | Elapsed: 29.9m/60.0m | Slots: 1/3 [baton (+0.41%)] | Realized PnL: -0.0331 SOL
+[02:17:10] INFO: Cycle #551 | Elapsed: 30.0m/60.0m | Slots: 1/3 [baton (+0.41%)] | Realized PnL: -0.0331 SOL
+[02:17:13] INFO: Cycle #552 | Elapsed: 30.0m/60.0m | Slots: 1/3 [baton (+0.41%)] | Realized PnL: -0.0331 SOL
+[02:17:16] INFO: Cycle #553 | Elapsed: 30.1m/60.0m | Slots: 1/3 [baton (+0.41%)] | Realized PnL: -0.0331 SOL
+[02:17:19] ERROR: Failed to fetch positions: <urlopen error [Errno 111] Connection refused>
+[02:17:19] ERROR: Failed to fetch API status: <urlopen error [Errno 111] Connection refused>
+[02:17:19] WARNING: Backend service unavailable. Retrying in next cycle...

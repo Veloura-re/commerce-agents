@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIDA // HIGH-DENSITY QUANTITATIVE TRADING COCKPIT</title>
+  
+  <!-- Space Grotesk & JetBrains Mono Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #09090b;
+      --bg-subtle: #121217;
+      --panel: #16161e;
+      --panel-hover: #1c1c26;
+      --border: #262636;
+      --border-bright: #38384f;
+      --text: #f4f4f5;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      /* Pro-Trader Swiss Accents - Strictly Zero Cyan/Blue */
+      --green: #10b981;
+      --green-dim: rgba(16, 185, 129, 0.12);
+      --green-border: rgba(16, 185, 129, 0.35);
+      --amber: #f59e0b;
+      --amber-dim: rgba(245, 158, 11, 0.12);
+      --amber-border: rgba(245, 158, 11, 0.35);
+      --red: #ef4444;
+      --red-dim: rgba(239, 68, 68, 0.12);
+      --red-border: rgba(239, 68, 68, 0.35);
+      
+      --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100vh; overflow: hidden; background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 12.5px; }
+
+    /* Top Command Strip */
+    .top-command-bar {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      height: 48px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-badge {
+      background: var(--green);
+      color: #09090b;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    /* Live Telemetry Pills */
+    .telemetry-strip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .tel-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .tel-pill .k { color: var(--text-dim); font-size: 9.5px; }
+    .tel-pill .v { font-weight: 700; color: var(--text); }
+    .tel-pill.green { background: var(--green-dim); border-color: var(--green-border); }
+    .tel-pill.green .v { color: var(--green); }
+    .tel-pill.amber { background: var(--amber-dim); border-color: var(--amber-border); }
+    .tel-pill.amber .v { color: var(--amber); }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Executive Buttons */
+    .btn {
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.12s ease;
+      white-space: nowrap;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+    }
+    .btn:hover { background: var(--panel-hover); border-color: var(--border-bright); }
+    .btn.primary { background: var(--green); color: #09090b; border-color: var(--green); font-weight: 700; }
+    .btn.primary:hover { filter: brightness(1.1); }
+    .btn.danger { background: var(--red-dim); color: var(--red); border-color: var(--red-border); }
+    .btn.danger:hover { background: rgba(239, 68, 68, 0.22); }
+    .btn.warn { background: var(--amber-dim); color: var(--amber); border-color: var(--amber-border); }
+    .btn.warn:hover { background: rgba(245, 158, 11, 0.22); }
+
+    /* Main Cockpit Layout */
+    .cockpit-container {
+      display: grid;
+      grid-template-columns: 1fr 410px;
+      gap: 12px;
+      height: calc(100vh - 48px);
+      padding: 12px;
+      overflow: hidden;
+    }
+
+    .cockpit-deck {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 0;
+      gap: 10px;
+    }
+
+    .panel-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .panel-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .tag-badge {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      padding: 8px 12px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      flex-shrink: 0;
+    }
+
+    .f-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.12s ease;
+      white-space: nowrap;
+    }
+    .f-pill:hover { border-color: var(--border-bright); color: var(--text); }
+    .f-pill.active { background: var(--text); color: #09090b; border-color: var(--text); font-weight: 700; }
+
+    /* Tables */
+    .table-viewport {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    table.cockpit-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+      text-align: left;
+    }
+
+    table.cockpit-table th {
+      background: var(--bg-subtle);
+      color: var(--text-dim);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    table.cockpit-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    table.cockpit-table tr:hover td { background: var(--panel-hover); }
+
+    .tok-info { display: flex; flex-direction: column; gap: 1px; }
+    .tok-sym { font-weight: 700; color: var(--text); font-family: var(--font-sans); font-size: 12px; }
+    .tok-addr { font-size: 9.5px; color: var(--text-dim); cursor: pointer; text-decoration: underline; }
+    .tok-addr:hover { color: var(--green); }
+
+    .badge-gate {
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      font-family: var(--font-sans);
+    }
+    .badge-gate.pass { background: var(--green-dim); color: var(--green); border: 1px solid var(--green-border); }
+    .badge-gate.fail { background: var(--red-dim); color: var(--red); border: 1px solid var(--red-border); }
+    .badge-gate.warn { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-border); }
+
+    /* Active Positions Cards */
+    .positions-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .pos-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.12s ease;
+    }
+    .pos-card:hover { border-color: var(--border-bright); }
+    .pos-card.winner { border-left: 3px solid var(--green); }
+    .pos-card.loser { border-left: 3px solid var(--red); }
+
+    .pos-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pos-card-sym {
+      font-size: 13px;
+      font-weight: 700;
+      font-family: var(--font-sans);
+      color: var(--text);
+    }
+    .pos-card-pnl {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .pos-card-pnl.up { color: var(--green); }
+    .pos-card-pnl.dn { color: var(--red); }
+
+    .pos-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      font-size: 10px;
+      background: var(--bg-subtle);
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+    }
+    .pos-meta-grid div { display: flex; flex-direction: column; }
+    .pos-meta-grid span { color: var(--text-dim); font-size: 8.5px; }
+    .pos-meta-grid b { color: var(--text); }
+
+    .pos-foot-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 9.5px;
+    }
+    .pos-status-badge {
+      font-size: 9px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    /* Decision Feed Stream */
+    .decision-feed {
+      height: 140px;
+      overflow-y: auto;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      background: var(--bg);
+    }
+    .dec-row {
+      display: grid;
+      grid-template-columns: 50px 45px 70px 1fr;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 6px;
+      border-radius: 3px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+    }
+
+    /* Closed Trades Ledger */
+    .ledger-table-wrap {
+      height: 160px;
+      overflow-y: auto;
+    }
+
+    /* Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #2d2d3d; border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+
+    @media (max-width: 1080px) {
+      .cockpit-container { grid-template-columns: 1fr; overflow-y: auto; height: auto; }
+      html, body { overflow: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Command & Telemetry Strip -->
+  <header class="top-command-bar">
+    <div class="brand-group">
+      <span class="brand-badge">KIDA//QUANT</span>
+      <span class="brand-title">AUTONOMOUS ROTATION ENGINE</span>
+    </div>
+
+    <!-- Live Telemetry Strip -->
+    <div class="telemetry-strip">
+      <div class="tel-pill green">
+        <span class="k">STATUS:</span>
+        <span class="v" id="telStatus">ONLINE</span>
+      </div>
+      <div class="tel-pill amber">
+        <span class="k">MODE:</span>
+        <span class="v" id="telMode">SHADOW</span>
+      </div>
+      <div class="tel-pill green">
+        <span class="k">BANKED:</span>
+        <span class="v" id="telRealized">+0.0639 SOL</span>
+      </div>
+      <div class="tel-pill green">
+        <span class="k">FLOATING:</span>
+        <span class="v" id="telFloating">+0.5453 SOL</span>
+      </div>
+      <div class="tel-pill green">
+        <span class="k">NET PNL:</span>
+        <span class="v" id="telNet">+0.6092 SOL ($+85.29)</span>
+      </div>
+      <div class="tel-pill">
+        <span class="k">CAPACITY:</span>
+        <span class="v" id="telSlots">5 / 5 SLOTS</span>
+      </div>
+      <div class="tel-pill green">
+        <span class="k">RATCHET:</span>
+        <span class="v">-12% / +35%</span>
+      </div>
+    </div>
+
+    <!-- Fast Action Controls -->
+    <div class="top-actions">
+      <button class="btn warn" onclick="harvestWinners()">HARVEST WINNERS</button>
+      <button class="btn danger" onclick="purgeStopped()">PURGE STOPPED</button>
+      <button class="btn" onclick="triggerManualRefresh()">REFRESH</button>
+    </div>
+  </header>
+
+  <!-- Main 2-Column Cockpit Grid (Radar Left, Positions & Controls Right) -->
+  <main class="cockpit-container">
+    
+    <!-- LEFT DECK: 100-Candidate Screening Radar -->
+    <section class="cockpit-deck">
+      <div class="panel-box" style="flex:1;">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>01 ON-CHAIN SCREENING RADAR // 100 REAL-TIME CANDIDATES</span>
+            <span class="tag-badge" id="radarLatency">Latency: --ms</span>
+          </div>
+          <div style="font-size:11px;color:var(--text-muted);font-family:var(--font-mono);">
+            ALLOCATION: <b style="color:var(--green)">0.70 SOL / SLOT</b>
+          </div>
+        </div>
+
+        <!-- Protocol Filter Pills -->
+        <div class="filter-bar">
+          <div class="f-pill active" onclick="setDexFilter('ALL', this)">ALL CANDIDATES (100)</div>
+          <div class="f-pill" onclick="setDexFilter('PUMP.FUN', this)">PUMP.FUN</div>
+          <div class="f-pill" onclick="setDexFilter('RAYDIUM', this)">RAYDIUM</div>
+          <div class="f-pill" onclick="setDexFilter('METEORA', this)">METEORA</div>
+          <div class="f-pill" onclick="setDexFilter('BUY', this)">QUALIFIED ENTRY</div>
+        </div>
+
+        <!-- 100 Candidates Radar Table -->
+        <div class="table-viewport">
+          <table class="cockpit-table">
+            <thead>
+              <tr>
+                <th style="min-width:140px;">TOKEN / CONTRACT</th>
+                <th>DEX</th>
+                <th>SAFETY GATES</th>
+                <th>BUNDLER</th>
+                <th>DEV HOLD</th>
+                <th>TOP 10</th>
+                <th>SMART CONFLUENCE</th>
+                <th>5M / 1H CHG</th>
+                <th>DECISION RATIONALE</th>
+                <th style="text-align:right;">ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="radarTbody">
+              <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-dim)">CONNECTING TO 100-TOKEN RADAR STREAM...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT DECK: Active Positions Citadel, Decisions & Closed Ledger -->
+    <section class="cockpit-deck">
+      
+      <!-- Monitored Active Positions Citadel (5 Concentrated Slots) -->
+      <div class="panel-box" style="flex:1.2;">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>ACTIVE POSITIONS CITADEL</span>
+            <span class="tag-badge" id="posCountBadge">5 / 5 SLOTS</span>
+          </div>
+          <div style="font-family:var(--font-mono);font-weight:700;color:var(--green);font-size:12px;" id="posTotalFloatHeader">
+            +0.5453 SOL
+          </div>
+        </div>
+        
+        <div class="positions-stack" id="positionsBoard">
+          <div style="text-align:center;padding:32px;color:var(--text-dim);">CONNECTING TO ACTIVE POSITIONS...</div>
+        </div>
+      </div>
+
+      <!-- Real-Time Audited Decision Stream (trade_decisions.jsonl) -->
+      <div class="panel-box" style="flex:0.8;">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>REAL-TIME DECISION STREAM</span>
+            <span class="tag-badge">LAST 15 ACTIONS</span>
+          </div>
+          <span style="font-size:10px;color:var(--text-dim);font-family:var(--font-mono);">trade_decisions.jsonl</span>
+        </div>
+        <div class="decision-feed" id="decisionFeed">
+          <div style="text-align:center;padding:20px;color:var(--text-dim)">LOADING DECISION STREAM...</div>
+        </div>
+      </div>
+
+      <!-- Recent Closed Trades Ledger -->
+      <div class="panel-box" style="flex:0.8;">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span>RECENT CLOSED TRADES AUDIT</span>
+            <span class="tag-badge" id="closedCountBadge">7 TRADES</span>
+          </div>
+          <span style="font-size:10px;color:var(--green);font-family:var(--font-mono);">RATCHET SECURED</span>
+        </div>
+        <div class="ledger-table-wrap">
+          <table class="cockpit-table">
+            <thead>
+              <tr>
+                <th>TOKEN</th>
+                <th>REASON</th>
+                <th>PNL %</th>
+                <th>REALIZED SOL</th>
+                <th>HOLD</th>
+              </tr>
+            </thead>
+            <tbody id="ledgerTbody">
+              <tr><td colspan="5" style="text-align:center;padding:16px;color:var(--text-dim)">LOADING CLOSED TRADES...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    // -------------------------------------------------------------
+    // HIGH-DENSITY QUANTITATIVE TRADING ENGINE
+    // -------------------------------------------------------------
+    const API = location.protocol === 'file:' ? 'http://127.0.0.1:8000' : '';
+    let currentDexFilter = 'ALL';
+    let rawDecisions = [];
+    let rawPositions = [];
+    let rawAuditTrades = [];
+
+    function setDexFilter(dex, el) {
+      currentDexFilter = dex;
+      document.querySelectorAll('.f-pill').forEach(c => c.classList.remove('active'));
+      if (el) el.classList.add('active');
+      renderRadarTable();
+    }
+
+    function copyAddress(addr) {
+      navigator.clipboard.writeText(addr).then(() => {
+        alert('Copied Address: ' + addr);
+      }).catch(() => {
+        prompt('Copy Address:', addr);
+      });
+    }
+
+    // -------------------------------------------------------------
+    // API FETCHERS
+    // -------------------------------------------------------------
+    async function fetchStatus() {
+      try {
+        const res = await fetch(API + '/api/status');
+        if (!res.ok) throw new Error('Status ' + res.status);
+        const data = await res.json();
+        document.getElementById('telStatus').textContent = 'ONLINE';
+        document.getElementById('telStatus').style.color = 'var(--green)';
+        document.getElementById('telMode').textContent = data.mode || 'SHADOW';
+      } catch (err) {
+        document.getElementById('telStatus').textContent = 'OFFLINE';
+        document.getElementById('telStatus').style.color = 'var(--red)';
+      }
+    }
+
+    async function fetchAnalytics() {
+      try {
+        const res = await fetch(API + '/api/analytics');
+        if (!res.ok) return;
+        const data = await res.json();
+        const sum = data.summary || {};
+
+        if (sum.net_realized_pnl_sol != null) {
+          const sol = sum.net_realized_pnl_sol;
+          document.getElementById('telRealized').textContent = (sol >= 0 ? '+' : '') + sol.toFixed(4) + ' SOL';
+        }
+
+        if (sum.net_portfolio_pnl_sol != null) {
+          const netSol = sum.net_portfolio_pnl_sol;
+          const netUsd = (netSol * 140).toFixed(2);
+          const el = document.getElementById('telNet');
+          el.textContent = (netSol >= 0 ? '+' : '') + netSol.toFixed(4) + ' SOL ($' + (netSol >= 0 ? '+' : '') + netUsd + ')';
+        }
+
+        if (sum.total_trades != null) {
+          document.getElementById('closedCountBadge').textContent = sum.total_trades + ' TRADES';
+        }
+
+        rawAuditTrades = data.recent_trades || [];
+        renderLedgerTable();
+      } catch (err) {
+        console.warn('Analytics error:', err);
+      }
+    }
+
+    async function fetchPositions() {
+      try {
+        const res = await fetch(API + '/api/positions?chain=sol');
+        if (!res.ok) throw new Error('Positions ' + res.status);
+        const data = await res.json();
+        rawPositions = data.positions || [];
+        const port = data.portfolio || {};
+
+        const totalSlots = port.max_concurrent || 5;
+        document.getElementById('posCountBadge').textContent = rawPositions.length + ' / ' + totalSlots + ' SLOTS';
+        document.getElementById('telSlots').textContent = rawPositions.length + ' / ' + totalSlots + ' SLOTS';
+
+        renderPositions();
+      } catch (err) {
+        console.warn('Positions error:', err);
+      }
+    }
+
+    async function fetchScreening() {
+      const t0 = performance.now();
+      try {
+        const res = await fetch(API + '/api/run', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol' })
+        });
+        if (!res.ok) throw new Error('Run ' + res.status);
+        const data = await res.json();
+        const lat = Math.round(performance.now() - t0);
+        document.getElementById('radarLatency').textContent = 'Latency: ' + lat + 'ms';
+
+        rawDecisions = data.decisions || [];
+        renderRadarTable();
+        renderDecisionFeed(rawDecisions);
+      } catch (err) {
+        console.warn('Screening error:', err);
+      }
+    }
+
+    // -------------------------------------------------------------
+    // RENDERERS
+    // -------------------------------------------------------------
+    function renderRadarTable() {
+      const tbody = document.getElementById('radarTbody');
+      if (!tbody) return;
+
+      let filtered = rawDecisions;
+      if (currentDexFilter === 'BUY') {
+        filtered = rawDecisions.filter(d => {
+          const dec = d.decision || d;
+          return dec.action === 'BUY' || dec.action === 'ACTION';
+        });
+      } else if (currentDexFilter !== 'ALL') {
+        filtered = rawDecisions.filter(d => {
+          const dec = d.decision || d;
+          const dex = (dec.dex || (dec.features && dec.features.dex) || '').toUpperCase();
+          return dex.includes(currentDexFilter);
+        });
+      }
+
+      if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:28px;color:var(--text-dim)">NO TOKENS MATCH FILTER [${currentDexFilter}]</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(item => {
+        const dec = item.decision || item;
+        const f = dec.features || {};
+        const sym = dec.symbol || 'TOKEN';
+        const addr = dec.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const dex = dec.dex || f.dex || (addr.endsWith('pump') ? 'PUMP' : 'RAY');
+        const isSafe = !f.honeypot && (f.renounced !== false);
+        const bundPct = ((f.bundler || 0) * 100).toFixed(0) + '%';
+        const devPct = ((f.dev_hold || 0) * 100).toFixed(0) + '%';
+        const top10Pct = ((f.top10 || 0) * 100).toFixed(0) + '%';
+        const smc = (f.smart_degen || 0) + '/' + (f.renowned || 0);
+        const chg5m = f.chg_5m != null ? (f.chg_5m >= 0 ? '+' : '') + (f.chg_5m * 100).toFixed(1) + '%' : '--';
+        const chg1h = f.chg_1h != null ? (f.chg_1h >= 0 ? '+' : '') + (f.chg_1h * 100).toFixed(1) + '%' : '--';
+        const isBuy = dec.action === 'BUY' || dec.action === 'ACTION';
+        const reason = dec.reason || (isBuy ? 'QUALIFIED FOR ENTRY' : 'FILTERED BY GATE');
+
+        return `
+          <tr>
+            <td>
+              <div class="tok-info">
+                <span class="tok-sym">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+            </td>
+            <td><span class="badge-gate warn">${dex}</span></td>
+            <td><span class="badge-gate ${isSafe ? 'pass' : 'fail'}">${isSafe ? 'SAFE' : 'RISK'}</span></td>
+            <td style="color:${parseFloat(bundPct) > 30 ? 'var(--red)' : 'var(--text)'}">${bundPct}</td>
+            <td style="color:${parseFloat(devPct) > 10 ? 'var(--red)' : 'var(--text)'}">${devPct}</td>
+            <td style="color:${parseFloat(top10Pct) > 40 ? 'var(--red)' : 'var(--text)'}">${top10Pct}</td>
+            <td><b>${smc}</b></td>
+            <td><span style="color:${chg5m.startsWith('+') ? 'var(--green)' : 'var(--red)'}">${chg5m}</span> / ${chg1h}</td>
+            <td><span style="color:${isBuy ? 'var(--green)' : 'var(--text-muted)'};font-family:var(--font-sans);font-weight:600;">${reason}</span></td>
+            <td style="text-align:right;">
+              <button class="btn ${isBuy ? 'primary' : ''}" style="padding:3px 9px;font-size:10.5px;" onclick="executeDirectBuy('${addr}', 0.70, '${sym}')">BUY 0.70 SOL</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderPositions() {
+      const container = document.getElementById('positionsBoard');
+      if (!container) return;
+
+      let totalFloating = 0;
+      rawPositions.forEach(p => {
+        const pnl = p.pnl || 0;
+        const size = p.size_sol || 0.70;
+        totalFloating += size * pnl;
+      });
+
+      const floatPnlStr = (totalFloating >= 0 ? '+' : '') + totalFloating.toFixed(4) + ' SOL';
+      document.getElementById('telFloating').textContent = floatPnlStr;
+      document.getElementById('posTotalFloatHeader').textContent = floatPnlStr;
+
+      if (!rawPositions.length) {
+        container.innerHTML = `<div style="text-align:center;padding:32px;color:var(--text-dim);">NO ACTIVE OPEN ROTATION POSITIONS</div>`;
+        return;
+      }
+
+      const sorted = [...rawPositions].sort((a, b) => (b.pnl || 0) - (a.pnl || 0));
+
+      container.innerHTML = sorted.map(p => {
+        const sym = p.symbol || p.sym || 'TOKEN';
+        const addr = p.address || '';
+        const shortAddr = addr ? (addr.slice(0, 4) + '...' + addr.slice(-4)) : '';
+        const pnlPct = ((p.pnl || 0) * 100).toFixed(2);
+        const isUp = (p.pnl || 0) >= 0;
+        const pnlSol = (((p.size_sol || 0.70) * (p.pnl || 0))).toFixed(4);
+        const curPx = p.cur_price ? ('$' + p.cur_price.toFixed(6)) : '--';
+        const entryPx = p.entry_price ? ('$' + p.entry_price.toFixed(6)) : '--';
+
+        let protTag = 'Monitored';
+        if (parseFloat(pnlPct) >= 150) protTag = 'Moonbag · Trailing ATH';
+        else if (parseFloat(pnlPct) >= 75) protTag = 'Tier 2 TP (+35% Locked)';
+        else if (parseFloat(pnlPct) >= 35) protTag = 'Break-Even (+5% Floor)';
+        else if (parseFloat(pnlPct) <= -10) protTag = 'Near -12% Stop';
+
+        return `
+          <div class="pos-card ${isUp ? 'winner' : 'loser'}">
+            <div class="pos-card-head">
+              <div>
+                <span class="pos-card-sym">$${sym}</span>
+                <span class="tok-addr" onclick="copyAddress('${addr}')">${shortAddr}</span>
+              </div>
+              <div class="pos-card-pnl ${isUp ? 'up' : 'dn'}">
+                ${isUp ? '+' : ''}${pnlPct}%
+              </div>
+            </div>
+            <div class="pos-meta-grid">
+              <div><span>ENTRY</span><b>${entryPx}</b></div>
+              <div><span>NOW</span><b>${curPx}</b></div>
+              <div><span>PNL SOL</span><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlSol}</b></div>
+            </div>
+            <div class="pos-foot-row">
+              <span class="pos-status-badge">${protTag}</span>
+              <button class="btn danger" style="padding:2px 7px;font-size:10px;" onclick="executeExit('${addr}', '${sym}')">EXIT 100%</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderDecisionFeed(decisions) {
+      const feed = document.getElementById('decisionFeed');
+      if (!feed) return;
+
+      const recent = decisions.slice(0, 15);
+      if (!recent.length) {
+        feed.innerHTML = `<div style="text-align:center;padding:20px;color:var(--text-dim)">NO RECENT DECISION ENTRIES</div>`;
+        return;
+      }
+
+      feed.innerHTML = recent.map(item => {
+        const dec = item.decision || item;
+        const sym = dec.symbol || 'TOKEN';
+        const action = dec.action || 'HOLD';
+        const isBuy = action === 'BUY' || action === 'ACTION';
+        const reason = dec.reason || 'Screened';
+
+        return `
+          <div class="dec-row">
+            <span style="color:var(--text-dim);">NOW</span>
+            <span class="badge-gate ${isBuy ? 'pass' : 'fail'}">${action}</span>
+            <span style="font-weight:700;color:var(--text);">$${sym}</span>
+            <span style="color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${reason}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderLedgerTable() {
+      const tbody = document.getElementById('ledgerTbody');
+      if (!tbody) return;
+
+      if (!rawAuditTrades.length) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:20px;color:var(--text-dim)">NO CLOSED TRADES RECORDED</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = rawAuditTrades.slice(0, 10).map(tr => {
+        const sym = tr.symbol || 'TOKEN';
+        const pnlPct = ((tr.pnl_pct || 0) * 100).toFixed(2);
+        const isUp = (tr.pnl_pct || 0) >= 0;
+        const pnlSol = (tr.pnl_sol != null) ? ((tr.pnl_sol >= 0 ? '+' : '') + tr.pnl_sol.toFixed(4) + ' SOL') : '--';
+        const reason = tr.reason || 'EXIT';
+        const hold = tr.hold_minutes ? (tr.hold_minutes.toFixed(1) + 'm') : '--';
+
+        return `
+          <tr>
+            <td><b style="color:var(--text);">$${sym}</b></td>
+            <td><span style="color:var(--amber);font-size:10px;">${reason}</span></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${isUp ? '+' : ''}${pnlPct}%</b></td>
+            <td><b style="color:${isUp ? 'var(--green)' : 'var(--red)'}">${pnlSol}</b></td>
+            <td style="color:var(--text-dim)">${hold}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // -------------------------------------------------------------
+    // EXECUTION ACTIONS
+    // -------------------------------------------------------------
+    async function executeDirectBuy(addr, size, sym) {
+      if (!confirm('Execute 1-Click Buy for $' + sym + ' (' + size + ' SOL)?')) return;
+      try {
+        const res = await fetch(API + '/api/buy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: addr, size_sol: size })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          alert('Buy Error: ' + (d.detail || d.message || 'Execution error'));
+        }
+      } catch (err) {
+        alert('Execution failed: ' + err.message);
+      }
+    }
+
+    async function executeExit(addr, sym) {
+      if (!confirm('Execute 100% Exit for $' + sym + '?')) return;
+      try {
+        const res = await fetch(API + '/api/sell', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chain: 'sol', address: addr, pct: 1.0 })
+        });
+        const d = await res.json();
+        if (res.ok && d.ok) {
+          fetchPositions();
+          fetchAnalytics();
+        } else {
+          alert('Exit Error: ' + (d.detail || d.message || 'Execution error'));
+        }
+      } catch (err) {
+        alert('Exit failed: ' + err.message);
+      }
+    }
+
+    async function harvestWinners() {
+      if (!confirm('Harvest and lock partial profits on all winning positions?')) return;
+      try {
+        const res = await fetch(API + '/api/positions/harvest', { method: 'POST' });
+        const d = await res.json();
+        alert('Harvest: ' + (d.msg || ('Harvested ' + (d.count || 0) + ' positions')));
+        fetchPositions();
+        fetchAnalytics();
+      } catch (err) {
+        alert('Harvest failed: ' + err.message);
+      }
+    }
+
+    async function purgeStopped() {
+      if (!confirm('Purge all positions that reached stop-loss?')) return;
+      try {
+        const res = await fetch(API + '/api/positions/purge_stopped', { method: 'POST' });
+        const d = await res.json();
+        alert('Purge: ' + (d.msg || ('Purged ' + (d.count || 0) + ' positions')));
+        fetchPositions();
+        fetchAnalytics();
+      } catch (err) {
+        alert('Purge failed: ' + err.message);
+      }
+    }
+
+    async function triggerManualRefresh() {
+      await fetchStatus();
+      await fetchAnalytics();
+      await fetchPositions();
+      await fetchScreening();
+    }
+
+    // -------------------------------------------------------------
+    // INITIALIZATION & CYCLES
+    // -------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      triggerManualRefresh();
+      setInterval(fetchAnalytics, 2500);
+      setInterval(fetchPositions, 2500);
+      setInterval(fetchScreening, 5000);
+      setInterval(fetchStatus, 8000);
+    });
+  </script>
+</body>
+</html>

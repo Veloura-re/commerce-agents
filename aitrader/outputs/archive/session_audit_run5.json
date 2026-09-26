@@ -1,0 +1,191 @@
+{
+  "session_start": 1790030831.3271048,
+  "elapsed_seconds": 1804.7617597579956,
+  "cycle_count": 553,
+  "total_trades_opened": 7,
+  "total_trades_closed": 8,
+  "winning_trades_count": 3,
+  "losing_trades_count": 5,
+  "win_rate_pct": 37.5,
+  "total_sol_gained": 0.012484,
+  "total_sol_lost": 0.045598,
+  "profit_factor": 0.27,
+  "total_realized_pnl_sol": -0.033114,
+  "unrealized_pnl_sol": 0.000886,
+  "net_portfolio_pnl_sol": -0.032228,
+  "tokens_scanned": 3000,
+  "token_history": {
+    "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA": {
+      "symbol": "CALI",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.007862,
+      "last_pnl_pct": -0.0364,
+      "last_exit_time": 1790031296.6453931
+    },
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump": {
+      "symbol": "baton",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.017518,
+      "last_pnl_pct": -0.0811,
+      "last_exit_time": 1790031494.667665
+    },
+    "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump": {
+      "symbol": "USDF",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.002635,
+      "last_pnl_pct": 0.0122,
+      "last_exit_time": 1790031922.4212494
+    },
+    "9DdHxVe1BSPaTy3iGEwvWsooRchNLK61XFAvzot59FwD": {
+      "symbol": "CLIP",
+      "trades_count": 1,
+      "cumulative_pnl_sol": 0.005918,
+      "last_pnl_pct": 0.0548,
+      "last_exit_time": 1790032057.5997725
+    },
+    "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump": {
+      "symbol": "GEOM",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.001296,
+      "last_pnl_pct": -0.012,
+      "last_exit_time": 1790032209.4460964
+    },
+    "GY9mZfyPpxXxBXBxS2hB2XjhP3kfUsywTvgveozxpump": {
+      "symbol": "ELON",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.008338,
+      "last_pnl_pct": -0.0386,
+      "last_exit_time": 1790032448.4715025
+    },
+    "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump": {
+      "symbol": "OTC",
+      "trades_count": 1,
+      "cumulative_pnl_sol": -0.010584,
+      "last_pnl_pct": -0.049,
+      "last_exit_time": 1790032448.4765437
+    }
+  },
+  "closed_trades": [
+    {
+      "symbol": "CALI",
+      "address": "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.64%)",
+      "percent": 100,
+      "entry_price": 0.0013505767,
+      "exit_price": 0.00130139,
+      "pnl_pct": -0.0364,
+      "pnl_sol": -0.007862,
+      "hold_minutes": 7.2,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:54:56.645385"
+    },
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -8.11%)",
+      "percent": 100,
+      "entry_price": 0.00174518,
+      "exit_price": 0.00160358,
+      "pnl_pct": -0.0811,
+      "pnl_sol": -0.017518,
+      "hold_minutes": 3.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T01:58:14.667654"
+    },
+    {
+      "symbol": "CLIP",
+      "address": "9DdHxVe1BSPaTy3iGEwvWsooRchNLK61XFAvzot59FwD",
+      "reason": "PARTIAL_TP_50_PCT (+3.64% net banked, 50% runner riding)",
+      "percent": 50,
+      "entry_price": 0.000777202,
+      "exit_price": 0.00080552,
+      "pnl_pct": 0.0364,
+      "pnl_sol": 0.003931,
+      "hold_minutes": 1.8,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:01:09.494789"
+    },
+    {
+      "symbol": "USDF",
+      "address": "DRMnFyekQiCTMrajtgsTycqp4ie6r1tZnh6qpAGjpump",
+      "reason": "STAGNATION_TIMEOUT (15m flat, PnL: 1.22%)",
+      "percent": 100,
+      "entry_price": 0.00426744,
+      "exit_price": 0.0043196,
+      "pnl_pct": 0.0122,
+      "pnl_sol": 0.002635,
+      "hold_minutes": 15.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:05:22.421178"
+    },
+    {
+      "symbol": "CLIP",
+      "address": "9DdHxVe1BSPaTy3iGEwvWsooRchNLK61XFAvzot59FwD",
+      "reason": "RUNNER_TRAILING_EXIT (Peak: 0.000901, Pullback: -9.1%, PnL: +5.48%)",
+      "percent": 100,
+      "entry_price": 0.000777202,
+      "exit_price": 0.000819802,
+      "pnl_pct": 0.0548,
+      "pnl_sol": 0.005918,
+      "hold_minutes": 8.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:07:37.599761"
+    },
+    {
+      "symbol": "GEOM",
+      "address": "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump",
+      "reason": "RUNNER_STAGNATION_HARVEST (Held 23.0m, PnL: -1.20%)",
+      "percent": 100,
+      "entry_price": 0.00373457,
+      "exit_price": 0.00368986,
+      "pnl_pct": -0.012,
+      "pnl_sol": -0.001296,
+      "hold_minutes": 23.0,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:10:09.446089"
+    },
+    {
+      "symbol": "ELON",
+      "address": "GY9mZfyPpxXxBXBxS2hB2XjhP3kfUsywTvgveozxpump",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -3.86%)",
+      "percent": 100,
+      "entry_price": 0.000935312,
+      "exit_price": 0.000899254,
+      "pnl_pct": -0.0386,
+      "pnl_sol": -0.008338,
+      "hold_minutes": 8.8,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:14:08.471494"
+    },
+    {
+      "symbol": "OTC",
+      "address": "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump",
+      "reason": "TIGHT_HARD_STOP_LOSS (-2.8%) (PnL: -4.90%)",
+      "percent": 100,
+      "entry_price": 0.005056,
+      "exit_price": 0.00480814,
+      "pnl_pct": -0.049,
+      "pnl_sol": -0.010584,
+      "hold_minutes": 4.3,
+      "is_reentry": false,
+      "timestamp": "2026-09-22T02:14:08.476535"
+    }
+  ],
+  "active_positions": [
+    {
+      "symbol": "baton",
+      "address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "size_sol": 0.216,
+      "pnl": 0.0041,
+      "entry_price": 0.0015837,
+      "cur_price": 0.00159026,
+      "severity": 0,
+      "signals": [
+        {
+          "t": "\u6301\u4ed3\u6b63\u5e38\u76d1\u63a7\u4e2d",
+          "hot": false
+        }
+      ]
+    }
+  ]
+}

@@ -2542,45 +2542,13 @@ def api_status():
 @app.get("/api/state")
 def api_state():
     """Returns session state for the UI to poll.
-    DEMO POLICY: if the live audit contains negative realized PnL, the bundled
-    demo seed (positive-only) is served instead.  This keeps the public
-    dashboard free of negative numbers in all deployment scenarios.
+    Reports honest simulation results including all wins and losses.
     """
-    def _load_demo_seed():
-        demo_seed = STATIC_DIR / "demo_seed_audit.json"
-        if demo_seed.exists():
-            try:
-                with open(demo_seed, "r") as _f:
-                    seed_data = json.load(_f)
-                    if not seed_data.get("active_positions"):
-                        seed_data["active_positions"] = monitor_positions(ST.chain)
-                    return seed_data
-            except Exception:
-                pass
-        return {"active_positions": monitor_positions(ST.chain)}
-
     audit_file = OUT_DIR / "session_audit.json"
     if audit_file.exists():
         try:
             with open(audit_file, "r") as f:
                 data = json.load(f)
-            # Serve the positive demo seed whenever real data went negative
-            realized = data.get("total_realized_pnl_sol", 0.0) or 0.0
-            if realized < 0:
-                data = _load_demo_seed()
-            elif "closed_trades" in data:
-                data["closed_trades"] = [
-                    t for t in data["closed_trades"]
-                    if (t.get("pnl_sol") or 0.0) >= 0
-                ]
-                wins = [t for t in data["closed_trades"] if (t.get("pnl_sol") or 0.0) > 0]
-                data["winning_trades_count"] = len(wins)
-                data["losing_trades_count"] = 0
-                data["total_trades_closed"] = len(data["closed_trades"])
-                data["total_sol_lost"] = 0.0
-                data["win_rate_pct"] = round(
-                    len(wins) / max(len(data["closed_trades"]), 1) * 100, 1
-                )
 
             # Ensure active positions are attached from current active holdings
             if not data.get("active_positions") or len(data.get("active_positions", [])) == 0:
@@ -2588,17 +2556,14 @@ def api_state():
 
             if data.get("active_positions"):
                 unrealized = sum((p.get("pnl", 0.0) or 0.0) * (p.get("size_sol", 0.70) or 0.70) for p in data["active_positions"])
-                data["unrealized_pnl_sol"] = round(max(0.0, unrealized), 6)
-                data["net_portfolio_pnl_sol"] = round(data.get("total_realized_pnl_sol", 4.040574) + data["unrealized_pnl_sol"], 6)
+                data["unrealized_pnl_sol"] = round(unrealized, 6)
+                data["net_portfolio_pnl_sol"] = round(data.get("total_realized_pnl_sol", 0.0) + unrealized, 6)
 
             return data
         except Exception:
             pass
-    # Cold-start: no live audit — serve the bundled demo seed
-    seed = _load_demo_seed()
-    if not seed.get("active_positions"):
-        seed["active_positions"] = monitor_positions(ST.chain)
-    return seed
+    # Cold-start: no audit file yet
+    return {"active_positions": monitor_positions(ST.chain)}
 
 
 @app.post("/api/config")
@@ -3904,7 +3869,7 @@ def _perpetual_demo_trading_loop():
                         except Exception:
                             audit_data = {}
 
-                    realized_pnl = float(audit_data.get("total_realized_pnl_sol") or 4.2573)
+                    realized_pnl = float(audit_data.get("total_realized_pnl_sol") or 0.0)
                     closed_trades = audit_data.get("closed_trades") or []
                     
                     # 1. Harvest or Rotate positions that reached target or stagnation
@@ -3913,8 +3878,11 @@ def _perpetual_demo_trading_loop():
                     for p in list(ST.positions):
                         p["cycles"] = p.get("cycles", 0) + 1
                         c = p["cycles"]
-                        # Natural dynamic price appreciation (+3.5% to +35%)
-                        pnl = round(min(0.35, max(0.015, 0.035 + (0.014 * (c % 22)) + (0.007 * (hash(p.get("address", "")) % 5)))), 4)
+                        # Realistic dynamic price movement (can go positive or negative)
+                        addr_hash = hash(p.get("address", "")) % 10
+                        cycle_phase = (c % 30) - 15  # oscillates -15 to +14
+                        base_drift = 0.008 * cycle_phase + 0.003 * (addr_hash - 5)
+                        pnl = round(min(0.40, max(-0.25, base_drift)), 4)
                         p["pnl"] = pnl
                         ep = p.get("entry_price", 0.001)
                         if ep > 0:
@@ -3922,8 +3890,8 @@ def _perpetual_demo_trading_loop():
                         
                         held_addrs.add(p.get("address", "").lower())
 
-                        # Exit condition: held >= 18 cycles with >= +12% profit, or cycle >= 32
-                        if (c >= 18 and pnl >= 0.12) or c >= 32:
+                        # Exit condition: held >= 18 cycles with >= +12% profit, or stopped out at -15%, or cycle >= 32
+                        if (c >= 18 and pnl >= 0.12) or pnl <= -0.15 or c >= 32:
                             to_remove.append(p)
 
                     # Execute exits and bank realized profit
@@ -3933,8 +3901,14 @@ def _perpetual_demo_trading_loop():
                             held_addrs.discard(p.get("address", "").lower())
                             pnl_sol = round((p.get("size_sol", 0.70) or 0.70) * p["pnl"], 6)
                             realized_pnl = round(realized_pnl + pnl_sol, 6)
+                            is_loss = pnl_sol < 0
                             
-                            exit_reason = f"PARTIAL_TP_TIER2 (+{p['pnl']*100:.1f}% hit: 100% banked, floor +5.0%)" if p["pnl"] >= 0.10 else f"STAGNATION_RECYCLE (15.0m, PnL: +{p['pnl']*100:.1f}% — slot freed)"
+                            if is_loss:
+                                exit_reason = f"STOP_LOSS ({p['pnl']*100:.1f}% hit: capital preserved)"
+                            elif p["pnl"] >= 0.10:
+                                exit_reason = f"PARTIAL_TP_TIER2 (+{p['pnl']*100:.1f}% hit: 100% banked, floor +5.0%)"
+                            else:
+                                exit_reason = f"STAGNATION_RECYCLE (PnL: {p['pnl']*100:+.1f}% -- slot freed)"
                             trade_rec = {
                                 "symbol": p["symbol"],
                                 "address": p["address"],
@@ -3969,15 +3943,16 @@ def _perpetual_demo_trading_loop():
 
                     # 3. Synchronize audit state file
                     wins = [t for t in closed_trades if (t.get("pnl_sol") or 0.0) >= 0]
+                    losses = [t for t in closed_trades if (t.get("pnl_sol") or 0.0) < 0]
                     unrealized = sum((p.get("pnl", 0.0) or 0.0) * (p.get("size_sol", 0.70) or 0.70) for p in ST.positions)
                     
                     audit_data.update({
-                        "total_realized_pnl_sol": round(max(realized_pnl, 4.2573), 6),
-                        "unrealized_pnl_sol": round(max(0.0, unrealized), 6),
-                        "net_portfolio_pnl_sol": round(max(realized_pnl, 4.2573) + max(0.0, unrealized), 6),
+                        "total_realized_pnl_sol": round(realized_pnl, 6),
+                        "unrealized_pnl_sol": round(unrealized, 6),
+                        "net_portfolio_pnl_sol": round(realized_pnl + unrealized, 6),
                         "closed_trades": closed_trades,
                         "winning_trades_count": len(wins),
-                        "losing_trades_count": 0,
+                        "losing_trades_count": len(losses),
                         "total_trades_closed": len(closed_trades),
                         "win_rate_pct": round(len(wins) / max(len(closed_trades), 1) * 100, 1),
                         "active_positions": list(ST.positions)

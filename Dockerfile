@@ -3,11 +3,9 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y curl build-essential nodejs npm && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN npm install -g gmgn-cli@1.0.1
-
-COPY . .
 RUN chmod +x start.sh start_all.sh
 
 ENV KIDA_MODE=SHADOW

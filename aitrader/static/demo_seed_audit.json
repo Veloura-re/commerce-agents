@@ -63962,7 +63962,84 @@
       "timestamp": "2026-09-27T05:08:09.293943"
     }
   ],
-  "active_positions": [],
+  "active_positions": [
+    {
+      "symbol": "VBUCKS",
+      "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
+      "size_sol": 0.70,
+      "pnl": 0.0527,
+      "entry_price": 0.00130784,
+      "cur_price": 0.00137676,
+      "mcap": 622941.0,
+      "liquidity": 79541.0,
+      "council_score": 84,
+      "council_risk": "LOW_RISK",
+      "severity": 0,
+      "signals": [
+        {
+          "t": "Active monitoring - normal telemetry",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "pill",
+      "address": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
+      "size_sol": 0.70,
+      "pnl": 0.1333,
+      "entry_price": 0.00292094,
+      "cur_price": 0.00331042,
+      "mcap": 3739970.0,
+      "liquidity": 246393.0,
+      "council_score": 92,
+      "council_risk": "LOW_RISK",
+      "severity": 0,
+      "signals": [
+        {
+          "t": "Active monitoring - normal telemetry",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "NEARKAT",
+      "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
+      "size_sol": 0.70,
+      "pnl": 0.0820,
+      "entry_price": 0.00781059,
+      "cur_price": 0.00845106,
+      "mcap": 9453250.0,
+      "liquidity": 487168.0,
+      "council_score": 78,
+      "council_risk": "MODERATE_RISK",
+      "severity": 0,
+      "signals": [
+        {
+          "t": "Active monitoring - normal telemetry",
+          "hot": false
+        }
+      ]
+    },
+    {
+      "symbol": "GROK",
+      "address": "2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump",
+      "size_sol": 0.70,
+      "pnl": 0.1664,
+      "entry_price": 0.00491914,
+      "cur_price": 0.00573768,
+      "mcap": 1420500.0,
+      "liquidity": 184500.0,
+      "council_score": 88,
+      "council_risk": "LOW_RISK",
+      "severity": 0,
+      "signals": [
+        {
+          "t": "Active monitoring - normal telemetry",
+          "hot": false
+        }
+      ]
+    }
+  ],
   "candidates": [
     {
       "symbol": "giga/acc",

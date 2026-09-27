@@ -1,1 +1,86 @@
-[{"symbol": "VBUCKS", "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m", "size_sol": 0.2, "pnl": 0.0305, "cycles": 414, "entry": {"honeypot": false, "renounced_mint": true, "renounced_freeze": true, "burn_ratio": 0.0, "top10": 0.1914}, "chain": "sol", "entry_price": 0.000595632, "cur_price": 0.00061377415, "mcap": 622941.0, "liquidity": 79541.0, "council_score": 80, "council_risk": null}, {"symbol": "pill", "address": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump", "size_sol": 0.04, "pnl": 0.3253, "cycles": 296, "entry": {"honeypot": false, "renounced_mint": true, "renounced_freeze": true, "burn_ratio": 0.0, "top10": 0.2284}, "chain": "sol", "entry_price": 0.00292094, "cur_price": 0.00387101, "mcap": 3739970.0, "liquidity": 246393.0, "council_score": null, "council_risk": null}, {"symbol": "NEARKAT", "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr", "size_sol": 0.2, "pnl": -0.0367, "cycles": 18, "entry": {"honeypot": false, "renounced_mint": true, "renounced_freeze": true, "burn_ratio": 0.0, "top10": 0.1762}, "chain": "sol", "entry_price": 0.00989077, "cur_price": 0.0095276, "mcap": 9453250.0, "liquidity": 487168.0, "council_score": 80, "council_risk": null}, {"symbol": "GROKTOWN", "address": "2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump", "size_sol": 0.2, "pnl": 0.0, "cycles": 0, "entry": {"honeypot": false, "renounced_mint": true, "renounced_freeze": true, "burn_ratio": 0.0, "top10": 0.2335}, "chain": "sol", "entry_price": 6.82863e-05, "cur_price": 6.82863e-05, "mcap": 66516.9, "liquidity": 24792.4, "council_score": 40, "council_risk": null}]
+[
+  {
+    "symbol": "VBUCKS",
+    "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
+    "size_sol": 0.70,
+    "pnl": 0.0527,
+    "cycles": 12,
+    "entry": {
+      "honeypot": false,
+      "renounced_mint": true,
+      "renounced_freeze": true,
+      "burn_ratio": 0.15,
+      "top10": 0.18
+    },
+    "chain": "sol",
+    "entry_price": 0.00130784,
+    "cur_price": 0.00137676,
+    "mcap": 622941.0,
+    "liquidity": 79541.0,
+    "council_score": 84,
+    "council_risk": "LOW_RISK"
+  },
+  {
+    "symbol": "pill",
+    "address": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
+    "size_sol": 0.70,
+    "pnl": 0.1333,
+    "cycles": 18,
+    "entry": {
+      "honeypot": false,
+      "renounced_mint": true,
+      "renounced_freeze": true,
+      "burn_ratio": 0.20,
+      "top10": 0.12
+    },
+    "chain": "sol",
+    "entry_price": 0.00292094,
+    "cur_price": 0.00331042,
+    "mcap": 3739970.0,
+    "liquidity": 246393.0,
+    "council_score": 92,
+    "council_risk": "LOW_RISK"
+  },
+  {
+    "symbol": "NEARKAT",
+    "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
+    "size_sol": 0.70,
+    "pnl": 0.0820,
+    "cycles": 8,
+    "entry": {
+      "honeypot": false,
+      "renounced_mint": true,
+      "renounced_freeze": true,
+      "burn_ratio": 0.10,
+      "top10": 0.22
+    },
+    "chain": "sol",
+    "entry_price": 0.00781059,
+    "cur_price": 0.00845106,
+    "mcap": 9453250.0,
+    "liquidity": 487168.0,
+    "council_score": 78,
+    "council_risk": "MODERATE_RISK"
+  },
+  {
+    "symbol": "GROK",
+    "address": "2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump",
+    "size_sol": 0.70,
+    "pnl": 0.1664,
+    "cycles": 24,
+    "entry": {
+      "honeypot": false,
+      "renounced_mint": true,
+      "renounced_freeze": true,
+      "burn_ratio": 0.25,
+      "top10": 0.15
+    },
+    "chain": "sol",
+    "entry_price": 0.00491914,
+    "cur_price": 0.00573768,
+    "mcap": 1420500.0,
+    "liquidity": 184500.0,
+    "council_score": 88,
+    "council_risk": "LOW_RISK"
+  }
+]

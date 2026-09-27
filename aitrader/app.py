@@ -2552,7 +2552,9 @@ def api_risk_reset():
     return dict(ok=True, message="Risk gates reset successfully")
 
 _SCREEN_CACHE: dict = {}
-_SCREEN_CACHE_TTL = 4.0
+import threading
+_SCREEN_LOCK = threading.Lock()
+_SCREEN_CACHE_TTL = 30.0
 
 @app.post("/api/run")
 def api_run(r: RunIn):
@@ -2564,19 +2566,20 @@ def api_run(r: RunIn):
             return JSONResponse(dict(decisions=[], portfolio=None, positions=[]))
         return JSONResponse(data)
     ch = valid_chain(r.chain)
-    now = time.time()
-    cached = _SCREEN_CACHE.get(ch)
-    if cached and (now - cached.get("ts", 0) < _SCREEN_CACHE_TTL):
-        return JSONResponse(cached["data"])
-    try:
-        data = screen_once(ch)
-        _SCREEN_CACHE[ch] = {"ts": now, "data": data}
-        return JSONResponse(data)
-    except Exception as e:
-        if cached and cached.get("data"):
+    
+    with _SCREEN_LOCK:
+        now = time.time()
+        cached = _SCREEN_CACHE.get(ch)
+        if cached and (now - cached.get("ts", 0) < _SCREEN_CACHE_TTL):
             return JSONResponse(cached["data"])
-        raise HTTPException(502, f"扫描失败：{e}")
-
+        try:
+            data = screen_once(ch)
+            _SCREEN_CACHE[ch] = {"ts": time.time(), "data": data}
+            return JSONResponse(data)
+        except Exception as e:
+            if cached and cached.get("data"):
+                return JSONResponse(cached["data"])
+            raise HTTPException(502, f"扫描失败：{e}")
 @app.get("/api/run")
 def api_run_get(chain: str = "sol"):
     return api_run(RunIn(chain=chain))

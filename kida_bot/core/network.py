@@ -22,13 +22,13 @@ def send_webhook_alert(message: str, tier: str = "INFO"):
     # TODO: Add requests.post(WEBHOOK_URL, json={"content": message}) here
 
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10))
-def http_get(url: str, timeout: int = 10):
+def http_get(url: str, timeout: int = 120):
     resp = requests.get(url, timeout=timeout)
     resp.raise_for_status()
     return resp.json()
 
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10))
-def http_post(url: str, payload: dict, timeout: int = 35):
+def http_post(url: str, payload: dict, timeout: int = 120):
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
     resp = requests.post(url, json=payload, headers=headers, timeout=timeout)
     resp.raise_for_status()

@@ -142,7 +142,7 @@ def _compute_entry_quality(chg_5m: float, chg_1h: float, buy_ratio: float) -> st
 
 def run_screening():
     try:
-        data = http_post(f"{API_BASE}/api/run", {"chain": CHAIN}, timeout=35)
+        data = http_post(f"{API_BASE}/api/run", {"chain": CHAIN}, timeout=120)
         decisions = data.get("decisions", [])
         state["tokens_scanned"] += len(decisions)
         

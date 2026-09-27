@@ -1,0 +1,95 @@
+Starting backend API...
+Starting KIDA Bot...
+Starting KIDA Bot Engine from /home/liora/Documents/prjs/claude coomerce agents...
+[05:08:01] INFO: RESTORED ACTIVE SESSION: Cycle #26613, 2146 closed trades, Realized PnL: +4.0065 SOL
+[05:08:01] INFO: ================================================================
+[05:08:01] INFO:   KIDA // AUTONOMOUS ON-CHAIN SNIPER CITADEL (SHADOW MODE)
+[05:08:01] INFO:   ANTHROPIC COMMERCE-AGENT TWO-PHASE STAGED GUARDRAILS ACTIVE
+[05:08:01] INFO:   Target Chain: SOL | Concurrent Slots: 4
+[05:08:01] INFO:   Dynamic Position Sizing: 0.2-0.2 SOL per slot
+[05:08:01] INFO:   Micro-Monitor Cadence: 3.0s (Fast In-Memory Tick)
+[05:08:01] INFO:   Take-Profit Target: +35.0% | Base Stop-Loss: -4.0%
+[05:08:01] INFO:   House Money Re-Entry Stop: -2.5%
+[05:08:01] INFO:   Liquidity Moat: >= $15,000 Pool Depth | >= $15,000 Mcap | >= 5 SM
+[05:08:01] INFO:   Provenance Registry Initialized: Base58 Address Validation Active
+[05:08:01] INFO: ================================================================
+[05:08:01] ERROR: Failed to fetch positions: <urlopen error [Errno 111] Connection refused>
+[05:08:01] INFO: Ingested 0 active portfolio positions into Provenance Registry.
+[05:08:01] ERROR: Failed to fetch positions: <urlopen error [Errno 111] Connection refused>
+[05:08:01] ERROR: Failed to fetch API status: <urlopen error [Errno 111] Connection refused>
+[05:08:01] WARNING: Backend service unavailable. Retrying in next cycle...
+INFO:     Started server process [24102]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:33706 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33716 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33718 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 1/2] SWAP PROPOSED & STAGED: swap-stage-0001 | SELL_STOP STEVEWILLDOIT (3pVv9iav...q8nG) | Size: 0.200 SOL | Sig: 0bfc730edb8c2186
+INFO:     127.0.0.1:33732 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] DISPATCHING ON-CHAIN TRANSACTION: swap-stage-0001 | STEVEWILLDOIT...
+INFO:     127.0.0.1:33740 - "POST /api/sell HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] SWAP APPLIED TO CHAIN: swap-stage-0001 | STEVEWILLDOIT | Tx: SHADOW_SIM_CONFIRMED
+[05:08:09] INFO: BRAIN HEURISTICS UPDATED: WR EMA 23.9% | Total Reflections: 3641
+[05:08:09] INFO: CONSOLIDATION COOLDOWN: STEVEWILLDOIT exited. Enforcing 15m cooldown before re-evaluation.
+INFO:     127.0.0.1:33748 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: HIGH-WATER MARK TRAILING LOCK: pill peak +32.5%. Floor ratcheted to +28.5%.
+INFO:     127.0.0.1:33764 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 1/2] SWAP PROPOSED & STAGED: swap-stage-0002 | SELL_PARTIAL pill (DvdmEnzt...pump) | Size: 0.100 SOL | Sig: 3e09496d6c992d7c
+INFO:     127.0.0.1:33772 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] DISPATCHING ON-CHAIN TRANSACTION: swap-stage-0002 | pill...
+INFO:     127.0.0.1:33782 - "POST /api/sell HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] SWAP APPLIED TO CHAIN: swap-stage-0002 | pill | Tx: SHADOW_SIM_CONFIRMED
+[05:08:09] INFO: BRAIN HEURISTICS UPDATED: WR EMA 23.9% | Total Reflections: 3641
+INFO:     127.0.0.1:33796 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33802 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33804 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33814 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: HIGH-WATER MARK TRAILING LOCK: pill peak +32.5%. Floor ratcheted to +28.5%.
+INFO:     127.0.0.1:33816 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 1/2] SWAP PROPOSED & STAGED: swap-stage-0003 | SELL_PARTIAL pill (DvdmEnzt...pump) | Size: 0.060 SOL | Sig: 3e09496d6c992d7c
+INFO:     127.0.0.1:33822 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] DISPATCHING ON-CHAIN TRANSACTION: swap-stage-0003 | pill...
+INFO:     127.0.0.1:33824 - "POST /api/sell HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] SWAP APPLIED TO CHAIN: swap-stage-0003 | pill | Tx: SHADOW_SIM_CONFIRMED
+[05:08:09] INFO: BRAIN HEURISTICS UPDATED: WR EMA 23.9% | Total Reflections: 3641
+INFO:     127.0.0.1:33828 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33840 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: Cycle #26615 | Elapsed: 3693.8m/525600m | Slots: 3/4 [VBUCKS (+3.05%), pill (+32.53%), NEARKAT (-3.67%)] | Realized PnL: +4.0406 SOL
+INFO:     127.0.0.1:33852 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33870 - "GET /api/token/9ZdLqWeyvgrHWVXW3wQGXg62RSxAp9RxbnWtC3gfpump/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33872 - "GET /api/token/4jipzXcySV6ywKPHihKGc4ESCwstJMWk9BWzQPRapump/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33886 - "GET /api/token/9ZdLqWeyvgrHWVXW3wQGXg62RSxAp9RxbnWtC3gfpump/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33892 - "GET /api/token/4jipzXcySV6ywKPHihKGc4ESCwstJMWk9BWzQPRapump/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33898 - "GET /api/token/2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33908 - "GET /api/token/DAemPFNc3RtibBDKkUA4eL2Ns11q9VRdbpptmqm8DGqN/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33918 - "GET /api/token/J1yxV53EmVRmt9RUj6PPufMfdAYUbtgwXCuNYTBTsYzJ/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33928 - "GET /api/token/8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33938 - "GET /api/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33954 - "GET /api/token/HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33966 - "GET /api/token/HSnCtWsw5YmfAkJo9S3eetWtGHPMrc2pAxvCu24AnQEa/security HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:33864 - "POST /api/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33982 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 1/2] SWAP PROPOSED & STAGED: swap-stage-0004 | BUY_REENTRY GROKTOWN (2PiCu43D...pump) | Size: 0.200 SOL | Sig: 99eed439279444dc
+INFO:     127.0.0.1:33994 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] DISPATCHING ON-CHAIN TRANSACTION: swap-stage-0004 | GROKTOWN...
+INFO:     127.0.0.1:34004 - "POST /api/buy HTTP/1.1" 200 OK
+[05:08:09] INFO: [STAGE 2/2] SWAP APPLIED TO CHAIN: swap-stage-0004 | GROKTOWN | Tx: SHADOW_SIM_CONFIRMED
+INFO:     127.0.0.1:34010 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37866 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37870 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:12] INFO: HIGH-WATER MARK TRAILING LOCK: pill peak +32.5%. Floor ratcheted to +28.5%.
+INFO:     127.0.0.1:37872 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37880 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37896 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37908 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:12] INFO: Cycle #26616 | Elapsed: 3693.9m/525600m | Slots: 4/4 [VBUCKS (+3.05%), pill (+32.53%), NEARKAT (-3.67%), GROKTOWN (+0.00%)] | Realized PnL: +4.0406 SOL
+INFO:     127.0.0.1:37922 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37928 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37944 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37960 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37974 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37982 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37998 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK
+[05:08:15] INFO: Cycle #26617 | Elapsed: 3693.9m/525600m | Slots: 4/4 [VBUCKS (+3.05%), pill (+32.53%), NEARKAT (-3.67%), GROKTOWN (+0.00%)] | Realized PnL: +4.0406 SOL
+INFO:     127.0.0.1:38014 - "GET /api/positions?chain=sol HTTP/1.1" 200 OK

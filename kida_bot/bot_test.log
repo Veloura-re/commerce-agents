@@ -1,0 +1,1 @@
+/usr/bin/python3: Error while finding module specification for 'kida_bot.main' (ModuleNotFoundError: No module named 'kida_bot')

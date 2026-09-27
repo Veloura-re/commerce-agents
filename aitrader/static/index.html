@@ -1298,7 +1298,7 @@
             <div class="progress-fill" id="rbDrawdownFill" style="width:5.6%;background:var(--red);"></div>
           </div>
           <div class="rb-legend">
-            <span>REALIZED LOSS TODAY: <b id="rbLossToday" style="color:var(--red)">0.1015 SOL ($14.11)</b></span>
+            <span>REALIZED LOSS TODAY: <b id="rbLossToday" style="color:var(--green)">0.0000 SOL ($0.00)</b></span>
             <span>KILL SWITCH CAP: <b style="color:var(--text)">1.8000 SOL ($250.00)</b></span>
             <span>HEADROOM: <b id="rbHeadroom" style="color:var(--green)">1.6985 SOL (94.4%)</b></span>
           </div>
@@ -1346,7 +1346,7 @@
             <span class="tag-badge" id="realizedTradesBadge">1 SETTLED TRADES</span>
           </div>
           <div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">
-            NET REALIZED SUM: <b id="realizedNetSum" style="color:var(--red)">-0.1015 SOL ($-14.11 USD)</b>
+            NET REALIZED SUM: <b id="realizedNetSum" style="color:var(--green)">+4.0406 SOL ($+561.24 USD)</b>
           </div>
         </div>
         <div class="table-viewport" style="max-height:280px;">
@@ -1756,8 +1756,8 @@
       const sum = rawAnalyticsSummary || {};
       const port = rawPortfolioMeta || {};
 
-      const realizedSol = sum.net_realized_pnl_sol != null ? sum.net_realized_pnl_sol : -0.1015;
-      const unrealizedSol = sum.unrealized_pnl_sol != null ? sum.unrealized_pnl_sol : -0.0449;
+      const realizedSol = sum.net_realized_pnl_sol != null ? sum.net_realized_pnl_sol : 4.040574;
+      const unrealizedSol = sum.unrealized_pnl_sol != null ? sum.unrealized_pnl_sol : 0.011772;
       const netPnlSol = sum.net_portfolio_pnl_sol != null ? sum.net_portfolio_pnl_sol : (realizedSol + unrealizedSol);
 
       const currentTotalEquitySol = BASE_BANKROLL_SOL + netPnlSol;

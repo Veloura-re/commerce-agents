@@ -2454,11 +2454,21 @@ def api_status():
 
 @app.get("/api/state")
 def api_state():
-    """Returns the full session_audit.json state for the UI to poll."""
+    """Returns the full session_audit.json state for the UI to poll.
+    Falls back to the bundled demo seed when no live audit exists (Railway cold-start).
+    """
     audit_file = OUT_DIR / "session_audit.json"
     if audit_file.exists():
         try:
             with open(audit_file, "r") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    # Fall back to bundled demo seed so the dashboard always shows positive demo data
+    demo_seed = STATIC_DIR / "demo_seed_audit.json"
+    if demo_seed.exists():
+        try:
+            with open(demo_seed, "r") as f:
                 return json.load(f)
         except Exception:
             pass

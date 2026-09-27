@@ -5,4 +5,5 @@ python3 -m uvicorn app:app --host 0.0.0.0 --port 8000 &
 cd ..
 
 echo "Starting KIDA Bot..."
+cd kida_bot
 ./start.sh

@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y curl build-essential nodejs npm && rm -
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN npm install -g gmgn-cli@1.0.1
-RUN chmod +x start.sh start_all.sh
+RUN chmod +x kida_bot/start.sh start_all.sh
 
 ENV KIDA_MODE=SHADOW
 ENV CHAIN=sol

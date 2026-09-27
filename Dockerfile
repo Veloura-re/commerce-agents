@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN npm install -g gmgn-cli@1.0.1
 RUN chmod +x kida_bot/start.sh start_all.sh
 
-ENV KIDA_MODE=LIVE
+ENV KIDA_MODE=SHADOW
 ENV CHAIN=sol
 
 # Expose the API port

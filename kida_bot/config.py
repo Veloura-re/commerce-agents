@@ -30,7 +30,9 @@ fh = logging.FileHandler(str(LOG_FILE), mode="w", encoding="utf-8")
 fh.setFormatter(formatter)
 logger.addHandler(fh)
 
-API_BASE = "http://127.0.0.1:8000"
+import os
+port = os.environ.get("PORT", "8000")
+API_BASE = f"http://127.0.0.1:{port}"
 CHAIN = "sol"
 FAST_MONITOR_INTERVAL_SECONDS = 3.0
 SCREEN_INTERVAL_SECONDS = 20.0

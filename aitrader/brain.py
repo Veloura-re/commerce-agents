@@ -389,11 +389,15 @@ class KIDABrain:
         self.agent_telemetry = self._init_agent_telemetry()
         try:
             from .analysis_delegate import TokenAnalysisDelegate
-            self.analysis_delegate = TokenAnalysisDelegate(api_base="http://127.0.0.1:8000")
+            import os
+            port = os.environ.get("PORT", "8000")
+            self.analysis_delegate = TokenAnalysisDelegate(api_base=f"http://127.0.0.1:{port}")
         except Exception:
             try:
                 from analysis_delegate import TokenAnalysisDelegate
-                self.analysis_delegate = TokenAnalysisDelegate(api_base="http://127.0.0.1:8000")
+                import os
+                port = os.environ.get("PORT", "8000")
+                self.analysis_delegate = TokenAnalysisDelegate(api_base=f"http://127.0.0.1:{port}")
             except Exception:
                 self.analysis_delegate = None
 

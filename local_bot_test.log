@@ -1,0 +1,23 @@
+[04:50:44] INFO: RESTORED ACTIVE SESSION: Cycle #26613, 2146 closed trades, Realized PnL: +4.0065 SOL
+[04:50:44] INFO: ================================================================
+[04:50:44] INFO:   KIDA // AUTONOMOUS ON-CHAIN SNIPER CITADEL (SHADOW MODE)
+[04:50:44] INFO:   ANTHROPIC COMMERCE-AGENT TWO-PHASE STAGED GUARDRAILS ACTIVE
+[04:50:44] INFO:   Target Chain: SOL | Concurrent Slots: 4
+[04:50:44] INFO:   Dynamic Position Sizing: 0.2-0.2 SOL per slot
+[04:50:44] INFO:   Micro-Monitor Cadence: 3.0s (Fast In-Memory Tick)
+[04:50:44] INFO:   Take-Profit Target: +35.0% | Base Stop-Loss: -4.0%
+[04:50:44] INFO:   House Money Re-Entry Stop: -2.5%
+[04:50:44] INFO:   Liquidity Moat: >= $15,000 Pool Depth | >= $15,000 Mcap | >= 5 SM
+[04:50:44] INFO:   Provenance Registry Initialized: Base58 Address Validation Active
+[04:50:44] INFO: ================================================================
+[04:50:44] ERROR: Failed to fetch positions: HTTP Error 404: Not Found
+[04:50:44] INFO: Ingested 0 active portfolio positions into Provenance Registry.
+[04:50:44] ERROR: Failed to fetch positions: HTTP Error 404: Not Found
+[04:50:44] ERROR: Failed to fetch API status: HTTP Error 404: Not Found
+[04:50:44] WARNING: Backend service unavailable. Retrying in next cycle...
+[04:50:47] ERROR: Failed to fetch positions: HTTP Error 404: Not Found
+[04:50:47] ERROR: Failed to fetch API status: HTTP Error 404: Not Found
+[04:50:47] WARNING: Backend service unavailable. Retrying in next cycle...
+[04:50:50] ERROR: Failed to fetch positions: HTTP Error 404: Not Found
+[04:50:50] ERROR: Failed to fetch API status: HTTP Error 404: Not Found
+[04:50:50] WARNING: Backend service unavailable. Retrying in next cycle...

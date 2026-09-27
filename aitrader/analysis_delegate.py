@@ -114,7 +114,11 @@ class TokenAnalysisDelegate:
     Operates in isolated tool loop with zero write/swap access.
     """
 
-    def __init__(self, api_base: str = "http://127.0.0.1:8000", anthropic_api_key: Optional[str] = None):
+    def __init__(self, api_base: Optional[str] = None, anthropic_api_key: Optional[str] = None):
+        import os
+        if api_base is None:
+            port = os.environ.get("PORT", "8000")
+            api_base = f"http://127.0.0.1:{port}"
         self.api_base = api_base.rstrip("/")
         self.api_key = anthropic_api_key or os.environ.get("ANTHROPIC_API_KEY")
 

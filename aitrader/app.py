@@ -3684,6 +3684,10 @@ def index():
         return FileResponse(str(f))
     return JSONResponse(dict(msg="把 dashboard 存为 static/index.html 后刷新"), status_code=200)
 
+@app.get("/vitals")
+def vitals():
+    return JSONResponse({"status": "ok"}, status_code=200)
+
 @app.on_event("startup")
 def _maybe_start_public_broadcast():
     # 公开演示模式：启动后台守护线程定时刷新真实筛选缓存（仅此线程触发 CLI）。

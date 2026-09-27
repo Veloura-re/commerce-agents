@@ -2567,11 +2567,19 @@ def api_run(r: RunIn):
         return JSONResponse(data)
     ch = valid_chain(r.chain)
     
-    with _SCREEN_LOCK:
+    # Non-blocking lock to prevent threadpool exhaustion
+    if not _SCREEN_LOCK.acquire(blocking=False):
+        cached = _SCREEN_CACHE.get(ch)
+        if cached:
+            return JSONResponse(cached["data"])
+        return JSONResponse(dict(decisions=[], portfolio=None, positions=[], msg="Analysis in progress"))
+        
+    try:
         now = time.time()
         cached = _SCREEN_CACHE.get(ch)
         if cached and (now - cached.get("ts", 0) < _SCREEN_CACHE_TTL):
             return JSONResponse(cached["data"])
+            
         try:
             data = screen_once(ch)
             _SCREEN_CACHE[ch] = {"ts": time.time(), "data": data}
@@ -2580,6 +2588,8 @@ def api_run(r: RunIn):
             if cached and cached.get("data"):
                 return JSONResponse(cached["data"])
             raise HTTPException(502, f"扫描失败：{e}")
+    finally:
+        _SCREEN_LOCK.release()
 @app.get("/api/run")
 def api_run_get(chain: str = "sol"):
     return api_run(RunIn(chain=chain))

@@ -339,14 +339,51 @@ def check_memex_gates(address: str, symbol: str, feat: dict = None, is_reentry: 
 # SECTION 6: TWO-PHASE STAGED BUY & SELL DISPATCHERS
 # ==============================================================================
 
-def calculate_dynamic_size(council_score: int, sm_count: int, liq: float) -> float:
-    """Blended Conviction Engine: Grades setup as A+, B, or C tier for Kelly Sizing."""
-    if council_score >= 85 and sm_count >= 10 and liq >= 100_000:
-        return MAX_TRADE_SIZE_SOL
-    elif council_score >= 70 and sm_count >= 5 and liq >= 50_000:
-        return 1.000
+def detect_market_regime(candidates: List[dict] = None) -> dict:
+    """
+    Evaluates market regime based on candidate breadth, momentum acceleration, and smart money presence:
+    - High Conviction Concentration (Option 3): High average 5m momentum (>= 3%), strong liquidity (> $80k), SM confluence >= 8 -> 1.20 SOL, 3 slots max
+    - Micro-Scalp Agility (Option 2): Low average 5m momentum (<= 0.5%), choppy/low turnover, thin liquidity -> 0.25 SOL, 8 slots max
+    - Standard Conservative (Option 1): Balanced baseline market -> 0.70 SOL, 5 slots max
+    """
+    if not candidates:
+        return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.70, "max_positions": 5, "exposure_cap_sol": 3.60}
+    
+    top = candidates[:6]
+    def extract_chg_5m(c: dict) -> float:
+        if "chg_5m" in c:
+            val = float(c["chg_5m"])
+            return val / 100.0 if abs(val) > 1.0 else val
+        for k in ("price_change_5m", "price_change_percent_5m"):
+            if k in c:
+                return float(c[k]) / 100.0
+        return 0.0
+
+    def extract_sm(c: dict) -> int:
+        return int(c.get("smart_degen_count") or c.get("smart_money_count") or c.get("smart_wallets") or 0)
+
+    avg_chg_5m = sum(extract_chg_5m(c) for c in top) / max(len(top), 1)
+    high_conviction_count = sum(
+        1 for c in top
+        if extract_sm(c) >= 6 and (c.get("liquidity") or 0) >= 80_000 and extract_chg_5m(c) >= 0.02
+    )
+
+    if high_conviction_count >= 2 or avg_chg_5m >= 0.03:
+        return {"regime": "HIGH_CONVICTION", "trade_size_sol": 1.20, "max_positions": 3, "exposure_cap_sol": 3.60}
+    elif avg_chg_5m <= 0.005 or len([c for c in top if extract_sm(c) >= 4]) == 0:
+        return {"regime": "MICRO_SCALP", "trade_size_sol": 0.25, "max_positions": 8, "exposure_cap_sol": 2.00}
     else:
-        return MIN_TRADE_SIZE_SOL
+        return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.70, "max_positions": 5, "exposure_cap_sol": 3.60}
+
+def calculate_dynamic_size(council_score: int, sm_count: int, liq: float, regime: dict = None) -> float:
+    """Blended Conviction Engine: Grades setup across Kelly Sizing & Active Market Regime."""
+    base_size = regime.get("trade_size_sol", DEFAULT_TRADE_SIZE_SOL) if regime else DEFAULT_TRADE_SIZE_SOL
+    if council_score >= 85 and sm_count >= 10 and liq >= 100_000:
+        return min(round(base_size * 1.2, 3), 1.20)
+    elif council_score >= 70 and sm_count >= 5 and liq >= 50_000:
+        return round(base_size, 3)
+    else:
+        return max(round(base_size * 0.75, 3), 0.25)
 
 def execute_buy(
     address: str,
@@ -356,7 +393,8 @@ def execute_buy(
     liq: float,
     is_reentry: bool = False,
     council_score: int = 50,
-    risk_label: str = "MODERATE_RISK"
+    risk_label: str = "MODERATE_RISK",
+    regime: dict = None
 ) -> bool:
     """
     Executes a BUY using the Anthropic Two-Phase Staged Guardrail Architecture.
@@ -366,7 +404,8 @@ def execute_buy(
     kind = SwapKind.BUY_REENTRY if is_reentry else SwapKind.BUY_FRESH
     actor = "WAVE_RIDER_ENGINE" if is_reentry else "AUTONOMOUS_SCREENER"
     
-    dynamic_size = calculate_dynamic_size(council_score, sm_count, liq)
+    dynamic_size = calculate_dynamic_size(council_score, sm_count, liq, regime=regime)
+    max_slots = regime.get("max_positions", MAX_POSITIONS) if regime else MAX_POSITIONS
     
     # Phase 1: Stage Swap & Run Phase-1 Guardrails
     staged = swap_ledger.stage_swap(
@@ -383,7 +422,8 @@ def execute_buy(
             "liquidity": liq,
             "is_reentry": is_reentry,
             "council_score": council_score,
-            "risk_label": risk_label
+            "risk_label": risk_label,
+            "max_positions": max_slots
         },
         portfolio_context=get_portfolio_context(),
         live_heuristics=get_live_heuristics(),
@@ -790,11 +830,11 @@ def monitor_and_manage_risk():
                 )
                 continue
 
-        # 5. Dynamic Stagnation Exit: If held >= 15m and failed to reach at least +2.0% target, recycle slot
-        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < 0.02:
+        # 5. Dynamic Stagnation Exit: If held >= 8m and failed to reach at least +1.5% target, recycle slot
+        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < STAGNATION_MIN_PNL_TARGET:
             execute_sell(
                 addr, sym,
-                f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +2.0% target — slot freed)",
+                f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
                 pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
             )
             continue
@@ -841,6 +881,13 @@ def cycle():
     if (now - state["last_screen_time"]) >= SCREEN_INTERVAL_SECONDS or current_count == 0:
         state["last_screen_time"] = now
         candidates = run_screening()
+        regime = detect_market_regime(candidates)
+        active_max_positions = regime["max_positions"]
+        available_slots = active_max_positions - current_count
+        logger.info(
+            f"MARKET REGIME: {regime['regime']} | Sizing: {regime['trade_size_sol']} SOL | "
+            f"Capacity: {current_count}/{active_max_positions} slots | Cap: {regime['exposure_cap_sol']} SOL"
+        )
         held_addrs = {p["address"].lower() for p in positions}
 
         # Priority 1: Check Wave Rider Re-entry candidates first
@@ -868,7 +915,8 @@ def cycle():
                             addr, sym, c.get("market_cap", 0), c.get("smart_degen_count", 0), c.get("liquidity", 0),
                             is_reentry=True,
                             council_score=80,
-                            risk_label="LOW_RISK"
+                            risk_label="LOW_RISK",
+                            regime=regime
                         )
                         if success:
                             held_addrs.add(addr.lower())
@@ -936,7 +984,8 @@ def cycle():
                 addr, sym, mcap, sm_count, liq,
                 is_reentry=False,
                 council_score=council_score,
-                risk_label=risk_label
+                risk_label=risk_label,
+                regime=regime
             )
             if success:
                 held_addrs.add(addr.lower())

@@ -294,9 +294,10 @@ def check_swap_guardrails(
                 f"exceeds limit {MAX_ACTIVE_EXPOSURE_SOL:.3f} SOL"
             )
 
-        # Max Concurrent Positions Cap
-        if open_count >= MAX_POSITIONS:
-            violations.append(f"SLOT_CAP_SATURATED: All {MAX_POSITIONS} concurrent slots are active")
+        # Max Concurrent Positions Cap (Dynamic Regime Adaptive)
+        active_max = staged.context.get("max_positions", MAX_POSITIONS)
+        if open_count >= active_max:
+            violations.append(f"SLOT_CAP_SATURATED: All {active_max} concurrent slots are active")
 
         # Duplicate Position Defense
         held_addrs = {p["address"].lower() for p in current_positions}

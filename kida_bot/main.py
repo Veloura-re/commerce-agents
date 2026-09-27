@@ -268,6 +268,111 @@ def run_screening():
         logger.error(f"Screening exception: {e}")
         return []
 
+FALLBACK_RADAR_CANDIDATES = [
+    {
+        "symbol": "VBUCKS",
+        "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
+        "market_cap": 622941.0,
+        "volume": 320000.0,
+        "liquidity": 79541.0,
+        "chg_5m": 0.012,
+        "buy_ratio": 0.65,
+        "bundler": 0.05,
+        "dev_hold": 0.02,
+        "smart_degen_count": 8,
+        "priority": 85.0,
+        "action": "ACTION",
+        "risk_label": "LOW_RISK",
+        "council_score": 84,
+        "features": {"buy_volume_1m": 5000, "sell_volume_1m": 2000, "buy_volume_5m": 25000, "sell_volume_5m": 10000}
+    },
+    {
+        "symbol": "pill",
+        "address": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
+        "market_cap": 3739970.0,
+        "volume": 890000.0,
+        "liquidity": 246393.0,
+        "chg_5m": 0.024,
+        "buy_ratio": 0.72,
+        "bundler": 0.04,
+        "dev_hold": 0.01,
+        "smart_degen_count": 14,
+        "priority": 92.0,
+        "action": "ACTION",
+        "risk_label": "LOW_RISK",
+        "council_score": 92,
+        "features": {"buy_volume_1m": 12000, "sell_volume_1m": 4000, "buy_volume_5m": 60000, "sell_volume_5m": 20000}
+    },
+    {
+        "symbol": "NEARKAT",
+        "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
+        "market_cap": 9453250.0,
+        "volume": 1450000.0,
+        "liquidity": 487168.0,
+        "chg_5m": 0.009,
+        "buy_ratio": 0.58,
+        "bundler": 0.06,
+        "dev_hold": 0.03,
+        "smart_degen_count": 9,
+        "priority": 78.0,
+        "action": "ACTION",
+        "risk_label": "MODERATE_RISK",
+        "council_score": 78,
+        "features": {"buy_volume_1m": 8000, "sell_volume_1m": 5000, "buy_volume_5m": 40000, "sell_volume_5m": 25000}
+    },
+    {
+        "symbol": "GROK",
+        "address": "2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump",
+        "market_cap": 1420500.0,
+        "volume": 680000.0,
+        "liquidity": 184500.0,
+        "chg_5m": 0.031,
+        "buy_ratio": 0.68,
+        "bundler": 0.03,
+        "dev_hold": 0.02,
+        "smart_degen_count": 11,
+        "priority": 88.0,
+        "action": "ACTION",
+        "risk_label": "LOW_RISK",
+        "council_score": 88,
+        "features": {"buy_volume_1m": 9000, "sell_volume_1m": 3000, "buy_volume_5m": 45000, "sell_volume_5m": 15000}
+    },
+    {
+        "symbol": "CALI",
+        "address": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+        "market_cap": 2840000.0,
+        "volume": 720000.0,
+        "liquidity": 210000.0,
+        "chg_5m": 0.015,
+        "buy_ratio": 0.62,
+        "bundler": 0.05,
+        "dev_hold": 0.02,
+        "smart_degen_count": 12,
+        "priority": 82.0,
+        "action": "ACTION",
+        "risk_label": "LOW_RISK",
+        "council_score": 82,
+        "features": {"buy_volume_1m": 7000, "sell_volume_1m": 3500, "buy_volume_5m": 35000, "sell_volume_5m": 18000}
+    },
+    {
+        "symbol": "CLEANCAT",
+        "address": "CLEANCATxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "market_cap": 850000.0,
+        "volume": 420000.0,
+        "liquidity": 120000.0,
+        "chg_5m": 0.018,
+        "buy_ratio": 0.66,
+        "bundler": 0.04,
+        "dev_hold": 0.01,
+        "smart_degen_count": 10,
+        "priority": 86.0,
+        "action": "ACTION",
+        "risk_label": "LOW_RISK",
+        "council_score": 86,
+        "features": {"buy_volume_1m": 6000, "sell_volume_1m": 2500, "buy_volume_5m": 30000, "sell_volume_5m": 12000}
+    }
+]
+
 def execute_buy(
     address: str,
     symbol: str,
@@ -276,7 +381,8 @@ def execute_buy(
     liq: float,
     is_reentry: bool = False,
     council_score: int = 50,
-    risk_label: str = "MODERATE_RISK"
+    risk_label: str = "MODERATE_RISK",
+    regime: dict = None
 ) -> bool:
     """
     Executes a BUY using the Anthropic Two-Phase Staged Guardrail Architecture.
@@ -286,7 +392,8 @@ def execute_buy(
     kind = SwapKind.BUY_REENTRY if is_reentry else SwapKind.BUY_FRESH
     actor = "WAVE_RIDER_ENGINE" if is_reentry else "AUTONOMOUS_SCREENER"
     
-    dynamic_size = calculate_dynamic_size(council_score, sm_count, liq)
+    dynamic_size = calculate_dynamic_size(council_score, sm_count, liq, regime=regime)
+    max_slots = regime.get("max_positions", MAX_POSITIONS) if regime else MAX_POSITIONS
     
     # Phase 1: Stage Swap & Run Phase-1 Guardrails
     staged = swap_ledger.stage_swap(
@@ -303,7 +410,8 @@ def execute_buy(
             "liquidity": liq,
             "is_reentry": is_reentry,
             "council_score": council_score,
-            "risk_label": risk_label
+            "risk_label": risk_label,
+            "max_positions": max_slots
         },
         portfolio_context=get_portfolio_context(),
         live_heuristics=get_live_heuristics(),
@@ -713,6 +821,13 @@ def cycle():
     if (now - state["last_screen_time"]) >= SCREEN_INTERVAL_SECONDS or current_count == 0:
         state["last_screen_time"] = now
         candidates = run_screening()
+        regime = detect_market_regime(candidates)
+        active_max_positions = regime["max_positions"]
+        available_slots = active_max_positions - current_count
+        logger.info(
+            f"MARKET REGIME: {regime['regime']} | Sizing: {regime['trade_size_sol']} SOL | "
+            f"Capacity: {current_count}/{active_max_positions} slots | Cap: {regime['exposure_cap_sol']} SOL"
+        )
         held_addrs = {p["address"].lower() for p in positions}
 
         # Priority 1: Check Wave Rider Re-entry candidates first
@@ -740,7 +855,8 @@ def cycle():
                             addr, sym, c.get("market_cap", 0), c.get("smart_degen_count", 0), c.get("liquidity", 0),
                             is_reentry=True,
                             council_score=80,
-                            risk_label="LOW_RISK"
+                            risk_label="LOW_RISK",
+                            regime=regime
                         )
                         if success:
                             held_addrs.add(addr.lower())
@@ -805,7 +921,6 @@ def cycle():
                 state["token_history"][addr] = {}
             state["token_history"][addr]["entry_candidate_snapshot"] = c
 
-
             # Council Veto: block score < 40 or explicitly rejected.
             if council_score < 40 or council_eval.get("verdict") == "REJECTED":
                 logger.info(f"COUNCIL VETO ({sym}): Score {council_score}/100 [{risk_label}] ({gates_passed}/5 sentinels) — {council_eval.get('verdict_rationale')}")
@@ -818,7 +933,8 @@ def cycle():
                 addr, sym, mcap, sm_count, liq,
                 is_reentry=False,
                 council_score=council_score,
-                risk_label=risk_label
+                risk_label=risk_label,
+                regime=regime
             )
             if success:
                 held_addrs.add(addr.lower())
@@ -895,7 +1011,7 @@ def main():
     try:
         while True:
             elapsed = time.time() - state["session_start_time"]
-            if elapsed >= SESSION_DURATION_SECONDS:
+            if SESSION_DURATION_SECONDS > 0 and elapsed >= SESSION_DURATION_SECONDS:
                 logger.info(f"Target session duration ({SESSION_DURATION_SECONDS/3600:.1f}h) reached.")
                 break
             

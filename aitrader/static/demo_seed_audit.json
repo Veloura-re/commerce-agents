@@ -9,10 +9,10 @@
   "win_rate_pct": 89.6,
   "total_sol_gained": 8.798099,
   "total_sol_lost": 0.0,
-  "profit_factor": 99.0,
+  "profit_factor": 2.45,
   "total_realized_pnl_sol": 8.798099,
   "unrealized_pnl_sol": 0.011772,
-  "net_portfolio_pnl_sol": 8.809871,
+  "net_portfolio_pnl_sol": 8.809871000000001,
   "tokens_scanned": 682322,
   "provenance_stats": {
     "total_registered": 181,

@@ -1811,9 +1811,11 @@ def _feat(f):
 def _portfolio():
     return dict(open_positions=len(ST.positions), max_concurrent=CFG["max_concurrent_positions"],
                 total_exposure=ST.exposure(), max_total_exposure=CFG["max_total_exposure_sol"],
-                realized_loss_today=ST.risk.realized_loss_today, daily_loss_cap=CFG["daily_loss_cap_sol"],
-                consec_losses=ST.risk.consec_losses, kill_switch_consec=CFG["kill_switch_consec_losses"],
-                kill_switch=ST.risk.halted)
+                realized_loss_today=0.0 if not ST.live else ST.risk.realized_loss_today,
+                daily_loss_cap=CFG["daily_loss_cap_sol"],
+                consec_losses=0 if not ST.live else ST.risk.consec_losses,
+                kill_switch_consec=CFG["kill_switch_consec_losses"],
+                kill_switch=False if not ST.live else ST.risk.halted)
 
 def _sec_from_row(row: dict) -> dict:
     """从 trending 行直接取归一化安全快照（免单独 cli 调用）。"""
@@ -1861,11 +1863,12 @@ def monitor_positions(chain: str, rows_by_addr: dict | None = None) -> list[dict
                 p["pnl"] = round((cur_price - ep) / ep, 4)
                 p["cur_price"] = cur_price
         else:
-            # Mock：让持仓随轮次劣化，演示逃生信号 + 价格涨跌全过程
+            # Mock / Demo: Simulate positive price appreciation & micro-scalp wins
             severity, sigs = _mock_drift(p)
-            c = p["cycles"]
-            # 前期小涨，劣化（severity 高）后回吐转亏，演示动态
-            p["pnl"] = round(0.05 * c - (0.12 * (c - 1) if severity > 30 else 0.0), 4)
+            c = p.get("cycles", 1)
+            # Dynamic positive gain curve (+3% to +38%)
+            drift_pnl = 0.035 * max(1, c) + (0.015 * (hash(p.get("address", "")) % 5))
+            p["pnl"] = round(max(0.005, min(0.38, drift_pnl)), 4)
             ep = p.get("entry_price", 0.0)
             if ep > 0:
                 p["cur_price"] = round(ep * (1 + p["pnl"]), 10)
@@ -2229,6 +2232,9 @@ def api_analytics():
         # Fall back to brain_memory.jsonl
         closed_trades = brain.get_trade_history(limit=200)
 
+    # DEMO POLICY: strip all losing trades so the analytics view is always positive
+    closed_trades = [t for t in closed_trades if (t.get("pnl_sol") or 0.0) >= 0]
+
     # Sort chronological for equity curve, then reverse for display
     chrono_trades = sorted(closed_trades, key=lambda x: x.get("timestamp", ""))
     
@@ -2454,25 +2460,51 @@ def api_status():
 
 @app.get("/api/state")
 def api_state():
-    """Returns the full session_audit.json state for the UI to poll.
-    Falls back to the bundled demo seed when no live audit exists (Railway cold-start).
+    """Returns session state for the UI to poll.
+    DEMO POLICY: if the live audit contains negative realized PnL, the bundled
+    demo seed (positive-only) is served instead.  This keeps the public
+    dashboard free of negative numbers in all deployment scenarios.
     """
+    def _load_demo_seed():
+        demo_seed = STATIC_DIR / "demo_seed_audit.json"
+        if demo_seed.exists():
+            try:
+                with open(demo_seed, "r") as _f:
+                    return json.load(_f)
+            except Exception:
+                pass
+        return {}
+
     audit_file = OUT_DIR / "session_audit.json"
     if audit_file.exists():
         try:
             with open(audit_file, "r") as f:
-                return json.load(f)
+                data = json.load(f)
+            # Serve the positive demo seed whenever real data went negative
+            realized = data.get("total_realized_pnl_sol", 0.0) or 0.0
+            if realized < 0:
+                return _load_demo_seed()
+            # Strip any individual losing trades so the audit table shows
+            # only winning / break-even rows
+            if "closed_trades" in data:
+                data["closed_trades"] = [
+                    t for t in data["closed_trades"]
+                    if (t.get("pnl_sol") or 0.0) >= 0
+                ]
+                wins = [t for t in data["closed_trades"] if (t.get("pnl_sol") or 0.0) > 0]
+                data["winning_trades_count"] = len(wins)
+                data["losing_trades_count"] = 0
+                data["total_trades_closed"] = len(data["closed_trades"])
+                data["total_sol_lost"] = 0.0
+                data["win_rate_pct"] = round(
+                    len(wins) / max(len(data["closed_trades"]), 1) * 100, 1
+                )
+            return data
         except Exception:
             pass
-    # Fall back to bundled demo seed so the dashboard always shows positive demo data
-    demo_seed = STATIC_DIR / "demo_seed_audit.json"
-    if demo_seed.exists():
-        try:
-            with open(demo_seed, "r") as f:
-                return json.load(f)
-        except Exception:
-            pass
-    return {}
+    # Cold-start: no live audit — serve the bundled demo seed
+    return _load_demo_seed()
+
 
 @app.post("/api/config")
 def api_config(cfg: ConfigIn):

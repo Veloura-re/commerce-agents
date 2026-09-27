@@ -3677,15 +3677,18 @@ def api_positions(chain: str = "sol"):
 if STATIC_DIR.exists():
     app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
-@app.get("/")
-def index():
+@app.api_route("/", methods=["GET", "HEAD"])
+async def index():
     f = STATIC_DIR / "index.html"
     if f.exists():
         return FileResponse(str(f))
     return JSONResponse(dict(msg="把 dashboard 存为 static/index.html 后刷新"), status_code=200)
 
-@app.get("/vitals")
-def vitals():
+@app.api_route("/vitals", methods=["GET", "HEAD"])
+@app.api_route("/health", methods=["GET", "HEAD"])
+@app.api_route("/healthz", methods=["GET", "HEAD"])
+@app.api_route("/api/health", methods=["GET", "HEAD"])
+async def vitals():
     return JSONResponse({"status": "ok"}, status_code=200)
 
 @app.on_event("startup")

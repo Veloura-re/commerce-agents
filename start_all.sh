@@ -7,7 +7,8 @@ if [ ! -z "$GMGN_PRIVATE_KEY" ]; then
     echo "GMGN private key configured from environment."
 fi
 cd aitrader
-python3 -m uvicorn app:app --host 0.0.0.0 --port 8000 &
+PORT=${PORT:-8000}
+python3 -m uvicorn app:app --host 0.0.0.0 --port $PORT &
 cd ..
 
 echo "Starting KIDA Bot..."

@@ -32,7 +32,7 @@ from typing import Optional, Union
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 try:
@@ -3691,9 +3691,64 @@ async def index():
 async def vitals():
     return JSONResponse({"status": "ok"}, status_code=200)
 
+@app.api_route("/favicon.ico", methods=["GET", "HEAD"])
+async def favicon():
+    return Response(status_code=204)
+
+def _start_port_bridge():
+    """Bridges standard Railway target ports (8000, 8080, 3000) to the active listening port."""
+    import socket
+    try:
+        main_port = int(os.environ.get("PORT", "8000"))
+    except Exception:
+        main_port = 8000
+
+    def forward(src, dst):
+        try:
+            while True:
+                data = src.recv(65536)
+                if not data:
+                    break
+                dst.sendall(data)
+        except Exception:
+            pass
+        finally:
+            try:
+                src.close()
+            except Exception:
+                pass
+            try:
+                dst.close()
+            except Exception:
+                pass
+
+    def bridge(port):
+        try:
+            srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            srv.bind(('0.0.0.0', port))
+            srv.listen(128)
+            logger.info(f"Port bridge active: 0.0.0.0:{port} -> 127.0.0.1:{main_port}")
+        except Exception as e:
+            logger.debug(f"Port bridge bind skipped for {port}: {e}")
+            return
+        while True:
+            try:
+                client, _ = srv.accept()
+                target = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                target.connect(('127.0.0.1', main_port))
+                threading.Thread(target=forward, args=(client, target), daemon=True).start()
+                threading.Thread(target=forward, args=(target, client), daemon=True).start()
+            except Exception:
+                time.sleep(0.1)
+
+    for p in [8000, 8080, 3000]:
+        if p != main_port:
+            threading.Thread(target=bridge, args=(p,), daemon=True).start()
+
 @app.on_event("startup")
-def _maybe_start_public_broadcast():
-    # 公开演示模式：启动后台守护线程定时刷新真实筛选缓存（仅此线程触发 CLI）。
+def _on_startup():
+    _start_port_bridge()
     if PUBLIC_DEMO:
         threading.Thread(target=_public_broadcast_loop, daemon=True).start()
 

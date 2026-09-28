@@ -1489,6 +1489,7 @@ class AppState:
         self.risk = RiskManager()
         self.positions: list[dict] = []          # 每项含 entry 快照 + cycles + chain
         self.trending_cmds: dict[str, str] = load_trending_cmds()   # 按链热榜命令（落盘持久，重启不丢）
+        self._last_trending_error: str = ""
         # 启动即读环境 key：有 API key/私钥或系统已安装 gmgn-cli 就走真实数据适配器
         env = load_env()
         has_cli = shutil.which("gmgn-cli") is not None
@@ -1543,8 +1544,10 @@ class AppState:
             return hit[1]
         try:
             rows = self.adapter_for(chain).market_trending(cmd=self.get_trending_cmd(chain))
+            self._last_trending_error = ""
         except Exception as e:
             rows = []
+            self._last_trending_error = str(e)
             log("TRENDING_FAIL", chain, f"热榜拉取失败：{e}")
         if not rows and self._trending_last_good.get(chain):
             log("TRENDING_STALE", chain, "本轮空榜/失败 → 沿用最近一次非空热榜，列表不清空")
@@ -2466,7 +2469,18 @@ def api_status():
     return dict(live_adapter=ST.is_live_adapter, chain=ST.chain, mode=ST.mode,
                 has_key=bool(load_env().get("GMGN_API_KEY")),
                 trading_locked=LIVE_TRADING_DISABLED, public_demo=PUBLIC_DEMO,
-                trending_cmd=ST.get_trending_cmd(ST.chain))
+                trending_cmd=ST.get_trending_cmd(ST.chain),
+                last_trending_error=ST._last_trending_error)
+
+@app.get("/api/decisions/log")
+def api_decisions_log(limit: int = 50):
+    if not LOG_PATH.exists():
+        return dict(lines=[])
+    try:
+        lines = LOG_PATH.read_text(encoding="utf-8", errors="ignore").splitlines()
+        return dict(lines=lines[-limit:] if limit > 0 else lines)
+    except Exception as e:
+        return dict(error=str(e))
 
 @app.get("/api/state")
 def api_state():

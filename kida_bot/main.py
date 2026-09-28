@@ -192,8 +192,8 @@ def run_screening():
                 if chg_5m < 0.005 or turnover_rate < 0.25:
                     continue
 
-            # Institutional Quality Moat (relaxed for jackpot hunting)
-            if liq < 5000.0 or mcap < 5000.0 or chg_5m < -0.01 or buy_ratio < 0.48:
+            # Conservative Institutional Quality Moat
+            if liq < 50_000.0 or mcap < 50_000.0 or chg_5m < -0.01 or buy_ratio < 0.48:
                 continue
 
             if (action == "ACTION") or (sm >= heur["min_smart_money"]):
@@ -284,7 +284,10 @@ def execute_buy(
     kind = SwapKind.BUY_REENTRY if is_reentry else SwapKind.BUY_FRESH
     actor = "WAVE_RIDER_ENGINE" if is_reentry else "AUTONOMOUS_SCREENER"
     
-    dynamic_size = calculate_dynamic_size(council_score, sm_count, liq, regime=regime)
+    dynamic_size = calculate_dynamic_size(
+        council_score, sm_count, liq, regime=regime,
+        portfolio_equity_sol=(TOTAL_BANKROLL_USD / 140.0)
+    )
     max_slots = regime.get("max_positions", MAX_POSITIONS) if regime else MAX_POSITIONS
     
     # Phase 1: Stage Swap & Run Phase-1 Guardrails
@@ -766,15 +769,15 @@ def cycle():
 
             heur = get_live_heuristics()
 
-            if action != "ACTION":
-                if liq < heur["min_pool_liquidity_usd"]:
-                    continue
-                if sm_count < heur["min_smart_money"]:
-                    continue
-                if bundler > heur["max_bundler_rate"]:
-                    continue
-                if dev_hold > heur["max_dev_hold_rate"]:
-                    continue
+            # Conservative Institutional Moat Enforcement
+            if liq < heur["min_pool_liquidity_usd"]:
+                continue
+            if sm_count < heur["min_smart_money"]:
+                continue
+            if bundler > heur["max_bundler_rate"]:
+                continue
+            if dev_hold > heur["max_dev_hold_rate"]:
+                continue
 
             ok_memex, reason_memex = check_memex_gates(addr, sym, feat=feat, is_reentry=False)
             if not ok_memex:

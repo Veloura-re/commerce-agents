@@ -29,27 +29,27 @@ def get_live_heuristics():
     try:
         h = brain.get_heuristics()
         return {
-            "min_pool_liquidity_usd": 15000.0,
-            "min_mcap": 15000.0,
+            "min_pool_liquidity_usd": 50000.0,
+            "min_mcap": 50000.0,
             "max_mcap": 1_000_000_000_000.0,
-            "min_1h_volume": 1000.0,
-            "min_smart_money": max(3, int(h.get("min_smart_money_consensus", 3))),
+            "min_1h_volume": 10000.0,
+            "min_smart_money": max(5, int(h.get("min_smart_money_consensus", 5))),
             "min_chg_5m": 0.0,
             "min_buy_ratio": 0.50,
-            "max_bundler_rate": float(h.get("max_bundler_tolerance", 0.15)),
-            "max_dev_hold_rate": float(h.get("max_dev_hold_tolerance", 0.12)),
+            "max_bundler_rate": min(0.05, float(h.get("max_bundler_tolerance", 0.05))),
+            "max_dev_hold_rate": min(0.05, float(h.get("max_dev_hold_tolerance", 0.05))),
         }
     except Exception:
         return {
-            "min_pool_liquidity_usd": 5000.0,
-            "min_mcap": 5000.0,
+            "min_pool_liquidity_usd": 50000.0,
+            "min_mcap": 50000.0,
             "max_mcap": 1_000_000_000_000.0,
-            "min_1h_volume": 1000.0,
-            "min_smart_money": 3,
+            "min_1h_volume": 10000.0,
+            "min_smart_money": 5,
             "min_chg_5m": 0.0,
             "min_buy_ratio": 0.50,
-            "max_bundler_rate": 0.15,
-            "max_dev_hold_rate": 0.12,
+            "max_bundler_rate": 0.05,
+            "max_dev_hold_rate": 0.05,
         }
 
 state = {
@@ -369,15 +369,25 @@ def detect_market_regime(candidates: List[dict] = None) -> dict:
     else:
         return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.70, "max_positions": 5, "exposure_cap_sol": 3.60}
 
-def calculate_dynamic_size(council_score: int, sm_count: int, liq: float, regime: dict = None) -> float:
-    """Blended Conviction Engine: Grades setup across Kelly Sizing & Active Market Regime."""
+def calculate_dynamic_size(council_score: int, sm_count: int, liq: float, regime: dict = None, portfolio_equity_sol: float = 0.0) -> float:
+    """Dynamic Conviction Sizing: 10% to 20% of portfolio equity, bounded by regime and risk."""
+    if portfolio_equity_sol > 0:
+        if council_score >= 85 and sm_count >= 10 and liq >= 100_000:
+            target_pct = 0.20
+        elif council_score >= 70 and sm_count >= 5 and liq >= 50_000:
+            target_pct = 0.15
+        else:
+            target_pct = 0.10
+        allocated = round(portfolio_equity_sol * target_pct, 3)
+        return max(MIN_TRADE_SIZE_SOL, min(allocated, MAX_TRADE_SIZE_SOL))
+
     base_size = regime.get("trade_size_sol", DEFAULT_TRADE_SIZE_SOL) if regime else DEFAULT_TRADE_SIZE_SOL
     if council_score >= 85 and sm_count >= 10 and liq >= 100_000:
-        return min(round(base_size * 1.2, 3), 1.20)
+        return min(round(base_size * 1.2, 3), MAX_TRADE_SIZE_SOL)
     elif council_score >= 70 and sm_count >= 5 and liq >= 50_000:
         return round(base_size, 3)
     else:
-        return max(round(base_size * 0.75, 3), 0.25)
+        return max(round(base_size * 0.75, 3), MIN_TRADE_SIZE_SOL)
 
 def execute_buy(
     address: str,
@@ -398,7 +408,10 @@ def execute_buy(
     kind = SwapKind.BUY_REENTRY if is_reentry else SwapKind.BUY_FRESH
     actor = "WAVE_RIDER_ENGINE" if is_reentry else "AUTONOMOUS_SCREENER"
     
-    dynamic_size = calculate_dynamic_size(council_score, sm_count, liq, regime=regime)
+    dynamic_size = calculate_dynamic_size(
+        council_score, sm_count, liq, regime=regime,
+        portfolio_equity_sol=(TOTAL_BANKROLL_USD / 140.0)
+    )
     max_slots = regime.get("max_positions", MAX_POSITIONS) if regime else MAX_POSITIONS
     
     # Phase 1: Stage Swap & Run Phase-1 Guardrails
@@ -928,15 +941,15 @@ def cycle():
 
             heur = get_live_heuristics()
 
-            if action != "ACTION":
-                if liq < heur["min_pool_liquidity_usd"]:
-                    continue
-                if sm_count < heur["min_smart_money"]:
-                    continue
-                if bundler > heur["max_bundler_rate"]:
-                    continue
-                if dev_hold > heur["max_dev_hold_rate"]:
-                    continue
+            # Conservative Institutional Moat Enforcement
+            if liq < heur["min_pool_liquidity_usd"]:
+                continue
+            if sm_count < heur["min_smart_money"]:
+                continue
+            if bundler > heur["max_bundler_rate"]:
+                continue
+            if dev_hold > heur["max_dev_hold_rate"]:
+                continue
 
             ok_memex, reason_memex = check_memex_gates(addr, sym, feat=feat, is_reentry=False)
             if not ok_memex:
@@ -1090,18 +1103,4 @@ def check_memex_gates(address: str, symbol: str, feat: dict = None, is_reentry: 
         logger.warning(f"MemeX gate error on {symbol}: {e}")
         return True, "PASS"
 
-# ==============================================================================
-# SECTION 6: TWO-PHASE STAGED BUY & SELL DISPATCHERS
-# ==============================================================================
-
-def calculate_dynamic_size(council_score: int, sm_count: int, liq: float) -> float:
-    """Blended Conviction Engine: Grades setup as A+, B, or C tier for Kelly Sizing."""
-    if liq < 35_000:
-        return MIN_TRADE_SIZE_SOL
-    elif council_score >= 85 and sm_count >= 10 and liq >= 100_000:
-        return MAX_TRADE_SIZE_SOL
-    elif council_score >= 70 and sm_count >= 5 and liq >= 50_000:
-        return DEFAULT_TRADE_SIZE_SOL
-    else:
-        return MIN_TRADE_SIZE_SOL
 

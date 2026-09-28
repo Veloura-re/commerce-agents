@@ -1609,69 +1609,12 @@
     const BASE_BANKROLL_SOL = 7.2000; // Reference initial capital ($1,000 USD at $139/SOL)
     const SOL_PRICE_USD = 139.00;
 
-    const defaultDemoPositions = [
-      {
-        symbol: "VBUCKS",
-        address: "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
-        size_sol: 0.70,
-        entry_price: 0.00130784,
-        cur_price: 0.00137676,
-        pnl: 0.0527,
-        cycles: 12,
-        mcap: 622941.0,
-        liquidity: 79541.0,
-        council_score: 84,
-        council_risk: "LOW_RISK",
-        severity: 0
-      },
-      {
-        symbol: "pill",
-        address: "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
-        size_sol: 0.70,
-        entry_price: 0.00292094,
-        cur_price: 0.00331042,
-        pnl: 0.1333,
-        cycles: 18,
-        mcap: 3739970.0,
-        liquidity: 246393.0,
-        council_score: 92,
-        council_risk: "LOW_RISK",
-        severity: 0
-      },
-      {
-        symbol: "NEARKAT",
-        address: "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
-        size_sol: 0.70,
-        entry_price: 0.00781059,
-        cur_price: 0.00845106,
-        pnl: 0.0820,
-        cycles: 8,
-        mcap: 9453250.0,
-        liquidity: 487168.0,
-        council_score: 78,
-        council_risk: "MODERATE_RISK",
-        severity: 0
-      },
-      {
-        symbol: "GROK",
-        address: "2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump",
-        size_sol: 0.70,
-        entry_price: 0.00491914,
-        cur_price: 0.00573768,
-        pnl: 0.1664,
-        cycles: 24,
-        mcap: 1420500.0,
-        liquidity: 184500.0,
-        council_score: 88,
-        council_risk: "LOW_RISK",
-        severity: 0
-      }
-    ];
+    const defaultDemoPositions = [];
 
     let currentDexFilter = 'ALL';
     let currentActiveView = 'treasury';
     let rawDecisions = [];
-    let rawPositions = [...defaultDemoPositions];
+    let rawPositions = [];
     let rawAuditTrades = [];
     let rawAnalyticsSummary = {};
     let rawPortfolioMeta = {};
@@ -1761,7 +1704,7 @@
         
         rawPositions = (state.active_positions && state.active_positions.length > 0)
           ? state.active_positions
-          : defaultDemoPositions;
+          : [];
 
         rawPositions.forEach(p => {
           if (!p.size_sol) p.size_sol = 0.70;

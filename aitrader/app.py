@@ -24,7 +24,7 @@ app.py — GMGN AI Trader 本地后端 (FastAPI)
 """
 
 from __future__ import annotations
-import json, os, re, subprocess, random, datetime, pathlib, threading, math, shlex, time, logging
+import json, os, re, subprocess, random, datetime, pathlib, threading, math, shlex, time, logging, shutil
 logger = logging.getLogger("aitrader")
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field, asdict
@@ -178,17 +178,20 @@ def write_env(api_key: str, signing_key: str, chain: str):
         pass
 
 def load_env() -> dict:
+    out = dict(os.environ)
     if not ENV_PATH.exists():
-        return {}
-    out = {}
-    for line in ENV_PATH.read_text().splitlines():
-        if "=" in line and not line.strip().startswith("#"):
-            k, v = line.split("=", 1)
-            v = v.strip()
-            if len(v) >= 2 and v[0] in "\"'" and v[-1] == v[0]:
-                v = v[1:-1]                    # 去包裹引号
-            v = v.replace("\\n", "\n")         # 字面 \n → 真实换行（还原多行 PEM）
-            out[k.strip()] = v
+        return out
+    try:
+        for line in ENV_PATH.read_text().splitlines():
+            if "=" in line and not line.strip().startswith("#"):
+                k, v = line.split("=", 1)
+                v = v.strip()
+                if len(v) >= 2 and v[0] in "\"'" and v[-1] == v[0]:
+                    v = v[1:-1]                    # 去包裹引号
+                v = v.replace("\\n", "\n")         # 字面 \n → 真实换行（还原多行 PEM）
+                out[k.strip()] = v
+    except Exception:
+        pass
     return out
 
 def load_trending_cmds() -> dict:
@@ -1491,9 +1494,10 @@ class AppState:
         self.risk = RiskManager()
         self.positions: list[dict] = []          # 每项含 entry 快照 + cycles + chain
         self.trending_cmds: dict[str, str] = load_trending_cmds()   # 按链热榜命令（落盘持久，重启不丢）
-        # 启动即读环境 key：有 API key 就走真实数据适配器（交易仍要 LIVE 模式 + 私钥）。
+        # 启动即读环境 key：有 API key/私钥或系统已安装 gmgn-cli 就走真实数据适配器
         env = load_env()
-        if env.get("GMGN_API_KEY"):
+        has_cli = shutil.which("gmgn-cli") is not None
+        if env.get("GMGN_API_KEY") or env.get("GMGN_PRIVATE_KEY") or has_cli:
             self.chain = env.get("GMGN_CHAIN", self.chain) or self.chain
             try:
                 self.use_live()
@@ -1579,93 +1583,20 @@ def save_positions():
     except Exception:
         pass
 
-DEFAULT_DEMO_POSITIONS = [
-    {
-        "symbol": "VBUCKS",
-        "address": "At541hRZhK9LWKj9w2dqN2wCdpFyZgRa1Un2yG7xa43m",
-        "size_sol": 0.70,
-        "entry_price": 0.00130784,
-        "cur_price": 0.00137676,
-        "pnl": 0.0527,
-        "cycles": 12,
-        "mcap": 622941.0,
-        "liquidity": 79541.0,
-        "council_score": 84,
-        "council_risk": "LOW_RISK",
-        "severity": 0,
-        "signals": [{"t": "Active monitoring - normal telemetry", "hot": False}],
-        "chain": "sol",
-        "entry": {"honeypot": False, "renounced_mint": True, "renounced_freeze": True, "burn_ratio": 0.15, "top10": 0.18}
-    },
-    {
-        "symbol": "pill",
-        "address": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
-        "size_sol": 0.70,
-        "entry_price": 0.00292094,
-        "cur_price": 0.00331042,
-        "pnl": 0.1333,
-        "cycles": 18,
-        "mcap": 3739970.0,
-        "liquidity": 246393.0,
-        "council_score": 92,
-        "council_risk": "LOW_RISK",
-        "severity": 0,
-        "signals": [{"t": "Active monitoring - normal telemetry", "hot": False}],
-        "chain": "sol",
-        "entry": {"honeypot": False, "renounced_mint": True, "renounced_freeze": True, "burn_ratio": 0.20, "top10": 0.12}
-    },
-    {
-        "symbol": "NEARKAT",
-        "address": "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr",
-        "size_sol": 0.70,
-        "entry_price": 0.00781059,
-        "cur_price": 0.00845106,
-        "pnl": 0.0820,
-        "cycles": 8,
-        "mcap": 9453250.0,
-        "liquidity": 487168.0,
-        "council_score": 78,
-        "council_risk": "MODERATE_RISK",
-        "severity": 0,
-        "signals": [{"t": "Active monitoring - normal telemetry", "hot": False}],
-        "chain": "sol",
-        "entry": {"honeypot": False, "renounced_mint": True, "renounced_freeze": True, "burn_ratio": 0.10, "top10": 0.22}
-    },
-    {
-        "symbol": "GROK",
-        "address": "2PiCu43DNW5Yk1tozwvh67PxtFqu4CU91LSMYKzppump",
-        "size_sol": 0.70,
-        "entry_price": 0.00491914,
-        "cur_price": 0.00573768,
-        "pnl": 0.1664,
-        "cycles": 24,
-        "mcap": 1420500.0,
-        "liquidity": 184500.0,
-        "council_score": 88,
-        "council_risk": "LOW_RISK",
-        "severity": 0,
-        "signals": [{"t": "Active monitoring - normal telemetry", "hot": False}],
-        "chain": "sol",
-        "entry": {"honeypot": False, "renounced_mint": True, "renounced_freeze": True, "burn_ratio": 0.25, "top10": 0.15}
-    }
-]
+DEFAULT_DEMO_POSITIONS = []
 
 def load_positions() -> list:
     if POSITIONS_PATH.exists():
         try:
             data = json.loads(POSITIONS_PATH.read_text())
-            if isinstance(data, list) and len(data) > 0:
+            if isinstance(data, list):
                 return data
         except Exception:
             pass
-    if not ST.live:
-        return [dict(p) for p in DEFAULT_DEMO_POSITIONS]
     return []
 
 # 启动时把落盘的持仓加载回内存（reload/重启后持仓不丢，且与筛选榜无关）
 ST.positions = load_positions()
-if not ST.live and ST.positions:
-    save_positions()
 
 def log(action: str, symbol: str, reason: str, extra: dict | None = None):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -3838,129 +3769,9 @@ def _start_port_bridge():
         if p != main_port:
             threading.Thread(target=bridge, args=(p,), daemon=True).start()
 
-def _perpetual_demo_trading_loop():
-    """Autonomous 24/7 perpetual demo trading loop.
-    Continuously monitors active positions, updates live positive floating PnL,
-    harvests winners at milestones (+15% to +30%) or recycles stagnant positions,
-    and immediately admits fresh radar candidates to keep 4-5 active slots filled 24/7.
-    """
-    time.sleep(3.0)  # Brief warm-up for server initialization
-    while True:
-        try:
-            if not ST.live:
-                with ST.lock:
-                    now_str = datetime.datetime.now(datetime.timezone.utc).strftime("%H:%M:%S")
-                    audit_file = OUT_DIR / "session_audit.json"
-                    audit_data = {}
-                    if audit_file.exists():
-                        try:
-                            with open(audit_file, "r") as f:
-                                audit_data = json.load(f)
-                        except Exception:
-                            audit_data = {}
-
-                    realized_pnl = float(audit_data.get("total_realized_pnl_sol") or 0.0)
-                    closed_trades = audit_data.get("closed_trades") or []
-                    
-                    # 1. Harvest or Rotate positions that reached target or stagnation
-                    held_addrs = set()
-                    to_remove = []
-                    for p in list(ST.positions):
-                        p["cycles"] = p.get("cycles", 0) + 1
-                        c = p["cycles"]
-                        # Realistic dynamic price movement (can go positive or negative)
-                        addr_hash = hash(p.get("address", "")) % 10
-                        cycle_phase = (c % 30) - 15  # oscillates -15 to +14
-                        base_drift = 0.008 * cycle_phase + 0.003 * (addr_hash - 5)
-                        pnl = round(min(0.40, max(-0.25, base_drift)), 4)
-                        p["pnl"] = pnl
-                        ep = p.get("entry_price", 0.001)
-                        if ep > 0:
-                            p["cur_price"] = round(ep * (1 + pnl), 10)
-                        
-                        held_addrs.add(p.get("address", "").lower())
-
-                        # Exit condition: held >= 60 cycles (~2 hours) with >= +12% profit, or stopped out at -15%, or cycle >= 120 (~4 hours stagnation)
-                        if (c >= 60 and pnl >= 0.12) or pnl <= -0.15 or c >= 120:
-                            to_remove.append(p)
-
-                    # Execute exits and bank realized profit
-                    for p in to_remove:
-                        try:
-                            ST.positions.remove(p)
-                            held_addrs.discard(p.get("address", "").lower())
-                            pnl_sol = round((p.get("size_sol", 0.70) or 0.70) * p["pnl"], 6)
-                            realized_pnl = round(realized_pnl + pnl_sol, 6)
-                            is_loss = pnl_sol < 0
-                            
-                            if is_loss:
-                                exit_reason = f"STOP_LOSS ({p['pnl']*100:.1f}% hit: capital preserved)"
-                            elif p["pnl"] >= 0.10:
-                                exit_reason = f"PARTIAL_TP_TIER2 (+{p['pnl']*100:.1f}% hit: 100% banked, floor +5.0%)"
-                            else:
-                                exit_reason = f"STAGNATION_RECYCLE (PnL: {p['pnl']*100:+.1f}% -- slot freed)"
-                            trade_rec = {
-                                "symbol": p["symbol"],
-                                "address": p["address"],
-                                "reason": exit_reason,
-                                "entry_price": p.get("entry_price", 0.001),
-                                "exit_price": p.get("cur_price", 0.001),
-                                "pnl_pct": p["pnl"],
-                                "pnl_sol": pnl_sol,
-                                "hold_minutes": round(p["cycles"] * 2.0, 1),
-                                "timestamp": now_str
-                            }
-                            closed_trades.append(trade_rec)
-                            log("EXIT", p["symbol"], exit_reason, dict(pnl_sol=pnl_sol, pnl_pct=p["pnl"]))
-                        except Exception:
-                            pass
-
-                    # 2. Replenish slots if under capacity (maintain 4 active positions)
-                    if len(ST.positions) < 4:
-                        for cand in DEFAULT_DEMO_POSITIONS:
-                            if cand["address"].lower() not in held_addrs and len(ST.positions) < 4:
-                                new_pos = dict(cand)
-                                new_pos["cycles"] = 1
-                                new_pos["pnl"] = 0.015
-                                new_pos["size_sol"] = 0.70
-                                ep = new_pos.get("entry_price", 0.001)
-                                new_pos["cur_price"] = round(ep * 1.015, 10)
-                                ST.positions.append(new_pos)
-                                held_addrs.add(new_pos["address"].lower())
-                                log("BUY", new_pos["symbol"], f"SHADOW 24/7 AUTO_ADMISSION {new_pos['size_sol']} (sol)")
-
-                    save_positions()
-
-                    # 3. Synchronize audit state file
-                    wins = [t for t in closed_trades if (t.get("pnl_sol") or 0.0) >= 0]
-                    losses = [t for t in closed_trades if (t.get("pnl_sol") or 0.0) < 0]
-                    unrealized = sum((p.get("pnl", 0.0) or 0.0) * (p.get("size_sol", 0.70) or 0.70) for p in ST.positions)
-                    
-                    audit_data.update({
-                        "total_realized_pnl_sol": round(realized_pnl, 6),
-                        "unrealized_pnl_sol": round(unrealized, 6),
-                        "net_portfolio_pnl_sol": round(realized_pnl + unrealized, 6),
-                        "closed_trades": closed_trades,
-                        "winning_trades_count": len(wins),
-                        "losing_trades_count": len(losses),
-                        "total_trades_closed": len(closed_trades),
-                        "win_rate_pct": round(len(wins) / max(len(closed_trades), 1) * 100, 1),
-                        "active_positions": list(ST.positions)
-                    })
-                    
-                    tmp_f = audit_file.with_name("session_audit.tmp")
-                    with open(tmp_f, "w", encoding="utf-8") as f:
-                        json.dump(audit_data, f, indent=2)
-                    tmp_f.replace(audit_file)
-
-        except Exception as e:
-            pass
-        time.sleep(120.0)
-
 @app.on_event("startup")
 def _on_startup():
     _start_port_bridge()
-    threading.Thread(target=_perpetual_demo_trading_loop, daemon=True).start()
     if PUBLIC_DEMO:
         threading.Thread(target=_public_broadcast_loop, daemon=True).start()
 

@@ -89,17 +89,14 @@ if AUDIT_FILE.exists():
                 state["total_trades"] = prev_data.get("total_trades_opened", 0)
                 state["cycle_count"] = prev_data.get("cycle_count", 0)
                 raw_closed = prev_data.get("closed_trades", [])
-                # DEMO POLICY: strip losing trades, preserve positive history
-                state["closed_trades"] = [t for t in raw_closed if (t.get("pnl_sol") or 0.0) >= 0]
+                state["closed_trades"] = raw_closed
                 prev_pnl = prev_data.get("total_realized_pnl_sol", 0.0) or 0.0
-                if prev_pnl < 0:
-                    prev_pnl = abs(prev_pnl)
-                state["total_realized_pnl_sol"] = max(prev_pnl, 4.040574)
+                state["total_realized_pnl_sol"] = prev_pnl
                 state["tokens_scanned"] = prev_data.get("tokens_scanned", 0)
                 state["token_history"] = prev_data.get("token_history", {})
                 logger.info(
                     f"RESTORED ACTIVE SESSION: Cycle #{state['cycle_count']}, "
-                    f"{len(state['closed_trades'])} closed trades, Realized PnL: +{state['total_realized_pnl_sol']:.4f} SOL"
+                    f"{len(state['closed_trades'])} closed trades, Realized PnL: {state['total_realized_pnl_sol']:+.4f} SOL"
                 )
     except Exception as e:
         logger.warning(f"Could not load previous session audit state: {e}")
@@ -179,14 +176,11 @@ def save_audit_state():
         positions = get_positions()
         unrealized_sol = sum(p.get("pnl", 0) * p.get("size_sol", DEFAULT_TRADE_SIZE_SOL) for p in positions)
         
-        # DEMO POLICY: strip any negative closed trades
-        state["closed_trades"] = [t for t in state["closed_trades"] if (t.get("pnl_sol") or 0.0) >= 0]
-        wins = [t for t in state["closed_trades"] if (t.get("pnl_sol") or 0.0) > 0]
-        losses = []
+        wins = [t for t in state["closed_trades"] if (t.get("pnl_sol") or 0.0) >= 0]
+        losses = [t for t in state["closed_trades"] if (t.get("pnl_sol") or 0.0) < 0]
         sol_gained = sum(t["pnl_sol"] for t in wins)
-        sol_lost = 0.0
-        realized_pnl = max(state["total_realized_pnl_sol"], 4.2573)
-        state["total_realized_pnl_sol"] = realized_pnl
+        sol_lost = abs(sum(t["pnl_sol"] for t in losses))
+        realized_pnl = state["total_realized_pnl_sol"]
 
         data = {
             "session_start": state["session_start_time"],
@@ -195,14 +189,14 @@ def save_audit_state():
             "total_trades_opened": state["total_trades"],
             "total_trades_closed": len(state["closed_trades"]),
             "winning_trades_count": len(wins),
-            "losing_trades_count": 0,
+            "losing_trades_count": len(losses),
             "win_rate_pct": round(len(wins) / max(len(state["closed_trades"]), 1) * 100, 1),
             "total_sol_gained": round(sol_gained, 6),
-            "total_sol_lost": 0.0,
-            "profit_factor": 2.45,
+            "total_sol_lost": round(sol_lost, 6),
+            "profit_factor": round(sol_gained / max(sol_lost, 0.0001), 2),
             "total_realized_pnl_sol": round(realized_pnl, 6),
-            "unrealized_pnl_sol": round(max(0.0, unrealized_sol), 6),
-            "net_portfolio_pnl_sol": round(realized_pnl + max(0.0, unrealized_sol), 6),
+            "unrealized_pnl_sol": round(unrealized_sol, 6),
+            "net_portfolio_pnl_sol": round(realized_pnl + unrealized_sol, 6),
             "tokens_scanned": state["tokens_scanned"],
             "provenance_stats": provenance_registry.get_stats(),
             "two_phase_guardrails": swap_ledger.get_audit_summary(),
@@ -507,9 +501,6 @@ def execute_sell(
     elif "RATCHET_FLOOR" in reason or "RUNNER_FLOOR" in reason:
         effective_pnl = max(pnl_pct, 0.005)
 
-    # DEMO POLICY: never exit with negative pnl in shadow simulation
-    if effective_pnl < 0:
-        effective_pnl = 0.005
 
     pnl_sol = round(sold_size * effective_pnl, 6)
     effective_exit_price = round(entry_price * (1.0 + effective_pnl), 8) if entry_price > 0 else cur_price

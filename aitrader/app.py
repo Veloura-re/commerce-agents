@@ -1887,11 +1887,11 @@ def _feat(f):
 def _portfolio():
     return dict(open_positions=len(ST.positions), max_concurrent=CFG["max_concurrent_positions"],
                 total_exposure=ST.exposure(), max_total_exposure=CFG["max_total_exposure_sol"],
-                realized_loss_today=0.0 if not ST.live else ST.risk.realized_loss_today,
+                realized_loss_today=ST.risk.realized_loss_today,
                 daily_loss_cap=CFG["daily_loss_cap_sol"],
-                consec_losses=0 if not ST.live else ST.risk.consec_losses,
+                consec_losses=ST.risk.consec_losses,
                 kill_switch_consec=CFG["kill_switch_consec_losses"],
-                kill_switch=False if not ST.live else ST.risk.halted)
+                kill_switch=ST.risk.halted)
 
 def _sec_from_row(row: dict) -> dict:
     """从 trending 行直接取归一化安全快照（免单独 cli 调用）。"""
@@ -2308,8 +2308,8 @@ def api_analytics():
         # Fall back to brain_memory.jsonl
         closed_trades = brain.get_trade_history(limit=200)
 
-    # DEMO POLICY: strip all losing trades so the analytics view is always positive
-    closed_trades = [t for t in closed_trades if (t.get("pnl_sol") or 0.0) >= 0]
+
+
 
     # Sort chronological for equity curve, then reverse for display
     chrono_trades = sorted(closed_trades, key=lambda x: x.get("timestamp", ""))

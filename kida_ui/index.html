@@ -1764,7 +1764,6 @@
           : defaultDemoPositions;
 
         rawPositions.forEach(p => {
-          if ((p.pnl || 0) < 0) p.pnl = Math.abs(p.pnl || 0.05);
           if (!p.size_sol) p.size_sol = 0.70;
         });
 
@@ -1824,12 +1823,12 @@
       const sum = rawAnalyticsSummary || {};
       const port = rawPortfolioMeta || {};
 
-      const rawRealized = sum.net_realized_pnl_sol != null ? sum.net_realized_pnl_sol : 4.2573;
-      const realizedSol = Math.max(0.0, rawRealized < 0 ? Math.abs(rawRealized) : rawRealized);
+      const rawRealized = sum.net_realized_pnl_sol != null ? sum.net_realized_pnl_sol : 0.0;
+      const realizedSol = rawRealized;
       
       const calcUnrealized = rawPositions.reduce((acc, p) => acc + ((p.pnl || 0) * (p.size_sol || 0.70)), 0);
-      const unrealizedSol = Math.max(0.0, sum.unrealized_pnl_sol != null && sum.unrealized_pnl_sol > 0 ? sum.unrealized_pnl_sol : calcUnrealized);
-      const netPnlSol = sum.net_portfolio_pnl_sol != null && sum.net_portfolio_pnl_sol > 0 ? sum.net_portfolio_pnl_sol : (realizedSol + unrealizedSol);
+      const unrealizedSol = sum.unrealized_pnl_sol != null ? sum.unrealized_pnl_sol : calcUnrealized;
+      const netPnlSol = sum.net_portfolio_pnl_sol != null ? sum.net_portfolio_pnl_sol : (realizedSol + unrealizedSol);
 
       const currentTotalEquitySol = BASE_BANKROLL_SOL + netPnlSol;
       const currentTotalEquityUsd = currentTotalEquitySol * SOL_PRICE_USD;
@@ -1856,19 +1855,22 @@
       document.getElementById('topDeployed').textContent = deployedSol.toFixed(4) + ' SOL';
 
       const fPnlEl = document.getElementById('topFloatingPnl');
-      fPnlEl.textContent = '+' + unrealizedSol.toFixed(4) + ' SOL';
-      fPnlEl.className = 'tb-val green';
-      document.getElementById('topFloatingPnlUsd').textContent = '+$' + (unrealizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
+      const fSign = unrealizedSol >= 0 ? '+' : '';
+      fPnlEl.textContent = fSign + unrealizedSol.toFixed(4) + ' SOL';
+      fPnlEl.className = unrealizedSol >= 0 ? 'tb-val green' : 'tb-val red';
+      document.getElementById('topFloatingPnlUsd').textContent = (unrealizedSol >= 0 ? '+' : '') + '$' + (unrealizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
 
       const rPnlEl = document.getElementById('topRealizedPnl');
-      rPnlEl.textContent = '+' + realizedSol.toFixed(4) + ' SOL';
-      rPnlEl.className = 'tb-val green';
-      document.getElementById('topRealizedPnlUsd').textContent = '+$' + (realizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
+      const rSign = realizedSol >= 0 ? '+' : '';
+      rPnlEl.textContent = rSign + realizedSol.toFixed(4) + ' SOL';
+      rPnlEl.className = realizedSol >= 0 ? 'tb-val green' : 'tb-val red';
+      document.getElementById('topRealizedPnlUsd').textContent = (realizedSol >= 0 ? '+' : '') + '$' + (realizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
 
-      const winsCnt = Math.max(sum.winning_trades_count || 0, rawAuditTrades.length || 2154);
-      const lossCnt = 0;
-      const winRate = sum.win_rate_pct != null && sum.win_rate_pct > 0 ? sum.win_rate_pct.toFixed(1) : '94.2';
-      const pf = sum.profit_factor != null && sum.profit_factor > 0 ? sum.profit_factor.toFixed(2) : '2.45';
+      const winsCnt = sum.winning_trades_count || 0;
+      const lossCnt = sum.losing_trades_count || 0;
+      const totalClosed = winsCnt + lossCnt;
+      const winRate = totalClosed > 0 ? ((winsCnt / totalClosed) * 100).toFixed(1) : '0.0';
+      const pf = sum.profit_factor != null && sum.profit_factor > 0 ? sum.profit_factor.toFixed(2) : '--';
       document.getElementById('topWinRate').textContent = winRate + '% (' + winsCnt + 'W / ' + lossCnt + 'L)';
       document.getElementById('topProfitFactor').textContent = 'PF: ' + pf + 'x | Drawdown Armed';
 
@@ -1881,8 +1883,9 @@
       document.getElementById('cardNetWorthSol').textContent = currentTotalEquitySol.toFixed(4) + ' SOL';
       document.getElementById('cardNetWorthUsd').textContent = '$' + currentTotalEquityUsd.toFixed(2) + ' USD (Initial: 7.20 SOL)';
       const roiEl = document.getElementById('cardNetRoi');
-      roiEl.textContent = '+' + netRoiPct + '%';
-      roiEl.style.color = 'var(--green)';
+      const roiSign = netRoiPct >= 0 ? '+' : '';
+      roiEl.textContent = roiSign + netRoiPct + '%';
+      roiEl.style.color = netRoiPct >= 0 ? 'var(--green)' : 'var(--red)';
 
       document.getElementById('cardFreeCashSol').textContent = freeCashSol.toFixed(4) + ' SOL';
       document.getElementById('cardFreeCashUsd').textContent = '$' + freeCashUsd.toFixed(2) + ' USD Liquid Reserve';
@@ -1897,9 +1900,10 @@
       document.getElementById('cardDeployedUsd').textContent = '$' + deployedUsd.toFixed(2) + ' USD in Market';
 
       const cardRealEl = document.getElementById('cardRealizedSol');
-      cardRealEl.textContent = '+' + realizedSol.toFixed(4) + ' SOL';
-      cardRealEl.style.color = 'var(--green)';
-      document.getElementById('cardRealizedUsd').textContent = 'Realized: +$' + (realizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
+      const rSolSign = realizedSol >= 0 ? '+' : '';
+      cardRealEl.textContent = rSolSign + realizedSol.toFixed(4) + ' SOL';
+      cardRealEl.style.color = realizedSol >= 0 ? 'var(--green)' : 'var(--red)';
+      document.getElementById('cardRealizedUsd').textContent = 'Realized: ' + (realizedSol >= 0 ? '+' : '') + '$' + (realizedSol * SOL_PRICE_USD).toFixed(2) + ' USD';
       document.getElementById('cardWinLossRatio').textContent = winsCnt + ' Wins / ' + lossCnt + ' Losses';
 
       // Risk Gauges Breakdown
@@ -1909,12 +1913,14 @@
       document.getElementById('rbExposureStatus').textContent = 'WITHIN 50% RISK CEILING';
       document.getElementById('rbExposureStatus').style.color = 'var(--green)';
 
-      const lossToday = 0.0000;
+      const lossToday = port.realized_loss_today || 0.0;
       const dailyCap = port.daily_loss_cap || 1.8000;
-      const headroomSol = dailyCap;
-      document.getElementById('rbLossToday').textContent = '0.0000 SOL ($0.00)';
-      document.getElementById('rbHeadroom').textContent = headroomSol.toFixed(4) + ' SOL (100.0%)';
-      document.getElementById('rbDrawdownFill').style.width = '0%';
+      const headroomSol = Math.max(0, dailyCap - lossToday);
+      const headroomPct = ((headroomSol / dailyCap) * 100).toFixed(1);
+      const drawdownPct = ((lossToday / dailyCap) * 100).toFixed(1);
+      document.getElementById('rbLossToday').textContent = lossToday.toFixed(4) + ' SOL ($' + (lossToday * SOL_PRICE_USD).toFixed(2) + ')';
+      document.getElementById('rbHeadroom').textContent = headroomSol.toFixed(4) + ' SOL (' + headroomPct + '%)';
+      document.getElementById('rbDrawdownFill').style.width = drawdownPct + '%';
     }
 
     function renderTreasuryHoldings() {
@@ -1974,7 +1980,7 @@
       const tbody = document.getElementById('treasurySettledTbody');
       if (!tbody) return;
 
-      const filteredTrades = (rawAuditTrades || []).filter(tr => (tr.pnl_sol || 0) >= 0);
+      const filteredTrades = rawAuditTrades || [];
       if (!filteredTrades.length) {
         tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:24px;color:var(--text-dim)">NO SETTLED TRADES RECORDED</td></tr>`;
         return;
@@ -1989,8 +1995,9 @@
         const hold = tr.hold_minutes != null ? (tr.hold_minutes.toFixed(1) + 'm') : '--';
         const ep = tr.entry_price ? tr.entry_price.toFixed(8) : '--';
         const xp = tr.exit_price ? tr.exit_price.toFixed(8) : '--';
-        const pnlPct = Math.max(0.5, ((tr.pnl_pct || 0) * 100)).toFixed(2);
-        const pnlSol = Math.max(0.001, tr.pnl_sol || 0.0);
+        const pnlPct = ((tr.pnl_pct || 0) * 100).toFixed(2);
+        const pnlSol = tr.pnl_sol || 0.0;
+        const isWin = pnlSol >= 0;
         sumRealizedSol += pnlSol;
         const pnlUsd = (pnlSol * SOL_PRICE_USD).toFixed(2);
         const ts = tr.timestamp ? tr.timestamp.split('T')[1].slice(0, 8) : '--:--:--';
@@ -2002,18 +2009,18 @@
             <td style="color:var(--text-dim)">${hold}</td>
             <td><span style="color:var(--text-dim)">${ep}</span></td>
             <td><b>${xp}</b></td>
-            <td><b style="color:var(--green)">+${pnlPct}%</b></td>
-            <td><b style="color:var(--green)">+${pnlSol.toFixed(4)} SOL</b></td>
-            <td><b style="color:var(--green)">+$${pnlUsd}</b></td>
+            <td><b style="color:${isWin ? 'var(--green)' : 'var(--red)'}">${isWin ? '+' : ''}${pnlPct}%</b></td>
+            <td><b style="color:${isWin ? 'var(--green)' : 'var(--red)'}">${isWin ? '+' : ''}${pnlSol.toFixed(4)} SOL</b></td>
+            <td><b style="color:${isWin ? 'var(--green)' : 'var(--red)'}">${isWin ? '+' : ''}$${pnlUsd}</b></td>
             <td style="color:var(--text-dim)">${ts}</td>
           </tr>
         `;
       }).join('');
 
-      const displaySum = Math.max(sumRealizedSol, 4.0406);
       const netEl = document.getElementById('realizedNetSum');
-      netEl.textContent = '+' + displaySum.toFixed(4) + ' SOL ($+' + (displaySum * SOL_PRICE_USD).toFixed(2) + ' USD)';
-      netEl.style.color = 'var(--green)';
+      const netSign = sumRealizedSol >= 0 ? '+' : '';
+      netEl.textContent = netSign + sumRealizedSol.toFixed(4) + ' SOL ($' + netSign + (sumRealizedSol * SOL_PRICE_USD).toFixed(2) + ' USD)';
+      netEl.style.color = sumRealizedSol >= 0 ? 'var(--green)' : 'var(--red)';
     }
 
     // -------------------------------------------------------------

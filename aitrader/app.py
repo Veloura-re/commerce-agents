@@ -179,17 +179,18 @@ def write_env(api_key: str, signing_key: str, chain: str):
 
 def load_env() -> dict:
     out = dict(os.environ)
-    if not ENV_PATH.exists():
-        return out
-    try:
-        for line in ENV_PATH.read_text().splitlines():
-            if "=" in line and not line.strip().startswith("#"):
-                k, v = line.split("=", 1)
-                v = v.strip()
-                if len(v) >= 2 and v[0] in "\"'" and v[-1] == v[0]:
-                    v = v[1:-1]                    # 去包裹引号
-                v = v.replace("\\n", "\n")         # 字面 \n → 真实换行（还原多行 PEM）
-                out[k.strip()] = v
+    if ENV_PATH.exists():
+        try:
+            for line in ENV_PATH.read_text().splitlines():
+                if "=" in line and not line.strip().startswith("#"):
+                    k, v = line.split("=", 1)
+                    v = v.strip()
+                    if len(v) >= 2 and v[0] in "\"'" and v[-1] == v[0]:
+                        v = v[1:-1]                    # 去包裹引号
+                    v = v.replace("\\n", "\n")         # 字面 \n → 真实换行（还原多行 PEM）
+                    out[k.strip()] = v
+        except Exception:
+            pass
     if not out.get("GMGN_API_KEY"):
         out["GMGN_API_KEY"] = "gmgn_1bec3d8d9f6334b3dabbc45b64e0775f"
     if not out.get("GMGN_PRIVATE_KEY"):

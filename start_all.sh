@@ -17,6 +17,7 @@ echo "GMGN credentials configured in environment and ~/.config/gmgn/.env."
 
 # Purge all fabricated session state on fresh deploy -- start from zero
 echo "Resetting session state (clean slate)..."
+mkdir -p aitrader/outputs
 echo "[]" > aitrader/outputs/positions.json
 echo "{}" > aitrader/outputs/session_audit.json
 : > aitrader/outputs/brain_memory.jsonl

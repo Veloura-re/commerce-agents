@@ -60,20 +60,20 @@ CFG = {
     "llm_max": 20,                 # LLM 最多解释幸存者数（启发式占位不花钱，放大减少 gate3 误杀；接真实 LLM 再收紧）
     "equity_sol": 10.0,                # 10.0 SOL paper bankroll
     "risk_per_trade": 0.10,            # 10% risk budget per trade
-    "hard_stop_pct": 0.04,             # -4.0% base stop loss
-    "max_per_trade_sol": 0.80,         # 0.80 SOL max per position
-    "max_total_exposure_sol": 5.50,    # 5.50 SOL active exposure cap (up to ~75% deployment)
-    "max_concurrent_positions": 8,     # 8 concurrent slots
+    "hard_stop_pct": 0.035,            # -3.5% base stop loss
+    "max_per_trade_sol": 0.50,         # 0.50 SOL max per position
+    "max_total_exposure_sol": 3.60,    # 3.60 SOL active exposure cap (50% max deployment)
+    "max_concurrent_positions": 5,     # 5 concurrent slots
     "daily_loss_cap_sol": 1.80,        # 1.80 SOL daily loss cap
-    "kill_switch_consec_losses": 8,
+    "kill_switch_consec_losses": 6,
     # 避雷硬门槛（真实字段，无合成安全分；用户决策：直接用布尔/数值字段判）
     "require_renounced_mint": True,   # 必须放弃增发权
-    "max_buy_tax": 0.10,
-    "max_sell_tax": 0.10,
-    "max_rug_ratio": 0.60,
-    "max_bundler_ratio": 0.08,        # 8% max bundler rate
-    "max_dev_holding_pct": 0.08,      # 8% max dev holding
-    "max_top10_concentration": 0.50,
+    "max_buy_tax": 0.08,
+    "max_sell_tax": 0.08,
+    "max_rug_ratio": 0.50,
+    "max_bundler_ratio": 0.05,        # 5% max bundler rate
+    "max_dev_holding_pct": 0.05,      # 5% max dev holding
+    "max_top10_concentration": 0.35,
     # 选择质量：共识 = 聪明钱(smart_degen) + 知名KOL(renowned) 计数之和（与脑部自适应启发式联动）
     "min_smart_money_confluence": 15,  # 15+ smart degens & KOLs to avoid low-liquidity rug dumps
     "min_llm_conviction": 0.6,
@@ -944,15 +944,15 @@ def hard_gates(f: TokenFeatures):
         return False, f"REJECT 避雷：dev 持仓 {f.dev_hold:.0%} > {CFG['max_dev_holding_pct']:.0%}", 1
     if f.top10 > CFG["max_top10_concentration"]:
         return False, f"REJECT 避雷：top10 {f.top10:.0%} 集中", 1
-    # Liquidity & Market Cap Floor — $35k minimum to prevent hard-stop slippage blowouts
-    if f.liquidity < 35000.0:
-        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $35,000", 1
-    if f.mcap < 30000.0:
-        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $30,000", 1
-    if f.chg_5m < -0.020:
+    # Liquidity & Market Cap Floor — $45k minimum to prevent hard-stop slippage blowouts
+    if f.liquidity < 45000.0:
+        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $45,000", 1
+    if f.mcap < 40000.0:
+        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $40,000", 1
+    if f.chg_5m < -0.015:
         return False, f"REJECT 动能下行：5m 跌 {f.chg_5m*100:.1f}%", 1
-    if f.buy_ratio < 0.45:
-        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 45%", 1
+    if f.buy_ratio < 0.50:
+        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 50%", 1
     # gate 2 共识：smart_degen + renowned KOL 计数（自适应脑部启发式联动）
     min_sm = int(brain.heuristics.get("min_smart_money_consensus", CFG.get("min_smart_money_confluence", 2)))
     if f.sm_confluence < min_sm:
@@ -974,23 +974,23 @@ def entry_price_quality(f) -> tuple:
     buy_ratio = getattr(f, "buy_ratio", 0.5)
 
     # BAD: already pumped hard in 5m — buying the spike top
-    if chg_5m > 0.25:
+    if chg_5m > 0.15:
         bad_reasons.append(f"Overbought: +{chg_5m*100:.1f}% in 5m")
     elif chg_5m < 0.08:
         good_signals += 1  # Still early, not chased yet
 
-    # BAD: buy ratio falling below 50% — sellers taking control
-    if buy_ratio < 0.50:
+    # BAD: buy ratio falling below 52% — sellers taking control
+    if buy_ratio < 0.52:
         bad_reasons.append(f"Sell pressure: buy_ratio={buy_ratio*100:.1f}%")
     elif buy_ratio > 0.60:
         good_signals += 1  # Strong buyer dominance
 
     # BAD: 1h trend negative while 5m spike — likely dead cat bounce
-    if chg_1h < -0.05 and chg_5m > 0.10:
+    if chg_1h < -0.05 and chg_5m > 0.08:
         bad_reasons.append(f"Dead cat bounce: 1h={chg_1h*100:.1f}% / 5m={chg_5m*100:.1f}%")
 
     # GOOD: 1h uptrend with moderate 5m momentum — ideal entry
-    if chg_1h > 0.05 and 0.01 < chg_5m < 0.20:
+    if chg_1h > 0.05 and 0.01 < chg_5m < 0.15:
         good_signals += 1
 
     if bad_reasons:
@@ -1650,6 +1650,10 @@ def screen_once(chain: str) -> dict:
         ok, reason, gate_idx = hard_gates(f)             # STEP 3 确定性硬门槛（先跑）
         if not ok:
             decisions.append(_reject(f, reason, gate_idx, None))
+            continue
+        q_label, q_reason = entry_price_quality(f)
+        if q_label == "BAD":
+            decisions.append(_reject(f, f"REJECT 入场时机劣质：{q_reason}", 1, None))
             continue
         survivors.append(f)
 

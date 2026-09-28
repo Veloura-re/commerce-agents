@@ -828,14 +828,44 @@ def monitor_and_manage_risk():
                 )
                 continue
 
-        # 5. Dynamic Stagnation Exit: If held >= 8m and failed to reach at least +1.5% target, recycle slot
-        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < STAGNATION_MIN_PNL_TARGET:
+        # 4b. Rapid Momentum Failure Cut: If trade immediately reverses down > 2.0% within first 25-90s, cut immediately
+        if elapsed_seconds >= 25 and pnl <= -0.020:
             execute_sell(
                 addr, sym,
-                f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
+                f"RAPID_MOMENTUM_CUT ({elapsed_seconds:.0f}s, PnL: {pnl*100:+.1f}% <= -2.0% — early cut)",
                 pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
             )
             continue
+
+        # 4c. Early Bleeder Defense: If down > 1.8% after 90s, cut immediately to prevent hard-stop slippage blowouts
+        if elapsed_seconds >= 90 and pnl <= -0.018:
+            execute_sell(
+                addr, sym,
+                f"EARLY_BLEEDER_DEFENSE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% <= -1.8% — mitigating hard stop slip)",
+                pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+            )
+            continue
+
+        # 5. Dynamic Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS
+        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS:
+            if pnl >= 0.006:
+                # Green Consolidation: Bank 50% profit, lock floor at +0.4%, and extend hold
+                if addr not in state["partial_tp_taken"]:
+                    state["active_stop_floors"][addr] = 0.004
+                    execute_sell(
+                        addr, sym,
+                        f"CONSOLIDATION_PROFIT_HARVEST ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}%: banking 50% gain, +0.4% floor locked)",
+                        pnl, cur_price, entry_price, percent=50, pos_size_sol=size_sol
+                    )
+                    state["entry_timestamps"][addr] = now  # Reset hold timer for remaining portion
+                    continue
+            elif pnl < STAGNATION_MIN_PNL_TARGET:
+                execute_sell(
+                    addr, sym,
+                    f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
+                    pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                )
+                continue
 
 # ==============================================================================
 # SECTION 8: CYCLE ORCHESTRATION & SUMMARY

@@ -123,22 +123,22 @@ def save_audit_state():
 def _compute_entry_quality(chg_5m: float, chg_1h: float, buy_ratio: float) -> str:
     """
     Classify the current price entry as GOOD, NEUTRAL, or BAD.
-    BAD = token already pumped hard / sellers taking over.
-    GOOD = early momentum, buyers dominant, 1h trend up.
+    BAD = token already pumped hard / sellers taking over / dead cat bounce.
+    GOOD = early momentum, buyers dominant, stable 1h trend.
     """
     bad_reasons = []
     good_signals = 0
-    if chg_5m > 0.25:
+    if chg_5m > 0.15:
         bad_reasons.append("OVERBOUGHT")
     elif chg_5m < 0.08:
         good_signals += 1
-    if buy_ratio < 0.50:
+    if buy_ratio < 0.52:
         bad_reasons.append("SELL_PRESSURE")
     elif buy_ratio > 0.60:
         good_signals += 1
-    if chg_1h < -0.05 and chg_5m > 0.10:
+    if chg_1h < -0.05 and chg_5m > 0.08:
         bad_reasons.append("DEAD_CAT")
-    if chg_1h > 0.05 and 0.01 < chg_5m < 0.20:
+    if chg_1h > 0.05 and 0.01 < chg_5m < 0.15:
         good_signals += 1
     if bad_reasons:
         return "BAD"
@@ -662,23 +662,44 @@ def monitor_and_manage_risk():
                 )
                 continue
 
-        # 4b. Early Bleeder Defense: If down > 2.5% within first 2 minutes, cut immediately to prevent hard-stop slippage blowouts
-        if elapsed_seconds >= 120 and pnl <= -0.025:
+        # 4b. Rapid Momentum Failure Cut: If trade immediately reverses down > 2.0% within first 25-90s, cut immediately
+        if elapsed_seconds >= 25 and pnl <= -0.020:
             execute_sell(
                 addr, sym,
-                f"EARLY_BLEEDER_DEFENSE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% <= -2.5% — mitigating hard stop slip)",
+                f"RAPID_MOMENTUM_CUT ({elapsed_seconds:.0f}s, PnL: {pnl*100:+.1f}% <= -2.0% — early cut)",
                 pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
             )
             continue
 
-        # 5. Dynamic Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS and failed to reach at least target, recycle slot
-        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < STAGNATION_MIN_PNL_TARGET:
+        # 4c. Early Bleeder Defense: If down > 1.8% after 90s, cut immediately to prevent hard-stop slippage blowouts
+        if elapsed_seconds >= 90 and pnl <= -0.018:
             execute_sell(
                 addr, sym,
-                f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
+                f"EARLY_BLEEDER_DEFENSE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% <= -1.8% — mitigating hard stop slip)",
                 pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
             )
             continue
+
+        # 5. Dynamic Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS
+        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS:
+            if pnl >= 0.006:
+                # Green Consolidation: Bank 50% profit, lock floor at +0.4%, and extend hold
+                if addr not in state["partial_tp_taken"]:
+                    state["active_stop_floors"][addr] = 0.004
+                    execute_sell(
+                        addr, sym,
+                        f"CONSOLIDATION_PROFIT_HARVEST ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}%: banking 50% gain, +0.4% floor locked)",
+                        pnl, cur_price, entry_price, percent=50, pos_size_sol=size_sol
+                    )
+                    state["entry_timestamps"][addr] = now  # Reset hold timer for remaining moonbag portion
+                    continue
+            elif pnl < STAGNATION_MIN_PNL_TARGET:
+                execute_sell(
+                    addr, sym,
+                    f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
+                    pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                )
+                continue
 
 # ==============================================================================
 # SECTION 8: CYCLE ORCHESTRATION & SUMMARY
@@ -834,8 +855,8 @@ def cycle():
                 state["token_history"][addr] = {}
             state["token_history"][addr]["entry_candidate_snapshot"] = c
 
-            # Council Veto: block score < 40 or explicitly rejected.
-            if council_score < 40 or council_eval.get("verdict") == "REJECTED":
+            # Council Veto: block score < 60, fewer than 3 sentinels passing, or explicitly rejected.
+            if council_score < 60 or gates_passed < 3 or council_eval.get("verdict") == "REJECTED":
                 logger.info(f"COUNCIL VETO ({sym}): Score {council_score}/100 [{risk_label}] ({gates_passed}/5 sentinels) — {council_eval.get('verdict_rationale')}")
                 state["cooldown_until"][addr] = now + 900
                 continue

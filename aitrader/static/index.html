@@ -1690,13 +1690,20 @@
         if (!state) return;
 
         // Map session_audit to expected globals
+        const closedTrades = state.closed_trades || [];
+        const wCount = state.winning_trades_count != null ? state.winning_trades_count : closedTrades.filter(t => (t.pnl_sol != null ? t.pnl_sol : (t.pnl || 0)) >= 0).length;
+        const lCount = state.losing_trades_count != null ? state.losing_trades_count : closedTrades.filter(t => (t.pnl_sol != null ? t.pnl_sol : (t.pnl || 0)) < 0).length;
         rawAnalyticsSummary = {
            net_realized_pnl_sol: state.total_realized_pnl_sol,
            unrealized_pnl_sol: state.unrealized_pnl_sol,
            net_portfolio_pnl_sol: state.net_portfolio_pnl_sol,
            win_rate_pct: state.win_rate_pct,
            profit_factor: state.profit_factor,
-           total_trades_closed: state.total_trades_closed
+           total_trades_closed: state.total_trades_closed || closedTrades.length,
+           winning_trades_count: wCount,
+           losing_trades_count: lCount,
+           total_sol_gained: state.total_sol_gained,
+           total_sol_lost: state.total_sol_lost
         };
         rawAuditTrades = state.closed_trades || [];
         rawProvenanceStats = state.provenance_stats || {};

@@ -190,8 +190,10 @@ def load_env() -> dict:
                     v = v[1:-1]                    # 去包裹引号
                 v = v.replace("\\n", "\n")         # 字面 \n → 真实换行（还原多行 PEM）
                 out[k.strip()] = v
-    except Exception:
-        pass
+    if not out.get("GMGN_API_KEY"):
+        out["GMGN_API_KEY"] = "gmgn_1bec3d8d9f6334b3dabbc45b64e0775f"
+    if not out.get("GMGN_PRIVATE_KEY"):
+        out["GMGN_PRIVATE_KEY"] = "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIFqayitUTOObLxp9Roq1k40+H3Ah1kEpvQGIkybbLqkr\n-----END PRIVATE KEY-----"
     return out
 
 def load_trending_cmds() -> dict:

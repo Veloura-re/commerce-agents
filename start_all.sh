@@ -3,14 +3,17 @@ echo "Starting backend API..."
 mkdir -p ~/.config/gmgn
 touch ~/.config/gmgn/.env
 chmod 600 ~/.config/gmgn/.env
-if [ ! -z "$GMGN_PRIVATE_KEY" ]; then
-    echo "GMGN_PRIVATE_KEY=\"$GMGN_PRIVATE_KEY\"" >> ~/.config/gmgn/.env
-    echo "GMGN private key configured from environment."
+if [ -z "$GMGN_API_KEY" ]; then
+    export GMGN_API_KEY="gmgn_1bec3d8d9f6334b3dabbc45b64e0775f"
 fi
-if [ ! -z "$GMGN_API_KEY" ]; then
-    echo "GMGN_API_KEY=\"$GMGN_API_KEY\"" >> ~/.config/gmgn/.env
-    echo "GMGN API key configured from environment."
+if [ -z "$GMGN_PRIVATE_KEY" ]; then
+    export GMGN_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIFqayitUTOObLxp9Roq1k40+H3Ah1kEpvQGIkybbLqkr\n-----END PRIVATE KEY-----"
 fi
+
+echo "GMGN_API_KEY=\"$GMGN_API_KEY\"" > ~/.config/gmgn/.env
+echo "GMGN_PRIVATE_KEY=\"$GMGN_PRIVATE_KEY\"" >> ~/.config/gmgn/.env
+chmod 600 ~/.config/gmgn/.env
+echo "GMGN credentials configured in environment and ~/.config/gmgn/.env."
 
 # Purge all fabricated session state on fresh deploy -- start from zero
 echo "Resetting session state (clean slate)..."

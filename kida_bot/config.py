@@ -46,23 +46,24 @@ MAX_TRADE_SIZE_SOL = 0.800
 MAX_POSITIONS = 8
 SESSION_DURATION_SECONDS = 0  # 0 indicates perpetual 24/7 non-stop execution
 
-TAKE_PROFIT_PCT = 0.250
+TAKE_PROFIT_PCT = 0.350
 STOP_LOSS_PCT = -0.040
 REENTRY_STOP_LOSS_PCT = -0.025
 MAX_SLIPPAGE_TOLERANCE = 0.050
-STAGNATION_TIMEOUT_SECONDS = 3 * 60
-STAGNATION_MIN_PNL_TARGET = 0.015
+STAGNATION_TIMEOUT_SECONDS = 5 * 60
+STAGNATION_MIN_PNL_TARGET = 0.020
 EMERGENCY_LIQUIDITY_DROP_THRESHOLD = 0.15
 MOONBAG_TRAILING_STOP_PULLBACK = 0.12
+NEGATIVE_TOKEN_LOCKOUT_SECONDS = 21600
 
-TIER1_TRIGGER_PCT   = 0.035      # +3.5% gain: Locks Break-Even floor
-TIER1_LOCK_PCT      = 0.012      # +1.2% locked
-TIER2_TRIGGER_PCT   = 0.080      # +8.0% gain: Banks 50% partial profit
-TIER2_LOCK_PCT      = 0.040      # +4.0% locked
-TIER3_TRIGGER_PCT   = 0.160      # +16.0% gain: Banks 30% partial profit
-TIER3_LOCK_PCT      = 0.100      # +10.0% locked
+TIER1_TRIGGER_PCT   = 0.050      # +5.0% gain: Locks Break-Even floor at +2.0%
+TIER1_LOCK_PCT      = 0.020      # +2.0% locked (covers DEX fees and slippage)
+TIER2_TRIGGER_PCT   = 0.100      # +10.0% gain: Banks 50% partial profit
+TIER2_LOCK_PCT      = 0.050      # +5.0% locked
+TIER3_TRIGGER_PCT   = 0.200      # +20.0% gain: Banks 30% partial profit
+TIER3_LOCK_PCT      = 0.120      # +12.0% locked
 
-MAX_REENTRIES_PER_TOKEN = 3
+MAX_REENTRIES_PER_TOKEN = 1
 
 state = {
     "session_start_time": time.time(),

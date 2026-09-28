@@ -71,11 +71,11 @@ CFG = {
     "max_buy_tax": 0.10,
     "max_sell_tax": 0.10,
     "max_rug_ratio": 0.60,
-    "max_bundler_ratio": 0.15,        # 15% max bundler rate
-    "max_dev_holding_pct": 0.10,      # 10% max dev holding
+    "max_bundler_ratio": 0.08,        # 8% max bundler rate
+    "max_dev_holding_pct": 0.08,      # 8% max dev holding
     "max_top10_concentration": 0.50,
     # 选择质量：共识 = 聪明钱(smart_degen) + 知名KOL(renowned) 计数之和（与脑部自适应启发式联动）
-    "min_smart_money_confluence": 2,   # 2+ smart degens & KOLs for active demo cadence
+    "min_smart_money_confluence": 15,  # 15+ smart degens & KOLs to avoid low-liquidity rug dumps
     "min_llm_conviction": 0.6,
     # dev 评估维度：初排后只对前 dev_pool_n 个幸存者额外查 dev 历史（token info 的 dev 对象），
     # 结果按地址缓存 dev_info_ttl_s 秒（dev 历史变化慢，跨轮复用、不每轮重拉，省 cli 配额）。
@@ -944,15 +944,15 @@ def hard_gates(f: TokenFeatures):
         return False, f"REJECT 避雷：dev 持仓 {f.dev_hold:.0%} > {CFG['max_dev_holding_pct']:.0%}", 1
     if f.top10 > CFG["max_top10_concentration"]:
         return False, f"REJECT 避雷：top10 {f.top10:.0%} 集中", 1
-    # Liquidity & Market Cap Floor — $25k minimum for live shadow demo trading
-    if f.liquidity < 25000.0:
-        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $25,000", 1
-    if f.mcap < 25000.0:
-        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $25,000", 1
-    if f.chg_5m < -0.030:
+    # Liquidity & Market Cap Floor — $35k minimum to prevent hard-stop slippage blowouts
+    if f.liquidity < 35000.0:
+        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $35,000", 1
+    if f.mcap < 30000.0:
+        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $30,000", 1
+    if f.chg_5m < -0.020:
         return False, f"REJECT 动能下行：5m 跌 {f.chg_5m*100:.1f}%", 1
-    if f.buy_ratio < 0.40:
-        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 40%", 1
+    if f.buy_ratio < 0.45:
+        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 45%", 1
     # gate 2 共识：smart_degen + renowned KOL 计数（自适应脑部启发式联动）
     min_sm = int(brain.heuristics.get("min_smart_money_consensus", CFG.get("min_smart_money_confluence", 2)))
     if f.sm_confluence < min_sm:

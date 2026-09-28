@@ -490,8 +490,12 @@ def execute_sell(
         state["moonbag_active"].discard(address)
         state["break_even_locked"].discard(address)
 
-        state["cooldown_until"][address] = time.time() + 900
-        logger.info(f"CONSOLIDATION COOLDOWN: {symbol} exited. Enforcing 15m cooldown before re-evaluation.")
+        if pnl_sol < 0 or "STOP" in reason:
+            state["cooldown_until"][address] = time.time() + NEGATIVE_TOKEN_LOCKOUT_SECONDS
+            logger.info(f"NEGATIVE LOCKOUT: {symbol} closed at loss ({pnl_sol:+.4f} SOL). Blacklisted for 6 hours.")
+        else:
+            state["cooldown_until"][address] = time.time() + 900
+            logger.info(f"CONSOLIDATION COOLDOWN: {symbol} exited. Enforcing 15m cooldown before re-evaluation.")
     else:
         state["partial_tp_taken"].add(address)
         state["break_even_locked"].add(address)
@@ -658,6 +662,15 @@ def monitor_and_manage_risk():
                 )
                 continue
 
+        # 4b. Early Bleeder Defense: If down > 2.5% within first 2 minutes, cut immediately to prevent hard-stop slippage blowouts
+        if elapsed_seconds >= 120 and pnl <= -0.025:
+            execute_sell(
+                addr, sym,
+                f"EARLY_BLEEDER_DEFENSE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% <= -2.5% — mitigating hard stop slip)",
+                pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+            )
+            continue
+
         # 5. Dynamic Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS and failed to reach at least target, recycle slot
         if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < STAGNATION_MIN_PNL_TARGET:
             execute_sell(
@@ -772,6 +785,17 @@ def cycle():
             if not addr or addr.lower() in held_addrs:
                 continue
             if now < state["cooldown_until"].get(addr, 0):
+                continue
+
+            # Anti-Churn Defense: Check token history for previous net loss or hard stop
+            th = state.get("token_history", {}).get(addr, {})
+            if th.get("cumulative_pnl_sol", 0.0) < 0 or (th.get("trades_count", 0) >= 1 and th.get("last_pnl_pct", 0) < 0):
+                state["cooldown_until"][addr] = now + NEGATIVE_TOKEN_LOCKOUT_SECONDS
+                continue
+
+            # Entry Quality Defense: Reject overbought spikes and sell-pressure distribution
+            if c.get("entry_quality") == "BAD":
+                state["cooldown_until"][addr] = now + 900
                 continue
 
             heur = get_live_heuristics()

@@ -29,27 +29,27 @@ def get_live_heuristics():
     try:
         h = brain.get_heuristics()
         return {
-            "min_pool_liquidity_usd": 25000.0,
-            "min_mcap": 25000.0,
+            "min_pool_liquidity_usd": 35000.0,
+            "min_mcap": 30000.0,
             "max_mcap": 1_000_000_000_000.0,
-            "min_1h_volume": 10000.0,
-            "min_smart_money": max(2, int(h.get("min_smart_money_consensus", 2))),
-            "min_chg_5m": -0.03,
-            "min_buy_ratio": 0.40,
-            "max_bundler_rate": min(0.15, float(h.get("max_bundler_tolerance", 0.15))),
-            "max_dev_hold_rate": min(0.10, float(h.get("max_dev_hold_tolerance", 0.10))),
+            "min_1h_volume": 15000.0,
+            "min_smart_money": max(15, int(h.get("min_smart_money_consensus", 15))),
+            "min_chg_5m": -0.02,
+            "min_buy_ratio": 0.45,
+            "max_bundler_rate": min(0.08, float(h.get("max_bundler_tolerance", 0.08))),
+            "max_dev_hold_rate": min(0.08, float(h.get("max_dev_hold_tolerance", 0.08))),
         }
     except Exception:
         return {
-            "min_pool_liquidity_usd": 25000.0,
-            "min_mcap": 25000.0,
+            "min_pool_liquidity_usd": 35000.0,
+            "min_mcap": 30000.0,
             "max_mcap": 1_000_000_000_000.0,
-            "min_1h_volume": 10000.0,
-            "min_smart_money": 2,
-            "min_chg_5m": -0.03,
-            "min_buy_ratio": 0.40,
-            "max_bundler_rate": 0.15,
-            "max_dev_hold_rate": 0.10,
+            "min_1h_volume": 15000.0,
+            "min_smart_money": 15,
+            "min_chg_5m": -0.02,
+            "min_buy_ratio": 0.45,
+            "max_bundler_rate": 0.08,
+            "max_dev_hold_rate": 0.08,
         }
 
 state = {
@@ -618,8 +618,12 @@ def execute_sell(
         state["moonbag_active"].discard(address)
         state["break_even_locked"].discard(address)
 
-        state["cooldown_until"][address] = time.time() + 900
-        logger.info(f"CONSOLIDATION COOLDOWN: {symbol} exited. Enforcing 15m cooldown before re-evaluation.")
+        if pnl_sol < 0 or "STOP" in reason:
+            state["cooldown_until"][address] = time.time() + NEGATIVE_TOKEN_LOCKOUT_SECONDS
+            logger.info(f"NEGATIVE LOCKOUT: {symbol} closed at loss ({pnl_sol:+.4f} SOL). Blacklisted for 6 hours.")
+        else:
+            state["cooldown_until"][address] = time.time() + 900
+            logger.info(f"CONSOLIDATION COOLDOWN: {symbol} exited. Enforcing 15m cooldown before re-evaluation.")
     else:
         state["partial_tp_taken"].add(address)
         state["break_even_locked"].add(address)
@@ -937,6 +941,17 @@ def cycle():
             if not addr or addr.lower() in held_addrs:
                 continue
             if now < state["cooldown_until"].get(addr, 0):
+                continue
+
+            # Anti-Churn Defense: Check token history for previous net loss or hard stop
+            th = state.get("token_history", {}).get(addr, {})
+            if th.get("cumulative_pnl_sol", 0.0) < 0 or (th.get("trades_count", 0) >= 1 and th.get("last_pnl_pct", 0) < 0):
+                state["cooldown_until"][addr] = now + NEGATIVE_TOKEN_LOCKOUT_SECONDS
+                continue
+
+            # Entry Quality Defense: Reject overbought spikes and sell-pressure distribution
+            if c.get("entry_quality") == "BAD":
+                state["cooldown_until"][addr] = now + 900
                 continue
 
             heur = get_live_heuristics()

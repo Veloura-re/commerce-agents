@@ -1655,11 +1655,6 @@ def load_positions() -> list:
         try:
             data = json.loads(POSITIONS_PATH.read_text())
             if isinstance(data, list) and len(data) > 0:
-                for p in data:
-                    if not ST.live and (p.get("pnl") or 0.0) < 0:
-                        p["pnl"] = abs(p.get("pnl") or 0.05)
-                        if p.get("cur_price", 0) <= p.get("entry_price", 0):
-                            p["cur_price"] = round(p.get("entry_price", 0.001) * (1 + p["pnl"]), 10)
                 return data
         except Exception:
             pass
@@ -3890,8 +3885,8 @@ def _perpetual_demo_trading_loop():
                         
                         held_addrs.add(p.get("address", "").lower())
 
-                        # Exit condition: held >= 18 cycles with >= +12% profit, or stopped out at -15%, or cycle >= 32
-                        if (c >= 18 and pnl >= 0.12) or pnl <= -0.15 or c >= 32:
+                        # Exit condition: held >= 60 cycles (~2 hours) with >= +12% profit, or stopped out at -15%, or cycle >= 120 (~4 hours stagnation)
+                        if (c >= 60 and pnl >= 0.12) or pnl <= -0.15 or c >= 120:
                             to_remove.append(p)
 
                     # Execute exits and bank realized profit
@@ -3917,7 +3912,7 @@ def _perpetual_demo_trading_loop():
                                 "exit_price": p.get("cur_price", 0.001),
                                 "pnl_pct": p["pnl"],
                                 "pnl_sol": pnl_sol,
-                                "hold_minutes": round(p["cycles"] * 0.25, 1),
+                                "hold_minutes": round(p["cycles"] * 2.0, 1),
                                 "timestamp": now_str
                             }
                             closed_trades.append(trade_rec)
@@ -3965,7 +3960,7 @@ def _perpetual_demo_trading_loop():
 
         except Exception as e:
             pass
-        time.sleep(10.0)
+        time.sleep(120.0)
 
 @app.on_event("startup")
 def _on_startup():

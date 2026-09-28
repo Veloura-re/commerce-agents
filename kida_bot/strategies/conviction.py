@@ -29,27 +29,27 @@ def get_live_heuristics():
     try:
         h = brain.get_heuristics()
         return {
-            "min_pool_liquidity_usd": 35000.0,
-            "min_mcap": 30000.0,
+            "min_pool_liquidity_usd": 45000.0,
+            "min_mcap": 40000.0,
             "max_mcap": 1_000_000_000_000.0,
             "min_1h_volume": 15000.0,
             "min_smart_money": max(15, int(h.get("min_smart_money_consensus", 15))),
-            "min_chg_5m": -0.02,
-            "min_buy_ratio": 0.45,
-            "max_bundler_rate": min(0.08, float(h.get("max_bundler_tolerance", 0.08))),
-            "max_dev_hold_rate": min(0.08, float(h.get("max_dev_hold_tolerance", 0.08))),
+            "min_chg_5m": -0.015,
+            "min_buy_ratio": 0.50,
+            "max_bundler_rate": min(0.05, float(h.get("max_bundler_tolerance", 0.05))),
+            "max_dev_hold_rate": min(0.05, float(h.get("max_dev_hold_tolerance", 0.05))),
         }
     except Exception:
         return {
-            "min_pool_liquidity_usd": 35000.0,
-            "min_mcap": 30000.0,
+            "min_pool_liquidity_usd": 45000.0,
+            "min_mcap": 40000.0,
             "max_mcap": 1_000_000_000_000.0,
             "min_1h_volume": 15000.0,
             "min_smart_money": 15,
-            "min_chg_5m": -0.02,
-            "min_buy_ratio": 0.45,
-            "max_bundler_rate": 0.08,
-            "max_dev_hold_rate": 0.08,
+            "min_chg_5m": -0.015,
+            "min_buy_ratio": 0.50,
+            "max_bundler_rate": 0.05,
+            "max_dev_hold_rate": 0.05,
         }
 
 state = {

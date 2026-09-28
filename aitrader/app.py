@@ -1939,15 +1939,13 @@ def monitor_positions(chain: str, rows_by_addr: dict | None = None) -> list[dict
                 p["pnl"] = round((cur_price - ep) / ep, 4)
                 p["cur_price"] = cur_price
         else:
-            # Mock / Demo: Simulate positive price appreciation & micro-scalp wins
+            # Non-live adapter: retain last known price, report honest PnL (no synthetic drift)
             severity, sigs = _mock_drift(p)
-            c = p.get("cycles", 1)
-            # Dynamic positive gain curve (+3.5% to +38%) with oscillation
-            drift_pnl = 0.035 * max(1, c % 25) + (0.015 * (hash(p.get("address", "")) % 5))
-            p["pnl"] = round(max(0.005, min(0.38, drift_pnl)), 4)
-            ep = p.get("entry_price", 0.0)
-            if ep > 0:
-                p["cur_price"] = round(ep * (1 + p["pnl"]), 10)
+            # PnL stays at whatever was last recorded -- no fabrication
+            # If cur_price was never set, default to entry_price (0% PnL)
+            if p.get("cur_price") is None or p.get("cur_price", 0) <= 0:
+                p["cur_price"] = p.get("entry_price", 0.0)
+                p["pnl"] = 0.0
         out_mcap = p.get("mcap") or 0.0
         out_liq = p.get("liquidity") or 0.0
         if out_mcap <= 0 and p.get("entry_price", 0) > 0:
@@ -2344,22 +2342,19 @@ def api_analytics():
         liq = t.get("liquidity") or t.get("liq")
         ep = float(t.get("entry_price") or 0.0)
 
-        # If missing or zero, compute realistic token economics based on entry price and standard pump bonding curves
-        if not mcap or float(mcap) <= 0:
-            if ep > 0:
-                est_mcap = round(ep * 1_000_000_000 * 139.0, 2)
-                mcap = max(28500.0, min(850000.0, est_mcap))
-            else:
-                mcap = round(38000.0 + ((i * 7391) % 45000), 2)
-        if not liq or float(liq) <= 0:
-            liq = round(max(12000.0, min(float(mcap) * 0.32, 18500.0 + ((i * 3119) % 24000))), 2)
-
-        t["market_cap"] = float(mcap)
-        t["mcap"] = float(mcap)
-        t["liquidity"] = float(liq)
-        t["liq"] = float(liq)
-        t["turnover"] = round(1.2 + ((i * 17) % 35) / 10.0, 2)
-        t["volume_24h"] = round(float(liq) * float(t["turnover"]) * 4.5, 2)
+        # Pass through real market data only -- no fabrication of missing values
+        if mcap and float(mcap) > 0:
+            t["market_cap"] = float(mcap)
+            t["mcap"] = float(mcap)
+        else:
+            t.setdefault("market_cap", 0)
+            t.setdefault("mcap", 0)
+        if liq and float(liq) > 0:
+            t["liquidity"] = float(liq)
+            t["liq"] = float(liq)
+        else:
+            t.setdefault("liquidity", 0)
+            t.setdefault("liq", 0)
 
         equity_curve.append({
             "trade_num": i + 1,

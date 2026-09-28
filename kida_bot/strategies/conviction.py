@@ -488,18 +488,8 @@ def execute_sell(
     else:
         kind = SwapKind.SELL_FULL if percent >= 100 else SwapKind.SELL_PARTIAL
 
-    # Anti-Slippage Invariant Bound
+    # Record actual PnL without any floor clamping -- honest losses reported as-is
     effective_pnl = pnl_pct
-    if "MICRO_HARD_STOP" in reason or "HARD_STOP" in reason:
-        effective_pnl = max(pnl_pct, STOP_LOSS_PCT - MAX_SLIPPAGE_TOLERANCE)
-    elif "HOUSE_MONEY_STOP" in reason:
-        effective_pnl = max(pnl_pct, REENTRY_STOP_LOSS_PCT - MAX_SLIPPAGE_TOLERANCE)
-    elif "PROACTIVE_MOMENTUM_CUT" in reason:
-        effective_pnl = max(pnl_pct, -0.012)
-    elif "RATCHET_VAULT" in reason or "BREAK_EVEN" in reason:
-        effective_pnl = max(pnl_pct, 0.002)
-    elif "RATCHET_FLOOR" in reason or "RUNNER_FLOOR" in reason:
-        effective_pnl = max(pnl_pct, 0.005)
 
 
     pnl_sol = round(sold_size * effective_pnl, 6)

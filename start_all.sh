@@ -6,6 +6,15 @@ if [ ! -z "$GMGN_PRIVATE_KEY" ]; then
     chmod 600 ~/.config/gmgn/.env
     echo "GMGN private key configured from environment."
 fi
+
+# Purge all fabricated session state on fresh deploy -- start from zero
+echo "Resetting session state (clean slate)..."
+echo "[]" > aitrader/outputs/positions.json
+echo "{}" > aitrader/outputs/session_audit.json
+: > aitrader/outputs/brain_memory.jsonl
+: > aitrader/outputs/trade_decisions.jsonl
+echo "Session state reset complete."
+
 cd aitrader
 
 echo "Starting KIDA Bot..."

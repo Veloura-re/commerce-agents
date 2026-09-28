@@ -341,7 +341,7 @@ def detect_market_regime(candidates: List[dict] = None) -> dict:
     - Standard Conservative (Option 1): Balanced baseline market -> 0.70 SOL, 5 slots max
     """
     if not candidates:
-        return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.70, "max_positions": 5, "exposure_cap_sol": 3.60}
+        return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.50, "max_positions": 8, "exposure_cap_sol": 5.50}
     
     top = candidates[:6]
     def extract_chg_5m(c: dict) -> float:
@@ -363,11 +363,11 @@ def detect_market_regime(candidates: List[dict] = None) -> dict:
     )
 
     if high_conviction_count >= 2 or avg_chg_5m >= 0.03:
-        return {"regime": "HIGH_CONVICTION", "trade_size_sol": 1.20, "max_positions": 3, "exposure_cap_sol": 3.60}
+        return {"regime": "HIGH_CONVICTION", "trade_size_sol": 0.80, "max_positions": 5, "exposure_cap_sol": 5.50}
     elif avg_chg_5m <= 0.005 or len([c for c in top if extract_sm(c) >= 4]) == 0:
-        return {"regime": "MICRO_SCALP", "trade_size_sol": 0.25, "max_positions": 8, "exposure_cap_sol": 2.00}
+        return {"regime": "MICRO_SCALP", "trade_size_sol": 0.35, "max_positions": 10, "exposure_cap_sol": 4.50}
     else:
-        return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.70, "max_positions": 5, "exposure_cap_sol": 3.60}
+        return {"regime": "STANDARD_CONSERVATIVE", "trade_size_sol": 0.50, "max_positions": 8, "exposure_cap_sol": 5.50}
 
 def calculate_dynamic_size(council_score: int, sm_count: int, liq: float, regime: dict = None, portfolio_equity_sol: float = 0.0) -> float:
     """Dynamic Conviction Sizing: 10% to 20% of portfolio equity, bounded by regime and risk."""

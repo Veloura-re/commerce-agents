@@ -658,11 +658,11 @@ def monitor_and_manage_risk():
                 )
                 continue
 
-        # 5. Dynamic Stagnation Exit: If held >= 15m and failed to reach at least +2.0% target, recycle slot
-        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < 0.02:
+        # 5. Dynamic Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS and failed to reach at least target, recycle slot
+        if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS and pnl < STAGNATION_MIN_PNL_TARGET:
             execute_sell(
                 addr, sym,
-                f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +2.0% target — slot freed)",
+                f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
                 pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
             )
             continue

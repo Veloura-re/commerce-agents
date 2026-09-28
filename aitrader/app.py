@@ -61,9 +61,9 @@ CFG = {
     "equity_sol": 10.0,                # 10.0 SOL paper bankroll
     "risk_per_trade": 0.10,            # 10% risk budget per trade
     "hard_stop_pct": 0.04,             # -4.0% base stop loss
-    "max_per_trade_sol": 1.00,         # 1.00 SOL max per position
-    "max_total_exposure_sol": 3.60,    # 3.60 SOL active exposure cap
-    "max_concurrent_positions": 5,     # 5 concurrent slots
+    "max_per_trade_sol": 0.80,         # 0.80 SOL max per position
+    "max_total_exposure_sol": 5.50,    # 5.50 SOL active exposure cap (up to ~75% deployment)
+    "max_concurrent_positions": 8,     # 8 concurrent slots
     "daily_loss_cap_sol": 1.80,        # 1.80 SOL daily loss cap
     "kill_switch_consec_losses": 8,
     # 避雷硬门槛（真实字段，无合成安全分；用户决策：直接用布尔/数值字段判）
@@ -2602,7 +2602,7 @@ def api_risk_reset():
 _SCREEN_CACHE: dict = {}
 import threading
 _SCREEN_LOCK = threading.Lock()
-_SCREEN_CACHE_TTL = 30.0
+_SCREEN_CACHE_TTL = 10.0
 
 @app.post("/api/run")
 def api_run(r: RunIn):

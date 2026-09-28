@@ -58,24 +58,24 @@ CFG = {
     # 不再像旧版那样砍到极小（砍小反而只剩榜首最新/刷量币、聪明钱标记全为 0）。
     "top_n_prefilter": 100,        # 参与筛选的 trending 行数上限
     "llm_max": 20,                 # LLM 最多解释幸存者数（启发式占位不花钱，放大减少 gate3 误杀；接真实 LLM 再收紧）
-    "equity_sol": 7.2,                 # $1,000 USD bankroll (~7.2 SOL at $139/SOL)
-    "risk_per_trade": 0.08,            # Increased risk budget to 8% to enable 0.70 SOL sizing
-    "hard_stop_pct": 0.12,             # -12.0% widened base stop loss (gives room to breathe)
-    "max_per_trade_sol": 0.70,         # 0.70 SOL per position (~$100 USD) - concentrated 7x!
-    "max_total_exposure_sol": 3.60,    # 50% active exposure cap (3.60 SOL / $500 USD deployed)
-    "max_concurrent_positions": 5,     # 5 concentrated high-conviction slots (5 x 0.70 = 3.50 SOL)
-    "daily_loss_cap_sol": 1.80,        # 25% daily loss cap (1.80 SOL / $250 USD)
+    "equity_sol": 10.0,                # 10.0 SOL paper bankroll
+    "risk_per_trade": 0.10,            # 10% risk budget per trade
+    "hard_stop_pct": 0.04,             # -4.0% base stop loss
+    "max_per_trade_sol": 1.00,         # 1.00 SOL max per position
+    "max_total_exposure_sol": 3.60,    # 3.60 SOL active exposure cap
+    "max_concurrent_positions": 5,     # 5 concurrent slots
+    "daily_loss_cap_sol": 1.80,        # 1.80 SOL daily loss cap
     "kill_switch_consec_losses": 8,
     # 避雷硬门槛（真实字段，无合成安全分；用户决策：直接用布尔/数值字段判）
     "require_renounced_mint": True,   # 必须放弃增发权
     "max_buy_tax": 0.10,
     "max_sell_tax": 0.10,
     "max_rug_ratio": 0.60,
-    "max_bundler_ratio": 0.30,        # memecoin bundler 较常见，放宽
-    "max_dev_holding_pct": 0.10,
+    "max_bundler_ratio": 0.15,        # 15% max bundler rate
+    "max_dev_holding_pct": 0.10,      # 10% max dev holding
     "max_top10_concentration": 0.50,
     # 选择质量：共识 = 聪明钱(smart_degen) + 知名KOL(renowned) 计数之和（与脑部自适应启发式联动）
-    "min_smart_money_confluence": 8,   # Widened quality filter: 8+ smart degens & KOLs
+    "min_smart_money_confluence": 2,   # 2+ smart degens & KOLs for active demo cadence
     "min_llm_conviction": 0.6,
     # dev 评估维度：初排后只对前 dev_pool_n 个幸存者额外查 dev 历史（token info 的 dev 对象），
     # 结果按地址缓存 dev_info_ttl_s 秒（dev 历史变化慢，跨轮复用、不每轮重拉，省 cli 配额）。
@@ -142,7 +142,7 @@ PUBLIC_DEMO = os.getenv("PUBLIC_DEMO", "").strip().lower() in ("1", "true", "yes
 #   sol 用经调优的命令（含 not_wash_trading 过滤）；其他链先用通用模板（仅换 --chain）。
 DEFAULT_TRENDING_CMDS = {
     "sol": ("gmgn-cli market trending --chain sol "
-            "--interval 1h --order-by volume --direction desc --limit 120 --raw"),
+            "--interval 1h --order-by volume --direction desc --limit 100 --raw"),
     "bsc": ("gmgn-cli market trending --chain bsc "
             "--platform fourmeme --platform fourmeme_agent --platform bn_fourmeme "
             "--platform cubepeg --platform likwid --platform goplus_creator --platform goplus_skills "
@@ -234,11 +234,6 @@ class LiveGMGN(GMGNAdapter):
     def __init__(self, chain="sol"):
         self.chain = chain
         self.env = {**os.environ, **load_env()}
-        # 部分网络环境对 openapi.gmgn.ai 做 TLS 中间人检查（自定义 CA，系统 Keychain 已信任但
-        # Node 内置证书库不认），导致 gmgn-cli 报 "self-signed certificate in certificate chain"。
-        # --use-system-ca 让 Node 改走系统信任链，规避这个误判。
-        if "--use-system-ca" not in self.env.get("NODE_OPTIONS", ""):
-            self.env["NODE_OPTIONS"] = (self.env.get("NODE_OPTIONS", "") + " --use-system-ca").strip()
         self._wallet_cache: dict[str, str] = {}   # chain -> bound wallet address
 
     _price_cache: dict[str, tuple[float, float]] = {}       # addr -> (timestamp, price)
@@ -946,17 +941,17 @@ def hard_gates(f: TokenFeatures):
         return False, f"REJECT 避雷：dev 持仓 {f.dev_hold:.0%} > {CFG['max_dev_holding_pct']:.0%}", 1
     if f.top10 > CFG["max_top10_concentration"]:
         return False, f"REJECT 避雷：top10 {f.top10:.0%} 集中", 1
-    # Liquidity & Market Cap Floor — $15k minimum for micro-cap jackpot hunting
-    if f.liquidity < 15000.0:
-        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $15,000", 1
-    if f.mcap < 15000.0:
-        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $15,000", 1
-    if f.chg_5m < -0.015:
+    # Liquidity & Market Cap Floor — $25k minimum for live shadow demo trading
+    if f.liquidity < 25000.0:
+        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $25,000", 1
+    if f.mcap < 25000.0:
+        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $25,000", 1
+    if f.chg_5m < -0.030:
         return False, f"REJECT 动能下行：5m 跌 {f.chg_5m*100:.1f}%", 1
-    if f.buy_ratio < 0.48:
-        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 48%", 1
+    if f.buy_ratio < 0.40:
+        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 40%", 1
     # gate 2 共识：smart_degen + renowned KOL 计数（自适应脑部启发式联动）
-    min_sm = int(brain.heuristics.get("min_smart_money_consensus", CFG.get("min_smart_money_confluence", 5)))
+    min_sm = int(brain.heuristics.get("min_smart_money_consensus", CFG.get("min_smart_money_confluence", 2)))
     if f.sm_confluence < min_sm:
         return False, (f"REJECT 共识：聪明钱+KOL {f.sm_confluence} "
                        f"(degen {f.smart_degen}/KOL {f.renowned}) < {min_sm}"), 2
@@ -1719,6 +1714,7 @@ def screen_once(chain: str) -> dict:
 
         decisions.append(dict(
             decision=dict(symbol=f.symbol_safe, address=f.address, action="ACTION",
+                          price=f.price,
                           reason="Passed screening gates — advisory council annotated",
                           size_sol=size, risk_warn=(not allow),
                           verdict=asdict(v), features=_feat(f), priority=pri,
@@ -1783,6 +1779,7 @@ def _reject(f, reason, gate_idx, v):
     risk_label = "HIGH_RISK" if c_score < 40 else "ELEVATED_RISK"
     gates = 0 if hp else (2 if c_score >= 40 else 1)
     return dict(decision=dict(symbol=f.symbol_safe, address=f.address, action="SKIP",
+                              price=f.price,
                               reason=reason, size_sol=0, gate=gate_idx,
                               dex=getattr(f, "dex", "RAY-CPMM"),
                               verdict=asdict(v) if v else {}, features=_feat(f),
@@ -1798,7 +1795,7 @@ def _feat(f):
                 dex=getattr(f, "dex", "RAY-CPMM"),
                 sniper_count=f.sniper_count, chg_1h=round(f.chg_1h, 3), chg_5m=round(f.chg_5m, 3),
                 buy_ratio=round(f.buy_ratio, 2), turnover=round(f.turnover, 2),
-                liquidity=f.liquidity, mcap=f.mcap, age_min=round(f.age_min, 1),
+                liquidity=f.liquidity, mcap=f.mcap, price=f.price, age_min=round(f.age_min, 1),
                 # dev 评估维度（仅查过 dev 历史的幸存者非空）
                 dev_score=(round(f.dev_eval, 2) if f.dev_eval is not None else None),
                 dev_launches=(f.dev.get("analyzed") if f.dev else None),     # 历史发币(分析的币数)
@@ -1906,7 +1903,7 @@ def _mock_drift(p):
 # ──────────────────────────────────────────────────────────────────────────
 # 12. 成交（人按下才发生）
 # ──────────────────────────────────────────────────────────────────────────
-def do_buy(chain: str, address: str, size_sol: float) -> dict:
+def do_buy(chain: str, address: str, size_sol: float, price: float = 0.0, symbol: str = "", mcap: float = 0.0, liquidity: float = 0.0) -> dict:
     if any((p.get("address") or "").lower() == address.lower() for p in ST.positions):
         log("BUY_BLOCK", address[:8], "Duplicate position already open")
         raise HTTPException(409, "BLOCK Duplicate position already open for this token")
@@ -1918,23 +1915,30 @@ def do_buy(chain: str, address: str, size_sol: float) -> dict:
     g = ST.adapter_for(chain)
     cached_row = next((t for t in ST.trending_rows(chain) if (t.get("address") or "").lower() == address.lower()), None)
     if cached_row is not None:
-        symbol = sanitize(cached_row.get("symbol") or cached_row.get("name") or "TOKEN")
+        sym = sanitize(cached_row.get("symbol") or cached_row.get("name") or symbol or "TOKEN")
         sec = _sec_from_row(cached_row)
-        entry_price = _f(cached_row.get("price"))
+        entry_price = _f(cached_row.get("price")) or _f(price)
     else:
-        try:
-            info = g.token_info(address)
-            symbol = sanitize(info.get("symbol", ""))
-        except Exception:
-            symbol = "TOKEN"
-        try:
-            sec = g.token_security(address)
-        except Exception:
-            sec = {}
-        try:
-            entry_price = g.token_price(address)
-        except Exception:
-            entry_price = 0.0
+        sym = sanitize(symbol or "TOKEN")
+        entry_price = _f(price)
+        sec = {}
+        if entry_price <= 0.0:
+            try:
+                info = g.token_info(address)
+                if not sym or sym == "TOKEN":
+                    sym = sanitize(info.get("symbol", ""))
+            except Exception:
+                pass
+            try:
+                sec = g.token_security(address)
+            except Exception:
+                pass
+            try:
+                entry_price = g.token_price(address)
+            except Exception:
+                entry_price = 0.0
+
+    symbol = sym
 
     if entry_price <= 0.0:
         log("BUY_BLOCK", symbol, f"Cannot open position: entry price unresolved ({entry_price})")
@@ -2104,6 +2108,10 @@ class BuyIn(BaseModel):
     address: str
     size_sol: float
     chain: str = "sol"       # 链随请求传（每个 tab 独立）
+    price: Optional[float] = None
+    symbol: Optional[str] = None
+    mcap: Optional[float] = None
+    liquidity: Optional[float] = None
 
 class SellIn(BaseModel):
     address: str             # 卖出链由持仓自带，无需传
@@ -3606,7 +3614,7 @@ def api_buy(b: BuyIn):
     _block_if_public()
     ch = valid_chain(b.chain)
     with ST.lock:
-        return do_buy(ch, b.address, b.size_sol)
+        return do_buy(ch, b.address, b.size_sol, price=_f(b.price), symbol=b.symbol or "", mcap=_f(b.mcap), liquidity=_f(b.liquidity))
 
 @app.post("/api/sell")
 def api_sell(s: SellIn):

@@ -431,14 +431,14 @@ class KIDABrain:
             "persona": "Sovereign Quantitative General",
             "last_updated": datetime.now().isoformat(),
             # Gate 1 — Product Strategist: smart money & mcap
-            "min_smart_money_consensus": 5,
-            "min_mcap_usd": 50000.0,
+            "min_smart_money_consensus": 2,
+            "min_mcap_usd": 25000.0,
             # Gate 2 — Principal Architect: pool depth
-            "min_pool_liquidity_usd": 20000.0,
+            "min_pool_liquidity_usd": 25000.0,
             # Gate 3 — Dark-Hat: bundler / dev / sniper tolerances
-            "max_bundler_tolerance": 0.10,
+            "max_bundler_tolerance": 0.15,
             "max_dev_hold_tolerance": 0.10,
-            "max_sniper_hold": 0.20,
+            "max_sniper_hold": 0.25,
             # Gate 4 — Design & UX: volume acceleration
             "min_breakout_acceleration_mult": 1.10,
             "min_buy_volume_1m": 200.0,

@@ -192,8 +192,8 @@ def run_screening():
                 if chg_5m < 0.005 or turnover_rate < 0.25:
                     continue
 
-            # Conservative Institutional Quality Moat
-            if liq < 50_000.0 or mcap < 50_000.0 or chg_5m < -0.01 or buy_ratio < 0.48:
+            # High-Cadence Live Shadow Trading Moat
+            if liq < 25_000.0 or mcap < 25_000.0 or chg_5m < -0.03 or buy_ratio < 0.40:
                 continue
 
             if (action == "ACTION") or (sm >= heur["min_smart_money"]):
@@ -208,6 +208,7 @@ def run_screening():
                     "bundler": bundler,
                     "dev_hold": dev_hold,
                     "smart_degen_count": sm,
+                    "price": dec.get("price") or feat.get("price", 0.0),
                     "priority": dec.get("priority", 0),
                     "action": action,
                     "risk_label": dec.get("risk_label", "MODERATE_RISK"),
@@ -274,7 +275,8 @@ def execute_buy(
     is_reentry: bool = False,
     council_score: int = 50,
     risk_label: str = "MODERATE_RISK",
-    regime: dict = None
+    regime: dict = None,
+    price: float = 0.0
 ) -> bool:
     """
     Executes a BUY using the Anthropic Two-Phase Staged Guardrail Architecture.
@@ -286,7 +288,7 @@ def execute_buy(
     
     dynamic_size = calculate_dynamic_size(
         council_score, sm_count, liq, regime=regime,
-        portfolio_equity_sol=(TOTAL_BANKROLL_USD / 140.0)
+        portfolio_equity_sol=10.0
     )
     max_slots = regime.get("max_positions", MAX_POSITIONS) if regime else MAX_POSITIONS
     
@@ -322,7 +324,11 @@ def execute_buy(
         return http_post(f"{API_BASE}/api/buy", {
             "chain": CHAIN,
             "address": sw.address,
-            "size_sol": sw.size_sol
+            "size_sol": sw.size_sol,
+            "symbol": symbol,
+            "price": price,
+            "mcap": mcap,
+            "liquidity": liq
         }, timeout=20)
 
     # Phase 2: Pre-Flight Re-verification & Execution Dispatch
@@ -738,7 +744,8 @@ def cycle():
                             is_reentry=True,
                             council_score=80,
                             risk_label="LOW_RISK",
-                            regime=regime
+                            regime=regime,
+                            price=c.get("price", 0.0)
                         )
                         if success:
                             held_addrs.add(addr.lower())
@@ -816,7 +823,8 @@ def cycle():
                 is_reentry=False,
                 council_score=council_score,
                 risk_label=risk_label,
-                regime=regime
+                regime=regime,
+                price=c.get("price", 0.0)
             )
             if success:
                 held_addrs.add(addr.lower())

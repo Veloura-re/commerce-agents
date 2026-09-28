@@ -18,6 +18,7 @@ echo "[]" > aitrader/outputs/positions.json
 echo "{}" > aitrader/outputs/session_audit.json
 : > aitrader/outputs/brain_memory.jsonl
 : > aitrader/outputs/trade_decisions.jsonl
+rm -f aitrader/outputs/learned_heuristics.json
 echo "Session state reset complete."
 
 cd aitrader

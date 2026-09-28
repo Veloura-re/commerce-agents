@@ -29,27 +29,27 @@ def get_live_heuristics():
     try:
         h = brain.get_heuristics()
         return {
-            "min_pool_liquidity_usd": 50000.0,
-            "min_mcap": 50000.0,
+            "min_pool_liquidity_usd": 25000.0,
+            "min_mcap": 25000.0,
             "max_mcap": 1_000_000_000_000.0,
             "min_1h_volume": 10000.0,
-            "min_smart_money": max(5, int(h.get("min_smart_money_consensus", 5))),
-            "min_chg_5m": 0.0,
-            "min_buy_ratio": 0.50,
-            "max_bundler_rate": min(0.05, float(h.get("max_bundler_tolerance", 0.05))),
-            "max_dev_hold_rate": min(0.05, float(h.get("max_dev_hold_tolerance", 0.05))),
+            "min_smart_money": max(2, int(h.get("min_smart_money_consensus", 2))),
+            "min_chg_5m": -0.03,
+            "min_buy_ratio": 0.40,
+            "max_bundler_rate": min(0.15, float(h.get("max_bundler_tolerance", 0.15))),
+            "max_dev_hold_rate": min(0.10, float(h.get("max_dev_hold_tolerance", 0.10))),
         }
     except Exception:
         return {
-            "min_pool_liquidity_usd": 50000.0,
-            "min_mcap": 50000.0,
+            "min_pool_liquidity_usd": 25000.0,
+            "min_mcap": 25000.0,
             "max_mcap": 1_000_000_000_000.0,
             "min_1h_volume": 10000.0,
-            "min_smart_money": 5,
-            "min_chg_5m": 0.0,
-            "min_buy_ratio": 0.50,
-            "max_bundler_rate": 0.05,
-            "max_dev_hold_rate": 0.05,
+            "min_smart_money": 2,
+            "min_chg_5m": -0.03,
+            "min_buy_ratio": 0.40,
+            "max_bundler_rate": 0.15,
+            "max_dev_hold_rate": 0.10,
         }
 
 state = {
@@ -372,12 +372,12 @@ def detect_market_regime(candidates: List[dict] = None) -> dict:
 def calculate_dynamic_size(council_score: int, sm_count: int, liq: float, regime: dict = None, portfolio_equity_sol: float = 0.0) -> float:
     """Dynamic Conviction Sizing: 10% to 20% of portfolio equity, bounded by regime and risk."""
     if portfolio_equity_sol > 0:
-        if council_score >= 85 and sm_count >= 10 and liq >= 100_000:
-            target_pct = 0.20
-        elif council_score >= 70 and sm_count >= 5 and liq >= 50_000:
-            target_pct = 0.15
-        else:
+        if council_score >= 85 and sm_count >= 5 and liq >= 50_000:
             target_pct = 0.10
+        elif council_score >= 60 and sm_count >= 2 and liq >= 25_000:
+            target_pct = 0.07
+        else:
+            target_pct = 0.05
         allocated = round(portfolio_equity_sol * target_pct, 3)
         return max(MIN_TRADE_SIZE_SOL, min(allocated, MAX_TRADE_SIZE_SOL))
 
@@ -410,7 +410,7 @@ def execute_buy(
     
     dynamic_size = calculate_dynamic_size(
         council_score, sm_count, liq, regime=regime,
-        portfolio_equity_sol=(TOTAL_BANKROLL_USD / 140.0)
+        portfolio_equity_sol=10.0
     )
     max_slots = regime.get("max_positions", MAX_POSITIONS) if regime else MAX_POSITIONS
     
@@ -1079,28 +1079,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-def check_memex_gates(address: str, symbol: str, feat: dict = None, is_reentry: bool = False) -> Tuple[bool, str]:
-    try:
-        if feat:
-            b1m = float(feat.get("buy_volume_1m", 0.0))
-            s1m = float(feat.get("sell_volume_1m", 0.0))
-            b5m = float(feat.get("buy_volume_5m", 0.0))
-            s5m = float(feat.get("sell_volume_5m", 0.0))
-            top70_hold = float(feat.get("top70_sniper_hold", 0.0) or feat.get("top10", 0.0))
-            
-            if top70_hold > 0.40:
-                return False, f"REJECT_MEMEX_SKILL3 (Snipers hold {top70_hold*100:.1f}% > 40%)"
-            if s5m > b5m and s5m > 2000.0:
-                return False, f"REJECT_MEMEX_SKILL3 (5m Net Outflow: Sell ${s5m:,.0f} > Buy ${b5m:,.0f})"
-                
-            if s1m > b1m and s1m > 1000.0:
-                return False, f"REJECT_MEMEX_SKILL4 (1m Dump: Sell ${s1m:,.0f} > Buy ${b1m:,.0f})"
-
-            return True, "PASS"
-
-        return True, "PASS"
-    except Exception as e:
-        logger.warning(f"MemeX gate error on {symbol}: {e}")
-        return True, "PASS"
 
 

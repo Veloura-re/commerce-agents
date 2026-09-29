@@ -41,4 +41,5 @@ merchant-agent/managed-agents/merchant-mcp-server/.merchant_memory.json
 .claude/
 pyrightconfig.json
 aitrader/outputs/archive/trade_decisions_bloated_209m.jsonl
-aitrader/outputs/archive/trade_decisions_bloated_209m.jsonl
+data/*.db
+data/

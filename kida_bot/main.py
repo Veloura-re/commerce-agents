@@ -34,30 +34,39 @@ def get_status():
         logger.error(f"Failed to fetch API status: {e}")
         return None
 
-def get_positions():
+def get_positions(retries: int = 3):
+    last_err = None
+    for attempt in range(1, retries + 1):
+        try:
+            data = http_get(f"{API_BASE}/api/positions?chain={CHAIN}", timeout=6)
+            positions = data.get("positions", [])
+            if positions is not None:
+                for p in positions:
+                    addr = p.get("address")
+                    sym = p.get("symbol", "TOKEN")
+                    cycles = p.get("cycles", 0)
+                    if addr:
+                        provenance_registry.register_held_position(addr, sym, source="PORTFOLIO_INGEST")
+                        if addr not in state["entry_timestamps"]:
+                            elapsed_prior = cycles * FAST_MONITOR_INTERVAL_SECONDS
+                            state["entry_timestamps"][addr] = time.time() - elapsed_prior
+                return positions
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(0.2 * (2 ** (attempt - 1)))
+
+    # Secondary fallback to /api/state
     try:
-        data = http_get(f"{API_BASE}/api/positions?chain={CHAIN}", timeout=10)
-        positions = data.get("positions", [])
-        if not positions:
-            try:
-                s_data = http_get(f"{API_BASE}/api/state", timeout=5)
-                positions = s_data.get("active_positions", [])
-            except Exception:
-                pass
-        # Ingest currently held positions into provenance registry and preserve entry time
-        for p in positions:
-            addr = p.get("address")
-            sym = p.get("symbol", "TOKEN")
-            cycles = p.get("cycles", 0)
-            if addr:
-                provenance_registry.register_held_position(addr, sym, source="PORTFOLIO_INGEST")
-                if addr not in state["entry_timestamps"]:
-                    elapsed_prior = cycles * FAST_MONITOR_INTERVAL_SECONDS
-                    state["entry_timestamps"][addr] = time.time() - elapsed_prior
-        return positions
-    except Exception as e:
-        logger.error(f"Failed to fetch positions: {e}")
-        return []
+        s_data = http_get(f"{API_BASE}/api/state", timeout=5)
+        positions = s_data.get("active_positions", [])
+        if positions:
+            return positions
+    except Exception:
+        pass
+
+    logger.error(f"Failed to fetch positions after {retries} attempts: {last_err}")
+    return []
 
 def get_portfolio_context():
     try:
@@ -363,7 +372,8 @@ def execute_sell(
     cur_price: float = 0.0,
     entry_price: float = 0.0,
     percent: int = 100,
-    pos_size_sol: float = 0.0
+    pos_size_sol: float = 0.0,
+    slippage_through_stop: float = 0.0
 ) -> bool:
     """
     Executes a SELL using the Anthropic Two-Phase Staged Guardrail Architecture.
@@ -415,7 +425,8 @@ def execute_sell(
             return http_post(f"{API_BASE}/api/sell", {
                 "chain": CHAIN,
                 "address": sw.address,
-                "percent": sw.percent
+                "percent": sw.percent,
+                "reason": sw.reason
             }, timeout=20)
         except urllib.error.HTTPError as e:
             if e.code == 404:
@@ -439,6 +450,9 @@ def execute_sell(
     entry_t = state["entry_timestamps"].get(address, time.time())
     hold_mins = (time.time() - entry_t) / 60.0
 
+    from kida_bot.core.cost_model import calculate_net_pnl
+    cost_info = calculate_net_pnl(sold_size, effective_pnl, fees_paid_sol=0.005)
+
     trade_record = {
         "symbol": symbol,
         "address": address,
@@ -449,6 +463,12 @@ def execute_sell(
         "exit_price": effective_exit_price,
         "pnl_pct": round(effective_pnl, 4),
         "pnl_sol": round(pnl_sol, 6),
+        "gross_pnl_pct": cost_info["gross_pnl_pct"],
+        "gross_pnl_sol": cost_info["gross_pnl_sol"],
+        "net_pnl_pct": cost_info["net_pnl_pct"],
+        "net_pnl_sol": cost_info["net_pnl_sol"],
+        "fees_sol": cost_info["fees_paid_sol"],
+        "slippage_through_stop": slippage_through_stop,
         "hold_minutes": round(hold_mins, 1),
         "mcap": state["entry_mcaps"].get(address, 0.0),
         "market_cap": state["entry_mcaps"].get(address, 0.0),
@@ -457,7 +477,53 @@ def execute_sell(
         "timestamp": datetime.now().isoformat()
     }
     state["closed_trades"].append(trade_record)
-    state["total_realized_pnl_sol"] += pnl_sol
+    state["total_realized_pnl_sol"] += cost_info["net_pnl_sol"]
+
+    logger.info(
+        f"TRADE SETTLED: {symbol} ({sold_size:.3f} SOL) | "
+        f"Gross: {cost_info['gross_pnl_sol']:+.4f} SOL ({cost_info['gross_pnl_pct']*100:+.2f}%) | "
+        f"Net: {cost_info['net_pnl_sol']:+.4f} SOL ({cost_info['net_pnl_pct']*100:+.2f}%) | "
+        f"Fees: {cost_info['fees_paid_sol']:.4f} SOL | StopSlip: {slippage_through_stop*100:.2f}% | Reason: {reason}"
+    )
+
+    # Phase 3: Blacklist persistence for losing trades / rugs
+    if cost_info["net_pnl_sol"] < 0:
+        try:
+            from kida_bot.core.safety_checks import record_loss_and_blacklist
+            record_loss_and_blacklist(
+                mint=address,
+                deployer=state.get("entry_deployers", {}).get(address),
+                bundler=state.get("entry_bundlers", {}).get(address),
+                loss_sol=abs(cost_info["net_pnl_sol"]),
+                reason=f"Closed at net loss {cost_info['net_pnl_pct']*100:+.2f}%: {reason}"
+            )
+        except Exception as e:
+            logger.warning(f"Error recording loss to blacklist: {e}")
+
+    # Phase 1: SQLite trade logging
+    try:
+        from kida_bot.core.db import log_trade
+        log_trade({
+            "trade_id": f"trade_{staged.stage_id}_{symbol}",
+            "mint": address,
+            "symbol": symbol,
+            "size": sold_size,
+            "entry_ts": entry_t,
+            "exit_ts": time.time(),
+            "entry_price": entry_price,
+            "exit_price": effective_exit_price,
+            "exit_reason": reason,
+            "realized_pnl": cost_info["net_pnl_sol"],
+            "realized_pnl_pct": cost_info["net_pnl_pct"],
+            "fees_paid": cost_info["fees_paid_sol"],
+            "priority_fee": 0.002,
+            "quoted_slippage": 0.01,
+            "realized_slippage": slippage_through_stop,
+            "slippage_through_stop": slippage_through_stop,
+            "order_latency_ms": round((time.time() - getattr(staged, "created_at", time.time())) * 1000.0, 1)
+        })
+    except Exception as e:
+        logger.warning(f"Error logging trade to SQLite: {e}")
 
     try:
         heur = brain.get_heuristics()
@@ -489,6 +555,9 @@ def execute_sell(
         state["partial_tp_taken"].discard(address)
         state["moonbag_active"].discard(address)
         state["break_even_locked"].discard(address)
+
+        from kida_bot.core.volatility import default_volatility_tracker
+        default_volatility_tracker.clear_mint(address)
 
         if pnl_sol < 0 or "STOP" in reason:
             state["cooldown_until"][address] = time.time() + NEGATIVE_TOKEN_LOCKOUT_SECONDS
@@ -604,12 +673,35 @@ def monitor_and_manage_risk():
         if addr not in state["moonbag_active"]:
             tp_stage = state.setdefault("tp_stage", {}).get(addr, 0)
 
-            # Tier 1: +8% gain -> Lock Breakeven Floor (+2.0%, covering fees)
+            # Cost Model: Dynamic Floors & Break-even derivation
+            from kida_bot.core.cost_model import compute_dynamic_floors, estimate_round_trip_cost, calculate_net_pnl
+            from kida_bot.core.volatility import default_volatility_tracker, calculate_slippage_through_stop
+
+            # Phase 4: Volatility tracking and Feed Latency Monitoring
+            default_volatility_tracker.add_price_sample(addr, cur_price, ts=now)
+            lat_ms = float(pos.get("latency_ms") or pos.get("order_latency_ms") or 0.0)
+            if lat_ms > 0:
+                default_volatility_tracker.record_feed_latency(addr, lat_ms)
+            is_blind, feed_lat = default_volatility_tracker.is_feed_blind(addr)
+            if is_blind:
+                logger.warning(f"BLIND FEED ALERT: {sym} price latency {feed_lat:.0f}ms > threshold! Widening risk boundaries.")
+
+            cost_profile = estimate_round_trip_cost(addr, size_sol, pool_liquidity_usd=pos.get("liquidity", 45000.0))
+            vol_stops = default_volatility_tracker.compute_volatility_stops(
+                addr, cur_price, round_trip_cost_pct=cost_profile["round_trip_cost_pct"]
+            )
+            dynamic_floors = compute_dynamic_floors(cost_profile["round_trip_cost_pct"])
+            dynamic_tier1_floor = max(TIER1_LOCK_PCT, dynamic_floors["tier1_floor_pct"])
+            dynamic_green_vault_trigger = dynamic_floors["green_vault_trigger_pct"]
+            dynamic_green_vault_floor = round(cost_profile["round_trip_cost_pct"] + 0.002, 4)
+            net_metrics = calculate_net_pnl(size_sol, pnl, fees_paid_sol=cost_profile["total_cost_sol"])
+
+            # Tier 1: Dynamic trigger / floor (at least cost + margin)
             if pnl >= TIER1_TRIGGER_PCT:
                 cur_floor = state["active_stop_floors"].get(addr, STOP_LOSS_PCT)
-                if TIER1_LOCK_PCT > cur_floor:
-                    state["active_stop_floors"][addr] = TIER1_LOCK_PCT
-                    logger.info(f"BREAK-EVEN LOCKED: {sym} reached +{pnl*100:.1f}%. Stop floor raised to +{TIER1_LOCK_PCT*100:.1f}%.")
+                if dynamic_tier1_floor > cur_floor:
+                    state["active_stop_floors"][addr] = dynamic_tier1_floor
+                    logger.info(f"BREAK-EVEN LOCKED: {sym} reached +{pnl*100:.1f}%. Dynamic floor raised to +{dynamic_tier1_floor*100:.1f}% (net: +{net_metrics['net_pnl_pct']*100:.1f}%).")
 
             # Tier 2: +15% gain -> Bank 50% partial profit & raise floor to +8.0%
             if pnl >= TIER2_TRIGGER_PCT and tp_stage < 1:
@@ -640,63 +732,83 @@ def monitor_and_manage_risk():
                 logger.info(f"MOONBAG ACTIVATED: {sym} reached +{pnl*100:.1f}%. Free-rolling with trailing stop from ATH.")
                 continue
 
-        # 4. Stop Loss & Ratchet Floor Enforcement
+        # 4. Volatility-Aware Stop Loss & Ratchet Floor Enforcement (Phase 4)
         active_floor = state["active_stop_floors"].get(addr)
         if active_floor is not None and active_floor > 0:
             if pnl <= active_floor:
+                stop_target = entry_price * (1.0 + active_floor)
+                stop_slip = calculate_slippage_through_stop(stop_target, cur_price)
                 execute_sell(
                     addr, sym,
-                    f"RATCHET_FLOOR_EXIT (+{active_floor*100:.1f}% floor hit, PnL: {pnl*100:.1f}%)",
-                    pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                    f"RATCHET_FLOOR_EXIT (+{active_floor*100:.1f}% floor hit, PnL: {pnl*100:.1f}%, Slip: {stop_slip*100:.2f}%)",
+                    pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol,
+                    slippage_through_stop=stop_slip
                 )
                 continue
         else:
             is_reentry = state["is_reentry"].get(addr, False)
-            active_stop = REENTRY_STOP_LOSS_PCT if is_reentry else STOP_LOSS_PCT
+            active_stop = REENTRY_STOP_LOSS_PCT if is_reentry else vol_stops["stop_loss_pct"]
             if pnl <= active_stop:
-                stop_label = f"REENTRY_STOP ({REENTRY_STOP_LOSS_PCT*100:.1f}%)" if is_reentry else f"HARD_STOP ({STOP_LOSS_PCT*100:.1f}%)"
+                stop_target = entry_price * (1.0 + active_stop)
+                stop_slip = calculate_slippage_through_stop(stop_target, cur_price)
+                stop_label = f"REENTRY_STOP ({REENTRY_STOP_LOSS_PCT*100:.1f}%)" if is_reentry else f"VOLATILITY_STOP ({active_stop*100:.1f}%)"
                 execute_sell(
                     addr, sym,
-                    f"{stop_label} (PnL: {pnl*100:.1f}%)",
-                    pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                    f"{stop_label} (PnL: {pnl*100:.1f}%, Slip: {stop_slip*100:.2f}%)",
+                    pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol,
+                    slippage_through_stop=stop_slip
                 )
                 continue
 
-        # 4b. Rapid Momentum Failure Cut: If trade immediately reverses down > 2.0% within first 25-90s, cut immediately
-        if elapsed_seconds >= 25 and pnl <= -0.020:
+        # 4b. Volatility-Aware Rapid Momentum Failure Cut (Phase 4)
+        if elapsed_seconds >= RAPID_CUT_WINDOW_SECONDS and pnl <= vol_stops["rapid_cut_pnl"]:
+            stop_target = entry_price * (1.0 + vol_stops["rapid_cut_pnl"])
+            stop_slip = calculate_slippage_through_stop(stop_target, cur_price)
             execute_sell(
                 addr, sym,
-                f"RAPID_MOMENTUM_CUT ({elapsed_seconds:.0f}s, PnL: {pnl*100:+.1f}% <= -2.0% — early cut)",
-                pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                f"VOLATILITY_RAPID_CUT ({elapsed_seconds:.0f}s, PnL: {pnl*100:+.1f}% <= {vol_stops['rapid_cut_pnl']*100:+.1f}%, Slip: {stop_slip*100:.2f}%)",
+                pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol,
+                slippage_through_stop=stop_slip
             )
             continue
 
-        # 4c. Early Bleeder Defense: If down > 1.8% after 90s, cut immediately to prevent hard-stop slippage blowouts
-        if elapsed_seconds >= 90 and pnl <= -0.018:
+        # 4c. Volatility-Aware Early Bleeder Defense (Phase 4)
+        if elapsed_seconds >= BLEEDER_WINDOW_SECONDS and pnl <= vol_stops["bleeder_cut_pnl"]:
+            stop_target = entry_price * (1.0 + vol_stops["bleeder_cut_pnl"])
+            stop_slip = calculate_slippage_through_stop(stop_target, cur_price)
             execute_sell(
                 addr, sym,
-                f"EARLY_BLEEDER_DEFENSE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% <= -1.8% — mitigating hard stop slip)",
-                pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                f"VOLATILITY_BLEEDER_CUT ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% <= {vol_stops['bleeder_cut_pnl']*100:+.1f}%, Slip: {stop_slip*100:.2f}%)",
+                pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol,
+                slippage_through_stop=stop_slip
             )
             continue
 
-        # 5. Dynamic Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS
+        # 5. Dynamic Green Vault / Stagnation Exit: If held >= STAGNATION_TIMEOUT_SECONDS
         if elapsed_seconds >= STAGNATION_TIMEOUT_SECONDS:
-            if pnl >= 0.006:
-                # Green Consolidation: Bank 50% profit, lock floor at +0.4%, and extend hold
+            if pnl >= dynamic_green_vault_trigger:
+                # Green Vault Profit Protection: Bank 50% profit, lock floor at dynamic_green_vault_floor, and extend hold
                 if addr not in state["partial_tp_taken"]:
-                    state["active_stop_floors"][addr] = 0.004
+                    state["active_stop_floors"][addr] = dynamic_green_vault_floor
                     execute_sell(
                         addr, sym,
-                        f"CONSOLIDATION_PROFIT_HARVEST ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}%: banking 50% gain, +0.4% floor locked)",
+                        f"GREEN_VAULT_PROFIT_PROTECTION ({elapsed_seconds/60:.1f}m, Gross: {pnl*100:+.1f}% | Net: {net_metrics['net_pnl_pct']*100:+.1f}% >= +{dynamic_green_vault_trigger*100:.1f}% trigger: banking 50%, +{dynamic_green_vault_floor*100:.1f}% floor locked)",
                         pnl, cur_price, entry_price, percent=50, pos_size_sol=size_sol
                     )
-                    state["entry_timestamps"][addr] = now  # Reset hold timer for remaining moonbag portion
+                    state["entry_timestamps"][addr] = now  # Reset hold timer for remaining portion
+                    continue
+                else:
+                    # Extended stagnation after partial profit: close remaining 50% to free capital
+                    execute_sell(
+                        addr, sym,
+                        f"STAGNATION_RECYCLE_REMAINDER ({elapsed_seconds/60:.1f}m, Gross: {pnl*100:+.1f}% | Net: {net_metrics['net_pnl_pct']*100:+.1f}% — remaining 50% banked, slot freed)",
+                        pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
+                    )
                     continue
             elif pnl < STAGNATION_MIN_PNL_TARGET:
                 execute_sell(
                     addr, sym,
-                    f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, PnL: {pnl*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
+                    f"STAGNATION_RECYCLE ({elapsed_seconds/60:.1f}m, Gross: {pnl*100:+.1f}% | Net: {net_metrics['net_pnl_pct']*100:+.1f}% < +{STAGNATION_MIN_PNL_TARGET*100:.1f}% target — slot freed)",
                     pnl, cur_price, entry_price, percent=100, pos_size_sol=size_sol
                 )
                 continue
@@ -707,16 +819,58 @@ def monitor_and_manage_risk():
 
 def cycle():
     state["cycle_count"] += 1
-    status = get_status()
-    if not status:
-        logger.warning("Backend service unavailable. Retrying in next cycle...")
-        return
-
-    positions = get_positions()
-    current_count = len(positions)
     now = time.time()
     elapsed_total = now - state["session_start_time"]
 
+    # 0. Emergency Flatten Signal: If FLATTEN file exists in project root, liquidate all open positions
+    flatten_file = HERE / "FLATTEN"
+    if flatten_file.exists():
+        logger.critical("EMERGENCY FLATTEN SIGNAL ENGAGED: Liquidating all open positions immediately...")
+        positions = get_positions()
+        for p in positions:
+            try:
+                execute_sell(
+                    p["address"], p.get("symbol", "TOKEN"),
+                    "EMERGENCY_FLATTEN_TRIGGERED",
+                    p.get("pnl", 0.0), p.get("cur_price", 0.0), p.get("entry_price", 0.0),
+                    percent=100, pos_size_sol=p.get("size_sol", DEFAULT_TRADE_SIZE_SOL)
+                )
+            except Exception as e:
+                logger.error(f"Failed to flatten {p.get('symbol')}: {e}")
+        try:
+            flatten_file.unlink()
+        except Exception:
+            pass
+        return
+
+    # 1. Watchdog Heartbeat Emission
+    positions = get_positions()
+    current_count = len(positions)
+    from kida_bot.core.watchdog import write_heartbeat
+    write_heartbeat(
+        cycle_count=state["cycle_count"],
+        active_positions_count=current_count,
+        mode="SHADOW" if PAPER_MODE else "LIVE",
+        details={"realized_pnl_sol": state["total_realized_pnl_sol"], "slots_used": current_count}
+    )
+
+    # 2. Backend Liveness & Watchdog Verification
+    status = get_status()
+    if not status:
+        state["consecutive_backend_failures"] = state.get("consecutive_backend_failures", 0) + 1
+        elapsed_fail = state["consecutive_backend_failures"] * FAST_MONITOR_INTERVAL_SECONDS
+        logger.warning(f"Backend service unavailable (missed {state['consecutive_backend_failures']} cycles, {elapsed_fail:.1f}s). Retrying...")
+        if elapsed_fail >= WATCHDOG_STALL_TIMEOUT_SECONDS:
+            logger.critical(f"WATCHDOG ALARM: Backend service down for {elapsed_fail:.1f}s >= threshold {WATCHDOG_STALL_TIMEOUT_SECONDS}s.")
+            try:
+                send_webhook_alert(f"CRITICAL WATCHDOG ALARM: Backend down for {elapsed_fail:.1f}s. Trading halted.")
+            except Exception:
+                pass
+        return
+    else:
+        state["consecutive_backend_failures"] = 0
+
+    # 3. Position Risk Management (Always runs when holdings exist)
     if current_count > 0:
         monitor_and_manage_risk()
         positions = get_positions()
@@ -737,6 +891,13 @@ def cycle():
 
     available_slots = MAX_POSITIONS - current_count
     if available_slots <= 0:
+        return
+
+    # 4. Kill Switch Safety Assertion: Stop new entries if daily loss, drawdown, consecutive losses, or HALT tripped
+    from kida_bot.core.killswitch import check_killswitch
+    ks_tripped, ks_reason = check_killswitch(bot_state=state, portfolio_context=get_portfolio_context())
+    if ks_tripped:
+        logger.warning(f"KILLSWITCH ACTIVE: {ks_reason}. New entries blocked; managing open positions.")
         return
 
     now = time.time()

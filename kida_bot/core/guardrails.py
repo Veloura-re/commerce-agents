@@ -270,6 +270,49 @@ def check_swap_guardrails(
     is_buy = staged.kind in (SwapKind.BUY_FRESH, SwapKind.BUY_REENTRY)
     is_reentry = (staged.kind == SwapKind.BUY_REENTRY)
 
+    # 0. Kill Switch Invariant (Daily loss, drawdown, consecutive losses, HALT file)
+    if is_buy:
+        from kida_bot.core.killswitch import check_killswitch
+        ks_tripped, ks_reason = check_killswitch(bot_state=bot_state, portfolio_context=portfolio_context)
+        if ks_tripped:
+            violations.append(f"KILLSWITCH_TRIPPED: {ks_reason}")
+
+        # Phase 3: Pre-trade Safety Checks (Blacklist, Freshness, Freeze/LP, Sell Simulation)
+        from kida_bot.core.safety_checks import (
+            is_blacklisted,
+            validate_freeze_and_lp,
+            simulate_sell_order,
+            validate_snapshot_freshness,
+        )
+
+        # 0a. Blacklist Invariant (Token, Deployer, Bundler)
+        b_hit, b_reason = is_blacklisted(staged.address)
+        if b_hit:
+            violations.append(b_reason)
+        deployer = staged.context.get("deployer") or staged.context.get("dev")
+        if deployer:
+            b_hit_d, b_reason_d = is_blacklisted(deployer)
+            if b_hit_d:
+                violations.append(b_reason_d)
+        bundler = staged.context.get("bundler") or staged.context.get("bundler_cluster")
+        if bundler:
+            b_hit_b, b_reason_b = is_blacklisted(bundler)
+            if b_hit_b:
+                violations.append(b_reason_b)
+
+        # 0b. Data Freshness Invariant
+        snap_ts = staged.context.get("snapshot_ts") or staged.context.get("screened_at") or 0.0
+        fresh_ok, fresh_reason = validate_snapshot_freshness(snap_ts)
+        if not fresh_ok:
+            violations.append(fresh_reason)
+
+        # 0c. Freeze & LP Burn/Lock Invariants
+        renounced_freeze = staged.context.get("renounced_freeze", True)
+        burn_ratio = staged.context.get("burn_ratio", 1.0)
+        fl_ok, fl_reason = validate_freeze_and_lp(renounced_freeze, burn_ratio)
+        if not fl_ok:
+            violations.append(fl_reason)
+
     # 1. Provenance Invariant
     ok_prov, prov_msg, prov_rec = provenance_registry.verify(staged.address, staged.symbol)
     if is_buy and not ok_prov:
@@ -313,6 +356,30 @@ def check_swap_guardrails(
             violations.append(f"LIQUIDITY_FLOOR: Pool ${prov_rec.verified_liquidity:,.0f} < ${min_liq:,.0f} minimum")
         if prov_rec.verified_mcap < min_mcap:
             violations.append(f"MCAP_FLOOR: Market cap ${prov_rec.verified_mcap:,.0f} < ${min_mcap:,.0f} minimum")
+
+        # 3b. Real Cost Model & Friction Validation
+        from kida_bot.core.cost_model import validate_entry_cost
+        cost_ok, cost_reason, cost_est = validate_entry_cost(
+            mint=staged.address,
+            size_sol=staged.size_sol,
+            pool_liquidity_usd=prov_rec.verified_liquidity if prov_rec else 45000.0
+        )
+        if not cost_ok:
+            violations.append(cost_reason)
+        else:
+            staged.guardrail_notes["round_trip_cost"] = cost_est
+
+        # 3c. Pre-Trade Sell Simulation Invariant (Honeypot & Exit Impact)
+        from kida_bot.core.safety_checks import simulate_sell_order
+        sell_sim_ok, sell_sim_msg, sell_sim_quote = simulate_sell_order(
+            mint=staged.address,
+            size_sol=staged.size_sol,
+            pool_liquidity_usd=prov_rec.verified_liquidity if prov_rec else 45000.0
+        )
+        if not sell_sim_ok:
+            violations.append(sell_sim_msg)
+        elif sell_sim_quote:
+            staged.guardrail_notes["sell_sim"] = sell_sim_quote
 
         # Price Impact Estimation (0.7 SOL order vs pool depth)
         sol_price_est = 140.0

@@ -1,0 +1,149 @@
+# ==============================================================================
+# KIDA CITADEL MASTER SYSTEM CONFIGURATION
+# All thresholds, gates, stops, limits, and timers must reside here.
+# Load once on startup, validate strictly, fail loudly on invalid values.
+# ==============================================================================
+
+mode:
+  # PAPER_MODE: When true (default), all orders are simulated at live quotes without signing txs.
+  # Live trading strictly requires PAPER_MODE=false in environment or config.
+  paper_mode: true
+
+capital:
+  total_bankroll_sol: 10.0
+  total_bankroll_usd: 1400.0
+  # Maximum capital deployed across all active positions simultaneously (50% max exposure)
+  capital_utilization_pct: 0.50
+  max_active_exposure_sol: 3.60
+  default_trade_size_sol: 0.350
+  min_trade_size_sol: 0.250
+  max_trade_size_sol: 0.500
+  max_positions: 5
+
+regimes:
+  high_conviction:
+    trade_size_sol: 0.70
+    max_positions: 4
+    exposure_cap_sol: 2.80
+    min_sol_trend_pct_1h: 0.010
+  standard_conservative:
+    trade_size_sol: 0.50
+    max_positions: 5
+    exposure_cap_sol: 2.50
+    min_sol_trend_pct_1h: -0.010
+  micro_scalp:
+    trade_size_sol: 0.30
+    max_positions: 6
+    exposure_cap_sol: 1.80
+    min_sol_trend_pct_1h: -0.050
+
+killswitch:
+  # Hard daily realized loss ceiling in SOL; trips killswitch immediately
+  daily_loss_cap_sol: 1.80
+  # Maximum drawdown fraction from session peak equity before halting entries (e.g. 0.15 = 15%)
+  max_drawdown_pct: 0.15
+  # Max consecutive losing trades before halting entries
+  max_consecutive_losses: 6
+  # Path to manual halt file in project root
+  halt_file: "HALT"
+
+watchdog:
+  # Loop cadence timers (seconds)
+  fast_monitor_interval_seconds: 2.0
+  screen_interval_seconds: 6.0
+  # Max allowed elapsed time without monitor heartbeat before raising alarm and blocking buys
+  stall_timeout_seconds: 15.0
+  heartbeat_file: "aitrader/outputs/heartbeat.json"
+
+stops:
+  take_profit_pct: 0.350
+  stop_loss_pct: -0.035
+  reentry_stop_loss_pct: -0.020
+  # Rapid sub-minute momentum cut: cuts adverse excursions early
+  rapid_momentum_cut_seconds: 25.0
+  rapid_momentum_cut_pnl: -0.020
+  # Early bleeder defense: cuts persistent bleeders
+  early_bleeder_cut_seconds: 90.0
+  early_bleeder_cut_pnl: -0.018
+  # Stagnation timer (5 minutes = 300s)
+  stagnation_timeout_seconds: 300.0
+  stagnation_min_pnl_target: 0.020
+  stagnation_green_harvest_pnl: 0.006
+  stagnation_locked_floor_pnl: 0.004
+  emergency_liquidity_drop_threshold: 0.15
+  moonbag_trailing_stop_pullback: 0.12
+  # Blacklist duration for stopped or losing tokens (6 hours = 21600s)
+  negative_token_lockout_seconds: 21600
+  max_reentries_per_token: 1
+
+volatility_stops:
+  # Dynamic volatility-aware stop: stop_distance = max(round_trip_cost + margin, k * short_window_range)
+  k_atr_multiplier: 1.5
+  atr_window_seconds: 60.0
+  min_stop_floor_pct: 0.015
+  max_stop_distance_pct: 0.050
+  rapid_cut_window_seconds: 25.0
+  bleeder_window_seconds: 90.0
+  # Latency monitoring: threshold in ms above which feed is flagged as blind
+  blind_feed_latency_ms: 3000.0
+
+ratchet_tiers:
+  # Tier 1: +5% gain -> lock breakeven floor (+2.0%)
+  tier1_trigger_pct: 0.050
+  tier1_lock_pct: 0.020
+  # Tier 2: +10% gain -> bank 50% partial profit, lock +5.0% floor
+  tier2_trigger_pct: 0.100
+  tier2_lock_pct: 0.050
+  # Tier 3: +20% gain -> bank 60% remaining (30% total), lock +12.0% floor
+  tier3_trigger_pct: 0.200
+  tier3_lock_pct: 0.120
+
+gates:
+  min_pool_liquidity_usd: 25000.0
+  min_mcap: 30000.0
+  max_mcap: 1000000000000.0
+  min_1h_volume: 10000.0
+  min_smart_money: 4
+  min_buy_ratio: 0.48
+  max_bundler_rate: 0.25
+  max_dev_hold_rate: 0.10
+  max_top10_concentration: 0.50
+  max_buy_tax: 0.08
+  max_sell_tax: 0.08
+  max_rug_ratio: 0.60
+  require_renounced_mint: true
+  require_renounced_freeze: true
+  min_lp_burn_or_lock_pct: 0.95
+  max_sell_simulation_impact_pct: 0.05
+  max_snapshot_age_seconds: 60.0
+  max_chg_5m_overbought: 0.20
+  min_chg_5m_falling_knife: -0.025
+  min_council_score: 55
+  min_council_sentinels_pass: 3
+
+cost_model:
+  # Maximum allowed ratio of round-trip cost to expected first target (e.g. 0.40 = 40%)
+  max_cost_to_first_target_ratio: 0.40
+  # Expected first profit target percentage (e.g. 0.05 = +5.0% for Tier 1)
+  expected_first_target_pct: 0.050
+  # Net margin buffer to add on top of round-trip cost for Green Vault (+0.4%)
+  green_vault_margin: 0.004
+  # Net margin buffer to add on top of round-trip cost for Tier 1 floor (+1.0%)
+  tier1_floor_margin: 0.010
+  # Baseline priority fee in SOL per leg (0.002 SOL in + 0.002 SOL out)
+  priority_fee_sol: 0.002
+  # Standard DEX swap fee percentage each leg (0.0025 = 0.25%)
+  swap_fee_pct: 0.0025
+  # Max allowable price impact per leg before rejecting entry
+  max_price_impact_pct: 0.025
+
+learning:
+  # Minimum number of closed trades before backpropagation updates weights (prevents premature tuning)
+  min_closed_trades: 50
+  # Maximum allowed single-step weight change (caps gradient updates)
+  max_step_size: 0.10
+  # Weight decay rate toward baseline each update (prevents drift from fundamentals)
+  weight_decay: 0.01
+  # PnL normalization clip range (clips reward signal to [-range, +range])
+  pnl_clip_range: 0.50
+

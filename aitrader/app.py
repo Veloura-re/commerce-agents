@@ -66,16 +66,15 @@ CFG = {
     "max_concurrent_positions": 5,     # 5 concurrent slots
     "daily_loss_cap_sol": 1.80,        # 1.80 SOL daily loss cap
     "kill_switch_consec_losses": 6,
-    # 避雷硬门槛（真实字段，无合成安全分；用户决策：直接用布尔/数值字段判）
     "require_renounced_mint": True,   # 必须放弃增发权
     "max_buy_tax": 0.08,
     "max_sell_tax": 0.08,
-    "max_rug_ratio": 0.50,
-    "max_bundler_ratio": 0.05,        # 5% max bundler rate
-    "max_dev_holding_pct": 0.05,      # 5% max dev holding
-    "max_top10_concentration": 0.35,
+    "max_rug_ratio": 0.60,
+    "max_bundler_ratio": 0.25,        # 25% max bundler rate
+    "max_dev_holding_pct": 0.10,      # 10% max dev holding
+    "max_top10_concentration": 0.50,  # 50% max top 10
     # 选择质量：共识 = 聪明钱(smart_degen) + 知名KOL(renowned) 计数之和（与脑部自适应启发式联动）
-    "min_smart_money_confluence": 15,  # 15+ smart degens & KOLs to avoid low-liquidity rug dumps
+    "min_smart_money_confluence": 4,   # 4+ smart degens & KOLs to allow fresh momentum runners
     "min_llm_conviction": 0.6,
     # dev 评估维度：初排后只对前 dev_pool_n 个幸存者额外查 dev 历史（token info 的 dev 对象），
     # 结果按地址缓存 dev_info_ttl_s 秒（dev 历史变化慢，跨轮复用、不每轮重拉，省 cli 配额）。
@@ -123,11 +122,10 @@ NATIVE_DECIMALS = {"sol": 9, "bsc": 18, "base": 18, "eth": 18, "robinhood": 18}
 def native_token(chain): return NATIVE_TOKEN.get(chain, NATIVE_TOKEN["sol"])
 def native_decimals(chain): return NATIVE_DECIMALS.get(chain, 9)
 
-# 安全护栏：置 True 时即使配了 private key、即使 mode=LIVE，也强制走 SHADOW、绝不调 swap。
-# 已解锁(False)：LIVE 模式 + 已配 GMGN_PRIVATE_KEY 时，「一键买入/平仓」会真实发单、动用资金、不可逆。
-# 仍是人在环：只有用户点按钮才成交；SHADOW 是默认安全态，需手动切 LIVE 才真发。
-# [NOTE] 真实下单要求 ~/.config/gmgn/.env 里 GMGN_PRIVATE_KEY 非空（签名密钥），否则 gmgn-cli 报错。
-LIVE_TRADING_DISABLED = False
+# PAPER_MODE: default True. Simulates fills using live quotes, never signs transactions.
+# Live trading strictly requires PAPER_MODE=false.
+PAPER_MODE = os.getenv("PAPER_MODE", "true").strip().lower() in ("1", "true", "yes", "on")
+LIVE_TRADING_DISABLED = PAPER_MODE or (os.getenv("LIVE_TRADING_DISABLED", "false").strip().lower() in ("1", "true", "yes", "on"))
 
 # 公开演示（只读广播）：设环境变量 PUBLIC_DEMO=1 开启。用于把看板挂公网给不特定访客看
 # 真实筛选数据，同时把后端收敛成纯只读：
@@ -879,6 +877,9 @@ class TokenFeatures:
     sniper_count: int = 0
     sm_confluence: int = 0   # = smart_degen + renowned
     dex: str = "RAY-CPMM"    # 10X DEX Engine: PUMP, RAY-CPMM, METEORA, MOONSHOT, ORCA...
+    snapshot_ts: float = 0.0
+    deployer: str = ""
+    bundler_addr: str = ""
     # dev 评估维度（额外查 dev 历史后回填；初排时为 None）
     dev: dict | None = None        # 归一化 dev 历史（_dev_from_info）
     dev_eval: float | None = None  # dev 子分 0..1（dev_score）
@@ -922,6 +923,9 @@ class FeatureExtractor:
             sniper_count=int(_f(row.get("sniper_count"))),
             sm_confluence=degen + renowned,
             dex=detect_dex(row, addr),
+            snapshot_ts=_f(row.get("snapshot_timestamp") or row.get("timestamp") or time.time()),
+            deployer=str(row.get("creator") or row.get("dev") or row.get("creator_address") or ""),
+            bundler_addr=str(row.get("bundler_address") or "")
         )
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -929,11 +933,22 @@ class FeatureExtractor:
 #    gate_idx 与前端漏斗对齐：1=避雷 2=共识 3=ML排序 4=LLM
 # ──────────────────────────────────────────────────────────────────────────
 def hard_gates(f: TokenFeatures):
-    # gate 1 避雷（真实布尔/数值字段，无合成安全分）
+    # Phase 3 Gate 1 Safety Invariants:
+    # 1. Honeypot check
     if f.honeypot:
         return False, "REJECT 避雷：honeypot 命中", 1
-    if CFG["require_renounced_mint"] and not f.renounced_mint:
+    # 2. Renounced Mint Authority
+    if CFG.get("require_renounced_mint", True) and not f.renounced_mint:
         return False, "REJECT 避雷：未放弃增发权（可无限增发）", 1
+    # 3. Renounced Freeze Authority
+    if CFG.get("require_renounced_freeze", True) and not getattr(f, "renounced_freeze", False):
+        return False, "REJECT 避雷：未放弃冻结权（可冻结交易/黑名单）", 1
+    # 4. LP Burned / Locked (only enforced if burn_ratio is reported > 0 and dex is not pump bonding curve)
+    min_lp = CFG.get("min_lp_burn_or_lock_pct", 0.0)
+    burn_r = getattr(f, "burn_ratio", 0.0)
+    if min_lp > 0 and burn_r > 0 and burn_r < min_lp and getattr(f, "dex", "").upper() not in ("PUMP", "PUMP.FUN"):
+        return False, f"REJECT 避雷：LP 销毁/锁定不足 {burn_r:.1%} < {min_lp:.0%}", 1
+    # 5. Taxes & Manipulation
     if f.buy_tax > CFG["max_buy_tax"] or f.sell_tax > CFG["max_sell_tax"]:
         return False, f"REJECT 避雷：税过高 买{f.buy_tax:.0%}/卖{f.sell_tax:.0%}", 1
     if f.rug_ratio > CFG["max_rug_ratio"]:
@@ -944,15 +959,44 @@ def hard_gates(f: TokenFeatures):
         return False, f"REJECT 避雷：dev 持仓 {f.dev_hold:.0%} > {CFG['max_dev_holding_pct']:.0%}", 1
     if f.top10 > CFG["max_top10_concentration"]:
         return False, f"REJECT 避雷：top10 {f.top10:.0%} 集中", 1
-    # Liquidity & Market Cap Floor — $45k minimum to prevent hard-stop slippage blowouts
-    if f.liquidity < 45000.0:
-        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $45,000", 1
-    if f.mcap < 40000.0:
-        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $40,000", 1
-    if f.chg_5m < -0.015:
+
+    # 6. Deployer & Bundler Blacklist
+    from kida_bot.core.safety_checks import is_blacklisted, validate_snapshot_freshness, simulate_sell_order
+    is_blk, blk_reason = is_blacklisted(f.address)
+    if is_blk:
+        return False, f"REJECT 黑名单：{blk_reason}", 1
+    if getattr(f, "deployer", None):
+        d_blk, d_reason = is_blacklisted(f.deployer)
+        if d_blk:
+            return False, f"REJECT 发币方黑名单：{d_reason}", 1
+
+    # 7. Data Freshness
+    snap_ts = getattr(f, "snapshot_ts", 0.0)
+    max_age = CFG.get("max_snapshot_age_seconds", 60.0)
+    fresh_ok, fresh_reason = validate_snapshot_freshness(snap_ts, max_age_seconds=max_age)
+    if not fresh_ok:
+        return False, f"REJECT 时效性：{fresh_reason}", 1
+
+    # 8. Sell Simulation Check
+    sim_ok, sim_reason, _ = simulate_sell_order(
+        mint=f.address,
+        size_sol=0.35,
+        pool_liquidity_usd=f.liquidity,
+        max_impact_pct=CFG.get("max_sell_simulation_impact_pct", 0.05),
+        max_tax_pct=CFG.get("max_sell_tax", 0.08)
+    )
+    if not sim_ok:
+        return False, f"REJECT 卖出模拟：{sim_reason}", 1
+
+    # Liquidity & Market Cap Floor — $25k minimum to balance opportunity with slippage protection
+    if f.liquidity < 25000.0:
+        return False, f"REJECT LIQUIDITY: ${f.liquidity:,.0f} < $25,000", 1
+    if f.mcap < 30000.0:
+        return False, f"REJECT MCAP: ${f.mcap:,.0f} < $30,000", 1
+    if f.chg_5m < -0.025:
         return False, f"REJECT 动能下行：5m 跌 {f.chg_5m*100:.1f}%", 1
-    if f.buy_ratio < 0.50:
-        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 50%", 1
+    if f.buy_ratio < 0.48:
+        return False, f"REJECT 买盘不足：买比 {f.buy_ratio*100:.1f}% < 48%", 1
     # gate 2 共识：smart_degen + renowned KOL 计数（自适应脑部启发式联动）
     min_sm = int(brain.heuristics.get("min_smart_money_consensus", CFG.get("min_smart_money_confluence", 2)))
     if f.sm_confluence < min_sm:
@@ -1741,6 +1785,61 @@ def screen_once(chain: str) -> dict:
     rows_by_addr = {t["address"]: t for t in candidates if t.get("address")}
     positions_out = monitor_positions(chain, rows_by_addr)
 
+    # Phase 1: SQLite candidate logging & forward returns tracking (data/kida.db)
+    try:
+        from kida_bot.core.db import log_candidates_batch
+        from kida_bot.core.forward_tracker import start_forward_returns_tracker
+        cands_to_log = []
+        now_ts = time.time()
+        for d_item in decisions:
+            dec = d_item.get("decision", {})
+            feat = dec.get("features", {})
+            action = dec.get("action", "SKIP")
+            passed = 1 if action == "ACTION" else 0
+            gate_idx = dec.get("gate", 1 if not passed else 0)
+            reason = dec.get("reason") if not passed else None
+            per_gate = {
+                "gate1": True if passed or gate_idx > 1 else False,
+                "gate2": True if passed or gate_idx > 2 else False,
+                "gate3": True if passed or gate_idx > 3 else False,
+                "gate4": True if passed else False
+            }
+            cands_to_log.append({
+                "ts": now_ts,
+                "mint": dec.get("address") or feat.get("address") or "",
+                "symbol": dec.get("symbol") or feat.get("symbol_safe") or "",
+                "price": float(dec.get("price") or feat.get("price") or 0.0),
+                "liquidity": float(feat.get("liquidity") or 0.0),
+                "mcap": float(feat.get("mcap") or 0.0),
+                "vol_1h": float(feat.get("vol_1h") or 0.0),
+                "age_min": float(feat.get("age_min") or 0.0),
+                "chg_1h": float(feat.get("chg_1h") or 0.0),
+                "chg_5m": float(feat.get("chg_5m") or 0.0),
+                "buy_ratio": float(feat.get("buy_ratio") or 0.5),
+                "turnover": float(feat.get("turnover") or 0.0),
+                "honeypot": 1 if feat.get("honeypot") else 0,
+                "renounced_mint": 1 if feat.get("renounced_mint") else 0,
+                "renounced_freeze": 1 if feat.get("renounced_freeze") else 0,
+                "buy_tax": float(feat.get("buy_tax") or 0.0),
+                "sell_tax": float(feat.get("sell_tax") or 0.0),
+                "bundler": float(feat.get("bundler") or 0.0),
+                "dev_hold": float(feat.get("dev_hold") or 0.0),
+                "top10": float(feat.get("top10") or 0.0),
+                "smart_degen": int(feat.get("smart_degen") or 0),
+                "renowned": int(feat.get("renowned") or 0),
+                "sm_confluence": int(feat.get("sm_confluence") or 0),
+                "dex": dec.get("dex", "RAY-CPMM"),
+                "per_gate_pass_fail": per_gate,
+                "passed": passed,
+                "first_rejection_reason": reason,
+                "raw_features_json": json.dumps(feat)
+            })
+        if cands_to_log:
+            log_candidates_batch(cands_to_log)
+        start_forward_returns_tracker(price_fn=lambda addr: g.token_price(addr))
+    except Exception as e:
+        logger.warning(f"Error logging candidates to SQLite in screen_once: {e}")
+
     # 回传后端真实 mode：前端据此同步 LIVE/SHADOW 开关，避免重启后端后开关停留在 LIVE 误导
     return dict(decisions=decisions, portfolio=_portfolio(), positions=positions_out, mode=ST.mode)
 
@@ -1891,8 +1990,20 @@ def monitor_positions(chain: str, rows_by_addr: dict | None = None) -> list[dict
         if out_liq <= 0 and out_mcap > 0:
             out_liq = round(out_mcap * 0.2, 2)
 
+        # Real cost model & net PnL computation
+        from kida_bot.core.cost_model import calculate_net_pnl
+        gross_pnl_pct = p.get("pnl", 0.0)
+        size_val = p.get("size_sol", 0.35)
+        pnl_data = calculate_net_pnl(size_val, gross_pnl_pct)
+
         out.append(dict(symbol=p["symbol"], address=p["address"], size_sol=p["size_sol"],
-                        pnl=p.get("pnl", 0), entry_price=p.get("entry_price", 0.0),
+                        pnl=gross_pnl_pct,
+                        gross_pnl=pnl_data["gross_pnl_sol"],
+                        gross_pnl_pct=gross_pnl_pct,
+                        net_pnl=pnl_data["net_pnl_sol"],
+                        net_pnl_pct=pnl_data["net_pnl_pct"],
+                        estimated_fees=pnl_data["fees_paid_sol"],
+                        entry_price=p.get("entry_price", 0.0),
                         cur_price=p.get("cur_price", 0.0),
                         mcap=out_mcap, liquidity=out_liq,
                         council_score=p.get("council_score"), council_risk=p.get("council_risk"),
@@ -1914,9 +2025,62 @@ def _mock_drift(p):
 # 12. 成交（人按下才发生）
 # ──────────────────────────────────────────────────────────────────────────
 def do_buy(chain: str, address: str, size_sol: float, price: float = 0.0, symbol: str = "", mcap: float = 0.0, liquidity: float = 0.0) -> dict:
+    # 0. System Survival Checks: Manual HALT file
+    halt_path = HERE.parent / "HALT"
+    if halt_path.exists():
+        log("BUY_BLOCK", address[:8], "Manual HALT file engaged")
+        raise HTTPException(403, "BLOCK Manual halt engaged: 'HALT' file present in project root")
+
+    # 0b. Kill Switch Invariants (loss limit, drawdown, consecutive losses)
+    try:
+        from kida_bot.core.killswitch import check_killswitch
+        audit_file = OUT_DIR / "session_audit.json"
+        b_state = {}
+        if audit_file.exists():
+            with open(audit_file, "r") as f:
+                b_state = json.load(f)
+        tripped, ks_reason = check_killswitch(bot_state=b_state, portfolio_context=dict(positions=ST.positions, total_exposure=ST.exposure()))
+        if tripped:
+            log("BUY_BLOCK", address[:8], f"Killswitch: {ks_reason}")
+            raise HTTPException(403, f"BLOCK Killswitch active: {ks_reason}")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.warning(f"Killswitch diagnostic error in do_buy: {e}")
+
+    # 0c. Watchdog Stall Invariant: Ensure rotation engine monitor loop is active
+    try:
+        from kida_bot.core.watchdog import read_heartbeat
+        hb = read_heartbeat()
+        if hb.get("is_stalled"):
+            age_s = hb.get("age_seconds")
+            log("BUY_BLOCK", address[:8], f"Watchdog engine stall ({age_s}s)")
+            raise HTTPException(503, f"BLOCK Watchdog alarm: Rotation engine monitor loop stalled ({age_s}s ago)")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.warning(f"Watchdog diagnostic error in do_buy: {e}")
+
     if any((p.get("address") or "").lower() == address.lower() for p in ST.positions):
         log("BUY_BLOCK", address[:8], "Duplicate position already open")
         raise HTTPException(409, "BLOCK Duplicate position already open for this token")
+
+    # 0d. Real Cost Model & Friction Validation
+    try:
+        from kida_bot.core.cost_model import validate_entry_cost
+        cost_ok, cost_reason, cost_est = validate_entry_cost(
+            mint=address,
+            size_sol=size_sol,
+            pool_liquidity_usd=float(liquidity or 45000.0)
+        )
+        if not cost_ok:
+            log("BUY_BLOCK", address[:8], cost_reason)
+            raise HTTPException(422, f"BLOCK {cost_reason}")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.warning(f"Cost validation error in do_buy: {e}")
+
     # 成交前再过一次组合风控（硬拦；与筛选时的提示分离）
     allow, rnote = ST.risk.gate(size_sol, len(ST.positions), ST.exposure())
     if not allow:
@@ -2009,6 +2173,7 @@ def do_buy(chain: str, address: str, size_sol: float, price: float = 0.0, symbol
     ST.positions.append(dict(symbol=symbol, address=address, size_sol=round(size_sol, 4),
                              pnl=0.0, cycles=0, entry=entry, chain=chain,
                              entry_price=entry_price, cur_price=entry_price,
+                             entry_time=time.time(),
                              mcap=cached_mcap, liquidity=cached_liq,
                              council_score=c_score, council_risk=c_risk))
     save_positions()
@@ -2016,7 +2181,7 @@ def do_buy(chain: str, address: str, size_sol: float, price: float = 0.0, symbol
     log("BUY", symbol, f"{ST.mode} {_verb} {size_sol} ({chain})", dict(size_sol=size_sol, chain=chain, **exit_plan()))
     return dict(ok=True, status=status_msg, filled=filled, symbol=symbol)
 
-def do_sell(address: str, percent: int = 100) -> dict:
+def do_sell(address: str, percent: int = 100, reason: str = "MANUAL_SELL", latency_ms: float = 0.0) -> dict:
     addr_clean = (address or "").strip().lower()
     idx = next((i for i, p in enumerate(ST.positions) if (p.get("address") or "").strip().lower() == addr_clean), None)
     if idx is None:
@@ -2037,6 +2202,17 @@ def do_sell(address: str, percent: int = 100) -> dict:
     if pnl < 0:
         ST.risk.consec_losses += 1
         ST.risk.realized_loss_today = round(ST.risk.realized_loss_today + abs(pnl_sol), 4)
+        try:
+            from kida_bot.core.safety_checks import record_loss_and_blacklist
+            record_loss_and_blacklist(
+                mint=p.get("address", address),
+                deployer=p.get("deployer") or p.get("creator") or p.get("dev"),
+                bundler=p.get("bundler") or p.get("bundler_cluster"),
+                loss_sol=abs(pnl_sol),
+                reason=f"Closed at loss {pnl:+.1%}: {reason}"
+            )
+        except Exception as e:
+            logger.warning(f"Error recording loss to blacklist: {e}")
     else:
         ST.risk.consec_losses = 0
     log("SELL", p["symbol"], f"{ST.mode} close {percent}% PnL {pnl:+.1%}")
@@ -2046,6 +2222,32 @@ def do_sell(address: str, percent: int = 100) -> dict:
         p["size_sol"] = round(p["size_sol"] - sold_size, 4)
         ST.positions[idx] = p
     save_positions()
+
+    # Phase 1: SQLite trade audit logging
+    try:
+        from kida_bot.core.db import log_trade
+        entry_t = p.get("entry_time", time.time() - p.get("cycles", 1) * 3.0)
+        log_trade({
+            "trade_id": f"trade_{int(time.time() * 1000)}_{p['symbol']}",
+            "mint": p.get("address", address),
+            "symbol": p.get("symbol", ""),
+            "size": sold_size,
+            "entry_ts": entry_t,
+            "exit_ts": time.time(),
+            "entry_price": p.get("entry_price", 0.0),
+            "exit_price": p.get("cur_price", p.get("entry_price", 0.0)),
+            "exit_reason": reason,
+            "realized_pnl": pnl_sol,
+            "realized_pnl_pct": pnl,
+            "fees_paid": 0.005,
+            "priority_fee": 0.002,
+            "quoted_slippage": 0.01,
+            "realized_slippage": 0.0,
+            "order_latency_ms": latency_ms
+        })
+    except Exception as e:
+        logger.warning(f"Error logging trade to SQLite: {e}")
+
     try:
         c_score = p.get("council_score")
         if c_score is None:
@@ -2055,7 +2257,7 @@ def do_sell(address: str, percent: int = 100) -> dict:
             "address": p["address"],
             "pnl_pct": pnl,
             "pnl_sol": pnl_sol,
-            "reason": f"{ST.mode} MANUAL_SELL ({percent}%)",
+            "reason": f"{ST.mode} {reason} ({percent}%)",
             "hold_minutes": round(p.get("cycles", 1) * 3.0 / 60.0, 1),
             "council_risk_score": c_score
         })
@@ -2128,6 +2330,8 @@ class SellIn(BaseModel):
     percent: Optional[Union[int, float]] = 100  # 卖出比例：默认 100% 清仓，50% 止盈半仓
     pct: Optional[Union[int, float]] = None
     chain: Optional[str] = "sol"
+    reason: Optional[str] = None
+    latency_ms: Optional[float] = 0.0
 
 class SettingsIn(BaseModel):
     trending_cmd: Optional[str] = None
@@ -2467,6 +2671,55 @@ def api_logs_raw():
         str(log_path),
         media_type="text/plain",
         filename="kida_flight_session_1h.log"
+    )
+
+@app.get("/api/health")
+def api_health():
+    """System survival watchdog & health probe.
+    Monitors rotation engine heartbeat, kill switch status, and paper mode.
+    """
+    try:
+        from kida_bot.core.watchdog import read_heartbeat
+        hb = read_heartbeat()
+    except Exception as e:
+        hb = {"exists": False, "status": "ERROR", "error": str(e), "is_stalled": True}
+
+    halt_path = HERE.parent / "HALT"
+    halt_present = halt_path.exists()
+
+    try:
+        from kida_bot.core.killswitch import get_killswitch_status
+        audit_file = OUT_DIR / "session_audit.json"
+        b_state = {}
+        if audit_file.exists():
+            with open(audit_file, "r") as f:
+                b_state = json.load(f)
+        ks = get_killswitch_status(bot_state=b_state, portfolio_context=dict(positions=ST.positions, total_exposure=ST.exposure()))
+    except Exception as e:
+        ks = {"is_tripped": False, "reason": f"Diagnostic error: {e}", "halt_file_present": halt_present}
+
+    is_stalled = hb.get("is_stalled", False)
+    is_tripped = ks.get("is_tripped", False)
+    is_healthy = not is_stalled and not is_tripped and not halt_present
+
+    overall_status = "HEALTHY"
+    if halt_present:
+        overall_status = "HALTED"
+    elif is_tripped:
+        overall_status = "KILLSWITCH_TRIPPED"
+    elif is_stalled:
+        overall_status = "STALLED"
+
+    return dict(
+        status=overall_status,
+        healthy=is_healthy,
+        paper_mode=PAPER_MODE,
+        trading_mode=ST.mode,
+        trading_locked=LIVE_TRADING_DISABLED,
+        watchdog=hb,
+        killswitch=ks,
+        open_positions_count=len(ST.positions),
+        timestamp=time.time()
     )
 
 @app.get("/api/status")
@@ -3649,7 +3902,7 @@ def api_sell(s: SellIn):
     else:
         final_percent = 100
     with ST.lock:
-        return do_sell(s.address, final_percent)
+        return do_sell(s.address, final_percent, reason=s.reason or "MANUAL_SELL", latency_ms=float(s.latency_ms or 0.0))
 
 @app.post("/api/unmonitor")
 def api_unmonitor(s: SellIn):

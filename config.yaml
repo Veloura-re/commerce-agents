@@ -50,7 +50,7 @@ killswitch:
 watchdog:
   # Loop cadence timers (seconds)
   fast_monitor_interval_seconds: 2.0
-  screen_interval_seconds: 6.0
+  screen_interval_seconds: 15.0
   # Max allowed elapsed time without monitor heartbeat before raising alarm and blocking buys
   stall_timeout_seconds: 15.0
   heartbeat_file: "aitrader/outputs/heartbeat.json"

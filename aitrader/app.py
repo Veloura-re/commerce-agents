@@ -2859,7 +2859,7 @@ def api_risk_reset():
 _SCREEN_CACHE: dict = {}
 import threading
 _SCREEN_LOCK = threading.Lock()
-_SCREEN_CACHE_TTL = 10.0
+_SCREEN_CACHE_TTL = 20.0
 
 @app.post("/api/run")
 def api_run(r: RunIn):

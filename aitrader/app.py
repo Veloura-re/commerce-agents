@@ -244,7 +244,7 @@ class LiveGMGN(GMGNAdapter):
     @classmethod
     def _handle_error_text(cls, err_text: str):
         if "RATE_LIMIT_BANNED" in err_text or "HTTP 429" in err_text or "code=429" in err_text:
-            cls._banned_until = time.time() + 315.0
+            cls._banned_until = time.time() + 60.0
 
     @classmethod
     def _check_circuit_breaker(cls):
@@ -307,30 +307,6 @@ class LiveGMGN(GMGNAdapter):
         if not isinstance(data, dict):
             return []
         base_ranks = data.get("rank") or data.get("tokens") or []
-
-        # Multi-Platform Aggregation on Solana:
-        # Guarantee representation across Raydium, Meteora, Moonshot, Letsbonk, and Pump.fun
-        if self.chain == "sol":
-            all_tokens = {r.get("address"): r for r in base_ranks if r.get("address")}
-            try:
-                m_resp = self._cli("market", "trending", "--platform", "moonshot_app",
-                                   "--interval", interval, "--order-by", orderby, "--direction", "desc", "--limit", "25")
-                m_data = m_resp.get("data") or m_resp
-                for r in (m_data.get("rank") or [] if isinstance(m_data, dict) else []):
-                    if r.get("address") and r.get("address") not in all_tokens:
-                        all_tokens[r["address"]] = r
-            except Exception:
-                pass
-            try:
-                b_resp = self._cli("market", "trending", "--platform", "letsbonk",
-                                   "--interval", interval, "--order-by", orderby, "--direction", "desc", "--limit", "25")
-                b_data = b_resp.get("data") or b_resp
-                for r in (b_data.get("rank") or [] if isinstance(b_data, dict) else []):
-                    if r.get("address") and r.get("address") not in all_tokens:
-                        all_tokens[r["address"]] = r
-            except Exception:
-                pass
-            return list(all_tokens.values())
 
         return base_ranks
 

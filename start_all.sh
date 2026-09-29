@@ -1,4 +1,5 @@
 #!/bin/bash
+export PYTHONPATH="/app:${PYTHONPATH}"
 echo "Starting backend API..."
 mkdir -p ~/.config/gmgn
 touch ~/.config/gmgn/.env

@@ -24,7 +24,13 @@ app.py — GMGN AI Trader 本地后端 (FastAPI)
 """
 
 from __future__ import annotations
-import json, os, re, subprocess, random, datetime, pathlib, threading, math, shlex, time, logging, shutil
+import sys, pathlib
+_HERE = pathlib.Path(__file__).resolve().parent
+_PROJECT_ROOT = _HERE.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+
+import json, os, re, subprocess, random, datetime, threading, math, shlex, time, logging, shutil
 logger = logging.getLogger("aitrader")
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field, asdict

@@ -2708,7 +2708,7 @@ def api_health():
 def api_status():
     """前端加载时探测：后端是否已就绪（环境有 key + 已切真实适配器），免去重填。
     chain 仅为启动默认链（前端各 tab 用自己的链，不依赖这个）。"""
-    return dict(live_adapter=ST.is_live_adapter, chain=ST.chain, mode=ST.mode,
+    return dict(version="2.1.0", live_adapter=ST.is_live_adapter, chain=ST.chain, mode=ST.mode,
                 has_key=bool(load_env().get("GMGN_API_KEY")),
                 trading_locked=LIVE_TRADING_DISABLED, public_demo=PUBLIC_DEMO,
                 trending_cmd=ST.get_trending_cmd(ST.chain),
